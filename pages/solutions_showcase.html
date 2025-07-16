@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solutions Showcase - Real-World AI Implementations | Cogniwide</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Explore real-world Cogniwide AI implementations with detailed case studies, ROI metrics, and success stories across Telecom, BFSI, Insurance, and Workforce Management industries." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fcogniwide6280back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="bg-primary border-b border-border-light sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg width="40" height="40" viewBox="0 0 40 40" class="transition-transform duration-300 hover:scale-105">
+                            <polygon points="20,2 35,12 35,28 20,38 5,28 5,12" fill="#FEC400" opacity="0.8"/>
+                            <polygon points="20,6 31,14 31,26 20,34 9,26 9,14" fill="#2ECC71" opacity="0.7"/>
+                            <polygon points="20,10 27,16 27,24 20,30 13,24 13,16" fill="#3498DB" opacity="0.6"/>
+                            <polygon points="20,14 23,18 23,22 20,26 17,22 17,18" fill="#E74C3C" opacity="0.9"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <span class="font-inter font-bold text-xl text-text-primary">Cogniwide</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <div class="relative group">
+                            <button class="text-text-primary hover:text-accent font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
+                                Products
+                            </button>
+                            <!-- Mega Menu -->
+                            <div class="absolute left-0 mt-2 w-96 bg-primary rounded-lg shadow-enterprise border border-border-light opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                <div class="p-6">
+                                    <div class="grid grid-cols-1 gap-4">
+                                        <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-surface transition-colors duration-300">
+                                            <div class="w-3 h-3 bg-accent rounded-full mr-3"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold text-text-primary">CogniXcellerate</h4>
+                                                <p class="text-text-secondary text-sm">AI Orchestration Platform</p>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="flex items-center p-3 rounded-lg hover:bg-surface transition-colors duration-300">
+                                            <div class="w-3 h-3 bg-success rounded-full mr-3"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold text-text-primary">CogniLoom</h4>
+                                                <p class="text-text-secondary text-sm">Intelligent Process Automation</p>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="flex items-center p-3 rounded-lg hover:bg-surface transition-colors duration-300">
+                                            <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold text-text-primary">CogniChat</h4>
+                                                <p class="text-text-secondary text-sm">Conversational AI Platform</p>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="flex items-center p-3 rounded-lg hover:bg-surface transition-colors duration-300">
+                                            <div class="w-3 h-3 bg-error rounded-full mr-3"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold text-text-primary">CogniAgent</h4>
+                                                <p class="text-text-secondary text-sm">Intelligent Agent Framework</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="solutions_showcase.html" class="text-accent font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">Solutions</a>
+                        <a href="platform_engineering_services.html" class="text-text-primary hover:text-accent font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">Services</a>
+                        <a href="industries_hub.html" class="text-text-primary hover:text-accent font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">Industries</a>
+                        <a href="resource_center.html" class="text-text-primary hover:text-accent font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">Resources</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="javascript:void(0)" class="btn-primary">
+                        Request Demo
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-text-primary hover:text-accent p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary via-secondary-100 to-accent-50 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-accent/5 to-success/5"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
+            <div class="text-center">
+                <h1 class="font-inter font-bold text-4xl lg:text-5xl text-text-primary mb-6">
+                    Real-World AI Success Stories
+                </h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
+                    Discover how leading enterprises across industries have transformed their operations with Cogniwide AI solutions, achieving measurable ROI and operational excellence.
+                </p>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                    <div class="bg-primary rounded-lg p-6 shadow-card">
+                        <div class="text-3xl font-inter font-bold text-accent mb-2">150+</div>
+                        <div class="text-sm text-text-secondary">Successful Implementations</div>
+                    </div>
+                    <div class="bg-primary rounded-lg p-6 shadow-card">
+                        <div class="text-3xl font-inter font-bold text-success mb-2">87%</div>
+                        <div class="text-sm text-text-secondary">Average Efficiency Gain</div>
+                    </div>
+                    <div class="bg-primary rounded-lg p-6 shadow-card">
+                        <div class="text-3xl font-inter font-bold text-blue-500 mb-2">$2.4M</div>
+                        <div class="text-sm text-text-secondary">Average Cost Savings</div>
+                    </div>
+                    <div class="bg-primary rounded-lg p-6 shadow-card">
+                        <div class="text-3xl font-inter font-bold text-error mb-2">6 Mo</div>
+                        <div class="text-sm text-text-secondary">Average ROI Timeline</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Filters -->
+    <section class="py-12 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-primary rounded-lg p-6 shadow-card">
+                <div class="flex flex-col lg:flex-row gap-6 items-center">
+                    <!-- Search -->
+                    <div class="flex-1 w-full lg:w-auto">
+                        <div class="relative">
+                            <svg class="absolute left-3 top-3 h-5 w-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                            <input type="text" placeholder="Search case studies..." class="input-field pl-10" />
+                        </div>
+                    </div>
+
+                    <!-- Industry Filter -->
+                    <div class="w-full lg:w-auto">
+                        <select class="input-field">
+                            <option value>All Industries</option>
+                            <option value="telecom">Telecom</option>
+                            <option value="bfsi">BFSI</option>
+                            <option value="insurance">Insurance</option>
+                            <option value="workforce">Workforce Management</option>
+                        </select>
+                    </div>
+
+                    <!-- Solution Filter -->
+                    <div class="w-full lg:w-auto">
+                        <select class="input-field">
+                            <option value>All Solutions</option>
+                            <option value="cognixcellerate">CogniXcellerate</option>
+                            <option value="cogniloom">CogniLoom</option>
+                            <option value="cognichat">CogniChat</option>
+                            <option value="cogniagent">CogniAgent</option>
+                        </select>
+                    </div>
+
+                    <!-- Implementation Scale Filter -->
+                    <div class="w-full lg:w-auto">
+                        <select class="input-field">
+                            <option value>All Scales</option>
+                            <option value="enterprise">Enterprise</option>
+                            <option value="mid-market">Mid-Market</option>
+                            <option value="department">Department</option>
+                        </select>
+                    </div>
+
+                    <!-- Reset Button -->
+                    <button class="btn-secondary whitespace-nowrap">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Case Studies -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-text-primary mb-4">
+                    Featured Success Stories
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Explore our most impactful implementations across different industries and solution types
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                <!-- Featured Case Study 1 - Telecom -->
+                <div class="card p-8 border-l-4 border-accent">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-3 h-3 bg-accent rounded-full"></div>
+                            <span class="text-sm font-inter font-medium text-accent">CogniXcellerate • Telecom</span>
+                        </div>
+                        <span class="text-sm text-text-secondary">Enterprise Scale</span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <img src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Telecom Network Operations Center" class="w-full h-48 object-cover rounded-lg mb-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <h3 class="font-inter font-bold text-xl text-text-primary mb-3">
+                            Global Telecom Provider Transforms Network Operations
+                        </h3>
+                        <p class="text-text-secondary mb-4">
+                            Leading telecommunications company implemented CogniXcellerate to orchestrate network maintenance, incident response, and capacity planning across 50+ countries.
+                        </p>
+                    </div>
+
+                    <!-- Challenge & Solution -->
+                    <div class="space-y-4 mb-6">
+                        <div class="bg-error-50 rounded-lg p-4">
+                            <h4 class="font-inter font-semibold text-sm text-error mb-2">Challenge</h4>
+                            <p class="text-sm text-text-secondary">Manual network monitoring across multiple time zones resulted in 4-hour average incident response times and $12M annual downtime costs.</p>
+                        </div>
+                        <div class="bg-success-50 rounded-lg p-4">
+                            <h4 class="font-inter font-semibold text-sm text-success mb-2">Solution</h4>
+                            <p class="text-sm text-text-secondary">AI-powered orchestration with predictive analytics, automated incident routing, and intelligent capacity forecasting.</p>
+                        </div>
+                    </div>
+
+                    <!-- Results Grid -->
+                    <div class="grid grid-cols-3 gap-4 mb-6">
+                        <div class="text-center">
+                            <div class="text-2xl font-inter font-bold text-accent mb-1">92%</div>
+                            <div class="text-xs text-text-secondary">Faster Response</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-inter font-bold text-success mb-1">$8.7M</div>
+                            <div class="text-xs text-text-secondary">Annual Savings</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-inter font-bold text-blue-500 mb-1">99.97%</div>
+                            <div class="text-xs text-text-secondary">Uptime Achieved</div>
+                        </div>
+                    </div>
+
+                    <!-- Executive Quote -->
+                    <div class="bg-secondary rounded-lg p-4 mb-6">
+                        <p class="text-sm text-text-secondary italic mb-2">
+                            "CogniXcellerate transformed our network operations from reactive to predictive. We've achieved unprecedented reliability while reducing operational costs by 35%."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://images.pixabay.com/photo/2019/11/03/20/11/portrait-4599553_1280.jpg" alt="Sarah Chen, CTO" class="w-8 h-8 rounded-full mr-3" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div>
+                                <div class="text-sm font-inter font-semibold text-text-primary">Sarah Chen</div>
+                                <div class="text-xs text-text-secondary">CTO, GlobalTel Networks</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="javascript:void(0)" class="btn-primary text-center flex-1">
+                            Download Case Study
+                        </a>
+                        <a href="javascript:void(0)" class="btn-secondary text-center flex-1">
+                            Technical Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Featured Case Study 2 - BFSI -->
+                <div class="card p-8 border-l-4 border-success">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-3 h-3 bg-success rounded-full"></div>
+                            <span class="text-sm font-inter font-medium text-success">CogniLoom • BFSI</span>
+                        </div>
+                        <span class="text-sm text-text-secondary">Enterprise Scale</span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Banking Operations Center" class="w-full h-48 object-cover rounded-lg mb-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <h3 class="font-inter font-bold text-xl text-text-primary mb-3">
+                            Major Bank Automates Loan Processing Workflow
+                        </h3>
+                        <p class="text-text-secondary mb-4">
+                            International banking institution deployed CogniLoom to streamline loan origination, credit assessment, and compliance verification processes.
+                        </p>
+                    </div>
+
+                    <!-- Challenge & Solution -->
+                    <div class="space-y-4 mb-6">
+                        <div class="bg-error-50 rounded-lg p-4">
+                            <h4 class="font-inter font-semibold text-sm text-error mb-2">Challenge</h4>
+                            <p class="text-sm text-text-secondary">Manual loan processing took 14 days average with 23% error rate in documentation, causing customer dissatisfaction and regulatory concerns.</p>
+                        </div>
+                        <div class="bg-success-50 rounded-lg p-4">
+                            <h4 class="font-inter font-semibold text-sm text-success mb-2">Solution</h4>
+                            <p class="text-sm text-text-secondary">Intelligent process automation with document AI, risk assessment algorithms, and automated compliance checking.</p>
+                        </div>
+                    </div>
+
+                    <!-- Results Grid -->
+                    <div class="grid grid-cols-3 gap-4 mb-6">
+                        <div class="text-center">
+                            <div class="text-2xl font-inter font-bold text-success mb-1">78%</div>
+                            <div class="text-xs text-text-secondary">Faster Processing</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-inter font-bold text-accent mb-1">$5.2M</div>
+                            <div class="text-xs text-text-secondary">Annual Savings</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-inter font-bold text-blue-500 mb-1">96%</div>
+                            <div class="text-xs text-text-secondary">Accuracy Rate</div>
+                        </div>
+                    </div>
+
+                    <!-- Executive Quote -->
+                    <div class="bg-secondary rounded-lg p-4 mb-6">
+                        <p class="text-sm text-text-secondary italic mb-2">
+                            "CogniLoom reduced our loan processing time from 14 days to 3 days while improving accuracy. Customer satisfaction scores increased by 40%."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Michael Rodriguez, COO" class="w-8 h-8 rounded-full mr-3" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div>
+                                <div class="text-sm font-inter font-semibold text-text-primary">Michael Rodriguez</div>
+                                <div class="text-xs text-text-secondary">COO, Premier Financial Group</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="javascript:void(0)" class="btn-primary text-center flex-1">
+                            Download Case Study
+                        </a>
+                        <a href="javascript:void(0)" class="btn-secondary text-center flex-1">
+                            Technical Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Grid -->
+    <section class="py-20 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-text-primary mb-4">
+                    All Case Studies
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Browse our complete collection of customer success stories
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Case Study Card 1 -->
+                <div class="card p-6 hover:shadow-card-hover transition-all duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <span class="text-sm font-inter font-medium text-blue-500">CogniChat</span>
+                        </div>
+                        <span class="text-xs text-text-secondary">Insurance</span>
+                    </div>
+                    
+                    <img src="https://images.pixabay.com/photo/2020/07/08/04/12/work-5382501_1280.jpg" alt="Insurance Customer Service" class="w-full h-32 object-cover rounded-lg mb-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    
+                    <h3 class="font-inter font-bold text-lg text-text-primary mb-2">
+                        Insurance Giant Enhances Customer Experience
+                    </h3>
+                    <p class="text-text-secondary text-sm mb-4">
+                        Deployed conversational AI to handle 80% of customer inquiries automatically while maintaining personalized service quality.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="text-center">
+                            <div class="text-lg font-inter font-bold text-blue-500">65%</div>
+                            <div class="text-xs text-text-secondary">Cost Reduction</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-lg font-inter font-bold text-success">94%</div>
+                            <div class="text-xs text-text-secondary">Satisfaction Score</div>
+                        </div>
+                    </div>
+                    
+                    <a href="javascript:void(0)" class="btn-primary w-full text-center">
+                        View Details
+                    </a>
+                </div>
+
+                <!-- Case Study Card 2 -->
+                <div class="card p-6 hover:shadow-card-hover transition-all duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-error rounded-full"></div>
+                            <span class="text-sm font-inter font-medium text-error">CogniAgent</span>
+                        </div>
+                        <span class="text-xs text-text-secondary">Workforce Mgmt</span>
+                    </div>
+                    
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Workforce Management Dashboard" class="w-full h-32 object-cover rounded-lg mb-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    
+                    <h3 class="font-inter font-bold text-lg text-text-primary mb-2">
+                        Manufacturing Leader Optimizes Workforce
+                    </h3>
+                    <p class="text-text-secondary text-sm mb-4">
+                        Intelligent agents manage shift scheduling, resource allocation, and performance optimization across 15 manufacturing facilities.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="text-center">
+                            <div class="text-lg font-inter font-bold text-error">43%</div>
+                            <div class="text-xs text-text-secondary">Efficiency Gain</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-lg font-inter font-bold text-accent">$3.1M</div>
+                            <div class="text-xs text-text-secondary">Annual Savings</div>
+                        </div>
+                    </div>
+                    
+                    <a href="javascript:void(0)" class="btn-primary w-full text-center">
+                        View Details
+                    </a>
+                </div>
+
+                <!-- Case Study Card 3 -->
+                <div class="card p-6 hover:shadow-card-hover transition-all duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-success rounded-full"></div>
+                            <span class="text-sm font-inter font-medium text-success">CogniLoom</span>
+                        </div>
+                        <span class="text-xs text-text-secondary">Telecom</span>
+                    </div>
+                    
+                    <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Telecom Infrastructure" class="w-full h-32 object-cover rounded-lg mb-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    
+                    <h3 class="font-inter font-bold text-lg text-text-primary mb-2">
+                        Regional Telecom Streamlines Operations
+                    </h3>
+                    <p class="text-text-secondary text-sm mb-4">
+                        Process automation across billing, provisioning, and customer onboarding reduced manual effort by 70% while improving accuracy.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="text-center">
+                            <div class="text-lg font-inter font-bold text-success">70%</div>
+                            <div class="text-xs text-text-secondary">Manual Reduction</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-lg font-inter font-bold text-blue-500">98%</div>
+                            <div class="text-xs text-text-secondary">Process Accuracy</div>
+                        </div>
+                    </div>
+                    
+                    <a href="javascript:void(0)" class="btn-primary w-full text-center">
+                        View Details
+                    </a>
+                </div>
+
+                <!-- Case Study Card 4 -->
+                <div class="card p-6 hover:shadow-card-hover transition-all duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-accent rounded-full"></div>
+                            <span class="text-sm font-inter font-medium text-accent">CogniXcellerate</span>
+                        </div>
+                        <span class="text-xs text-text-secondary">BFSI</span>
+                    </div>
+                    
+                    <img src="https://images.pixabay.com/photo/2016/11/27/21/42/stock-1863880_1280.jpg" alt="Financial Trading Floor" class="w-full h-32 object-cover rounded-lg mb-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    
+                    <h3 class="font-inter font-bold text-lg text-text-primary mb-2">
+                        Investment Firm Automates Risk Management
+                    </h3>
+                    <p class="text-text-secondary text-sm mb-4">
+                        AI orchestration platform manages portfolio risk assessment, compliance monitoring, and automated reporting across global markets.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="text-center">
+                            <div class="text-lg font-inter font-bold text-accent">85%</div>
+                            <div class="text-xs text-text-secondary">Risk Detection</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-lg font-inter font-bold text-success">$4.8M</div>
+                            <div class="text-xs text-text-secondary">Loss Prevention</div>
+                        </div>
+                    </div>
+                    
+                    <a href="javascript:void(0)" class="btn-primary w-full text-center">
+                        View Details
+                    </a>
+                </div>
+
+                <!-- Case Study Card 5 -->
+                <div class="card p-6 hover:shadow-card-hover transition-all duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <span class="text-sm font-inter font-medium text-blue-500">CogniChat</span>
+                        </div>
+                        <span class="text-xs text-text-secondary">BFSI</span>
+                    </div>
+                    
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Banking Customer Service" class="w-full h-32 object-cover rounded-lg mb-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    
+                    <h3 class="font-inter font-bold text-lg text-text-primary mb-2">
+                        Credit Union Transforms Member Service
+                    </h3>
+                    <p class="text-text-secondary text-sm mb-4">
+                        Conversational AI handles account inquiries, loan applications, and financial advice, improving member satisfaction and reducing costs.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="text-center">
+                            <div class="text-lg font-inter font-bold text-blue-500">89%</div>
+                            <div class="text-xs text-text-secondary">Query Resolution</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-lg font-inter font-bold text-success">52%</div>
+                            <div class="text-xs text-text-secondary">Cost Reduction</div>
+                        </div>
+                    </div>
+                    
+                    <a href="javascript:void(0)" class="btn-primary w-full text-center">
+                        View Details
+                    </a>
+                </div>
+
+                <!-- Case Study Card 6 -->
+                <div class="card p-6 hover:shadow-card-hover transition-all duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-error rounded-full"></div>
+                            <span class="text-sm font-inter font-medium text-error">CogniAgent</span>
+                        </div>
+                        <span class="text-xs text-text-secondary">Insurance</span>
+                    </div>
+                    
+                    <img src="https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Insurance Claims Processing" class="w-full h-32 object-cover rounded-lg mb-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    
+                    <h3 class="font-inter font-bold text-lg text-text-primary mb-2">
+                        Insurance Provider Accelerates Claims
+                    </h3>
+                    <p class="text-text-secondary text-sm mb-4">
+                        Intelligent agents automate claims processing, fraud detection, and settlement workflows, reducing processing time by 60%.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="text-center">
+                            <div class="text-lg font-inter font-bold text-error">60%</div>
+                            <div class="text-xs text-text-secondary">Faster Processing</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-lg font-inter font-bold text-accent">$2.3M</div>
+                            <div class="text-xs text-text-secondary">Fraud Prevention</div>
+                        </div>
+                    </div>
+                    
+                    <a href="javascript:void(0)" class="btn-primary w-full text-center">
+                        View Details
+                    </a>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="btn-secondary">
+                    Load More Case Studies
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Compliance Section -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-text-primary mb-4">
+                    Enterprise Trust & Compliance
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Our implementations meet the highest standards of security, compliance, and reliability
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <!-- Compliance Badge 1 -->
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 bg-success rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-lg text-text-primary mb-2">SOC 2 Type II</h3>
+                    <p class="text-text-secondary text-sm">Certified security controls and operational effectiveness</p>
+                </div>
+
+                <!-- Compliance Badge 2 -->
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-lg text-text-primary mb-2">ISO 27001</h3>
+                    <p class="text-text-secondary text-sm">International information security management standard</p>
+                </div>
+
+                <!-- Compliance Badge 3 -->
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 bg-accent rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-lg text-text-primary mb-2">GDPR Compliant</h3>
+                    <p class="text-text-secondary text-sm">Full compliance with European data protection regulations</p>
+                </div>
+
+                <!-- Compliance Badge 4 -->
+                <div class="card p-6 text-center">
+                    <div class="w-16 h-16 bg-error rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-lg text-text-primary mb-2">HIPAA Ready</h3>
+                    <p class="text-text-secondary text-sm">Healthcare data protection and privacy compliance</p>
+                </div>
+            </div>
+
+            <!-- Implementation Statistics -->
+            <div class="bg-secondary rounded-lg p-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-3xl font-inter font-bold text-accent mb-2">99.97%</div>
+                        <div class="text-text-secondary">Average Uptime</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-inter font-bold text-success mb-2">150+</div>
+                        <div class="text-text-secondary">Successful Deployments</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-inter font-bold text-blue-500 mb-2">4.2 Mo</div>
+                        <div class="text-text-secondary">Average Implementation</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-inter font-bold text-error mb-2">24/7</div>
+                        <div class="text-text-secondary">Enterprise Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-text-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-inter font-bold text-3xl lg:text-4xl text-primary mb-4">
+                Ready to Join Our Success Stories?
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your enterprise operations with proven AI solutions. Start your journey to measurable ROI today.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="javascript:void(0)" class="btn-primary">
+                    Schedule Consultation
+                </a>
+                <a href="javascript:void(0)" class="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-text-primary font-inter font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+                    Download Success Guide
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-200 border-t border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg width="32" height="32" viewBox="0 0 40 40" class="mr-3">
+                            <polygon points="20,2 35,12 35,28 20,38 5,28 5,12" fill="#FEC400" opacity="0.8"/>
+                            <polygon points="20,6 31,14 31,26 20,34 9,26 9,14" fill="#2ECC71" opacity="0.7"/>
+                            <polygon points="20,10 27,16 27,24 20,30 13,24 13,16" fill="#3498DB" opacity="0.6"/>
+                            <polygon points="20,14 23,18 23,22 20,26 17,22 17,18" fill="#E74C3C" opacity="0.9"/>
+                        </svg>
+                        <span class="font-inter font-bold text-xl text-text-primary">Cogniwide</span>
+                    </div>
+                    <p class="text-text-secondary mb-4 max-w-md">
+                        Intelligent automation that amplifies human potential. Transform your enterprise with AI-powered solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-inter font-semibold text-text-primary mb-4">Solutions</h4>
+                    <ul class="space-y-2">
+                        <li><a href="cogni_xcellerate_product_deep_dive.html" class="text-text-secondary hover:text-accent transition-colors duration-300">CogniXcellerate</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">CogniLoom</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">CogniChat</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">CogniAgent</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="font-inter font-semibold text-text-primary mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="resource_center.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Resource Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">Documentation</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">Case Studies</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-text-secondary text-sm">
+                    © 2025 Cogniwide AI Platform. All Rights Reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-accent text-sm transition-colors duration-300">Privacy Policy</a>
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-accent text-sm transition-colors duration-300">Terms of Service</a>
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-accent text-sm transition-colors duration-300">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

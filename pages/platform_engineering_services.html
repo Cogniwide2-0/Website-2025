@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platform Engineering Services - Cogniwide AI Platform</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Comprehensive platform engineering services with Loom portal integration. Infrastructure orchestration, DevOps automation, and CI/CD solutions for enterprise AI deployment." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fcogniwide6280back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="bg-primary border-b border-border-light sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg width="40" height="40" viewBox="0 0 40 40" class="transition-transform duration-300 hover:scale-105">
+                            <polygon points="20,2 35,12 35,28 20,38 5,28 5,12" fill="#FEC400" opacity="0.8"/>
+                            <polygon points="20,6 31,14 31,26 20,34 9,26 9,14" fill="#2ECC71" opacity="0.7"/>
+                            <polygon points="20,10 27,16 27,24 20,30 13,24 13,16" fill="#3498DB" opacity="0.6"/>
+                            <polygon points="20,14 23,18 23,22 20,26 17,22 17,18" fill="#E74C3C" opacity="0.9"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <span class="font-inter font-bold text-xl text-text-primary">Cogniwide</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <div class="relative group">
+                            <button class="text-text-primary hover:text-accent font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
+                                Products
+                            </button>
+                            <!-- Mega Menu -->
+                            <div class="absolute left-0 mt-2 w-96 bg-primary rounded-lg shadow-enterprise border border-border-light opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                <div class="p-6">
+                                    <div class="grid grid-cols-1 gap-4">
+                                        <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-surface transition-colors duration-300">
+                                            <div class="w-3 h-3 bg-accent rounded-full mr-3"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold text-text-primary">CogniXcellerate</h4>
+                                                <p class="text-text-secondary text-sm">AI Orchestration Platform</p>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="flex items-center p-3 rounded-lg hover:bg-surface transition-colors duration-300">
+                                            <div class="w-3 h-3 bg-success rounded-full mr-3"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold text-text-primary">CogniLoom</h4>
+                                                <p class="text-text-secondary text-sm">Intelligent Process Automation</p>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="flex items-center p-3 rounded-lg hover:bg-surface transition-colors duration-300">
+                                            <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold text-text-primary">CogniChat</h4>
+                                                <p class="text-text-secondary text-sm">Conversational AI Platform</p>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="flex items-center p-3 rounded-lg hover:bg-surface transition-colors duration-300">
+                                            <div class="w-3 h-3 bg-error rounded-full mr-3"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold text-text-primary">CogniAgent</h4>
+                                                <p class="text-text-secondary text-sm">Intelligent Agent Framework</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="solutions_showcase.html" class="text-text-primary hover:text-accent font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">Solutions</a>
+                        <a href="platform_engineering_services.html" class="text-accent font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">Services</a>
+                        <a href="industries_hub.html" class="text-text-primary hover:text-accent font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">Industries</a>
+                        <a href="resource_center.html" class="text-text-primary hover:text-accent font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">Resources</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="javascript:void(0)" class="btn-primary">
+                        Request Demo
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-text-primary hover:text-accent p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Loom Portal Demo -->
+    <section class="relative bg-gradient-to-br from-primary via-secondary-100 to-accent-50 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-accent/5 to-success/5"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <div class="inline-flex items-center px-4 py-2 bg-accent-50 rounded-full">
+                            <div class="w-2 h-2 bg-accent rounded-full mr-2"></div>
+                            <span class="text-sm font-inter font-medium text-accent-500">Platform Engineering Excellence</span>
+                        </div>
+                        <h1 class="font-inter font-bold text-4xl lg:text-6xl text-text-primary leading-tight">
+                            Enterprise-Grade 
+                            <span class="text-gradient">Platform Engineering</span>
+                        </h1>
+                        <p class="text-xl text-text-secondary leading-relaxed">
+                            Build scalable, secure AI infrastructure with our comprehensive platform engineering services and integrated Loom portal for real-time monitoring and orchestration.
+                        </p>
+                    </div>
+                    
+                    <!-- Service Highlights -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="flex items-center space-x-3 p-4 bg-primary rounded-lg border border-border-light">
+                            <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12zm-9 7a1 1 0 012 0v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1-1v-4zm13-1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L15 13.586V12a1 1 0 011-1z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-inter font-semibold text-sm text-text-primary">Auto-Scaling</h4>
+                                <p class="text-xs text-text-secondary">99.9% uptime</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 p-4 bg-primary rounded-lg border border-border-light">
+                            <div class="w-8 h-8 bg-success rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-inter font-semibold text-sm text-text-primary">CI/CD Pipeline</h4>
+                                <p class="text-xs text-text-secondary">Automated deployment</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 p-4 bg-primary rounded-lg border border-border-light">
+                            <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-inter font-semibold text-sm text-text-primary">Security First</h4>
+                                <p class="text-xs text-text-secondary">Zero-trust architecture</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="javascript:void(0)" class="btn-primary text-center">
+                            Explore Loom Portal
+                        </a>
+                        <a href="javascript:void(0)" class="btn-secondary text-center">
+                            Technical Consultation
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Live Loom Portal Demo -->
+                <div class="relative">
+                    <div class="bg-text-primary rounded-2xl p-6 shadow-enterprise">
+                        <!-- Portal Header -->
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm2 2a1 1 0 000 2h.01a1 1 0 100-2H5zm3 0a1 1 0 000 2h3a1 1 0 100-2H8z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-inter font-semibold text-white">Loom Portal</h3>
+                                    <p class="text-gray-400 text-sm">Live Platform Monitoring</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-success rounded-full"></div>
+                                <span class="text-success text-sm font-ibm-mono">LIVE</span>
+                            </div>
+                        </div>
+
+                        <!-- Dashboard Grid -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-800 rounded-lg p-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-gray-300 text-sm">CPU Usage</span>
+                                    <span class="text-success font-ibm-mono text-sm">67%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="bg-success h-2 rounded-full" style="width: 67%"></div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-800 rounded-lg p-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-gray-300 text-sm">Memory</span>
+                                    <span class="text-accent font-ibm-mono text-sm">4.2GB</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full" style="width: 52%"></div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-800 rounded-lg p-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-gray-300 text-sm">Active Pods</span>
+                                    <span class="text-blue-400 font-ibm-mono text-sm">24</span>
+                                </div>
+                                <div class="flex space-x-1">
+                                    <div class="w-2 h-2 bg-success rounded-full"></div>
+                                    <div class="w-2 h-2 bg-success rounded-full"></div>
+                                    <div class="w-2 h-2 bg-success rounded-full"></div>
+                                    <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-800 rounded-lg p-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-gray-300 text-sm">Deployments</span>
+                                    <span class="text-success font-ibm-mono text-sm">12/h</span>
+                                </div>
+                                <div class="text-xs text-gray-400">Last: 2 min ago</div>
+                            </div>
+                        </div>
+
+                        <!-- Live Activity Feed -->
+                        <div class="bg-gray-800 rounded-lg p-4">
+                            <h4 class="text-white font-inter font-semibold mb-3">Recent Activity</h4>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-3 text-sm">
+                                    <div class="w-2 h-2 bg-success rounded-full"></div>
+                                    <span class="text-gray-300 font-ibm-mono">14:31:15</span>
+                                    <span class="text-gray-400">Deployment completed: api-service-v2.1.3</span>
+                                </div>
+                                <div class="flex items-center space-x-3 text-sm">
+                                    <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                    <span class="text-gray-300 font-ibm-mono">14:29:42</span>
+                                    <span class="text-gray-400">Auto-scaling triggered: web-tier +2 instances</span>
+                                </div>
+                                <div class="flex items-center space-x-3 text-sm">
+                                    <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                    <span class="text-gray-300 font-ibm-mono">14:28:01</span>
+                                    <span class="text-gray-400">Health check passed: database cluster</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Service Areas -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-text-primary mb-4">
+                    Comprehensive Platform Engineering Services
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Three core service areas designed to accelerate your AI platform deployment and ensure long-term success
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Infrastructure Orchestration -->
+                <div class="card p-8 border-l-4 border-accent">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-500 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12zm-9 7a1 1 0 012 0v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1-1v-4zm13-1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L15 13.586V12a1 1 0 011-1z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-inter font-bold text-2xl text-text-primary mb-4">Infrastructure Orchestration</h3>
+                        <p class="text-text-secondary mb-6">
+                            Cloud-native infrastructure design and orchestration with intelligent resource optimization and automated scaling capabilities.
+                        </p>
+                    </div>
+
+                    <!-- Technical Specifications -->
+                    <div class="space-y-4 mb-6">
+                        <div class="bg-secondary rounded-lg p-4">
+                            <h4 class="font-inter font-semibold text-text-primary mb-2">Key Capabilities</h4>
+                            <ul class="space-y-2 text-sm text-text-secondary">
+                                <li class="flex items-center">
+                                    <div class="w-1.5 h-1.5 bg-accent rounded-full mr-2"></div>
+                                    Kubernetes orchestration with custom operators
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-1.5 h-1.5 bg-accent rounded-full mr-2"></div>
+                                    Multi-cloud deployment strategies
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-1.5 h-1.5 bg-accent rounded-full mr-2"></div>
+                                    Infrastructure as Code (Terraform/Pulumi)
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-1.5 h-1.5 bg-accent rounded-full mr-2"></div>
+                                    Automated disaster recovery
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Code Example -->
+                        <div class="bg-text-primary rounded-lg p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-300 text-sm font-inter font-semibold">Kubernetes Deployment</span>
+                                <span class="text-accent text-xs font-ibm-mono">YAML</span>
+                            </div>
+                            <pre class="text-gray-300 text-xs font-ibm-mono overflow-x-auto">
+<code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cogni-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cogni-api
+  template:
+    metadata:
+      labels:
+        app: cogni-api
+    spec:
+      containers:
+      - name: api
+        image: cogniwide/api:v2.1.3
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"</code>
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- Success Metrics -->
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="text-center">
+                            <div class="text-2xl font-inter font-bold text-accent">99.9%</div>
+                            <div class="text-sm text-text-secondary">Uptime SLA</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-inter font-bold text-accent">40%</div>
+                            <div class="text-sm text-text-secondary">Cost Reduction</div>
+                        </div>
+                    </div>
+
+                    <a href="javascript:void(0)" class="btn-primary w-full">
+                        Learn More
+                    </a>
+                </div>
+
+                <!-- DevOps Automation -->
+                <div class="card p-8 border-l-4 border-success">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-success to-green-600 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-inter font-bold text-2xl text-text-primary mb-4">DevOps Automation</h3>
+                        <p class="text-text-secondary mb-6">
+                            End-to-end automation of development workflows with intelligent monitoring, testing, and deployment pipelines.
+                        </p>
+                    </div>
+
+                    <!-- Pipeline Visualization -->
+                    <div class="space-y-4 mb-6">
+                        <div class="bg-secondary rounded-lg p-4">
+                            <h4 class="font-inter font-semibold text-text-primary mb-3">Automated Pipeline Stages</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-success rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center justify-between">
+                                            <span class="font-inter font-medium text-text-primary">Code Commit</span>
+                                            <span class="text-xs text-success font-ibm-mono">PASSED</span>
+                                        </div>
+                                        <div class="text-sm text-text-secondary">Automated testing & validation</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-success rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center justify-between">
+                                            <span class="font-inter font-medium text-text-primary">Build & Package</span>
+                                            <span class="text-xs text-success font-ibm-mono">PASSED</span>
+                                        </div>
+                                        <div class="text-sm text-text-secondary">Container image creation</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                                        <div class="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center justify-between">
+                                            <span class="font-inter font-medium text-text-primary">Deploy to Staging</span>
+                                            <span class="text-xs text-accent font-ibm-mono">RUNNING</span>
+                                        </div>
+                                        <div class="text-sm text-text-secondary">Automated deployment in progress</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Success Metrics -->
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="text-center">
+                            <div class="text-2xl font-inter font-bold text-success">85%</div>
+                            <div class="text-sm text-text-secondary">Faster Deployments</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-inter font-bold text-success">12x</div>
+                            <div class="text-sm text-text-secondary">Daily Releases</div>
+                        </div>
+                    </div>
+
+                    <a href="javascript:void(0)" class="btn-primary w-full">
+                        Learn More
+                    </a>
+                </div>
+
+                <!-- CI/CD Pipeline -->
+                <div class="card p-8 border-l-4 border-blue-500">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-inter font-bold text-2xl text-text-primary mb-4">Continuous Integration/Deployment</h3>
+                        <p class="text-text-secondary mb-6">
+                            Robust CI/CD pipelines with automated testing, security scanning, and intelligent deployment strategies.
+                        </p>
+                    </div>
+
+                    <!-- Pipeline Health Dashboard -->
+                    <div class="space-y-4 mb-6">
+                        <div class="bg-secondary rounded-lg p-4">
+                            <h4 class="font-inter font-semibold text-text-primary mb-3">Pipeline Health</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-text-secondary">Success Rate</span>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-20 bg-gray-200 rounded-full h-2">
+                                            <div class="bg-success h-2 rounded-full" style="width: 94%"></div>
+                                        </div>
+                                        <span class="text-sm font-ibm-mono text-success">94%</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-text-secondary">Avg. Build Time</span>
+                                    <span class="text-sm font-ibm-mono text-blue-500">3m 42s</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-text-secondary">Tests Passed</span>
+                                    <span class="text-sm font-ibm-mono text-success">2,847/2,891</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-text-secondary">Security Scans</span>
+                                    <span class="text-sm font-ibm-mono text-success">0 Critical Issues</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Success Metrics -->
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="text-center">
+                            <div class="text-2xl font-inter font-bold text-blue-500">2.5min</div>
+                            <div class="text-sm text-text-secondary">Avg Build Time</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-inter font-bold text-blue-500">99.2%</div>
+                            <div class="text-sm text-text-secondary">Pipeline Reliability</div>
+                        </div>
+                    </div>
+
+                    <a href="javascript:void(0)" class="btn-primary w-full">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Architecture Deep Dive -->
+    <section class="py-20 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-text-primary mb-4">
+                    Technical Architecture & Implementation
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Comprehensive technical documentation and architecture diagrams for solution architects and DevOps engineers
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Architecture Diagram -->
+                <div class="card p-8">
+                    <h3 class="font-inter font-bold text-xl text-text-primary mb-6">Platform Architecture</h3>
+                    <div class="bg-text-primary rounded-lg p-6 mb-6">
+                        <!-- Simplified Architecture Diagram -->
+                        <div class="space-y-4">
+                            <!-- Load Balancer Layer -->
+                            <div class="flex justify-center">
+                                <div class="bg-accent rounded-lg px-4 py-2 text-white text-sm font-inter font-semibold">
+                                    Load Balancer
+                                </div>
+                            </div>
+                            
+                            <!-- API Gateway Layer -->
+                            <div class="flex justify-center">
+                                <div class="bg-success rounded-lg px-4 py-2 text-white text-sm font-inter font-semibold">
+                                    API Gateway
+                                </div>
+                            </div>
+                            
+                            <!-- Microservices Layer -->
+                            <div class="grid grid-cols-3 gap-2">
+                                <div class="bg-blue-500 rounded-lg px-3 py-2 text-white text-xs font-inter font-semibold text-center">
+                                    Auth Service
+                                </div>
+                                <div class="bg-blue-500 rounded-lg px-3 py-2 text-white text-xs font-inter font-semibold text-center">
+                                    AI Engine
+                                </div>
+                                <div class="bg-blue-500 rounded-lg px-3 py-2 text-white text-xs font-inter font-semibold text-center">
+                                    Data Service
+                                </div>
+                            </div>
+                            
+                            <!-- Data Layer -->
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="bg-error rounded-lg px-3 py-2 text-white text-xs font-inter font-semibold text-center">
+                                    PostgreSQL
+                                </div>
+                                <div class="bg-error rounded-lg px-3 py-2 text-white text-xs font-inter font-semibold text-center">
+                                    Redis Cache
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Architecture Features -->
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-accent rounded-full"></div>
+                            <span class="text-sm text-text-secondary">Kubernetes-native deployment</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-success rounded-full"></div>
+                            <span class="text-sm text-text-secondary">Microservices architecture</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <span class="text-sm text-text-secondary">Event-driven communication</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-error rounded-full"></div>
+                            <span class="text-sm text-text-secondary">Distributed data management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Implementation Guide -->
+                <div class="space-y-8">
+                    <!-- Code Examples -->
+                    <div class="card p-6">
+                        <h4 class="font-inter font-semibold text-lg text-text-primary mb-4">Docker Configuration</h4>
+                        <div class="bg-text-primary rounded-lg p-4">
+                            <pre class="text-gray-300 text-sm font-ibm-mono overflow-x-auto">
+<code># Dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]
+
+# docker-compose.yml
+version: '3.8'
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - postgres
+      - redis</code>
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- Integration Documentation -->
+                    <div class="card p-6">
+                        <h4 class="font-inter font-semibold text-lg text-text-primary mb-4">API Integration</h4>
+                        <div class="space-y-4">
+                            <div class="bg-secondary rounded-lg p-4">
+                                <h5 class="font-inter font-semibold text-text-primary mb-2">Authentication</h5>
+                                <div class="bg-text-primary rounded p-3">
+                                    <code class="text-gray-300 text-sm font-ibm-mono">
+                                        POST /api/v1/auth/token<br />
+                                        Authorization: Bearer &lt;jwt-token&gt;
+                                    </code>
+                                </div>
+                            </div>
+                            <div class="bg-secondary rounded-lg p-4">
+                                <h5 class="font-inter font-semibold text-text-primary mb-2">Deployment Endpoint</h5>
+                                <div class="bg-text-primary rounded p-3">
+                                    <code class="text-gray-300 text-sm font-ibm-mono">
+                                        POST /api/v1/deploy<br />
+                                        Content-Type: application/json
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Performance Metrics -->
+                    <div class="card p-6">
+                        <h4 class="font-inter font-semibold text-lg text-text-primary mb-4">Performance Benchmarks</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <div class="text-2xl font-inter font-bold text-accent">< 100ms</div>
+                                <div class="text-sm text-text-secondary">API Response Time</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-inter font-bold text-success">10,000+</div>
+                                <div class="text-sm text-text-secondary">Requests/Second</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Success Stories -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-text-primary mb-4">
+                    Technical Success Stories
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Real-world implementations showcasing technical achievements and measurable improvements
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Case Study 1 -->
+                <div class="card p-8">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Enterprise Client" class="w-16 h-16 rounded-lg object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h3 class="font-inter font-bold text-xl text-text-primary">Global Telecom Provider</h3>
+                            <p class="text-text-secondary">Infrastructure Modernization</p>
+                        </div>
+                    </div>
+                    
+                    <blockquote class="text-text-secondary italic mb-6">
+                        "Cogniwide's platform engineering team reduced our deployment time from 6 hours to 15 minutes while improving system reliability by 300%. The Loom portal gives us unprecedented visibility into our infrastructure."
+                    </blockquote>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Deployment Speed</span>
+                            <span class="font-inter font-bold text-success">24x Faster</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">System Uptime</span>
+                            <span class="font-inter font-bold text-success">99.97%</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Cost Reduction</span>
+                            <span class="font-inter font-bold text-success">45%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-1">
+                            <div class="text-sm font-inter font-semibold text-text-primary">Sarah Chen</div>
+                            <div class="text-sm text-text-secondary">CTO, TelecomGlobal</div>
+                        </div>
+                        <div class="flex space-x-1">
+                            <div class="w-1 h-1 bg-accent rounded-full"></div>
+                            <div class="w-1 h-1 bg-success rounded-full"></div>
+                            <div class="w-1 h-1 bg-blue-500 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="card p-8">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img src="https://images.pixabay.com/photo/2016/11/27/21/42/stock-1863880_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Financial Services Client" class="w-16 h-16 rounded-lg object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h3 class="font-inter font-bold text-xl text-text-primary">Leading Financial Institution</h3>
+                            <p class="text-text-secondary">DevOps Transformation</p>
+                        </div>
+                    </div>
+                    
+                    <blockquote class="text-text-secondary italic mb-6">
+                        "The automated CI/CD pipeline implementation exceeded our expectations. We now deploy 50+ times per day with zero downtime, and the security scanning integration gives us complete confidence in our releases."
+                    </blockquote>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Daily Deployments</span>
+                            <span class="font-inter font-bold text-success">50+</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Zero Downtime</span>
+                            <span class="font-inter font-bold text-success">100%</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Security Compliance</span>
+                            <span class="font-inter font-bold text-success">SOC 2 Type II</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-1">
+                            <div class="text-sm font-inter font-semibold text-text-primary">Michael Rodriguez</div>
+                            <div class="text-sm text-text-secondary">VP Engineering, FinanceFirst</div>
+                        </div>
+                        <div class="flex space-x-1">
+                            <div class="w-1 h-1 bg-accent rounded-full"></div>
+                            <div class="w-1 h-1 bg-success rounded-full"></div>
+                            <div class="w-1 h-1 bg-blue-500 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tools Section -->
+    <section class="py-20 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-text-primary mb-4">
+                    Interactive Platform Tools
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Explore our platform capabilities with interactive dashboards and deployment calculators
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Platform Health Dashboard -->
+                <div class="card p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-inter font-bold text-xl text-text-primary">Platform Health Dashboard</h3>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-success rounded-full"></div>
+                            <span class="text-success text-sm font-ibm-mono">LIVE</span>
+                        </div>
+                    </div>
+
+                    <!-- Real-time Metrics -->
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-secondary rounded-lg p-4">
+                            <div class="text-2xl font-inter font-bold text-success mb-1">99.97%</div>
+                            <div class="text-sm text-text-secondary">System Uptime</div>
+                        </div>
+                        <div class="bg-secondary rounded-lg p-4">
+                            <div class="text-2xl font-inter font-bold text-accent mb-1">847ms</div>
+                            <div class="text-sm text-text-secondary">Avg Response Time</div>
+                        </div>
+                        <div class="bg-secondary rounded-lg p-4">
+                            <div class="text-2xl font-inter font-bold text-blue-500 mb-1">2.4K</div>
+                            <div class="text-sm text-text-secondary">Active Connections</div>
+                        </div>
+                        <div class="bg-secondary rounded-lg p-4">
+                            <div class="text-2xl font-inter font-bold text-error mb-1">0</div>
+                            <div class="text-sm text-text-secondary">Critical Alerts</div>
+                        </div>
+                    </div>
+
+                    <!-- Resource Usage -->
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm text-text-secondary">CPU Usage</span>
+                                <span class="text-sm font-ibm-mono text-success">67%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-success h-2 rounded-full transition-all duration-300" style="width: 67%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm text-text-secondary">Memory Usage</span>
+                                <span class="text-sm font-ibm-mono text-accent">52%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-accent h-2 rounded-full transition-all duration-300" style="width: 52%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm text-text-secondary">Storage Usage</span>
+                                <span class="text-sm font-ibm-mono text-blue-500">34%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full transition-all duration-300" style="width: 34%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deployment Timeline Calculator -->
+                <div class="card p-8">
+                    <h3 class="font-inter font-bold text-xl text-text-primary mb-6">Deployment Timeline Calculator</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Input Fields -->
+                        <div>
+                            <label class="block text-sm font-inter font-medium text-text-primary mb-2">
+                                Application Complexity
+                            </label>
+                            <select class="input-field">
+                                <option>Simple (Microservice)</option>
+                                <option>Medium (Multi-service)</option>
+                                <option>Complex (Enterprise)</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-inter font-medium text-text-primary mb-2">
+                                Team Size
+                            </label>
+                            <input type="number" class="input-field" placeholder="5" value="5" />
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-inter font-medium text-text-primary mb-2">
+                                Infrastructure Type
+                            </label>
+                            <select class="input-field">
+                                <option>Cloud-Native</option>
+                                <option>Hybrid Cloud</option>
+                                <option>On-Premises</option>
+                            </select>
+                        </div>
+
+                        <!-- Results -->
+                        <div class="bg-accent-50 rounded-lg p-6">
+                            <h4 class="font-inter font-semibold text-text-primary mb-4">Estimated Timeline</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-text-secondary">Setup & Configuration</span>
+                                    <span class="font-inter font-semibold text-accent-500">2-3 days</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-text-secondary">Pipeline Implementation</span>
+                                    <span class="font-inter font-semibold text-accent-500">1-2 weeks</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-text-secondary">Testing & Optimization</span>
+                                    <span class="font-inter font-semibold text-accent-500">3-5 days</span>
+                                </div>
+                                <div class="border-t border-border pt-3">
+                                    <div class="flex justify-between items-center">
+                                        <span class="font-inter font-semibold text-text-primary">Total Timeline</span>
+                                        <span class="font-inter font-bold text-xl text-success">2-3 weeks</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-primary w-full">
+                            Get Detailed Estimate
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Consultation CTA -->
+    <section class="py-20 bg-text-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-inter font-bold text-3xl lg:text-4xl text-primary mb-4">
+                Ready to Transform Your Platform Engineering?
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Schedule a technical consultation with our platform engineering experts and discover how Cogniwide can accelerate your AI infrastructure deployment.
+            </p>
+            
+            <!-- Consultation Booking Form -->
+            <div class="max-w-2xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <input type="text" class="input-field bg-gray-800 border-gray-600 text-white placeholder-gray-400" placeholder="Your Name" />
+                    <input type="email" class="input-field bg-gray-800 border-gray-600 text-white placeholder-gray-400" placeholder="Work Email" />
+                    <input type="text" class="input-field bg-gray-800 border-gray-600 text-white placeholder-gray-400" placeholder="Company" />
+                    <select class="input-field bg-gray-800 border-gray-600 text-white">
+                        <option>Infrastructure Assessment</option>
+                        <option>DevOps Transformation</option>
+                        <option>CI/CD Implementation</option>
+                        <option>Platform Migration</option>
+                    </select>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="btn-primary">
+                        Schedule Technical Consultation
+                    </button>
+                    <a href="javascript:void(0)" class="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-text-primary font-inter font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+                        Download Technical Guide
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-200 border-t border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg width="32" height="32" viewBox="0 0 40 40" class="mr-3">
+                            <polygon points="20,2 35,12 35,28 20,38 5,28 5,12" fill="#FEC400" opacity="0.8"/>
+                            <polygon points="20,6 31,14 31,26 20,34 9,26 9,14" fill="#2ECC71" opacity="0.7"/>
+                            <polygon points="20,10 27,16 27,24 20,30 13,24 13,16" fill="#3498DB" opacity="0.6"/>
+                            <polygon points="20,14 23,18 23,22 20,26 17,22 17,18" fill="#E74C3C" opacity="0.9"/>
+                        </svg>
+                        <span class="font-inter font-bold text-xl text-text-primary">Cogniwide</span>
+                    </div>
+                    <p class="text-text-secondary mb-4 max-w-md">
+                        Intelligent automation that amplifies human potential. Transform your enterprise with AI-powered solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-inter font-semibold text-text-primary mb-4">Solutions</h4>
+                    <ul class="space-y-2">
+                        <li><a href="cogni_xcellerate_product_deep_dive.html" class="text-text-secondary hover:text-accent transition-colors duration-300">CogniXcellerate</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">CogniLoom</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">CogniChat</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">CogniAgent</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="font-inter font-semibold text-text-primary mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="resource_center.html" class="text-text-secondary hover:text-accent transition-colors duration-300">Resource Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">Documentation</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">Case Studies</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-colors duration-300">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-text-secondary text-sm">
+                    © 2025 Cogniwide AI Platform. All Rights Reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-accent text-sm transition-colors duration-300">Privacy Policy</a>
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-accent text-sm transition-colors duration-300">Terms of Service</a>
+                    <a href="javascript:void(0)" class="text-text-secondary hover:text-accent text-sm transition-colors duration-300">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

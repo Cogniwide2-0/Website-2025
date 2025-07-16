@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #FFFFFF; /* white
+  --color-primary-50: #FAFAFA; /* gray-50 */
+  --color-primary-100: #F5F5F5; /* gray-100 */
+  
+  /* Secondary Colors */
+  --color-secondary: #F8F9FA; /* gray-50 */
+  --color-secondary-100: #F1F3F4; /* gray-100 */
+  --color-secondary-200: #E8EAED; /* gray-200 */
+  
+  /* Accent Colors */
+  --color-accent: #FEC400; /* yellow-400 */
+  --color-accent-50: #FFFBEB; /* yellow-50 */
+  --color-accent-100: #FEF3C7; /* yellow-100 */
+  --color-accent-500: #F59E0B; /* yellow-500 */
+  
+  /* Background Colors */
+  --color-background: #FFFFFF; /* white */
+  --color-surface: #F1F3F4; /* gray-100 */
+  --color-surface-hover: #E8EAED; /* gray-200 */
+  
+  /* Text Colors */
+  --color-text-primary: #1A1A1A; /* gray-900 */
+  --color-text-secondary: #6B7280; /* gray-500 */
+  --color-text-muted: #9CA3AF; /* gray-400 */
+  
+  /* Status Colors */
+  --color-success: #2ECC71; /* green-500 */
+  --color-success-50: #ECFDF5; /* green-50 */
+  --color-success-100: #D1FAE5; /* green-100 */
+  
+  --color-warning: #F59E0B; /* yellow-500 */
+  --color-warning-50: #FFFBEB; /* yellow-50 */
+  --color-warning-100: #FEF3C7; /* yellow-100 */
+  
+  --color-error: #E74C3C; /* red-500 */
+  --color-error-50: #FEF2F2; /* red-50 */
+  --color-error-100: #FEE2E2; /* red-100 */
+  
+  /* Border Colors */
+  --color-border: #E5E7EB; /* gray-200 */
+  --color-border-light: #F3F4F6; /* gray-100 */
+  
+  /* Shadow Values */
+  --shadow-subtle: 0px 4px 10px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0px 2px 8px rgba(0, 0, 0, 0.04);
+  
+  /* Animation Timing */
+  --transition-fast: 300ms ease-in-out;
+  --transition-medium: 400ms ease-in-out;
+}
+
+/* Base Styles */
+@layer base {
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+  }
+  
+  .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-gray-900 font-inter font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-accent-500 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface text-text-primary font-inter font-semibold px-6 py-3 rounded-lg border border-border transition-all duration-300 hover:bg-surface-hover focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50;
+  }
+  
+  .card {
+    @apply bg-primary rounded-lg shadow-subtle border border-border-light transition-all duration-300 hover:shadow-card;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-border rounded-lg bg-primary text-text-primary placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all duration-300;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-accent-500 bg-clip-text text-transparent;
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  .transition-smooth {
+    transition: all var(--transition-fast);
+  }
+  
+  .transition-content {
+    transition: all var(--transition-medium);
+  }
+  
+  .shadow-enterprise {
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card);
+  }
+}
