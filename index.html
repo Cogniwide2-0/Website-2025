@@ -3,87 +3,1691 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting to Homepage - Platform Engineering Services</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <title>Cogniwide AI Platform - Intelligent Automation That Amplifies Human Potential</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter and IBM Plex Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Enterprise AI solutions platform offering intelligent automation through CogniXcellerate, CogniLoom, CogniChat, and CogniAgent. Transform your business with AI-powered orchestration." />
     <style>
+
+        /* Base Dark Mode Colors (Default) */
+        :root {
+            --color-primary-dark: #0a0a0a;
+            --color-secondary-dark: #1a1a1a;
+            --color-border-dark: #333333;
+            --color-text-light: #f3f4f6; /* gray-100 */
+            --color-text-muted: #9ca3af; /* gray-400 */
+            --color-accent-vibrant: #a855f7; /* purple-500 */
+            --color-accent-vibrant-light: #c084fc; /* purple-400 */
+            --color-success-vibrant: #22c55e; /* green-500 */
+            --color-blue-vibrant: #3b82f6; /* blue-500 */
+            --color-error-vibrant: #ef4444; /* red-500 */
+            --color-card-bg: #1a1a1a; /* bg-gray-900 */
+            --color-card-border: #333333; /* border-gray-800 */
+            --color-input-bg: #1f2937; /* bg-gray-800 */
+            --color-input-border: #4b5563; /* border-gray-700 */
+            --color-input-text: #f3f4f6; /* text-gray-100 */
+            --color-input-placeholder: #9ca3af; /* placeholder-gray-500 */
+            --color-button-dark-bg: #0a0a0a; /* for inner buttons in dark mode */
+            --color-button-dark-text: #f3f4f6; /* for inner buttons text in dark mode */
+            --color-button-secondary-text: #d1d5db; /* text-gray-300 */
+            --color-button-hover-bg: #1f2937; /* hover:bg-gray-800 */
+            --color-button-secondary-hover-text: #f3f4f6; /* hover:text-white */
+            --color-header-bg: #1a1a1a; /* bg-secondary-dark */
+            --color-header-border: #333333; /* border-border-dark */
+            --color-nav-link: #d1d5db; /* text-gray-300 */
+            --color-nav-link-hover: #c084fc; /* hover:text-purple-400 */
+            --color-logo-text: #f3f4f6; /* text-gray-100 */
+            --color-mobile-menu-bg: #1a1a1a; /* bg-secondary-dark */
+            --color-mobile-menu-border: #4b5563; /* border-gray-700 */
+            --color-mobile-link-text: #9ca3af; /* text-gray-400 */
+            --color-mobile-link-hover: #c084fc; /* hover:text-purple-400 */
+            --color-footer-bg: #1a1a1a; /* bg-secondary-dark */
+            --color-footer-border: #333333; /* border-border-dark */
+            --color-footer-text: #9ca3af; /* text-gray-400 */
+            --color-footer-link-hover: #c084fc; /* hover:text-purple-400 */
+            --color-hero-visual-bg: #1f2937; /* bg-gray-900 */
+            --color-hero-visual-card-bg: #1f2937; /* bg-gray-800 */
+            --color-hero-visual-card-border: #4b5563; /* border-gray-700 */
+            --color-hero-visual-card-text: #f3f4f6; /* text-gray-100 */
+            --color-hero-visual-card-subtext: #9ca3af; /* text-gray-400 */
+            --color-product-card-bg: #1a1a1a; /* bg-gray-900 */
+            --color-product-card-border: #333333; /* border-gray-800 */
+            --color-product-card-text: #f3f4f6; /* text-gray-100 */
+            --color-product-card-subtext: #9ca3af; /* text-gray-400 */
+            --color-sdlc-bg: #050505; /* bg-gray-950 */
+            --color-sdlc-card-bg: #1a1a1a; /* bg-gray-900 */
+            --color-sdlc-card-border: #333333; /* border-gray-800 */
+            --color-sdlc-card-text: #f3f4f6; /* text-gray-100 */
+            --color-sdlc-card-subtext: #9ca3af; /* text-gray-400 */
+            --color-section-bg-primary: #0a0a0a;
+            --color-section-bg-secondary: #1a1a1a;
+            --color-section-heading: #f3f4f6;
+            --color-section-paragraph: #9ca3af;
+        }
+
+        /* Light Mode Colors */
+        body.light-mode {
+            --color-primary-dark: #fbfcfd; /* Very light blue-grey */
+            --color-secondary-dark: #ffffff; /* Pure white for main content areas */
+            --color-border-dark: #e0e7ed; /* Light, subtle blue-grey border */
+            --color-text-light: #1a202c; /* Near-black for main text */
+            --color-text-muted: #5a677b; /* Darker grey for muted text */
+
+            /* Accent colors remain vibrant for contrast */
+            --color-accent-vibrant: #a855f7; /* Purple */
+            --color-accent-vibrant-light: #c084fc; /* Light purple */
+            --color-success-vibrant: #22c55e; /* Green */
+            --color-blue-vibrant: #2563eb; /* Strong blue (Tailwind blue-600) */
+            --color-error-vibrant: #ef4444; /* Red */
+
+            --color-card-bg: #ffffff;
+            --color-card-border: #e0e7ed; /* Light blue-grey */
+            --color-input-bg: #f0f4f8; /* Very light blue-grey */
+            --color-input-border: #dae3ed; /* Light blue-grey */
+            --color-input-text: #1a202c;
+            --color-input-placeholder: #718096;
+
+            /* Buttons in Light Mode - NO GRADIENTS */
+            --color-button-primary-bg-light: var(--color-blue-vibrant);
+            --color-button-primary-text-light: #ffffff;
+            --color-button-primary-hover-bg-light: #1d4ed8; /* Darker blue */
+
+            --color-button-secondary-bg-light: transparent;
+            --color-button-secondary-text-light: var(--color-blue-vibrant);
+            --color-button-secondary-border-light: var(--color-blue-vibrant); /* Solid blue border */
+            --color-button-secondary-hover-bg-light: #e0e7ed; /* Very light blue-grey */
+            --color-button-secondary-hover-text-light: var(--color-blue-vibrant);
+
+            --color-header-bg: #ffffff;
+            --color-header-border: #e0e7ed;
+            --color-nav-link: #4a5568; /* Darker grey */
+            --color-nav-link-hover: var(--color-blue-vibrant); /* Blue hover */
+            --color-logo-text: #1a202c;
+
+            --color-mobile-menu-bg: #ffffff;
+            --color-mobile-menu-border: #d1d5db;
+            --color-mobile-link-text: #4a5568;
+            --color-mobile-link-hover: var(--color-blue-vibrant);
+
+            --color-footer-bg: #ffffff;
+            --color-footer-border: #e0e7ed;
+            --color-footer-text: #6b7280;
+            --color-footer-link-hover: var(--color-blue-vibrant);
+
+            --color-hero-visual-bg: #ffffff;
+            --color-hero-visual-card-bg: #f0f4f8;
+            --color-hero-visual-card-border: #dae3ed;
+            --color-hero-visual-card-text: #1a202c;
+            --color-hero-visual-card-subtext: #5a677b;
+
+            --color-product-card-bg: #ffffff;
+            --color-product-card-border: #e0e7ed;
+            --color-product-card-text: #1a202c;
+            --color-product-card-subtext: #5a677b;
+
+            --color-sdlc-bg: #f9fafb;
+            --color-sdlc-card-bg: #ffffff;
+            --color-sdlc-card-border: #e0e7ed;
+            --color-sdlc-card-text: #1a202c;
+            --color-sdlc-card-subtext: #5a677b;
+
+            --color-section-bg-primary: #fbfcfd;
+            --color-section-bg-secondary: #ffffff;
+            --color-section-heading: #1a202c;
+            --color-section-paragraph: #5a677b;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-primary-dark);
+            color: var(--color-text-light);
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+
+        .font-ibm-plex {
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+
+        /* Custom gradient for text - remains consistent across themes for branding */
+        .text-gradient {
+            background: linear-gradient(90deg, #a855f7, #3b82f6, #22c55e); /* Purple, Blue, Green */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
+        }
+
+        /* Override text-gradient for light mode to be solid blue */
+        body.light-mode .text-gradient {
+            background: none; /* Remove gradient background */
+            -webkit-background-clip: unset; /* Unset clip */
+            -webkit-text-fill-color: unset; /* Unset fill color */
+            color: var(--color-blue-vibrant); /* Solid blue color */
+        }
+
+        /* Button base styles */
+        .btn-primary-inner {
+            @apply inline-flex items-center justify-center px-8 py-3 rounded-lg font-inter font-semibold transition-all duration-300;
+            height: 100%;
+            width: 100%;
+        }
+        .btn-secondary-inner {
+            @apply inline-flex items-center justify-center px-8 py-3 rounded-lg font-inter font-semibold transition-all duration-300;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Dark Mode Button Styles (Default) */
+        /* Generic Gradient Border Buttons */
+
+.primary-button-wrapper,
+.secondary-button-wrapper {
+  background: linear-gradient(90deg, #a855f7, #3b82f6); /* Default: Purple to Blue */
+  padding: 2px; /* Creates the border effect */
+  border-radius: 0.5rem;
+  display: inline-block; /* Ensures wrapping behavior */
+}
+
+.secondary-button-wrapper {
+  background: linear-gradient(90deg, #6b7280, #9ca3af); /* Gray gradient */
+}
+
+/* Inner Button Styles */
+.btn-primary-inner,
+.btn-secondary-inner {
+  display: block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.375rem;
+  background-color: var(--color-button-dark-bg); /* Solid fill */
+  color: var(--color-button-dark-text);
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover Effects */
+.btn-primary-inner:hover,
+.btn-secondary-inner:hover {
+  background-color: var(--color-button-hover-bg);
+}
+
+/* Secondary text hover override */
+.btn-secondary-inner {
+  color: var(--color-button-secondary-text);
+}
+.btn-secondary-inner:hover {
+  color: var(--color-button-secondary-hover-text);
+}
+
+/* Light Mode Overrides — Only Solid Borders */
+body.light-mode .primary-button-wrapper,
+body.light-mode .secondary-button-wrapper {
+  background: none;
+  padding: 0;
+  border: 1px solid var(--color-blue-vibrant); /* Or use respective light border vars */
+  border-radius: 0.5rem;
+}
+
+/* Primary Button Inner in Light Mode */
+body.light-mode .btn-primary-inner {
+  background-color: var(--color-button-primary-bg-light);
+  color: var(--color-button-primary-text-light);
+  border: none; /* No inner border as wrapper has it */
+}
+
+/* Hover for Primary */
+body.light-mode .btn-primary-inner:hover {
+  background-color: var(--color-button-primary-hover-bg-light);
+}
+
+/* Secondary Button Inner in Light Mode */
+body.light-mode .btn-secondary-inner {
+  background-color: var(--color-button-secondary-bg-light);
+  color: var(--color-button-secondary-text-light);
+  border: 1px solid var(--color-button-secondary-border-light);
+}
+
+/* Hover for Secondary */
+body.light-mode .btn-secondary-inner:hover {
+  background-color: var(--color-button-secondary-hover-bg-light);
+  color: var(--color-button-secondary-hover-text-light);
+}
+
+
+
+        /* Custom card styles */
+        .card {
+            background-color: var(--color-card-bg);
+            border-color: var(--color-card-border);
+            @apply rounded-xl shadow-md p-6 border;
+        }
+
+        .hover\:shadow-card-hover:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px); /* Subtle lift effect */
+        }
+
+        /* Input field styling */
+        .input-field {
+            background-color: var(--color-input-bg);
+            border-color: var(--color-input-border);
+            color: var(--color-input-text);
+            @apply w-full p-3 rounded-lg border placeholder-gray-500
+            focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200;
+        }
+        .input-field::placeholder {
+            color: var(--color-input-placeholder);
+        }
+
+        /* Mobile menu transition */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            max-height: 0 !important;
+            opacity: 0 !important;
+        }
+        #mobile-menu:not(.hidden) {
+            max-height: 600px; /* Adjust as needed for content */
+            opacity: 1;
+        }
+
+        /* Canvas for hero background animation */
+        #hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* Ensure it's behind content */
+            opacity: 0.15; /* Adjusted for better visibility, can be tweaked */
+            transition: opacity 0.3s ease;
+        }
+        body.light-mode #hero-canvas {
+            opacity: 0.25; /* More prominent in light mode */
+        }
+
+        /* SDLC Cycle specific styles */
+        .sdlc-step {
+            color: var(--color-sdlc-card-text);
+            @apply flex flex-col items-center text-center transition-all duration-300;
+            justify-content: center;
+            width: 120px; /* Fixed width for consistent layout around the circle */
+        }
+        .sdlc-step p {
+            color: var(--color-sdlc-card-subtext);
+            font-size: 0.875rem; /* text-sm */
+            line-height: 1.25rem; /* leading-tight */
+        }
+        .sdlc-step h3 {
+            font-size: 1rem; /* text-base */
+            line-height: 1.5rem; /* leading-normal */
+            margin-bottom: 0.25rem; /* mb-1 */
+        }
+
+        .sdlc-icon-wrapper {
+            @apply w-12 h-12 rounded-full flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-110;
+        }
+
+        .sdlc-circle-container {
+            position: relative;
+            width: 500px; /* Adjusted for compactness */
+            height: 500px; /* Adjusted for compactness */
+            margin: 0 auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            animation: rotateCircle 30s linear infinite; /* Add rotation animation */
         }
-        .redirect-container {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+
+        @keyframes rotateCircle {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
-        .spinner {
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top: 4px solid #fff;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 1rem;
+
+        .sdlc-item {
+            position: absolute;
+            /* Calculate position based on angle */
+            --radius: 200px; /* Distance from center to item center, adjusted for tighter circle */
+            /* Using calc for dynamic positioning based on CSS variables */
+            left: calc(50% + var(--radius) * cos(var(--angle) * 1deg) - var(--item-width) / 2);
+            top: calc(50% + var(--radius) * sin(var(--angle) * 1deg) - var(--item-height) / 2);
+            animation: float 3s ease-in-out infinite alternate; /* Subtle floating animation */
+            animation-delay: calc(var(--index) * 0.1s); /* Stagger animation */
+            /* Set item width as a CSS variable for easier calculation */
+            --item-width: 120px; /* Matches .sdlc-step width */
+            --item-height: 100px; /* Approximate height of sdlc-step content */
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+
+        /* Counter-rotate the content of each item */
+        .sdlc-item > div {
+            transform: rotate(calc(-1 * var(--current-rotation-angle, 0deg))); /* This will be set by JS */
+            transition: transform 0.1s linear; /* Smooth counter-rotation */
         }
-        h1 {
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); } /* Slightly less movement */
+            100% { transform: translateY(0px); }
         }
-        p {
-            margin-bottom: 1rem;
-            opacity: 0.9;
+
+        /* General section backgrounds and text */
+        .bg-primary-dark { background-color: var(--color-section-bg-primary); }
+        .bg-secondary-dark { background-color: var(--color-section-bg-secondary); }
+        .text-gray-100 { color: var(--color-section-heading); }
+        .text-gray-400 { color: var(--color-section-paragraph); }
+
+        /* Navigation and Footer specific overrides */
+        header {
+            background-color: var(--color-header-bg);
+            border-color: var(--color-header-border);
         }
-        .manual-link {
-            color: #fff;
-            text-decoration: underline;
-            font-weight: bold;
+        footer {
+            background-color: var(--color-footer-bg);
+            border-color: var(--color-footer-border);
         }
-        .manual-link:hover {
-            opacity: 0.8;
+        footer p, footer a {
+            color: var(--color-footer-text);
+        }
+        footer a:hover {
+            color: var(--color-footer-link-hover);
+        }
+        nav a {
+            color: var(--color-nav-link);
+        }
+        nav a:hover {
+            color: var(--color-nav-link-hover);
+        }
+
+        /* Mobile menu specific colors */
+        #mobile-menu {
+            background-color: var(--color-mobile-menu-bg);
+            border-color: var(--color-mobile-menu-border);
+        }
+        #mobile-menu a {
+            color: var(--color-mobile-link-text);
+        }
+        #mobile-menu a:hover {
+            color: var(--color-mobile-link-hover);
+        }
+        #mobile-menu span { /* For "Products" and "Company" headings in mobile menu */
+            color: var(--color-text-light);
+        }
+
+        /* Hero visual cards */
+        .hero-section .relative.bg-gray-900 {
+            background-color: var(--color-hero-visual-bg);
+            border-color: var(--color-card-border); /* Use card border for consistency */
+        }
+        .hero-section .bg-gray-800 {
+            background-color: var(--color-hero-visual-card-bg);
+            border-color: var(--color-hero-visual-card-border);
+        }
+        .hero-section .bg-gray-800 h4 {
+            color: var(--color-hero-visual-card-text);
+        }
+        .hero-section .bg-gray-800 p {
+            color: var(--color-hero-visual-card-subtext);
+        }
+
+        /* Product showcase cards */
+        .group.card h3 {
+            color: var(--color-product-card-text);
+        }
+        .group.card p {
+            color: var(--color-product-card-subtext);
+        }
+
+        /* In your Tailwind CSS or global CSS */
+        .button-surface {
+          background-color: var(--color-button-dark-bg);
+          color: var(--color-button-dark-text);
+          transition: background-color 0.3s ease;
+        }
+
+        .button-surface:hover {
+          background-color: var(--color-button-hover-bg);
+        }
+
+        /* Responsive adjustments for SDLC circle */
+        @media (max-width: 1024px) {
+            .sdlc-circle-container {
+                width: 100%;
+                height: auto;
+                flex-direction: column;
+                position: static;
+                animation: none; /* Disable rotation on small screens */
+            }
+            .sdlc-item {
+                position: static;
+                transform: none;
+                margin-bottom: 2rem;
+                width: 90%; /* Adjust width for smaller screens */
+                max-width: 300px; /* Max width for cards */
+                left: auto;
+                top: auto;
+                animation: none; /* Disable float animation on mobile if stacked */
+            }
+            .sdlc-item > div {
+                transform: none !important; /* Disable counter-rotation on small screens */
+            }
+            /* Re-add some padding and background for mobile stacked view if desired */
+            .sdlc-item .sdlc-step {
+                padding: 1rem;
+                background-color: var(--color-sdlc-card-bg);
+                border: 1px solid var(--color-sdlc-card-border);
+                border-radius: 0.75rem; /* rounded-xl */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            }
+            .sdlc-flow-animation {
+                display: none; /* Hide circular animation on mobile */
+            }
         }
     </style>
-<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fcogniwide6280back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
 </head>
-<body>
-    <div class="redirect-container">
-        <div class="spinner"></div>
-        <h1>Redirecting to Homepage...</h1>
-        <p>You will be automatically redirected in <span id="countdown">3</span> seconds.</p>
-        <p>If you are not redirected automatically, <a href="pages/homepage.html" class="manual-link">click here</a>.</p>
+<body class="bg-primary-dark text-text-light font-inter">
+    <!-- Navigation Header -->
+    <header class="bg-secondary-dark border-b border-border-dark sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="homepage.html" class="text-accent-vibrant hover:text-accent-vibrant-light font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAgCAMAAADdXFNzAAAAk1BMVEVHcEw8Oy5MUTwtQT4/PjZGPy1FRDRFQjNFQzZNSzdWSjk9PTBTUEotLyhhUDZPQz9NRztFSzlFRjU+QzJGRzpQXDt9TTRIXjZJQTRqXChIdavfLCXiKyRGc6hGTUhLVl93NkdgQkhHdTxHjj6GMEbTjg2FPjq4Nyj/qQA8Y3fVVwnrnAOaNzeMZSy1fR8/bZeORx/Y+bhjAAAAGnRSTlMAD/G4K6tuIH7+/T3+B/e9zNtVjvT89veg9coMtxAAAAGDSURBVCiRdZPZloIwEAVjZEsIm8vgiNlARRTU//+66URE1OGe44tVfWkIINTHWyXBEG+GPuKkhMbxj01McfAh+C5ljN7PNnF3iN8F35XbLeeNvtfn+t6dTpc3wWLgW35rhBAnyIW+hAfeWuUmcIavl3HDgDk0SHcRevNVdxiEJ+bmAsz14a9ZuMx+r48l/c2zHCIshkS+N8eUgJAwmHzMvzDqS7IFIozzfpqNsS1Z+IgSaUb5N36EgsD5sNo3jxmT0xiRK5NS3qYwIoeuaSRJJjDwg2wakTjTnIljcZxPCMCFqHe7dkKA62sNfDfRQLVSqi2KYkKger9XqvhX8EMfJcD3qjb8XYgcL4XzcRIFfG/wWDCnR8gSXgAnAa7tfNHfJhyci9fr/i2HBqXNhkap507kBGleluXwEYSp1tpi+LXJJsvLqipH3wgI8Ij6FQgBWlU4iF67hqlQO9N+FFBsOPZG2Aikrlsq7Gi+Jh/YCCsIxnm+xhhu7AOjKPSGBFk6PKc/6PExEX9mJwAAAAAASUVORK5CYII="
+                        width="40"
+                         height="30"
+                        class="transition-transform duration-300 hover:scale-105"
+                        alt="Home Icon"
+                      />
+                    </a>
+                    <div class="ml-3">
+                        <span class="font-inter font-bold text-xl" style="color: var(--color-logo-text);">Cogniwide</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation - Grouped Layout -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <!-- Primary Navigation Group -->
+                    <div class="flex items-center space-x-1 px-2">
+                        <!-- Products Dropdown -->
+                        <div class="relative group">
+                            <button class="px-3 py-2 rounded-md text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                                Products
+                                <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                            <!-- Mega Menu -->
+                            <div class="absolute left-0 mt-2 w-96 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                                <div class="p-6">
+                                    <div class="grid grid-cols-1 gap-4">
+                                        <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
+                                            <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniXcellerate</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">AI Orchestration Platform</p>
+                                            </div>
+                                        </a>
+                                        <a href="cogni_loom_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
+                                            <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniLoom</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">Intelligent Process Automation</p>
+                                            </div>
+                                        </a>
+                                        <a href="cogni_chat_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
+                                            <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniChat</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">Conversational AI Platform</p>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
+                                            <div class="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniAgent</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">Intelligent Agent Framework</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Solutions & Services Group -->
+                        <div class="flex items-center space-x-1 pl-2 ml-2" style="border-left: 1px solid var(--color-border-dark);">
+                            <a href="solutions_showcase.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Solutions</a>
+                            <a href="platform_engineering_services.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Services</a>
+                            <a href="industries_hub.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Industries</a>
+                        </div>
+
+                        <!-- Resources & Company Group -->
+                        <div class="flex items-center space-x-1 pl-2 ml-2" style="border-left: 1px solid var(--color-border-dark);">
+                            <a href="resource_center.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Resources</a>
+
+                            <!-- Company Dropdown -->
+                            <div class="relative group">
+                                <button class="px-3 py-2 rounded-md text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                                    Company
+                                    <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </button>
+                                <!-- Company Dropdown -->
+                                <div class="absolute left-0 mt-2 w-72 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                                    <div class="p-4">
+                                        <div class="space-y-2">
+                                            <a href="about_us.html" class="block p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">About Us</a>
+                                            <a href="leadership_team.html" class="block p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Leadership Team</a>
+                                            <a href="life_at_cogniwide_careers.html" class="block p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Life at Cogniwide + Careers</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="contact.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tablet Navigation (768px - 1024px) -->
+                <div class="hidden md:flex lg:hidden items-center space-x-6">
+                    <!-- Essential Links -->
+                    <a href="homepage.html" class="font-ibm-plex font-medium text-sm transition-colors duration-300" style="color: var(--color-accent-vibrant-light);" onmouseover="this.style.color='var(--color-accent-vibrant)'" onmouseout="this.style.color='var(--color-accent-vibrant-light)'">Home</a>
+
+                    <!-- Products Menu -->
+                    <div class="relative group">
+                        <button class="font-ibm-plex font-medium text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                            Products
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-80 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                            <div class="p-4">
+                                <div class="grid grid-cols-1 gap-2">
+                                    <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
+                                        <div class="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
+                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniXcellerate</span>
+                                    </a>
+                                    <a href="cogni_loom_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
+                                        <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniLoom</span>
+                                    </a>
+                                    <a href="cogni_chat_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
+                                        <div class="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniChat</span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="flex items-center p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
+                                        <div class="w-2 h-2 bg-red-500 rounded-full mr-2"></div>
+                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniAgent</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More Menu for remaining items -->
+                    <div class="relative group">
+                        <button class="font-ibm-plex font-medium text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                            More
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-64 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                            <div class="p-4">
+                                <div class="space-y-2">
+                                    <a href="solutions_showcase.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Solutions</a>
+                                    <a href="platform_engineering_services.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Services</a>
+                                    <a href="industries_hub.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Industries</a>
+                                    <a href="resource_center.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Resources</a>
+                                    <hr style="border-color: var(--color-border-dark);" class="my-2" />
+                                    <a href="about_us.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">About Us</a>
+                                    <a href="leadership_team.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Leadership Team</a>
+                                    <a href="life_at_cogniwide_careers.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Careers</a>
+                                    <a href="contact.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500" style="color: var(--color-nav-link);">
+    <svg id="sun-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12h1m15.325-4.275l-.707-.707M4.675 19.325l-.707-.707M19.325 4.675l-.707-.707M4.675 4.675l-.707-.707M12 18a6 6 0 100-12 6 6 0 000 12z" />
+    </svg>
+    <svg id="moon-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+    </svg>
+  </button>
+
+  <!-- Request Demo Button -->
+  <div class="relative rounded-lg inline-block primary-button-wrapper">
+    <a href="contact.html" class="btn-primary-inner">
+      Request Demo
+    </a>
+  </div>
+</div>
+
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- Mobile Theme Toggle -->
+                    <button id="mobile-theme-toggle" class="p-2 rounded-full text-gray-300 hover:text-purple-400 hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500">
+                        <svg id="mobile-sun-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12h1m15.325-4.275l-.707-.707M4.675 19.325l-.707-.707M19.325 4.675l-.707-.707M4.675 4.675l-.707-.707M12 18a6 6 0 100-12 6 6 0 000 12z" />
+                        </svg>
+                        <svg id="mobile-moon-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-purple-400 hover:bg-gray-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden transition-all duration-300 ease-in-out" style="background-color: var(--color-mobile-menu-bg); border-color: var(--color-mobile-menu-border);">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t shadow-lg" style="border-color: var(--color-mobile-menu-border);">
+                    <a href="homepage.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-accent-vibrant-light);" onmouseover="this.style.color='var(--color-accent-vibrant)'" onmouseout="this.style.color='var(--color-accent-vibrant-light)'">Home</a>
+
+                    <!-- Mobile Products Submenu -->
+                    <div class="block px-3 py-2">
+                        <span class="font-medium text-base" style="color: var(--color-text-light);">Products</span>
+                        <div class="ml-4 mt-2 space-y-1">
+                            <a href="cogni_xcellerate_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniXcellerate</a>
+                            <a href="cogni_loom_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniLoom</a>
+                            <a href="cogni_chat_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniChat</a>
+                            <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAgent</a>
+                        </div>
+                    </div>
+
+                    <a href="solutions_showcase.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-text-light);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-text-light)'">Solutions</a>
+                    <a href="platform_engineering_services.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-text-light);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-text-light)'">Services</a>
+                    <a href="industries_hub.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-text-light);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-text-light)'">Industries</a>
+                    <a href="resource_center.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-text-light);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-text-light)'">Resources</a>
+
+                    <!-- Mobile Company Submenu -->
+                    <div class="block px-3 py-2">
+                        <span class="font-medium text-base" style="color: var(--color-text-light);">Company</span>
+                        <div class="ml-4 mt-2 space-y-1">
+                            <a href="about_us.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">About Us</a>
+                            <a href="leadership_team.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">Leadership Team</a>
+                            <a href="life_at_cogniwide_careers.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">Life at Cogniwide + Careers</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-text-light);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-text-light)'">Contact</a>
+
+                    <!-- Mobile CTA -->
+                    <div class="pt-4" style="border-color: var(--color-mobile-menu-border);">
+                        <div class="relative rounded-lg inline-block w-full primary-button-wrapper">
+                            <a href="contact.html" class="btn-primary-inner w-full text-center">
+                              Request Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative hero-section" style="background-color: var(--color-primary-dark);">
+        <!-- Canvas for particle background -->
+        <canvas id="hero-canvas"></canvas>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h1 class="font-inter font-bold text-4xl lg:text-6xl leading-tight" style="color: var(--color-text-light);">
+                            Intelligent Automation That
+                            <span class="text-gradient">Amplifies Human Potential</span>
+                        </h1>
+                        <p class="text-xl leading-relaxed" style="color: var(--color-text-muted);">
+                            Transform your enterprise with AI-powered orchestration that doesn't just automate—it intelligently adapts, learns, and scales with your business needs.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Product Selector -->
+                    <div class="space-y-4">
+                        <h3 class="font-inter font-semibold text-lg" style="color: var(--color-text-light);">Explore Our AI Solutions:</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="cogni_xcellerate_product_deep_dive.html" class="group p-4 border-2 rounded-lg hover:border-purple-500 hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105" style="background-color: var(--color-card-bg); border-color: var(--color-accent-vibrant);">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-4 h-4 bg-purple-500 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                                    <span class="font-inter font-medium" style="color: var(--color-text-light);">CogniXcellerate</span>
+                                </div>
+                            </a>
+                            <a href="cogni_loom_product_deep_dive.html" class="group p-4 border-2 rounded-lg hover:border-green-500 hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105" style="background-color: var(--color-card-bg); border-color: var(--color-success-vibrant);">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-4 h-4 bg-green-500 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                                    <span class="font-inter font-medium" style="color: var(--color-text-light);">CogniLoom</span>
+                                </div>
+                            </a>
+                            <a href="cogni_chat_product_deep_dive.html" class="group p-4 border-2 rounded-lg hover:border-blue-500 hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105" style="background-color: var(--color-card-bg); border-color: var(--color-blue-vibrant);">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-4 h-4 bg-blue-500 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                                    <span class="font-inter font-medium" style="color: var(--color-text-light);">CogniChat</span>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0)" class="group p-4 border-2 rounded-lg hover:border-red-500 hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105" style="background-color: var(--color-card-bg); border-color: var(--color-error-vibrant);">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-4 h-4 bg-red-500 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                                    <span class="font-inter font-medium" style="color: var(--color-text-light);">CogniAgent</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hero CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="relative rounded-lg inline-block primary-button-wrapper">
+                            <a href="contact.html" class="btn-primary-inner">
+                              Start Free Trial
+                            </a>
+                        </div>
+                        <div class="relative rounded-lg inline-block secondary-button-wrapper">
+                            <a href="contact.html" class="btn-secondary-inner">
+                              Watch Demo
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Hero Visual -->
+                <div class="relative">
+                    <div class="relative rounded-2xl p-8 border shadow-lg" style="background-color: var(--color-hero-visual-bg); border-color: var(--color-card-border);">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <div class="rounded-lg p-4 shadow-md border" style="background-color: var(--color-hero-visual-card-bg); border-color: var(--color-hero-visual-card-border);">
+                                    <div class="w-8 h-8 bg-purple-500 rounded-lg mb-3"></div>
+                                    <h4 class="font-inter font-semibold text-sm" style="color: var(--color-hero-visual-card-text);">Process Automation</h4>
+                                    <p class="text-xs mt-1" style="color: var(--color-hero-visual-card-subtext);">87% efficiency gain</p>
+                                </div>
+                                <div class="rounded-lg p-4 shadow-md border" style="background-color: var(--color-hero-visual-card-bg); border-color: var(--color-hero-visual-card-border);">
+                                    <div class="w-8 h-8 bg-green-500 rounded-lg mb-3"></div>
+                                    <h4 class="font-inter font-semibold text-sm" style="color: var(--color-hero-visual-card-text);">Smart Analytics</h4>
+                                    <p class="text-xs mt-1" style="color: var(--color-hero-visual-card-subtext);">Real-time insights</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4 mt-8">
+                                <div class="rounded-lg p-4 shadow-md border" style="background-color: var(--color-hero-visual-card-bg); border-color: var(--color-hero-visual-card-border);">
+                                    <div class="w-8 h-8 bg-blue-500 rounded-lg mb-3"></div>
+                                    <h4 class="font-inter font-semibold text-sm" style="color: var(--color-hero-visual-card-text);">AI Conversations</h4>
+                                    <p class="text-xs mt-1" style="color: var(--color-hero-visual-card-subtext);">Natural interactions</p>
+                                </div>
+                                <div class="rounded-lg p-4 shadow-md border" style="background-color: var(--color-hero-visual-card-bg); border-color: var(--color-hero-visual-card-border);">
+                                    <div class="w-8 h-8 bg-red-500 rounded-lg mb-3"></div>
+                                    <h4 class="font-inter font-semibold text-sm" style="color: var(--color-hero-visual-card-text);">Intelligent Agents</h4>
+                                    <p class="text-xs mt-1" style="color: var(--color-hero-visual-card-subtext);">Autonomous execution</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flagship Products Showcase -->
+    <section class="py-20" style="background-color: var(--color-section-bg-primary);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="font-inter font-bold text-3xl lg:text-4xl mb-4" style="color: var(--color-section-heading);">
+        Our Product Portfolio
+      </h2>
+      <p class="text-xl max-w-3xl mx-auto text-gray-400">
+        Four powerful platforms designed to transform every aspect of your enterprise operations
+      </p>
     </div>
 
-    <script>
-        // Countdown timer
-        let countdown = 3;
-        const countdownElement = document.getElementById('countdown');
-        
-        const timer = setInterval(() => {
-            countdown--;
-            countdownElement.textContent = countdown;
-            
-            if (countdown <= 0) {
-                clearInterval(timer);
-                // Redirect to homepage
-                window.location.href = 'pages/homepage.html';
-            }
-        }, 1000);
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-        // Immediate redirect after 3 seconds (backup)
-        setTimeout(() => {
-            window.location.href = 'pages/homepage.html';
-        }, 3000);
+      <!-- Card Template Start -->
+      <div class="group p-6 bg-[var(--color-product-card-bg)] rounded-2xl border border-[var(--color-product-card-border)] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-xl">
+        <div class="w-14 h-14 bg-gradient-to-tr from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center mb-5 shadow-md">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-lg text-[var(--color-product-card-text)] mb-3">CogniXcellerate</h3>
+        <p class="text-sm text-[var(--color-product-card-subtext)] mb-5 leading-relaxed">
+          AI orchestration platform that intelligently coordinates complex workflows and automates decision-making processes.
+        </p>
+        <ul class="text-sm text-[var(--color-product-card-subtext)] space-y-2 mb-6">
+          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-purple-500 rounded-full"></span>Workflow Orchestration</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-purple-500 rounded-full"></span>Intelligent Decision Making</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-purple-500 rounded-full"></span>Real-time Monitoring</li>
+        </ul>
+        <a href="cogni_xcellerate_product_deep_dive.html" class="inline-flex items-center font-semibold text-purple-400 hover:text-purple-300 transition duration-300">
+          Explore Solution
+          <svg class="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <!-- Card Template End -->
+
+      <!-- Repeat the card structure with different icon colors, product names and features for:
+           - CogniLoom (green)
+           - CogniChat (blue)
+           - CogniAgent (red) -->
+
+      <!-- CogniLoom -->
+      <div class="group p-6 bg-[var(--color-product-card-bg)] rounded-2xl border border-[var(--color-product-card-border)] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-xl">
+        <div class="w-14 h-14 bg-gradient-to-tr from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-5 shadow-md">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zM8.707 10.707L7.293 9.293A1 1 0 118.707 7.879l2 2a1 1 0 010 1.414l-2 2A1 1 0 017.293 11.12l1.414-1.414z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-lg text-[var(--color-product-card-text)] mb-3">CogniLoom</h3>
+        <p class="text-sm text-[var(--color-product-card-subtext)] mb-5 leading-relaxed">
+          Unified data fabric platform that weaves enterprise-wide data into a cohesive, secure and intelligent layer.
+        </p>
+        <ul class="text-sm text-[var(--color-product-card-subtext)] space-y-2 mb-6">
+          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-green-500 rounded-full"></span>Smart Data Integration</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-green-500 rounded-full"></span>Automated Lineage</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-green-500 rounded-full"></span>Enterprise Ontology</li>
+        </ul>
+        <a href="cogni_loom_product_deep_dive.html" class="inline-flex items-center font-semibold text-green-400 hover:text-green-300 transition duration-300">
+          Explore Solution
+          <svg class="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- CogniChat -->
+      <div class="group p-6 bg-[var(--color-product-card-bg)] rounded-2xl border border-[var(--color-product-card-border)] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-xl">
+        <div class="w-14 h-14 bg-gradient-to-tr from-blue-500 to-sky-500 rounded-xl flex items-center justify-center mb-5 shadow-md">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v7a2 2 0 01-2 2H6l-4 4V5z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-lg text-[var(--color-product-card-text)] mb-3">CogniChat</h3>
+        <p class="text-sm text-[var(--color-product-card-subtext)] mb-5 leading-relaxed">
+          Enterprise-grade conversational AI framework tailored for business-specific needs, deployed securely at scale.
+        </p>
+        <ul class="text-sm text-[var(--color-product-card-subtext)] space-y-2 mb-6">
+          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Enterprise-grade NLP</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Omnichannel Bots</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Full Control and Privacy</li>
+        </ul>
+        <a href="cogni_chat_product_deep_dive.html" class="inline-flex items-center font-semibold text-blue-400 hover:text-blue-300 transition duration-300">
+          Explore Solution
+          <svg class="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- CogniAgent -->
+      <div class="group p-6 bg-[var(--color-product-card-bg)] rounded-2xl border border-[var(--color-product-card-border)] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-xl">
+        <div class="w-14 h-14 bg-gradient-to-tr from-red-500 to-pink-500 rounded-xl flex items-center justify-center mb-5 shadow-md">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l.7 2.15a1 1 0 00.95.69h2.262c.969 0 1.371 1.24.588 1.81l-1.83 1.33a1 1 0 00-.364 1.118l.7 2.15c.3.921-.755 1.688-1.538 1.118l-1.83-1.33a1 1 0 00-1.176 0l-1.83 1.33c-.783.57-1.838-.197-1.538-1.118l.7-2.15a1 1 0 00-.364-1.118l-1.83-1.33c-.783-.57-.38-1.81.588-1.81h2.262a1 1 0 00.95-.69l.7-2.15z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-lg text-[var(--color-product-card-text)] mb-3">CogniAgent</h3>
+        <p class="text-sm text-[var(--color-product-card-subtext)] mb-5 leading-relaxed">
+          Autonomous agents equipped with reasoning and tooling that carry out tasks and processes with minimal human input.
+        </p>
+        <ul class="text-sm text-[var(--color-product-card-subtext)] space-y-2 mb-6">
+          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-500 rounded-full"></span>Autonomous Workflows</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-500 rounded-full"></span>Tool-Augmented Reasoning</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-500 rounded-full"></span>Human-in-the-loop Control</li>
+        </ul>
+        <a href="cogni_agent_product_deep_dive.html" class="inline-flex items-center font-semibold text-red-400 hover:text-red-300 transition duration-300">
+          Explore Solution
+          <svg class="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- AI SDLC Life Cycle Section -->
+   <section class="py-20 bg-gray-950 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-10">
+      <span class="text-gradient">AI-Powered SDLC</span> Life Cycle
+    </h2>
+    <div class="relative w-full max-w-[500px] h-[500px] mx-auto">
+      <!-- Rotating Circle Container -->
+      <div class="absolute inset-0 animate-spin-slow rounded-full border border-gray-700 flex items-center justify-center">
+        <!-- Invisible Circle for spacing -->
+        <div class="relative w-full h-full">
+
+          <!-- Planning & Design -->
+          <div class="absolute top-0 left-1/2 transform -translate-x-1/2 text-center">
+            <div class="flex flex-col items-center">
+              <div class="bg-purple-600 p-3 rounded-full">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+              </div>
+              <p class="text-white font-semibold mt-2">Planning & Design</p>
+              <p class="text-gray-400 text-sm">AI-assisted requirements</p>
+            </div>
+          </div>
+
+          <!-- Development -->
+          <div class="absolute top-1/4 right-0 transform translate-x-1/2 text-center">
+            <div class="flex flex-col items-center">
+              <div class="bg-green-500 p-3 rounded-full">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7v13h13M20 4L10 14"/></svg>
+              </div>
+              <p class="text-white font-semibold mt-2">Development</p>
+              <p class="text-gray-400 text-sm">AI code generation</p>
+            </div>
+          </div>
+
+          <!-- Feedback & Iteration -->
+          <div class="absolute bottom-1/4 right-0 transform translate-x-1/2 text-center">
+            <div class="flex flex-col items-center">
+              <div class="bg-yellow-400 p-3 rounded-full">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+  <path d="M5 13l4 4L19 7" />
+</svg>
+              </div>
+              <p class="text-white font-semibold mt-2">Feedback</p>
+              <p class="text-gray-400 text-sm">Continuous improvement</p>
+            </div>
+          </div>
+
+          <!-- Testing -->
+          <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center">
+            <div class="flex flex-col items-center">
+              <div class="bg-blue-600 p-3 rounded-full">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M9 2h6a2 2 0 0 1 2 2v2H7V4a2 2 0 0 1 2-2zM5 6h14v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6z" />
+                  <path d="M9 14l2 2 4-4" />
+                </svg>
+              </div>
+              <p class="text-white font-semibold mt-2">Testing</p>
+              <p class="text-gray-400 text-sm">Defect detection & cases</p>
+            </div>
+          </div>
+
+          <!-- Deployment -->
+          <div class="absolute bottom-1/4 left-0 transform -translate-x-1/2 text-center">
+            <div class="flex flex-col items-center">
+              <div class="bg-red-500 p-3 rounded-full">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m7-7H5"/></svg>
+              </div>
+              <p class="text-white font-semibold mt-2">Deployment</p>
+              <p class="text-gray-400 text-sm">CI/CD release</p>
+            </div>
+          </div>
+
+          <!-- Monitoring -->
+          <div class="absolute top-1/4 left-0 transform -translate-x-1/2 text-center">
+            <div class="flex flex-col items-center">
+              <div class="bg-indigo-500 p-3 rounded-full">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M3 12h4l2 5 4-10 2 5h6" />
+                </svg>
+              </div>
+              <p class="text-white font-semibold mt-2">Monitoring</p>
+              <p class="text-gray-400 text-sm">Performance tracking</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="max-w-4xl mx-auto mt-20">
+                <div class="card p-8 border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h3 class="font-inter font-bold text-3xl mb-6" style="color: var(--color-text-light);">Why Choose Our AI-Powered SDLC?</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-purple-500 rounded-full mt-3 flex-shrink-0"></div>
+                                    <span class="text-lg leading-relaxed" style="color: var(--color-text-muted);">Accelerate development cycles by 50%</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-green-500 rounded-full mt-3 flex-shrink-0"></div>
+                                    <span class="text-lg leading-relaxed" style="color: var(--color-text-muted);">Reduce bugs and security vulnerabilities</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
+                                    <span class="text-lg leading-relaxed" style="color: var(--color-text-muted);">Improve code quality and maintainability</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full mt-3 flex-shrink-0"></div>
+                                    <span class="text-lg leading-relaxed" style="color: var(--color-text-muted);">Enhance team collaboration and productivity</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="inline-flex items-center justify-center w-32 h-32 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full mb-8 shadow-lg">
+                                <!-- Lucide Icon: Code (large) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code w-16 h-16 text-white">
+                                    <polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <div class="relative rounded-lg inline-block primary-button-wrapper">
+                                <a href="contact.html" class="btn-primary-inner">
+                                    Get Started with AI SDLC
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    <!-- New Section: CogniXcellerate Deep Dive -->
+    <section class="py-20" style="background-color: var(--color-section-bg-primary);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="lg:order-2">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:1200/https://cdn.gamma.app/npv4hvns4y3k8z7/b303020c1518410c944051a4cbe70dec/original/image.png" alt="CogniXcellerate Platform" class="rounded-xl shadow-lg border transition-transform duration-500 hover:scale-[1.02]" style="border-color: var(--color-border-dark);" loading="lazy" />
+                </div>
+                <div class="lg:order-1 space-y-6">
+                    <h2 class="font-inter font-bold text-3xl lg:text-4xl" style="color: var(--color-section-heading);">
+                        <span class="text-gradient">CogniXcellerate:</span> AI Orchestration Platform
+                    </h2>
+                    <p class="text-lg leading-relaxed" style="color: var(--color-section-paragraph);">
+                        CogniXcellerate is our flagship AI orchestration platform, designed to intelligently coordinate complex workflows and automate decision-making across your enterprise. It acts as the central nervous system for your AI initiatives, ensuring seamless integration and optimal performance.
+                    </p>
+                    <ul class="space-y-3" style="color: var(--color-text-muted);">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-purple-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Automated Workflow Management
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-purple-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Intelligent Decision Automation
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-purple-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Real-time Performance Monitoring
+                        </li>
+                    </ul>
+                    <div class="relative rounded-lg inline-block primary-button-wrapper">
+                        <a href="contact.html" class="btn-primary-inner">
+                          Learn More about CogniXcellerate
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section: CogniLoom Deep Dive -->
+    <section class="py-20" style="background-color: var(--color-section-bg-secondary);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://go.isostech.com/hubfs/classicdevops.png" alt="CogniLoom Platform" class="rounded-xl shadow-lg border transition-transform duration-500 hover:scale-[1.02]" style="border-color: var(--color-border-dark);" loading="lazy" />
+                </div>
+                <div class="space-y-6">
+                    <h2 class="font-inter font-bold text-3xl lg:text-4xl" style="color: var(--color-section-heading);">
+                        <span class="text-gradient">CogniLoom:</span> Intelligent Process Automation
+                    </h2>
+                    <p class="text-lg leading-relaxed" style="color: var(--color-section-paragraph);">
+                        CogniLoom revolutionizes your business processes by intelligently automating repetitive tasks and integrating disparate systems. It weaves together complex operational flows, enhancing efficiency and reducing manual effort across your organization.
+                    </p>
+                    <ul class="space-y-3" style="color: var(--color-text-muted);">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Automated Task Execution
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Seamless System Integration
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Adaptive Process Optimization
+                        </li>
+                    </ul>
+                    <div class="relative rounded-lg inline-block primary-button-wrapper">
+                        <a href="contact.html" class="btn-primary-inner">
+                          Learn More about CogniLoom
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section: CogniAgent Deep Dive -->
+    <section class="py-20" style="background-color: var(--color-section-bg-primary);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="lg:order-2">
+                    <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_14fa0f4e9d0153477eed77c2d5a81be6.webp" alt="CogniAgent Platform" class="rounded-xl shadow-lg border transition-transform duration-500 hover:scale-[1.02]" style="border-color: var(--color-border-dark);" loading="lazy" />
+                </div>
+                <div class="lg:order-1 space-y-6">
+                    <h2 class="font-inter font-bold text-3xl lg:text-4xl" style="color: var(--color-section-heading);">
+                        <span class="text-gradient">CogniAgent:</span> Intelligent Agent Framework
+                    </h2>
+                    <p class="text-lg leading-relaxed" style="color: var(--color-section-paragraph);">
+                        CogniAgent provides a robust framework for deploying intelligent, autonomous agents that can execute complex tasks, learn from their environment, and adapt to changing business requirements. Empower your operations with self-sufficient AI entities.
+                    </p>
+                    <ul class="space-y-3" style="color: var(--color-text-muted);">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-red-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Autonomous Task Execution
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-red-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Adaptive Learning Capabilities
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-red-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Complex Task Orchestration
+                        </li>
+                    </ul>
+                   <div class="relative rounded-lg inline-block primary-button-wrapper">
+                        <a href="contact.html" class="btn-primary-inner">
+                          Learn More about CogniAgent
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section: Solutions Overview -->
+    <section class="py-20" style="background-color: var(--color-section-bg-secondary);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl mb-4" style="color: var(--color-section-heading);">
+                    Integrated AI <span class="text-gradient">Solutions Overview</span>
+                </h2>
+                <p class="text-xl max-w-3xl mx-auto" style="color: var(--color-section-paragraph);">
+                    Our platforms work in harmony to provide comprehensive, end-to-end AI solutions tailored to your enterprise needs.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card p-8 border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                    <h3 class="font-inter font-bold text-2xl" style="color: var(--color-text-light);">Seamless Integration</h3>
+                    <p style="color: var(--color-text-muted);">
+                        CogniXcellerate, CogniLoom, and CogniAgent are designed to integrate effortlessly, creating a unified AI ecosystem that drives efficiency and innovation.
+                    </p>
+                    <ul class="space-y-2 text-sm" style="color: var(--color-text-muted);">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Unified AI Ecosystem
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Cross-Platform Automation
+                        </li>
+                    </ul>
+                </div>
+                <div class="card p-8 border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                    <h3 class="font-inter font-bold text-2xl" style="color: var(--color-text-light);">Customizable & Scalable</h3>
+                    <p style="color: var(--color-text-muted);">
+                        Our solutions are built to scale with your business and can be customized to meet specific industry and operational demands.
+                    </p>
+                    <ul class="space-y-2 text-sm" style="color: var(--color-text-muted);">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Modular Architecture
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Industry-Specific Adaptability
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <div class="relative rounded-lg inline-block primary-button-wrapper">
+                    <a href="solutions_showcase.html" class="btn-primary-inner">
+                      Explore All Solutions
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Customer Success Section -->
+    <section class="py-20" style="background-color: var(--color-section-bg-secondary);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl mb-4" style="color: var(--color-section-heading);">
+                    Trusted by Enterprise Leaders
+                </h2>
+                <p class="text-xl" style="color: var(--color-section-paragraph);">
+                    Join thousands of organizations transforming their operations with Cogniwide AI
+                </p>
+            </div>
+
+            <!-- Customer Logos with Hover Metrics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-16">
+                <div class="group relative card p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Enterprise Client" class="w-full h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300" loading="lazy" onerror="this.src='https://placehold.co/150x50/333/FFF?text=Client+1'; this.onerror=null;" />
+                    <div class="absolute inset-0 bg-purple-500/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="font-inter font-bold text-lg">87%</div>
+                            <div class="text-sm">Efficiency Gain</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative card p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Enterprise Client" class="w-full h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300" loading="lazy" onerror="this.src='https://placehold.co/150x50/333/FFF?text=Client+2'; this.onerror=null;" />
+                    <div class="absolute inset-0 bg-green-500/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="font-inter font-bold text-lg">$2.4M</div>
+                            <div class="text-sm">Cost Savings</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative card p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Enterprise Client" class="w-full h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300" loading="lazy" onerror="this.src='https://placehold.co/150x50/333/FFF?text=Client+3'; this.onerror=null;" />
+                    <div class="absolute inset-0 bg-blue-500/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="font-inter font-bold text-lg">45%</div>
+                            <div class="text-sm">Faster Deployment</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative card p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Enterprise Client" class="w-full h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300" loading="lazy" onerror="this.src='https://placehold.co/150x50/333/FFF?text=Client+4'; this.onerror=null;" />
+                    <div class="absolute inset-0 bg-red-500/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="font-inter font-bold text-lg">99.9%</div>
+                            <div class="text-sm">Uptime</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative card p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Enterprise Client" class="w-full h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300" loading="lazy" onerror="this.src='https://placehold.co/150x50/333/FFF?text=Client+5'; this.onerror=null;" />
+                    <div class="absolute inset-0 bg-purple-700/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="font-inter font-bold text-lg">6 Months</div>
+                            <div class="text-sm">ROI Timeline</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative card p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Enterprise Client" class="w-full h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300" loading="lazy" onerror="this.src='https://placehold.co/150x50/333/FFF?text=Client+6'; this.onerror=null;" />
+                    <div class="absolute inset-0 bg-indigo-500/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="font-inter font-bold text-lg">300%</div>
+                            <div class="text-sm">Productivity Boost</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky CTA Section -->
+    <section class="py-20" style="background-color: var(--color-card-bg);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-inter font-bold text-3xl lg:text-4xl mb-4" style="color: var(--color-text-light);">
+                Ready to Transform Your Enterprise?
+            </h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto" style="color: var(--color-text-muted);">
+                Join the AI revolution with Cogniwide's intelligent automation platform. Start your journey today.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <div class="relative rounded-lg inline-block primary-button-wrapper">
+                    <a href="contact.html" class="btn-primary-inner">
+                      Start Free Trial
+                    </a>
+                </div>
+                <div class="relative rounded-lg inline-block secondary-button-wrapper">
+                    <a href="contact.html" class="btn-secondary-inner">
+                      Schedule Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t" style="background-color: var(--color-footer-bg); border-color: var(--color-footer-border);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center">
+                            <a href="homepage.html" class="text-purple-400 hover:text-purple-500 font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
+                              <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAgCAMAAADdXFNzAAAAk1BMVEVHcEw8Oy5MUTwtQT4/PjZGPy1FRDRFQjNFQzZNSzdWSjk9PTBTUEotLyhhUDZPQz9NRztFSzlFRjU+QzJGRzpQXDt9TTRIXjZJQTRqXChIdavfLCXiKyRGc6hGTUhLVl93NkdgQkhHdTxHjj6GMEbTjg2FPjq4Nyj/qQA8Y3fVVwnrnAOaNzeMZSy1fR8/bZeORx/Y+bhjAAAAGnRSTlMAD/G4K6tuIH7+/T3+B/e9zNtVjvT89veg9coMtxAAAAGDSURBVCiRdZPZloIwEAVjZEsIm8vgiNlARRTU//+66URE1OGe44tVfWkIINTHWyXBEG+GPuKkhMbxj01McfAh+C5ljN7PNnF3iN8F35XbLeeNvtfn+t6dTpc3wWLgW35rhBAnyIW+hAfeWuUmcIavl3HDgDk0SHcRevNVdxiEJ+bmAsz14a9ZuMx+r48l/c2zHCIshkS+N8eUgJAwmHzMvzDqS7IFIozzfpqNsS1Z+IgSaUb5N36EgsD5sNo3jxmT0xiRK5NS3qYwIoeuaSRJJjDwg2wakTjTnIljcZxPCMCFqHe7dkKA62sNfDfRQLVSqi2KYkKger9XqvhX8EMfJcD3qjb8XYgcL4XzcRIFfG/wWDCnR8gSXgAnAa7tfNHfJhyci9fr/i2HBqXNhkap507kBGleluXwEYSp1tpi+LXJJsvLqipH3wgI8Ij6FQgBWlU4iF67hqlQO9N+FFBsOPZG2Aikrlsq7Gi+Jh/YCCsIxnm+xhhu7AOjKPSGBFk6PKc/6PExEX9mJwAAAAAASUVORK5CYII="
+                                width="40"
+                                height="30"
+                                class="transition-transform duration-300 hover:scale-105"
+                                alt="Home Icon"
+                              />
+                            </a>
+                            <div class="ml-3">
+                                <span class="font-inter font-bold text-xl" style="color: var(--color-logo-text);">Cogniwide</span>
+                            </div>
+                        </div>
+                    <p class="mb-4 max-w-md" style="color: var(--color-footer-text);">
+                        Intelligent automation that amplifies human potential. Transform your enterprise with AI-powered solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0120 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Solutions</h4>
+                    <ul class="space-y-2">
+                        <li><a href="cogni_xcellerate_product_deep_dive.html" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">CogniXcellerate</a></li>
+                        <li><a href="cogni_loom_product_deep_dive.html" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">CogniLoom</a></li>
+                        <li><a href="cogni_chat_product_deep_dive.html" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">CogniChat</a></li>
+                        <li><a href="javascript:void(0)" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">CogniAgent</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about_us.html" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">About Us</a></li>
+                        <li><a href="leadership_team.html" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">Leadership Team</a></li>
+                        <li><a href="life_at_cogniwide_careers.html" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">Life at Cogniwide + Careers</a></li>
+                        <li><a href="contact.html" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center" style="border-color: var(--color-border-dark);">
+                <p class="text-sm" style="color: var(--color-footer-text);">
+                    © 2025 Cogniwide AI Platform. All Rights Reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="javascript:void(0)" class="text-sm transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">Privacy Policy</a>
+                    <a href="javascript:void(0)" class="text-sm transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">Terms of Service</a>
+                    <a href="javascript:void(0)" class="text-sm transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced mobile menu toggle with smooth transitions
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        }
+
+        // Add responsive behavior for window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const mobileSunIcon = document.getElementById('mobile-sun-icon');
+        const mobileMoonIcon = document.getElementById('mobile-moon-icon');
+        const body = document.body;
+
+        // Function to set theme
+        function setTheme(theme) {
+            if (theme === 'light-mode') {
+                body.classList.add('light-mode');
+                if (sunIcon) sunIcon.classList.remove('hidden');
+                if (moonIcon) moonIcon.classList.add('hidden');
+                if (mobileSunIcon) mobileSunIcon.classList.remove('hidden');
+                if (mobileMoonIcon) mobileMoonIcon.classList.add('hidden');
+            } else {
+                body.classList.remove('light-mode');
+                if (sunIcon) sunIcon.classList.add('hidden');
+                if (moonIcon) moonIcon.classList.remove('hidden');
+                if (mobileSunIcon) mobileSunIcon.classList.add('hidden');
+                if (mobileMoonIcon) mobileMoonIcon.classList.remove('hidden');
+            }
+            localStorage.setItem('theme', theme);
+        }
+
+        // Check for saved theme preference on load
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            setTheme(currentTheme);
+        } else {
+            // Default to dark mode if no preference
+            setTheme('dark-mode');
+        }
+
+        // Event listeners for theme toggles
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
+                setTheme(newTheme);
+            });
+        }
+        if (mobileThemeToggleBtn) {
+            mobileThemeToggleBtn.addEventListener('click', () => {
+                const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
+                setTheme(newTheme);
+            });
+        }
+
+
+        // Ring background animation for Hero Section
+        const canvas = document.getElementById('hero-canvas');
+        const ctx = canvas.getContext('2d');
+        let rings = [];
+
+        // Ring properties
+        const ringCount = 3; // Fewer, larger rings
+        const minRingRadius = 150;
+        const maxRingRadius = 300;
+        const minLineWidth = 2;
+        const maxLineWidth = 5;
+        const ringSpeed = 0.2; // Slower movement
+
+        // Ring constructor
+        class Ring {
+            constructor(x, y, radius, lineWidth, speedX, speedY, colorStops) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+                this.lineWidth = lineWidth;
+                this.speedX = speedX;
+                this.speedY = speedY;
+                this.colorStops = colorStops; // Array of {offset, color}
+                this.rotation = Math.random() * Math.PI * 2; // Initial random rotation
+                this.rotationSpeed = (Math.random() - 0.5) * 0.001; // Very slow rotation
+            }
+
+            // Method to draw ring
+            draw() {
+                ctx.save(); // Save current canvas state
+                ctx.translate(this.x, this.y); // Move origin to ring center
+                ctx.rotate(this.rotation); // Apply rotation
+
+                // Create a linear gradient for the stroke
+                const gradient = ctx.createLinearGradient(-this.radius, -this.radius, this.radius, this.radius);
+                this.colorStops.forEach(stop => {
+                    gradient.addColorStop(stop.offset, stop.color);
+                });
+
+                ctx.beginPath();
+                // Draw an ellipse to create the ring shape, making it look like an oval
+                ctx.ellipse(0, 0, this.radius, this.radius * 0.6, 0, 0, Math.PI * 2);
+                ctx.strokeStyle = gradient;
+                ctx.lineWidth = this.lineWidth;
+                ctx.stroke();
+
+                ctx.restore(); // Restore canvas state
+            }
+
+            // Method to update ring position and rotation
+            update() {
+                // Move ring
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.rotation += this.rotationSpeed;
+
+                // Wrap around canvas edges
+                if (this.x - this.radius > canvas.width) this.x = -this.radius;
+                if (this.x + this.radius < 0) this.x = canvas.width + this.radius;
+                if (this.y - this.radius > canvas.height) this.y = -this.radius;
+                if (this.y + this.radius < 0) this.y = canvas.height + this.radius;
+
+                // Draw ring
+                this.draw();
+            }
+        }
+
+        // Create ring array
+        function initRings() {
+            rings = [];
+            canvas.width = window.innerWidth;
+            canvas.height = document.querySelector('.hero-section').offsetHeight;
+
+            // Define a set of color gradients for the rings
+            const ringColorPresets = [
+                [{ offset: 0, color: 'rgba(168, 85, 247, 0.8)' }, { offset: 1, color: 'rgba(59, 130, 246, 0.8)' }], // Purple to Blue
+                [{ offset: 0, color: 'rgba(34, 197, 94, 0.8)' }, { offset: 1, color: 'rgba(168, 85, 247, 0.8)' }], // Green to Purple
+                [{ offset: 0, color: 'rgba(59, 130, 246, 0.8)' }, { offset: 1, color: 'rgba(239, 68, 68, 0.8)' }], // Blue to Red
+                [{ offset: 0, color: 'rgba(239, 68, 68, 0.8)' }, { offset: 1, color: 'rgba(34, 197, 94, 0.8)' }]  // Red to Green
+            ];
+
+
+            for (let i = 0; i < ringCount; i++) {
+                let radius = Math.random() * (maxRingRadius - minRingRadius) + minRingRadius;
+                let lineWidth = Math.random() * (maxLineWidth - minLineWidth) + minLineWidth;
+                let x = Math.random() * canvas.width;
+                let y = Math.random() * canvas.height;
+                let speedX = (Math.random() * ringSpeed * 2) - ringSpeed; // -0.2 to 0.2
+                let speedY = (Math.random() * ringSpeed * 2) - ringSpeed; // -0.2 to 0.2
+                let colors = ringColorPresets[Math.floor(Math.random() * ringColorPresets.length)];
+
+                rings.push(new Ring(x, y, radius, lineWidth, speedX, speedY, colors));
+            }
+        }
+
+        // Animation loop
+        function animateRings() {
+            requestAnimationFrame(animateRings);
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the entire canvas
+
+            rings.forEach(ring => {
+                ring.update();
+            });
+        }
+
+        // Initialize on window load and handle resize
+        window.onload = function() {
+            initRings();
+            animateRings();
+        };
+
+        window.addEventListener('resize', () => {
+            initRings(); // Re-initialize rings on resize
+        });
+
+        // SDLC Circle Counter-Rotation Logic
+        const sdlcCircleContainer = document.querySelector('.sdlc-circle-container');
+
+function updateSdlcItemRotation() {
+  if (!sdlcCircleContainer) return;
+
+  const transform = window.getComputedStyle(sdlcCircleContainer).transform;
+
+  let angle = 0;
+  if (transform && transform !== 'none') {
+    const values = transform.split('(')[1].split(')')[0].split(',');
+    const a = parseFloat(values[0]);
+    const b = parseFloat(values[1]);
+    angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+  }
+
+  document.querySelectorAll('.sdlc-item > div').forEach(el => {
+    el.style.transform = `rotate(${-angle}deg)`;
+  });
+}
+
+setInterval(updateSdlcItemRotation, 50);
+
+
     </script>
 </body>
 </html>
