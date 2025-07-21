@@ -3,168 +3,193 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cogniwide AI Platform - Intelligent Automation That Amplifies Human Potential</title>
+    <title>Cogniwide AI Platform - Cybernetic Future</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter and IBM Plex Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Enterprise AI solutions platform offering intelligent automation through CogniXcellerate, CogniLoom, CogniChat, and CogniAgent. Transform your business with AI-powered orchestration." />
+    <meta name="description" content="Experience the future of enterprise AI with Cogniwide's intelligent automation platforms. Redefine efficiency and amplify human potential." />
     <style>
-
-        /* Base Dark Mode Colors (Default) */
+        /* New Silver, Black & Blue Dark Mode Colors (Default) */
         :root {
-            --color-primary-dark: #0a0a0a;
-            --color-secondary-dark: #1a1a1a;
-            --color-border-dark: #333333;
-            --color-text-light: #f3f4f6; /* gray-100 */
-            --color-text-muted: #9ca3af; /* gray-400 */
-            --color-accent-vibrant: #a855f7; /* purple-500 */
-            --color-accent-vibrant-light: #c084fc; /* purple-400 */
-            --color-success-vibrant: #22c55e; /* green-500 */
-            --color-blue-vibrant: #3b82f6; /* blue-500 */
-            --color-error-vibrant: #ef4444; /* red-500 */
-            --color-card-bg: #1a1a1a; /* bg-gray-900 */
-            --color-card-border: #333333; /* border-gray-800 */
-            --color-input-bg: #1f2937; /* bg-gray-800 */
-            --color-input-border: #4b5563; /* border-gray-700 */
-            --color-input-text: #f3f4f6; /* text-gray-100 */
-            --color-input-placeholder: #9ca3af; /* placeholder-gray-500 */
-            --color-button-dark-bg: #0a0a0a; /* for inner buttons in dark mode */
-            --color-button-dark-text: #f3f4f6; /* for inner buttons text in dark mode */
-            --color-button-secondary-text: #d1d5db; /* text-gray-300 */
-            --color-button-hover-bg: #1f2937; /* hover:bg-gray-800 */
-            --color-button-secondary-hover-text: #f3f4f6; /* hover:text-white */
-            --color-header-bg: #1a1a1a; /* bg-secondary-dark */
-            --color-header-border: #333333; /* border-border-dark */
-            --color-nav-link: #d1d5db; /* text-gray-300 */
-            --color-nav-link-hover: #c084fc; /* hover:text-purple-400 */
-            --color-logo-text: #f3f4f6; /* text-gray-100 */
-            --color-mobile-menu-bg: #1a1a1a; /* bg-secondary-dark */
-            --color-mobile-menu-border: #4b5563; /* border-gray-700 */
-            --color-mobile-link-text: #9ca3af; /* text-gray-400 */
-            --color-mobile-link-hover: #c084fc; /* hover:text-purple-400 */
-            --color-footer-bg: #1a1a1a; /* bg-secondary-dark */
-            --color-footer-border: #333333; /* border-border-dark */
-            --color-footer-text: #9ca3af; /* text-gray-400 */
-            --color-footer-link-hover: #c084fc; /* hover:text-purple-400 */
-            --color-hero-visual-bg: #1f2937; /* bg-gray-900 */
-            --color-hero-visual-card-bg: #1f2937; /* bg-gray-800 */
-            --color-hero-visual-card-border: #4b5563; /* border-gray-700 */
-            --color-hero-visual-card-text: #f3f4f6; /* text-gray-100 */
-            --color-hero-visual-card-subtext: #9ca3af; /* text-gray-400 */
-            --color-product-card-bg: #1a1a1a; /* bg-gray-900 */
-            --color-product-card-border: #333333; /* border-gray-800 */
-            --color-product-card-text: #f3f4f6; /* text-gray-100 */
-            --color-product-card-subtext: #9ca3af; /* text-gray-400 */
-            --color-sdlc-bg: #050505; /* bg-gray-950 */
-            --color-sdlc-card-bg: #1a1a1a; /* bg-gray-900 */
-            --color-sdlc-card-border: #333333; /* border-gray-800 */
-            --color-sdlc-card-text: #f3f4f6; /* text-gray-100 */
-            --color-sdlc-card-subtext: #9ca3af; /* text-gray-400 */
-            --color-section-bg-primary: #0a0a0a;
-            --color-section-bg-secondary: #1a1a1a;
-            --color-section-heading: #f3f4f6;
-            --color-section-paragraph: #9ca3af;
+            --color-bg-primary: #0A0A0A; /* Even deeper black */
+            --color-bg-secondary: #181818; /* Slightly lighter black for cards/sections */
+            --color-border-subtle: #383838; /* Darker silver for subtle borders */
+            --color-text-light: #F0F0F0; /* Brighter Silver */
+            --color-text-muted: #C0C0C0; /* Muted Silver */
+
+            /* More vibrant, futuristic blues with a hint of silver */
+            --color-accent-blue: #00CFFF; /* Bright Cyan */
+            --color-accent-light-blue: #4DFFFF; /* Lighter Cyan */
+            --color-accent-silver-gradient: #E0E0E0; /* Silver for gradients */
+            --color-accent-dark-blue: #0099CC; /* Deeper Cyan */
+            --color-accent-silver: #E0E0E0; /* Brighter Silver */
+            --color-accent-grey: #A0A0A0; /* Medium Silver */
+
+            --color-card-bg: var(--color-bg-secondary);
+            --color-card-border: var(--color-border-subtle);
+            --color-input-bg: #222222;
+            --color-input-border: #383838;
+            --color-input-text: var(--color-text-light);
+            --color-input-placeholder: var(--color-input-text);
+
+            --color-button-primary-bg-inner: #222222;
+            --color-button-primary-text: var(--color-text-light);
+            --color-button-secondary-text: var(--color-text-muted);
+            --color-button-hover-bg: #333333;
+
+            --color-header-bg: rgba(24, 24, 24, 0.8); /* Semi-transparent for futuristic feel */
+            --color-header-border: #2C2C2C;
+            --color-nav-link: var(--color-text-muted);
+            --color-nav-link-hover: var(--color-accent-blue);
+            --color-logo-text: var(--color-text-light);
+
+            --color-mobile-menu-bg: var(--color-bg-secondary);
+            --color-mobile-menu-border: var(--color-border-subtle);
+            --color-mobile-link-text: var(--color-text-muted);
+            --color-mobile-link-hover: var(--color-accent-blue);
+            --color-mobile-heading: var(--color-text-light);
+
+            --color-footer-bg: var(--color-bg-secondary);
+            --color-footer-border: var(--color-border-subtle);
+            --color-footer-text: var(--color-text-muted);
+            --color-footer-link-hover: var(--color-accent-blue);
+
+            --color-hero-visual-bg: var(--color-bg-secondary);
+            --color-hero-visual-card-bg: #222222;
+            --color-hero-visual-card-border: #383838;
+            --color-hero-visual-card-text: var(--color-text-light);
+            --color-hero-visual-card-subtext: var(--color-text-muted);
+
+            --color-product-card-bg: var(--color-bg-secondary);
+            --color-product-card-border: var(--color-border-subtle);
+            --color-product-card-text: var(--color-text-light);
+            --color-product-card-subtext: var(--color-text-muted);
+
+            --color-sdlc-bg: var(--color-bg-primary);
+            --color-sdlc-card-bg: var(--color-bg-secondary);
+            --color-sdlc-card-border: var(--color-border-subtle);
+            --color-sdlc-card-text: var(--color-text-light);
+            --color-sdlc-card-subtext: var(--color-text-muted);
+
+            --color-section-heading: var(--color-text-light);
+            --color-section-paragraph: var(--color-text-muted);
+
+            /* New colors for the Solutions section */
+            --color-solution-card-bg: var(--color-bg-secondary);
+            --color-solution-card-border: var(--color-border-subtle);
+            --color-solution-heading: var(--color-text-light);
+            --color-solution-text: var(--color-text-muted);
+            --color-solution-icon-bg-start: #00CFFF; /* Bright Cyan */
+            --color-solution-icon-bg-end: #0099CC; /* Deeper Cyan */
+            --color-solution-check: #00CFFF; /* Bright Cyan */
         }
 
-        /* Light Mode Colors */
+        /* Light Mode Colors - Adjusted for contrast with new accents */
         body.light-mode {
-            --color-primary-dark: #fbfcfd; /* Very light blue-grey */
-            --color-secondary-dark: #ffffff; /* Pure white for main content areas */
-            --color-border-dark: #e0e7ed; /* Light, subtle blue-grey border */
-            --color-text-light: #1a202c; /* Near-black for main text */
-            --color-text-muted: #5a677b; /* Darker grey for muted text */
+            --color-bg-primary: #F8F8F8; /* Very light grey */
+            --color-bg-secondary: #FFFFFF; /* Pure White */
+            --color-border-subtle: #D0D0D0; /* Lighter silver border */
+            --color-text-light: #1A1A1A; /* Dark Black */
+            --color-text-muted: #707070; /* Medium Silver */
 
-            /* Accent colors remain vibrant for contrast */
-            --color-accent-vibrant: #a855f7; /* Purple */
-            --color-accent-vibrant-light: #c084fc; /* Light purple */
-            --color-success-vibrant: #22c55e; /* Green */
-            --color-blue-vibrant: #2563eb; /* Strong blue (Tailwind blue-600) */
-            --color-error-vibrant: #ef4444; /* Red */
+            --color-accent-blue: #007ACC; /* Darker Blue for contrast */
+            --color-accent-light-blue: #0099FF; /* Brighter Blue */
+            --color-accent-silver-gradient: #A0A0A0; /* Muted Silver for light mode gradients */
+            --color-accent-dark-blue: #005580; /* Even Darker Blue */
+            --color-accent-silver: #A0A0A0; /* Muted Silver */
+            --color-accent-grey: #606060; /* Darker Silver */
 
-            --color-card-bg: #ffffff;
-            --color-card-border: #e0e7ed; /* Light blue-grey */
-            --color-input-bg: #f0f4f8; /* Very light blue-grey */
-            --color-input-border: #dae3ed; /* Light blue-grey */
-            --color-input-text: #1a202c;
-            --color-input-placeholder: #718096;
+            --color-card-bg: var(--color-bg-secondary);
+            --color-card-border: var(--color-border-subtle);
+            --color-input-bg: #F0F0F0;
+            --color-input-border: #D8D8D8;
+            --color-input-text: var(--color-text-light);
+            --color-input-placeholder: var(--color-input-text);
 
-            /* Buttons in Light Mode - NO GRADIENTS */
-            --color-button-primary-bg-light: var(--color-blue-vibrant);
+            --color-button-primary-bg-light: var(--color-accent-blue);
             --color-button-primary-text-light: #ffffff;
-            --color-button-primary-hover-bg-light: #1d4ed8; /* Darker blue */
+            --color-button-primary-hover-bg-light: var(--color-accent-dark-blue);
 
             --color-button-secondary-bg-light: transparent;
-            --color-button-secondary-text-light: var(--color-blue-vibrant);
-            --color-button-secondary-border-light: var(--color-blue-vibrant); /* Solid blue border */
-            --color-button-secondary-hover-bg-light: #e0e7ed; /* Very light blue-grey */
-            --color-button-secondary-hover-text-light: var(--color-blue-vibrant);
+            --color-button-secondary-text-light: var(--color-accent-blue);
+            --color-button-secondary-border-light: var(--color-accent-blue);
+            --color-button-secondary-hover-bg-light: #E0F0FF; /* Light blue hover */
+            --color-button-secondary-hover-text-light: var(--color-accent-blue);
 
-            --color-header-bg: #ffffff;
-            --color-header-border: #e0e7ed;
-            --color-nav-link: #4a5568; /* Darker grey */
-            --color-nav-link-hover: var(--color-blue-vibrant); /* Blue hover */
-            --color-logo-text: #1a202c;
+            --color-header-bg: rgba(255, 255, 255, 0.8); /* Semi-transparent for futuristic feel */
+            --color-header-border: #E5E5E5;
+            --color-nav-link: var(--color-text-muted);
+            --color-nav-link-hover: var(--color-accent-blue);
+            --color-logo-text: var(--color-text-light);
 
-            --color-mobile-menu-bg: #ffffff;
-            --color-mobile-menu-border: #d1d5db;
-            --color-mobile-link-text: #4a5568;
-            --color-mobile-link-hover: var(--color-blue-vibrant);
+            --color-mobile-menu-bg: var(--color-bg-secondary);
+            --color-mobile-menu-border: var(--color-border-subtle);
+            --color-mobile-link-text: var(--color-text-muted);
+            --color-mobile-link-hover: var(--color-accent-blue);
+            --color-mobile-heading: var(--color-text-light);
 
-            --color-footer-bg: #ffffff;
-            --color-footer-border: #e0e7ed;
-            --color-footer-text: #6b7280;
-            --color-footer-link-hover: var(--color-blue-vibrant);
+            --color-footer-bg: var(--color-bg-secondary);
+            --color-footer-border: var(--color-border-subtle);
+            --color-footer-text: var(--color-text-muted);
+            --color-footer-link-hover: var(--color-accent-blue);
 
-            --color-hero-visual-bg: #ffffff;
-            --color-hero-visual-card-bg: #f0f4f8;
-            --color-hero-visual-card-border: #dae3ed;
-            --color-hero-visual-card-text: #1a202c;
-            --color-hero-visual-card-subtext: #5a677b;
+            --color-hero-visual-bg: var(--color-bg-secondary);
+            --color-hero-visual-card-bg: #F0F0F0;
+            --color-hero-visual-card-border: #D8D8D8;
+            --color-hero-visual-card-text: var(--color-text-light);
+            --color-hero-visual-card-subtext: var(--color-text-muted);
 
-            --color-product-card-bg: #ffffff;
-            --color-product-card-border: #e0e7ed;
-            --color-product-card-text: #1a202c;
-            --color-product-card-subtext: #5a677b;
+            --color-product-card-bg: var(--color-bg-secondary);
+            --color-product-card-border: var(--color-border-subtle);
+            --color-product-card-text: var(--color-text-light);
+            --color-product-card-subtext: var(--color-text-muted);
 
-            --color-sdlc-bg: #f9fafb;
-            --color-sdlc-card-bg: #ffffff;
-            --color-sdlc-card-border: #e0e7ed;
-            --color-sdlc-card-text: #1a202c;
-            --color-sdlc-card-subtext: #5a677b;
+            --color-sdlc-bg: var(--color-bg-primary);
+            --color-sdlc-card-bg: var(--color-bg-secondary);
+            --color-sdlc-card-border: var(--color-border-subtle);
+            --color-sdlc-card-text: var(--color-text-light);
+            --color-sdlc-card-subtext: var(--color-text-muted);
 
-            --color-section-bg-primary: #fbfcfd;
-            --color-section-bg-secondary: #ffffff;
-            --color-section-heading: #1a202c;
-            --color-section-paragraph: #5a677b;
+            --color-section-heading: var(--color-text-light);
+            --color-section-paragraph: var(--color-text-muted);
+
+            /* New colors for the Solutions section in light mode */
+            --color-solution-card-bg: var(--color-bg-secondary);
+            --color-solution-card-border: var(--color-border-subtle);
+            --color-solution-heading: var(--color-text-light);
+            --color-solution-text: var(--color-text-muted);
+            --color-solution-icon-bg-start: #007ACC; /* Darker Blue */
+            --color-solution-icon-bg-end: #005580; /* Even Darker Blue */
+            --color-solution-check: #007ACC; /* Darker Blue */
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--color-primary-dark);
+            background-color: var(--color-bg-primary);
             color: var(--color-text-light);
-            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+            transition: background-color 0.5s ease, color 0.5s ease;
         }
 
         .font-ibm-plex {
             font-family: 'IBM Plex Sans', sans-serif;
         }
 
-        /* Custom gradient for text - remains consistent across themes for branding */
+        /* Custom gradient for text - now includes silver */
         .text-gradient {
-            background: linear-gradient(90deg, #a855f7, #3b82f6, #22c55e); /* Purple, Blue, Green */
+            background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-light-blue), var(--color-accent-silver-gradient));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
+            color: transparent;
         }
 
-        /* Override text-gradient for light mode to be solid blue */
+        /* Override text-gradient for light mode to be solid primary accent */
         body.light-mode .text-gradient {
-            background: none; /* Remove gradient background */
-            -webkit-background-clip: unset; /* Unset clip */
-            -webkit-text-fill-color: unset; /* Unset fill color */
-            color: var(--color-blue-vibrant); /* Solid blue color */
+            background: none;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+            color: var(--color-accent-blue);
         }
 
         /* Button base styles */
@@ -179,94 +204,125 @@
             width: 100%;
         }
 
-        /* Dark Mode Button Styles (Default) */
-        /* Generic Gradient Border Buttons */
-
-.primary-button-wrapper,
-.secondary-button-wrapper {
-  background: linear-gradient(90deg, #a855f7, #3b82f6); /* Default: Purple to Blue */
-  padding: 2px; /* Creates the border effect */
-  border-radius: 0.5rem;
-  display: inline-block; /* Ensures wrapping behavior */
-}
-
-.secondary-button-wrapper {
-  background: linear-gradient(90deg, #6b7280, #9ca3af); /* Gray gradient */
-}
-
-/* Inner Button Styles */
-.btn-primary-inner,
-.btn-secondary-inner {
-  display: block;
-  padding: 0.5rem 1.25rem;
-  border-radius: 0.375rem;
-  background-color: var(--color-button-dark-bg); /* Solid fill */
-  color: var(--color-button-dark-text);
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Hover Effects */
-.btn-primary-inner:hover,
-.btn-secondary-inner:hover {
-  background-color: var(--color-button-hover-bg);
-}
-
-/* Secondary text hover override */
-.btn-secondary-inner {
-  color: var(--color-button-secondary-text);
-}
-.btn-secondary-inner:hover {
-  color: var(--color-button-secondary-hover-text);
-}
-
-/* Light Mode Overrides — Only Solid Borders */
-body.light-mode .primary-button-wrapper,
-body.light-mode .secondary-button-wrapper {
-  background: none;
-  padding: 0;
-  border: 1px solid var(--color-blue-vibrant); /* Or use respective light border vars */
-  border-radius: 0.5rem;
-}
-
-/* Primary Button Inner in Light Mode */
-body.light-mode .btn-primary-inner {
-  background-color: var(--color-button-primary-bg-light);
-  color: var(--color-button-primary-text-light);
-  border: none; /* No inner border as wrapper has it */
-}
-
-/* Hover for Primary */
-body.light-mode .btn-primary-inner:hover {
-  background-color: var(--color-button-primary-hover-bg-light);
-}
-
-/* Secondary Button Inner in Light Mode */
-body.light-mode .btn-secondary-inner {
-  background-color: var(--color-button-secondary-bg-light);
-  color: var(--color-button-secondary-text-light);
-  border: 1px solid var(--color-button-secondary-border-light);
-}
-
-/* Hover for Secondary */
-body.light-mode .btn-secondary-inner:hover {
-  background-color: var(--color-button-secondary-hover-bg-light);
-  color: var(--color-button-secondary-hover-text-light);
-}
+        /* Dark Mode Button Styles (Default) - updated glow for new blue */
+        .primary-button-wrapper {
+          background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-light-blue));
+          padding: 2px;
+          border-radius: 0.5rem;
+          display: inline-block;
+          box-shadow: 0 0 15px rgba(0, 207, 255, 0.4); /* Cyan glow */
+          transition: all 0.3s ease-in-out;
+        }
+        .primary-button-wrapper:hover {
+            box-shadow: 0 0 25px rgba(0, 207, 255, 0.6), 0 0 40px rgba(77, 255, 255, 0.4); /* Enhanced cyan glow */
+            transform: translateY(-2px);
+        }
+        .primary-button-wrapper.pulse {
+            animation: pulseGlow 2s infinite ease-in-out;
+        }
+        @keyframes pulseGlow {
+          0% { box-shadow: 0 0 10px rgba(0, 207, 255, 0.4); }
+          50% { box-shadow: 0 0 20px rgba(0, 207, 255, 0.8), 0 0 30px rgba(0, 207, 255, 0.6); }
+          100% { box-shadow: 0 0 10px rgba(0, 207, 255, 0.4); }
+        }
 
 
+        .secondary-button-wrapper {
+          background: linear-gradient(90deg, var(--color-text-muted), var(--color-border-subtle));
+          padding: 2px;
+          border-radius: 0.5rem;
+          display: inline-block;
+          box-shadow: 0 0 10px rgba(160, 160, 160, 0.3); /* Subtle silver glow */
+          transition: all 0.3s ease-in-out;
+        }
+        .secondary-button-wrapper:hover {
+            box-shadow: 0 0 15px rgba(160, 160, 160, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Inner Button Styles */
+        .btn-primary-inner,
+        .btn-secondary-inner {
+          display: block;
+          padding: 0.5rem 1.25rem;
+          border-radius: 0.375rem;
+          background-color: var(--color-button-primary-bg-inner);
+          color: var(--color-button-primary-text);
+          text-align: center;
+          text-decoration: none;
+          transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Hover Effects */
+        .btn-primary-inner:hover,
+        .btn-secondary-inner:hover {
+          background-color: var(--color-button-hover-bg);
+        }
+
+        /* Secondary text hover override */
+        .btn-secondary-inner {
+          color: var(--color-button-secondary-text);
+        }
+        .btn-secondary-inner:hover {
+          color: var(--color-button-primary-text); /* Text becomes light on hover */
+        }
+
+        /* Light Mode Overrides — Only Solid Borders */
+        body.light-mode .primary-button-wrapper,
+        body.light-mode .secondary-button-wrapper {
+          background: none;
+          padding: 0;
+          border: 1px solid var(--color-accent-blue);
+          border-radius: 0.5rem;
+          box-shadow: none; /* Remove glow in light mode */
+        }
+
+        /* Primary Button Inner in Light Mode */
+        body.light-mode .btn-primary-inner {
+          background-color: var(--color-button-primary-bg-light);
+          color: var(--color-button-primary-text-light);
+          border: none;
+        }
+
+        /* Hover for Primary */
+        body.light-mode .btn-primary-inner:hover {
+          background-color: var(--color-button-primary-hover-bg-light);
+        }
+
+        /* Secondary Button Inner in Light Mode */
+        body.light-mode .btn-secondary-inner {
+          background-color: var(--color-button-secondary-bg-light);
+          color: var(--color-button-secondary-text-light);
+          border: 1px solid var(--color-button-secondary-border-light);
+        }
+
+        /* Hover for Secondary */
+        body.light-mode .btn-secondary-inner:hover {
+          background-color: var(--color-button-secondary-hover-bg-light);
+          color: var(--color-button-secondary-hover-text-light);
+        }
 
         /* Custom card styles */
         .card {
             background-color: var(--color-card-bg);
             border-color: var(--color-card-border);
             @apply rounded-xl shadow-md p-6 border;
+            transition: all 0.3s ease-in-out;
         }
 
-        .hover\:shadow-card-hover:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-            transform: translateY(-5px); /* Subtle lift effect */
+        .card.glow-border {
+            box-shadow: 0 0 15px rgba(0, 207, 255, 0.2), inset 0 0 0 1px rgba(0, 207, 255, 0.1);
+        }
+        body.light-mode .card.glow-border {
+             box-shadow: 0 0 10px rgba(0, 153, 204, 0.1), inset 0 0 0 1px rgba(0, 153, 204, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 207, 255, 0.4); /* Enhanced hover shadow with cyan glow */
+        }
+        body.light-mode .card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 153, 204, 0.2);
         }
 
         /* Input field styling */
@@ -275,7 +331,7 @@ body.light-mode .btn-secondary-inner:hover {
             border-color: var(--color-input-border);
             color: var(--color-input-text);
             @apply w-full p-3 rounded-lg border placeholder-gray-500
-            focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200;
+            focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors duration-200;
         }
         .input-field::placeholder {
             color: var(--color-input-placeholder);
@@ -293,7 +349,7 @@ body.light-mode .btn-secondary-inner:hover {
             opacity: 0 !important;
         }
         #mobile-menu:not(.hidden) {
-            max-height: 600px; /* Adjust as needed for content */
+            max-height: 600px;
             opacity: 1;
         }
 
@@ -304,12 +360,12 @@ body.light-mode .btn-secondary-inner:hover {
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 0; /* Ensure it's behind content */
-            opacity: 0.15; /* Adjusted for better visibility, can be tweaked */
+            z-index: 0;
+            opacity: 0.5; /* Increased visibility for shiny effect */
             transition: opacity 0.3s ease;
         }
         body.light-mode #hero-canvas {
-            opacity: 0.25; /* More prominent in light mode */
+            opacity: 0.7; /* Adjusted for light mode visibility */
         }
 
         /* SDLC Cycle specific styles */
@@ -317,77 +373,192 @@ body.light-mode .btn-secondary-inner:hover {
             color: var(--color-sdlc-card-text);
             @apply flex flex-col items-center text-center transition-all duration-300;
             justify-content: center;
-            width: 120px; /* Fixed width for consistent layout around the circle */
+            /* Remove fixed width for better responsiveness */
         }
         .sdlc-step p {
             color: var(--color-sdlc-card-subtext);
-            font-size: 0.875rem; /* text-sm */
-            line-height: 1.25rem; /* leading-tight */
+            font-size: 0.875rem;
+            line-height: 1.25rem;
         }
         .sdlc-step h3 {
-            font-size: 1rem; /* text-base */
-            line-height: 1.5rem; /* leading-normal */
-            margin-bottom: 0.25rem; /* mb-1 */
+            font-size: 1rem;
+            line-height: 1.5rem;
+            margin-bottom: 0.25rem;
         }
 
         .sdlc-icon-wrapper {
-            @apply w-12 h-12 rounded-full flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-110;
+            @apply w-14 h-14 rounded-full flex items-center justify-center mb-3 shadow-md;
+            background: linear-gradient(to bottom right, var(--color-accent-silver), var(--color-accent-dark-blue)); /* Unified silver gradient */
         }
 
-        .sdlc-circle-container {
+        /* Remove specific icon background colors for dark mode, use unified */
+        .sdlc-icon-wrapper.bg-accent-blue,
+        .sdlc-icon-wrapper.bg-accent-light-blue,
+        .sdlc-icon-wrapper.bg-accent-dark-blue,
+        .sdlc-icon-wrapper.bg-accent-silver,
+        .sdlc-icon-wrapper.bg-accent-grey {
+            background: linear-gradient(to bottom right, var(--color-accent-silver), var(--color-accent-grey)); /* Unified silver gradient */
+        }
+
+        /* Ensure icon color adapts to theme for visibility */
+        .sdlc-icon-wrapper svg {
+            color: var(--color-text-light); /* Icons adapt to text color for contrast */
+        }
+
+
+        /* Product portfolio tiles - smoother edges */
+        .group.card {
+            border-radius: 1.5rem; /* Equivalent to rounded-3xl */
+        }
+        /* Ensure inner elements also respect this if they are rounded */
+        .group.card > div:first-child { /* The icon wrapper */
+            border-radius: 1rem; /* Slightly less rounded than card */
+        }
+        /* Product card icon background visibility */
+        .group.card .w-14.h-14 {
+            /* These gradients are designed to be visible on both dark and light backgrounds */
+            /* No specific light mode override needed if base colors provide enough contrast */
+        }
+
+
+        /* AI SDLC Life Cycle - New Layout */
+        .sdlc-layout {
             position: relative;
-            width: 500px; /* Adjusted for compactness */
-            height: 500px; /* Adjusted for compactness */
+            width: 100%;
+            max-width: 600px;
+            aspect-ratio: 1 / 1;
             margin: 0 auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            animation: rotateCircle 30s linear infinite; /* Add rotation animation */
         }
 
-        @keyframes rotateCircle {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
 
-        .sdlc-item {
+
+        .sdlc-step-item {
             position: absolute;
-            /* Calculate position based on angle */
-            --radius: 200px; /* Distance from center to item center, adjusted for tighter circle */
-            /* Using calc for dynamic positioning based on CSS variables */
-            left: calc(50% + var(--radius) * cos(var(--angle) * 1deg) - var(--item-width) / 2);
-            top: calc(50% + var(--radius) * sin(var(--angle) * 1deg) - var(--item-height) / 2);
-            animation: float 3s ease-in-out infinite alternate; /* Subtle floating animation */
-            animation-delay: calc(var(--index) * 0.1s); /* Stagger animation */
-            /* Set item width as a CSS variable for easier calculation */
-            --item-width: 120px; /* Matches .sdlc-step width */
-            --item-height: 100px; /* Approximate height of sdlc-step content */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the element based on JS-calculated offset */
+            width: 25%;
+            min-width: 90px;
+            min-height: 90px;
+            background-color: var(--color-sdlc-card-bg);
+            border: 1px solid var(--color-sdlc-card-border);
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            z-index: 10;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Counter-rotate the content of each item */
-        .sdlc-item > div {
-            transform: rotate(calc(-1 * var(--current-rotation-angle, 0deg))); /* This will be set by JS */
-            transition: transform 0.1s linear; /* Smooth counter-rotation */
+
+        .sdlc-step-item:hover {
+            transform: translate(-50%, -50%) translateY(-5px); /* Adjust hover transform */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 207, 255, 0.3);
         }
 
+        /* Remove specific grid-column/grid-row assignments */
+        .sdlc-layout .sdlc-step-item:nth-child(1) { /* Planning & Design */ }
+        .sdlc-layout .sdlc-step-item:nth-child(2) { /* Development */ }
+        .sdlc-layout .sdlc-step-item:nth-child(3) { /* Feedback */ }
+        .sdlc-layout .sdlc-step-item:nth-child(4) { /* Testing */ }
+        .sdlc-layout .sdlc-step-item:nth-child(5) { /* Deployment */ }
+        .sdlc-layout .sdlc-step-item:nth-child(6) { /* Monitoring */ }
 
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); } /* Slightly less movement */
-            100% { transform: translateY(0px); }
+
+        /* SVG Container for Lines */
+        .sdlc-line-svg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Allow clicks to pass through */
+            z-index: 5; /* Below step items, above background */
+        }
+        .sdlc-line-svg-container line {
+            stroke: var(--color-border-subtle); /* Line color */
+            stroke-width: 2;
+            opacity: 0.6;
+            transition: stroke 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* Responsive adjustments for SDLC layout */
+        @media (max-width: 1024px) {
+            .sdlc-layout {
+                max-width: 95%;
+                aspect-ratio: 1 / 1; /* Use aspect-ratio here too */
+                margin: 0 auto;
+            }
+            .sdlc-step-item {
+                width: 30%; /* Adjust width for mobile, allowing more space between */
+                min-width: 80px; /* Smaller minimum size for very small screens */
+                min-height: 80px;
+                font-size: 0.7rem; /* Smaller font size on mobile */
+                padding: 0.5rem; /* Further reduced padding for mobile */
+            }
+            .sdlc-step-item h3 {
+                font-size: 0.75rem;
+            }
+            .sdlc-step-item p {
+                font-size: 0.6rem;
+            }
+            .sdlc-icon-wrapper {
+                width: 10px; /* Even smaller icon wrapper */
+                height: 10px;
+                margin-bottom: 0.25rem; /* Reduced margin */
+            }
+            .sdlc-icon-wrapper svg {
+                width: 0.9rem; /* Smaller icon size */
+                height: 0.9rem;
+            }
+            .sdlc-line-svg-container {
+                display: block; /* Keep lines visible on mobile as requested */
+            }
+        }
+
+        /* Navbar specific styles for futuristic look */
+        header {
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            background-color: var(--color-header-bg);
+            border-color: var(--color-header-border);
+            box-shadow: 0 4px 15px rgba(0, 207, 255, 0.1); /* Subtle cyan glow shadow */
+        }
+
+        nav a, nav button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a::after, nav button::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-accent-blue);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-out;
+        }
+
+        nav a:hover::after, nav button:hover::after {
+            transform: translateX(0);
         }
 
         /* General section backgrounds and text */
-        .bg-primary-dark { background-color: var(--color-section-bg-primary); }
-        .bg-secondary-dark { background-color: var(--color-section-bg-secondary); }
-        .text-gray-100 { color: var(--color-section-heading); }
-        .text-gray-400 { color: var(--color-section-paragraph); }
+        .bg-section-primary { background-color: var(--color-bg-primary); }
+        .bg-section-secondary { background-color: var(--color-bg-secondary); }
+        .text-section-heading { color: var(--color-section-heading); }
+        .text-section-paragraph { color: var(--color-section-paragraph); }
 
         /* Navigation and Footer specific overrides */
-        header {
-            background-color: var(--color-header-bg);
-            border-color: var(--color-header-border);
-        }
         footer {
             background-color: var(--color-footer-bg);
             border-color: var(--color-footer-border);
@@ -413,26 +584,26 @@ body.light-mode .btn-secondary-inner:hover {
         #mobile-menu a {
             color: var(--color-mobile-link-text);
         }
-        #mobile-menu a:hover {
+    #mobile-menu a:hover {
             color: var(--color-mobile-link-hover);
         }
-        #mobile-menu span { /* For "Products" and "Company" headings in mobile menu */
-            color: var(--color-text-light);
+        #mobile-menu span {
+            color: var(--color-mobile-heading);
         }
 
         /* Hero visual cards */
-        .hero-section .relative.bg-gray-900 {
+        .hero-section .relative.card {
             background-color: var(--color-hero-visual-bg);
-            border-color: var(--color-card-border); /* Use card border for consistency */
+            border-color: var(--color-card-border);
         }
-        .hero-section .bg-gray-800 {
+        .hero-section .rounded-lg.p-4.shadow-md.border {
             background-color: var(--color-hero-visual-card-bg);
             border-color: var(--color-hero-visual-card-border);
         }
-        .hero-section .bg-gray-800 h4 {
+        .hero-section .rounded-lg.p-4.shadow-md.border h4 {
             color: var(--color-hero-visual-card-text);
         }
-        .hero-section .bg-gray-800 p {
+        .hero-section .rounded-lg.p-4.shadow-md.border p {
             color: var(--color-hero-visual-card-subtext);
         }
 
@@ -444,63 +615,123 @@ body.light-mode .btn-secondary-inner:hover {
             color: var(--color-product-card-subtext);
         }
 
-        /* In your Tailwind CSS or global CSS */
-        .button-surface {
-          background-color: var(--color-button-dark-bg);
-          color: var(--color-button-dark-text);
-          transition: background-color 0.3s ease;
+        /* New Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        .button-surface:hover {
-          background-color: var(--color-button-hover-bg);
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Responsive adjustments for SDLC circle */
-        @media (max-width: 1024px) {
-            .sdlc-circle-container {
-                width: 100%;
-                height: auto;
-                flex-direction: column;
-                position: static;
-                animation: none; /* Disable rotation on small screens */
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-on-scroll.slide-left.is-visible {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .animate-on-scroll.slide-right.is-8visible {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        .animate-on-scroll.fade-in.is-visible {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        /* Specific animation delays for staggered effects */
+        .animate-on-scroll:nth-child(1) { transition-delay: 0s; }
+        .animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+        .animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+        .animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+        .animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+        .animate-on-scroll:nth-child(6) { transition-delay: 0.5s; }
+
+        /* Hero section specific layout */
+        .hero-section-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .hero-section-content h1 {
+            font-size: 3.5rem; /* Large heading */
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        .hero-section-content p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+        }
+        @media (min-width: 1024px) {
+            .hero-section-content h1 {
+                font-size: 5rem; /* Even larger on desktop */
             }
-            .sdlc-item {
-                position: static;
-                transform: none;
-                margin-bottom: 2rem;
-                width: 90%; /* Adjust width for smaller screens */
-                max-width: 300px; /* Max width for cards */
-                left: auto;
-                top: auto;
-                animation: none; /* Disable float animation on mobile if stacked */
-            }
-            .sdlc-item > div {
-                transform: none !important; /* Disable counter-rotation on small screens */
-            }
-            /* Re-add some padding and background for mobile stacked view if desired */
-            .sdlc-item .sdlc-step {
-                padding: 1rem;
-                background-color: var(--color-sdlc-card-bg);
-                border: 1px solid var(--color-sdlc-card-border);
-                border-radius: 0.75rem; /* rounded-xl */
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-            }
-            .sdlc-flow-animation {
-                display: none; /* Hide circular animation on mobile */
-            }
+        }
+
+        /* Solutions Section Specific Styles */
+        .feature-card {
+            background-color: var(--color-solution-card-bg);
+            border: 1px solid var(--color-solution-card-border);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 207, 255, 0.3);
+        }
+        body.light-mode .feature-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 153, 204, 0.2);
+        }
+
+        .feature-card .w-16.h-16 {
+            background: linear-gradient(to bottom right, var(--color-solution-icon-bg-start), var(--color-solution-icon-bg-end));
+        }
+
+        .feature-card h3 {
+            color: var(--color-solution-heading);
+        }
+
+        .feature-card ul {
+            color: var(--color-solution-text);
+        }
+
+        .feature-card svg.lucide-circle-check-big {
+            color: var(--color-solution-check);
         }
     </style>
 </head>
-<body class="bg-primary-dark text-text-light font-inter">
+<body class="bg-bg-primary text-text-light font-inter">
     <!-- Navigation Header -->
-    <header class="bg-secondary-dark border-b border-border-dark sticky top-0 z-50">
+    <header class="bg-header-bg border-b border-header-border sticky top-0 z-50 shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <a href="homepage.html" class="text-accent-vibrant hover:text-accent-vibrant-light font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
-                      <img
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAgCAMAAADdXFNzAAAAk1BMVEVHcEw8Oy5MUTwtQT4/PjZGPy1FRDRFQjNFQzZNSzdWSjk9PTBTUEotLyhhUDZPQz9NRztFSzlFRjU+QzJGRzpQXDt9TTRIXjZJQTRqXChIdavfLCXiKyRGc6hGTUhLVl93NkdgQkhHdTxHjj6GMEbTjg2FPjq4Nyj/qQA8Y3fVVwnrnAOaNzeMZSy1fR8/bZeORx/Y+bhjAAAAGnRSTlMAD/G4K6tuIH7+/T3+B/e9zNtVjvT89veg9coMtxAAAAGDSURBVCiRdZPZloIwEAVjZEsIm8vgiNlARRTU//+66URE1OGe44tVfWkIINTHWyXBEG+GPuKkhMbxj01McfAh+C5ljN7PNnF3iN8F35XbLeeNvtfn+t6dTpc3wWLgW35rhBAnyIW+hAfeWuUmcIavl3HDgDk0SHcRevNVdxiEJ+bmAsz14a9ZuMx+r48l/c2zHCIshkS+N8eUgJAwmHzMvzDqS7IFIozzfpqNsS1Z+IgSaUb5N36EgsD5sNo3jxmT0xiRK5NS3qYwIoeuaSRJJjDwg2wakTjTnIljcZxPCMCFqHe7dkKA62sNfDfRQLVSqi2KYkKger9XqvhX8EMfJcD3qjb8XYgcL4XzcRIFfG/wWDCnR8gSXgAnAa7tfNHfJhyci9fr/i2HBqXNhkap507kBGleluXwEYSp1tpi+LXJJsvLqipH3wgI8Ij6FQgBWlU4iF67hqlQO9N+FFBsOPZG2Aikrlsq7Gi+Jh/YCCsIxnm+xhhu7AOjKPSGBFk6PKc/6PExEX9mJwAAAAAASUVORK5CYII="
+                    <a href="homepage.html" class="font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAgCAMAAADdXFNzAAAAk1BMVEVHcEw8Oy5MUTwtQT4/PjZGPy1FRDRFQjNFQzZNSzdWSjk9PTBTUEotLyhhUDZPQz9NRztFSzlFRjU+QzJGRzpQXDt9TTRIXjZJQTRqXChIdavfLCXiKyRGc6hGTUhLVl93NkdgQkhHdTxHjj6GMEbTjg2FPjq4Nyj/qQA8Y3fVVwnrnAOaNzeMZSy1fR8/bZeORx/Y+bhjAAAAGnRSTlMAD/G4K6tuIH7+/T3+B/e9zNtVjvT89veg9coMtxAAAAGDSURBVCiRdZPZloIwEAVjZEsIm8vgiNlARRTU//+66URE1OGe44tVfWkIINTHWyXBEG+GPuKkhMbxj01McfAh+C5ljN7PNnF3iN8F35XbLeeNvtfn+t6dTpc3wWLgW35rhBAnyIW+hAfeWuUmcIavl3HDgDk0SHcRevNVdxiEJ+bmAsz14a9ZuMx+r48l/c2zHCIshkS+N8eUgJAwmHzMvzDqS7IFIozzfpqNsS1Z+IgSaUb5N36EgsD5sNo3jxmT0xiRK5NS3qYwIoeuaSRJJjDwg2wakTjTnIljcZxPCMCFqHe7dkKA62sNfDfRQLVSqi2KYkKger9XqvhX8EMfJcD3qjb8XYgcL4XzcRIFfG/wWDCnR8gSXgAnAa7tfNHfJhyci9fr/i2HBqXNhkap507kBGleluXwEYSp1tpi+LXJJsvLqipH3wgI8Ij6FQgBWlU4iF67hqlQO9N+FFBsOPZG2Aikrlsq7Gi+Jh/YCCsIxnm+xhhu7AOjKPSGBFk6PKc/6PExEX9mJwAAAAAASUVORK5CYII="
                         width="40"
                          height="30"
                         class="transition-transform duration-300 hover:scale-105"
@@ -525,32 +756,32 @@ body.light-mode .btn-secondary-inner:hover {
                                 </svg>
                             </button>
                             <!-- Mega Menu -->
-                            <div class="absolute left-0 mt-2 w-96 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                            <div class="absolute left-0 mt-2 w-96 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
                                 <div class="p-6">
                                     <div class="grid grid-cols-1 gap-4">
-                                        <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
-                                            <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+                                        <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-blue);"></div>
                                             <div>
                                                 <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniXcellerate</h4>
                                                 <p class="text-sm" style="color: var(--color-text-muted);">AI Orchestration Platform</p>
                                             </div>
                                         </a>
-                                        <a href="cogni_loom_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
-                                            <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                                        <a href="cogni_loom_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-light-blue);"></div>
                                             <div>
                                                 <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniLoom</h4>
                                                 <p class="text-sm" style="color: var(--color-text-muted);">Intelligent Process Automation</p>
                                             </div>
                                         </a>
-                                        <a href="cogni_chat_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
-                                            <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                                        <a href="cogni_chat_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-dark-blue);"></div>
                                             <div>
                                                 <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniChat</h4>
                                                 <p class="text-sm" style="color: var(--color-text-muted);">Conversational AI Platform</p>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)" class="flex items-center p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
-                                            <div class="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
+                                        <a href="javascript:void(0)" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-silver);"></div>
                                             <div>
                                                 <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniAgent</h4>
                                                 <p class="text-sm" style="color: var(--color-text-muted);">Intelligent Agent Framework</p>
@@ -562,14 +793,14 @@ body.light-mode .btn-secondary-inner:hover {
                         </div>
 
                         <!-- Solutions & Services Group -->
-                        <div class="flex items-center space-x-1 pl-2 ml-2" style="border-left: 1px solid var(--color-border-dark);">
+                        <div class="flex items-center space-x-1 pl-2 ml-2" style="border-left: 1px solid var(--color-border-subtle);">
                             <a href="solutions_showcase.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Solutions</a>
                             <a href="platform_engineering_services.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Services</a>
                             <a href="industries_hub.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Industries</a>
                         </div>
 
                         <!-- Resources & Company Group -->
-                        <div class="flex items-center space-x-1 pl-2 ml-2" style="border-left: 1px solid var(--color-border-dark);">
+                        <div class="flex items-center space-x-1 pl-2 ml-2" style="border-left: 1px solid var(--color-border-subtle);">
                             <a href="resource_center.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Resources</a>
 
                             <!-- Company Dropdown -->
@@ -581,12 +812,12 @@ body.light-mode .btn-secondary-inner:hover {
                                     </svg>
                                 </button>
                                 <!-- Company Dropdown -->
-                                <div class="absolute left-0 mt-2 w-72 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                                <div class="absolute left-0 mt-2 w-72 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
                                     <div class="p-4">
                                         <div class="space-y-2">
-                                            <a href="about_us.html" class="block p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">About Us</a>
-                                            <a href="leadership_team.html" class="block p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Leadership Team</a>
-                                            <a href="life_at_cogniwide_careers.html" class="block p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Life at Cogniwide + Careers</a>
+                                            <a href="about_us.html" class="block p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">About Us</a>
+                                            <a href="leadership_team.html" class="block p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">Leadership Team</a>
+                                            <a href="life_at_cogniwide_careers.html" class="block p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">Life at Cogniwide + Careers</a>
                                         </div>
                                     </div>
                                 </div>
@@ -600,7 +831,7 @@ body.light-mode .btn-secondary-inner:hover {
                 <!-- Tablet Navigation (768px - 1024px) -->
                 <div class="hidden md:flex lg:hidden items-center space-x-6">
                     <!-- Essential Links -->
-                    <a href="homepage.html" class="font-ibm-plex font-medium text-sm transition-colors duration-300" style="color: var(--color-accent-vibrant-light);" onmouseover="this.style.color='var(--color-accent-vibrant)'" onmouseout="this.style.color='var(--color-accent-vibrant-light)'">Home</a>
+                    <a href="homepage.html" class="font-ibm-plex font-medium text-sm transition-colors duration-300" style="color: var(--color-accent-blue);" onmouseover="this.style.color='var(--color-accent-light-blue)'" onmouseout="this.style.color='var(--color-accent-blue)'">Home</a>
 
                     <!-- Products Menu -->
                     <div class="relative group">
@@ -610,23 +841,23 @@ body.light-mode .btn-secondary-inner:hover {
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                             </svg>
                         </button>
-                        <div class="absolute left-0 mt-2 w-80 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                        <div class="absolute left-0 mt-2 w-80 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
                             <div class="p-4">
                                 <div class="grid grid-cols-1 gap-2">
-                                    <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
-                                        <div class="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
+                                    <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-blue);"></div>
                                         <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniXcellerate</span>
                                     </a>
-                                    <a href="cogni_loom_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
-                                        <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                                    <a href="cogni_loom_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-light-blue);"></div>
                                         <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniLoom</span>
                                     </a>
-                                    <a href="cogni_chat_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
-                                        <div class="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                                    <a href="cogni_chat_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-dark-blue);"></div>
                                         <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniChat</span>
                                     </a>
-                                    <a href="javascript:void(0)" class="flex items-center p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300" style="color: var(--color-text-light); background-color: var(--color-input-bg);">
-                                        <div class="w-2 h-2 bg-red-500 rounded-full mr-2"></div>
+                                    <a href="javascript:void(0)" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-silver);"></div>
                                         <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniAgent</span>
                                     </a>
                                 </div>
@@ -642,18 +873,18 @@ body.light-mode .btn-secondary-inner:hover {
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                             </svg>
                         </button>
-                        <div class="absolute right-0 mt-2 w-64 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+                        <div class="absolute right-0 mt-2 w-64 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
                             <div class="p-4">
                                 <div class="space-y-2">
-                                    <a href="solutions_showcase.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Solutions</a>
-                                    <a href="platform_engineering_services.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Services</a>
-                                    <a href="industries_hub.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Industries</a>
-                                    <a href="resource_center.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Resources</a>
-                                    <hr style="border-color: var(--color-border-dark);" class="my-2" />
-                                    <a href="about_us.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">About Us</a>
-                                    <a href="leadership_team.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Leadership Team</a>
-                                    <a href="life_at_cogniwide_careers.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Careers</a>
-                                    <a href="contact.html" class="block p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm" style="color: var(--color-text-light); background-color: var(--color-input-bg);">Contact</a>
+                                    <a href="solutions_showcase.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Solutions</a>
+                                    <a href="platform_engineering_services.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Services</a>
+                                    <a href="industries_hub.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Industries</a>
+                                    <a href="resource_center.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Resources</a>
+                                    <hr style="border-color: var(--color-border-subtle);" class="my-2" />
+                                    <a href="about_us.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">About Us</a>
+                                    <a href="leadership_team.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Leadership Team</a>
+                                    <a href="life_at_cogniwide_careers.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Careers</a>
+                                    <a href="contact.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Contact</a>
                                 </div>
                             </div>
                         </div>
@@ -663,7 +894,7 @@ body.light-mode .btn-secondary-inner:hover {
                 <!-- CTA Button -->
                 <div class="hidden md:flex items-center space-x-4">
   <!-- Theme Toggle Button -->
-  <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500" style="color: var(--color-nav-link);">
+  <button id="theme-toggle" class="p-2 rounded-full hover:bg-input-bg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue" style="color: var(--color-nav-link);">
     <svg id="sun-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12h1m15.325-4.275l-.707-.707M4.675 19.325l-.707-.707M19.325 4.675l-.707-.707M4.675 4.675l-.707-.707M12 18a6 6 0 100-12 6 6 0 000 12z" />
     </svg>
@@ -673,7 +904,7 @@ body.light-mode .btn-secondary-inner:hover {
   </button>
 
   <!-- Request Demo Button -->
-  <div class="relative rounded-lg inline-block primary-button-wrapper">
+  <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
     <a href="contact.html" class="btn-primary-inner">
       Request Demo
     </a>
@@ -684,7 +915,7 @@ body.light-mode .btn-secondary-inner:hover {
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center space-x-4">
                     <!-- Mobile Theme Toggle -->
-                    <button id="mobile-theme-toggle" class="p-2 rounded-full text-gray-300 hover:text-purple-400 hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500">
+                    <button id="mobile-theme-toggle" class="p-2 rounded-full text-text-muted hover:text-accent-blue hover:bg-input-bg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue">
                         <svg id="mobile-sun-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12h1m15.325-4.275l-.707-.707M4.675 19.325l-.707-.707M19.325 4.675l-.707-.707M4.675 4.675l-.707-.707M12 18a6 6 0 100-12 6 6 0 000 12z" />
                         </svg>
@@ -693,7 +924,7 @@ body.light-mode .btn-secondary-inner:hover {
                         </svg>
                     </button>
 
-                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-purple-400 hover:bg-gray-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-text-muted hover:text-accent-blue hover:bg-input-bg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue">
                         <span class="sr-only">Open main menu</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -705,11 +936,11 @@ body.light-mode .btn-secondary-inner:hover {
             <!-- Mobile Navigation Menu -->
             <div id="mobile-menu" class="md:hidden hidden transition-all duration-300 ease-in-out" style="background-color: var(--color-mobile-menu-bg); border-color: var(--color-mobile-menu-border);">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t shadow-lg" style="border-color: var(--color-mobile-menu-border);">
-                    <a href="homepage.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-accent-vibrant-light);" onmouseover="this.style.color='var(--color-accent-vibrant)'" onmouseout="this.style.color='var(--color-accent-vibrant-light)'">Home</a>
+                    <a href="homepage.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-accent-blue);" onmouseover="this.style.color='var(--color-accent-light-blue)'" onmouseout="this.style.color='var(--color-accent-blue)'">Home</a>
 
                     <!-- Mobile Products Submenu -->
                     <div class="block px-3 py-2">
-                        <span class="font-medium text-base" style="color: var(--color-text-light);">Products</span>
+                        <span class="font-medium text-base" style="color: var(--color-mobile-heading);">Products</span>
                         <div class="ml-4 mt-2 space-y-1">
                             <a href="cogni_xcellerate_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniXcellerate</a>
                             <a href="cogni_loom_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniLoom</a>
@@ -718,14 +949,14 @@ body.light-mode .btn-secondary-inner:hover {
                         </div>
                     </div>
 
-                    <a href="solutions_showcase.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-text-light);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-text-light)'">Solutions</a>
-                    <a href="platform_engineering_services.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-text-light);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-text-light)'">Services</a>
-                    <a href="industries_hub.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-text-light);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-text-light)'">Industries</a>
-                    <a href="resource_center.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-text-light);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-text-light)'">Resources</a>
+                    <a href="solutions_showcase.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Solutions</a>
+                    <a href="platform_engineering_services.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Services</a>
+                    <a href="industries_hub.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Industries</a>
+                    <a href="resource_center.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Resources</a>
 
                     <!-- Mobile Company Submenu -->
                     <div class="block px-3 py-2">
-                        <span class="font-medium text-base" style="color: var(--color-text-light);">Company</span>
+                        <span class="font-medium text-base" style="color: var(--color-mobile-heading);">Company</span>
                         <div class="ml-4 mt-2 space-y-1">
                             <a href="about_us.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">About Us</a>
                             <a href="leadership_team.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">Leadership Team</a>
@@ -733,11 +964,11 @@ body.light-mode .btn-secondary-inner:hover {
                         </div>
                     </div>
 
-                    <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-text-light);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-text-light)'">Contact</a>
+                    <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Contact</a>
 
                     <!-- Mobile CTA -->
                     <div class="pt-4" style="border-color: var(--color-mobile-menu-border);">
-                        <div class="relative rounded-lg inline-block w-full primary-button-wrapper">
+                        <div class="relative rounded-lg inline-block w-full primary-button-wrapper pulse">
                             <a href="contact.html" class="btn-primary-inner w-full text-center">
                               Request Demo
                             </a>
@@ -749,98 +980,63 @@ body.light-mode .btn-secondary-inner:hover {
     </header>
 
     <!-- Hero Section -->
-    <section class="relative hero-section" style="background-color: var(--color-primary-dark);">
+    <section class="relative hero-section bg-bg-primary overflow-hidden min-h-[70vh] flex items-center justify-center">
         <!-- Canvas for particle background -->
         <canvas id="hero-canvas"></canvas>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Hero Content -->
-                <div class="space-y-8">
-                    <div class="space-y-4">
-                        <h1 class="font-inter font-bold text-4xl lg:text-6xl leading-tight" style="color: var(--color-text-light);">
-                            Intelligent Automation That
-                            <span class="text-gradient">Amplifies Human Potential</span>
-                        </h1>
-                        <p class="text-xl leading-relaxed" style="color: var(--color-text-muted);">
-                            Transform your enterprise with AI-powered orchestration that doesn't just automate—it intelligently adapts, learns, and scales with your business needs.
-                        </p>
-                    </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 z-10 hero-section-content">
+            <h1 class="font-inter font-extrabold text-section-heading animate-on-scroll fade-in">
+                Intelligent Automation That
+                <span class="text-gradient">Amplifies Human Potential</span>
+            </h1>
+            <p class="text-xl leading-relaxed text-section-paragraph max-w-4xl mx-auto animate-on-scroll fade-in" style="transition-delay: 0.2s;">
+                Transform your enterprise with AI-powered orchestration that doesn't just automate—it intelligently adapts, learns, and scales with your business needs.
+            </p>
 
-                    <!-- Interactive Product Selector -->
-                    <div class="space-y-4">
-                        <h3 class="font-inter font-semibold text-lg" style="color: var(--color-text-light);">Explore Our AI Solutions:</h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <a href="cogni_xcellerate_product_deep_dive.html" class="group p-4 border-2 rounded-lg hover:border-purple-500 hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105" style="background-color: var(--color-card-bg); border-color: var(--color-accent-vibrant);">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-4 h-4 bg-purple-500 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
-                                    <span class="font-inter font-medium" style="color: var(--color-text-light);">CogniXcellerate</span>
-                                </div>
-                            </a>
-                            <a href="cogni_loom_product_deep_dive.html" class="group p-4 border-2 rounded-lg hover:border-green-500 hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105" style="background-color: var(--color-card-bg); border-color: var(--color-success-vibrant);">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-4 h-4 bg-green-500 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
-                                    <span class="font-inter font-medium" style="color: var(--color-text-light);">CogniLoom</span>
-                                </div>
-                            </a>
-                            <a href="cogni_chat_product_deep_dive.html" class="group p-4 border-2 rounded-lg hover:border-blue-500 hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105" style="background-color: var(--color-card-bg); border-color: var(--color-blue-vibrant);">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-4 h-4 bg-blue-500 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
-                                    <span class="font-inter font-medium" style="color: var(--color-text-light);">CogniChat</span>
-                                </div>
-                            </a>
-                            <a href="javascript:void(0)" class="group p-4 border-2 rounded-lg hover:border-red-500 hover:bg-gray-800 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105" style="background-color: var(--color-card-bg); border-color: var(--color-error-vibrant);">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-4 h-4 bg-red-500 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
-                                    <span class="font-inter font-medium" style="color: var(--color-text-light);">CogniAgent</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Hero CTAs -->
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <div class="relative rounded-lg inline-block primary-button-wrapper">
-                            <a href="contact.html" class="btn-primary-inner">
-                              Start Free Trial
-                            </a>
-                        </div>
-                        <div class="relative rounded-lg inline-block secondary-button-wrapper">
-                            <a href="contact.html" class="btn-secondary-inner">
-                              Watch Demo
-                            </a>
-                        </div>
-
-                    </div>
+            <!-- Hero CTAs -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll fade-in" style="transition-delay: 0.4s;">
+                <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
+                    <a href="contact.html" class="btn-primary-inner">
+                      Start Free Trial
+                    </a>
                 </div>
+                <div class="relative rounded-lg inline-block secondary-button-wrapper">
+                    <a href="contact.html" class="btn-secondary-inner">
+                      Watch Demo
+                    </a>
+                </div>
+            </div>
 
-                <!-- Hero Visual -->
-                <div class="relative">
-                    <div class="relative rounded-2xl p-8 border shadow-lg" style="background-color: var(--color-hero-visual-bg); border-color: var(--color-card-border);">
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="space-y-4">
-                                <div class="rounded-lg p-4 shadow-md border" style="background-color: var(--color-hero-visual-card-bg); border-color: var(--color-hero-visual-card-border);">
-                                    <div class="w-8 h-8 bg-purple-500 rounded-lg mb-3"></div>
-                                    <h4 class="font-inter font-semibold text-sm" style="color: var(--color-hero-visual-card-text);">Process Automation</h4>
-                                    <p class="text-xs mt-1" style="color: var(--color-hero-visual-card-subtext);">87% efficiency gain</p>
-                                </div>
-                                <div class="rounded-lg p-4 shadow-md border" style="background-color: var(--color-hero-visual-card-bg); border-color: var(--color-hero-visual-card-border);">
-                                    <div class="w-8 h-8 bg-green-500 rounded-lg mb-3"></div>
-                                    <h4 class="font-inter font-semibold text-sm" style="color: var(--color-hero-visual-card-text);">Smart Analytics</h4>
-                                    <p class="text-xs mt-1" style="color: var(--color-hero-visual-card-subtext);">Real-time insights</p>
-                                </div>
+            <!-- Hero Visual - Integrated into the wider space -->
+            <div class="relative mt-16 lg:mt-24 w-full max-w-5xl animate-on-scroll fade-in" style="transition-delay: 0.6s;">
+                <div class="relative rounded-2xl p-8 border shadow-lg card glow-border">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="rounded-lg p-4 shadow-md border text-center" style="background-color: var(--color-hero-visual-card-bg); border-color: var(--color-hero-visual-card-border);">
+                            <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center sdlc-icon-wrapper">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                             </div>
-                            <div class="space-y-4 mt-8">
-                                <div class="rounded-lg p-4 shadow-md border" style="background-color: var(--color-hero-visual-card-bg); border-color: var(--color-hero-visual-card-border);">
-                                    <div class="w-8 h-8 bg-blue-500 rounded-lg mb-3"></div>
-                                    <h4 class="font-inter font-semibold text-sm" style="color: var(--color-hero-visual-card-text);">AI Conversations</h4>
-                                    <p class="text-xs mt-1" style="color: var(--color-hero-visual-card-subtext);">Natural interactions</p>
-                                </div>
-                                <div class="rounded-lg p-4 shadow-md border" style="background-color: var(--color-hero-visual-card-bg); border-color: var(--color-hero-visual-card-border);">
-                                    <div class="w-8 h-8 bg-red-500 rounded-lg mb-3"></div>
-                                    <h4 class="font-inter font-semibold text-sm" style="color: var(--color-hero-visual-card-text);">Intelligent Agents</h4>
-                                    <p class="text-xs mt-1" style="color: var(--color-hero-visual-card-subtext);">Autonomous execution</p>
-                                </div>
+                            <h4 class="font-inter font-semibold text-base" style="color: var(--color-hero-visual-card-text);">Process Automation</h4>
+                            <p class="text-xs mt-1" style="color: var(--color-hero-visual-card-subtext);">87% efficiency gain</p>
+                        </div>
+                        <div class="rounded-lg p-4 shadow-md border text-center" style="background-color: var(--color-hero-visual-card-bg); border-color: var(--color-hero-visual-card-border);">
+                            <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center sdlc-icon-wrapper">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zM20 15.5c-1.25 0-2.25.75-2.25 1.75s1 1.75 2.25 1.75 2.25-.75 2.25-1.75-1-1.75-2.25-1.75zM4 8.5c-1.25 0-2.25.75-2.25 1.75s1 1.75 2.25 1.75 2.25-.75 2.25-1.75-1-1.75-2.25-1.75z"/></svg>
                             </div>
+                            <h4 class="font-inter font-semibold text-base" style="color: var(--color-hero-visual-card-text);">Smart Analytics</h4>
+                            <p class="text-xs mt-1" style="color: var(--color-hero-visual-card-subtext);">Real-time insights</p>
+                        </div>
+                        <div class="rounded-lg p-4 shadow-md border text-center" style="background-color: var(--color-hero-visual-card-bg); border-color: var(--color-hero-visual-card-border);">
+                            <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center sdlc-icon-wrapper">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                            </div>
+                            <h4 class="font-inter font-semibold text-base" style="color: var(--color-hero-visual-card-text);">AI Conversations</h4>
+                            <p class="text-xs mt-1" style="color: var(--color-hero-visual-card-subtext);">Natural interactions</p>
+                        </div>
+                        <div class="rounded-lg p-4 shadow-md border text-center" style="background-color: var(--color-hero-visual-card-bg); border-color: var(--color-hero-visual-card-border);">
+                            <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center sdlc-icon-wrapper">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+                            </div>
+                            <h4 class="font-inter font-semibold text-base" style="color: var(--color-hero-visual-card-text);">Intelligent Agents</h4>
+                            <p class="text-xs mt-1" style="color: var(--color-hero-visual-card-subtext);">Autonomous execution</p>
                         </div>
                     </div>
                 </div>
@@ -849,66 +1045,62 @@ body.light-mode .btn-secondary-inner:hover {
     </section>
 
     <!-- Flagship Products Showcase -->
-    <section class="py-20" style="background-color: var(--color-section-bg-primary);">
+    <section class="py-20 bg-section-primary">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h2 class="font-inter font-bold text-3xl lg:text-4xl mb-4" style="color: var(--color-section-heading);">
-        Our Product Portfolio
+    <div class="text-center mb-16 animate-on-scroll fade-in">
+      <h2 class="font-inter font-bold text-3xl lg:text-4xl mb-4 text-section-heading">
+        Our Product <span class="text-gradient">Portfolio</span>
       </h2>
-      <p class="text-xl max-w-3xl mx-auto text-gray-400">
+      <p class="text-xl max-w-3xl mx-auto text-section-paragraph">
         Four powerful platforms designed to transform every aspect of your enterprise operations
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-      <!-- Card Template Start -->
-      <div class="group p-6 bg-[var(--color-product-card-bg)] rounded-2xl border border-[var(--color-product-card-border)] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-xl">
-        <div class="w-14 h-14 bg-gradient-to-tr from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center mb-5 shadow-md">
+      <!-- CogniXcellerate Card -->
+      <div class="group p-6 card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] animate-on-scroll slide-in-up rounded-3xl">
+          <div class="w-14 h-14 bg-gradient-to-tr from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-5 shadow-md">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+              </svg>
+          </div>
+        <h3 class="font-semibold text-lg text-product-card-text mb-3">CogniXcellerate</h3>
+        <p class="text-sm text-product-card-subtext mb-5 leading-relaxed">
+          AI orchestration platform that intelligently coordinates complex workflows and automates decision-making processes.
+        </p>
+        <ul class="text-sm text-product-card-subtext space-y-2 mb-6">
+          <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full" style="background-color: var(--color-accent-blue);"></span>Workflow Orchestration</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full" style="background-color: var(--color-accent-blue);"></span>Intelligent Decision Making</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full" style="background-color: var(--color-accent-blue);"></span>Real-time Monitoring</li>
+        </ul>
+        <a href="cogni_xcellerate_product_deep_dive.html" class="inline-flex items-center font-semibold text-accent-blue hover:text-accent-light-blue transition duration-300">
+          Explore Solution
+          <svg class="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- CogniLoom Card -->
+      <div class="group p-6 card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] animate-on-scroll slide-in-up rounded-3xl" style="transition-delay: 0.1s;">
+        <div class="w-14 h-14 bg-gradient-to-tr from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-5 shadow-md drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">
           <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
             <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
           </svg>
         </div>
-        <h3 class="font-semibold text-lg text-[var(--color-product-card-text)] mb-3">CogniXcellerate</h3>
-        <p class="text-sm text-[var(--color-product-card-subtext)] mb-5 leading-relaxed">
-          AI orchestration platform that intelligently coordinates complex workflows and automates decision-making processes.
-        </p>
-        <ul class="text-sm text-[var(--color-product-card-subtext)] space-y-2 mb-6">
-          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-purple-500 rounded-full"></span>Workflow Orchestration</li>
-          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-purple-500 rounded-full"></span>Intelligent Decision Making</li>
-          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-purple-500 rounded-full"></span>Real-time Monitoring</li>
-        </ul>
-        <a href="cogni_xcellerate_product_deep_dive.html" class="inline-flex items-center font-semibold text-purple-400 hover:text-purple-300 transition duration-300">
-          Explore Solution
-          <svg class="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-      <!-- Card Template End -->
 
-      <!-- Repeat the card structure with different icon colors, product names and features for:
-           - CogniLoom (green)
-           - CogniChat (blue)
-           - CogniAgent (red) -->
 
-      <!-- CogniLoom -->
-      <div class="group p-6 bg-[var(--color-product-card-bg)] rounded-2xl border border-[var(--color-product-card-border)] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-xl">
-        <div class="w-14 h-14 bg-gradient-to-tr from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-5 shadow-md">
-          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zM8.707 10.707L7.293 9.293A1 1 0 118.707 7.879l2 2a1 1 0 010 1.414l-2 2A1 1 0 017.293 11.12l1.414-1.414z" clip-rule="evenodd" />
-          </svg>
-        </div>
-        <h3 class="font-semibold text-lg text-[var(--color-product-card-text)] mb-3">CogniLoom</h3>
-        <p class="text-sm text-[var(--color-product-card-subtext)] mb-5 leading-relaxed">
+        <h3 class="font-semibold text-lg text-product-card-text mb-3">CogniLoom</h3>
+        <p class="text-sm text-product-card-subtext mb-5 leading-relaxed">
           Unified data fabric platform that weaves enterprise-wide data into a cohesive, secure and intelligent layer.
         </p>
-        <ul class="text-sm text-[var(--color-product-card-subtext)] space-y-2 mb-6">
-          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-green-500 rounded-full"></span>Smart Data Integration</li>
-          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-green-500 rounded-full"></span>Automated Lineage</li>
-          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-green-500 rounded-full"></span>Enterprise Ontology</li>
+        <ul class="text-sm text-product-card-subtext space-y-2 mb-6">
+          <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full" style="background-color: var(--color-accent-light-blue);"></span>Smart Data Integration</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full" style="background-color: var(--color-accent-light-blue);"></span>Automated Lineage</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full" style="background-color: var(--color-accent-light-blue);"></span>Enterprise Ontology</li>
         </ul>
-        <a href="cogni_loom_product_deep_dive.html" class="inline-flex items-center font-semibold text-green-400 hover:text-green-300 transition duration-300">
+        <a href="cogni_loom_product_deep_dive.html" class="inline-flex items-center font-semibold text-accent-light-blue hover:text-accent-blue transition duration-300">
           Explore Solution
           <svg class="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -916,23 +1108,23 @@ body.light-mode .btn-secondary-inner:hover {
         </a>
       </div>
 
-      <!-- CogniChat -->
-      <div class="group p-6 bg-[var(--color-product-card-bg)] rounded-2xl border border-[var(--color-product-card-border)] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-xl">
-        <div class="w-14 h-14 bg-gradient-to-tr from-blue-500 to-sky-500 rounded-xl flex items-center justify-center mb-5 shadow-md">
+      <!-- CogniChat Card -->
+      <div class="group p-6 card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] animate-on-scroll slide-in-up rounded-3xl" style="transition-delay: 0.2s;">
+        <div class="w-14 h-14 bg-gradient-to-tr from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-5 shadow-md drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">
           <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v7a2 2 0 01-2 2H6l-4 4V5z" />
+            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
           </svg>
         </div>
-        <h3 class="font-semibold text-lg text-[var(--color-product-card-text)] mb-3">CogniChat</h3>
-        <p class="text-sm text-[var(--color-product-card-subtext)] mb-5 leading-relaxed">
+        <h3 class="font-semibold text-lg text-product-card-text mb-3">CogniChat</h3>
+        <p class="text-sm text-product-card-subtext mb-5 leading-relaxed">
           Enterprise-grade conversational AI framework tailored for business-specific needs, deployed securely at scale.
         </p>
-        <ul class="text-sm text-[var(--color-product-card-subtext)] space-y-2 mb-6">
-          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Enterprise-grade NLP</li>
-          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Omnichannel Bots</li>
-          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Full Control and Privacy</li>
+        <ul class="text-sm text-product-card-subtext space-y-2 mb-6">
+          <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full" style="background-color: var(--color-accent-dark-blue);"></span>Enterprise-grade NLP</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full" style="background-color: var(--color-accent-dark-blue);"></span>Omnichannel Bots</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full" style="background-color: var(--color-accent-dark-blue);"></span>Full Control and Privacy</li>
         </ul>
-        <a href="cogni_chat_product_deep_dive.html" class="inline-flex items-center font-semibold text-blue-400 hover:text-blue-300 transition duration-300">
+        <a href="cogni_chat_product_deep_dive.html" class="inline-flex items-center font-semibold text-accent-dark-blue hover:text-accent-blue transition duration-300">
           Explore Solution
           <svg class="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -940,23 +1132,23 @@ body.light-mode .btn-secondary-inner:hover {
         </a>
       </div>
 
-      <!-- CogniAgent -->
-      <div class="group p-6 bg-[var(--color-product-card-bg)] rounded-2xl border border-[var(--color-product-card-border)] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-xl">
-        <div class="w-14 h-14 bg-gradient-to-tr from-red-500 to-pink-500 rounded-xl flex items-center justify-center mb-5 shadow-md">
+      <!-- CogniAgent Card -->
+      <div class="group p-6 card hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] animate-on-scroll slide-in-up rounded-3xl" style="transition-delay: 0.3s;">
+        <div class="w-14 h-14 bg-gradient-to-tr from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-5 shadow-md drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">
           <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l.7 2.15a1 1 0 00.95.69h2.262c.969 0 1.371 1.24.588 1.81l-1.83 1.33a1 1 0 00-.364 1.118l.7 2.15c.3.921-.755 1.688-1.538 1.118l-1.83-1.33a1 1 0 00-1.176 0l-1.83 1.33c-.783.57-1.838-.197-1.538-1.118l.7-2.15a1 1 0 00-.364-1.118l-1.83-1.33c-.783-.57-.38-1.81.588-1.81h2.262a1 1 0 00.95-.69l.7-2.15z" />
           </svg>
         </div>
-        <h3 class="font-semibold text-lg text-[var(--color-product-card-text)] mb-3">CogniAgent</h3>
-        <p class="text-sm text-[var(--color-product-card-subtext)] mb-5 leading-relaxed">
+        <h3 class="font-semibold text-lg text-product-card-text mb-3">CogniAgent</h3>
+        <p class="text-sm text-product-card-subtext mb-5 leading-relaxed">
           Autonomous agents equipped with reasoning and tooling that carry out tasks and processes with minimal human input.
         </p>
-        <ul class="text-sm text-[var(--color-product-card-subtext)] space-y-2 mb-6">
-          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-500 rounded-full"></span>Autonomous Workflows</li>
-          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-500 rounded-full"></span>Tool-Augmented Reasoning</li>
-          <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-500 rounded-full"></span>Human-in-the-loop Control</li>
+        <ul class="text-sm text-product-card-subtext space-y-2 mb-6">
+          <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full" style="background-color: var(--color-accent-silver);"></span>Autonomous Workflows</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full" style="background-color: var(--color-accent-silver);"></span>Tool-Augmented Reasoning</li>
+          <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full" style="background-color: var(--color-accent-silver);"></span>Human-in-the-loop Control</li>
         </ul>
-        <a href="cogni_agent_product_deep_dive.html" class="inline-flex items-center font-semibold text-red-400 hover:text-red-300 transition duration-300">
+        <a href="cogni_agent_product_deep_dive.html" class="inline-flex items-center font-semibold text-accent-silver hover:text-accent-grey transition duration-300">
           Explore Solution
           <svg class="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -970,128 +1162,112 @@ body.light-mode .btn-secondary-inner:hover {
 
 
     <!-- AI SDLC Life Cycle Section -->
-   <section class="py-20 bg-gray-950 overflow-hidden">
+   <section class="py-10 bg-sdlc-bg overflow-hidden"> <!-- Reduced py-20 to py-10 -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-10">
+    <h2 class="text-3xl lg:text-4xl font-bold text-section-heading mb-8 animate-on-scroll fade-in"> <!-- Reduced mb-10 to mb-8 -->
       <span class="text-gradient">AI-Powered SDLC</span> Life Cycle
     </h2>
-    <div class="relative w-full max-w-[500px] h-[500px] mx-auto">
-      <!-- Rotating Circle Container -->
-      <div class="absolute inset-0 animate-spin-slow rounded-full border border-gray-700 flex items-center justify-center">
-        <!-- Invisible Circle for spacing -->
-        <div class="relative w-full h-full">
+    <div class="relative sdlc-layout" id="sdlc-layout">
+        <!-- SVG for Lines - dynamically drawn by JS -->
+        <svg class="sdlc-line-svg-container" id="sdlc-lines"></svg>
 
-          <!-- Planning & Design -->
-          <div class="absolute top-0 left-1/2 transform -translate-x-1/2 text-center">
-            <div class="flex flex-col items-center">
-              <div class="bg-purple-600 p-3 rounded-full">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
-              </div>
-              <p class="text-white font-semibold mt-2">Planning & Design</p>
-              <p class="text-gray-400 text-sm">AI-assisted requirements</p>
+        <!-- Planning & Design -->
+        <div class="sdlc-step-item animate-on-scroll slide-in-up" data-step="planning">
+            <div class="sdlc-icon-wrapper"> <!-- Removed specific bg-accent-blue -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
             </div>
-          </div>
+            <h3 class="font-semibold">Planning & Design</h3>
+            <p>AI-assisted requirements</p>
+        </div>
 
-          <!-- Development -->
-          <div class="absolute top-1/4 right-0 transform translate-x-1/2 text-center">
-            <div class="flex flex-col items-center">
-              <div class="bg-green-500 p-3 rounded-full">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7v13h13M20 4L10 14"/></svg>
-              </div>
-              <p class="text-white font-semibold mt-2">Development</p>
-              <p class="text-gray-400 text-sm">AI code generation</p>
+        <!-- Development -->
+        <div class="sdlc-step-item animate-on-scroll slide-in-up" style="transition-delay: 0.1s;" data-step="development">
+            <div class="sdlc-icon-wrapper"> <!-- Removed specific bg-accent-light-blue -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7v13h13M20 4L10 14"/></svg>
             </div>
-          </div>
+            <h3 class="font-semibold">Development</h3>
+            <p>AI code generation</p>
+        </div>
 
-          <!-- Feedback & Iteration -->
-          <div class="absolute bottom-1/4 right-0 transform translate-x-1/2 text-center">
-            <div class="flex flex-col items-center">
-              <div class="bg-yellow-400 p-3 rounded-full">
-                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-  <path d="M5 13l4 4L19 7" />
-</svg>
-              </div>
-              <p class="text-white font-semibold mt-2">Feedback</p>
-              <p class="text-gray-400 text-sm">Continuous improvement</p>
+        <!-- Feedback -->
+        <div class="sdlc-step-item animate-on-scroll slide-in-up" style="transition-delay: 0.2s;" data-step="feedback">
+            <div class="sdlc-icon-wrapper"> <!-- Removed specific bg-accent-dark-blue -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M5 13l4 4L19 7" />
+                </svg>
             </div>
-          </div>
+            <h3 class="font-semibold">Feedback</h3>
+            <p>Continuous improvement</p>
+        </div>
 
-          <!-- Testing -->
-          <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center">
-            <div class="flex flex-col items-center">
-              <div class="bg-blue-600 p-3 rounded-full">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <!-- Testing -->
+        <div class="sdlc-step-item animate-on-scroll slide-in-up" style="transition-delay: 0.3s;" data-step="testing">
+            <div class="sdlc-icon-wrapper"> <!-- Removed specific bg-accent-silver -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path d="M9 2h6a2 2 0 0 1 2 2v2H7V4a2 2 0 0 1 2-2zM5 6h14v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6z" />
                   <path d="M9 14l2 2 4-4" />
                 </svg>
-              </div>
-              <p class="text-white font-semibold mt-2">Testing</p>
-              <p class="text-gray-400 text-sm">Defect detection & cases</p>
             </div>
-          </div>
+            <h3 class="font-semibold">Testing</h3>
+            <p>Defect detection & cases</p>
+        </div>
 
-          <!-- Deployment -->
-          <div class="absolute bottom-1/4 left-0 transform -translate-x-1/2 text-center">
-            <div class="flex flex-col items-center">
-              <div class="bg-red-500 p-3 rounded-full">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m7-7H5"/></svg>
-              </div>
-              <p class="text-white font-semibold mt-2">Deployment</p>
-              <p class="text-gray-400 text-sm">CI/CD release</p>
+        <!-- Deployment -->
+        <div class="sdlc-step-item animate-on-scroll slide-in-up" style="transition-delay: 0.4s;" data-step="deployment">
+            <div class="sdlc-icon-wrapper"> <!-- Removed specific bg-accent-grey -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14m7-7H5"/></svg>
             </div>
-          </div>
+            <h3 class="font-semibold">Deployment</h3>
+            <p>CI/CD release</p>
+        </div>
 
-          <!-- Monitoring -->
-          <div class="absolute top-1/4 left-0 transform -translate-x-1/2 text-center">
-            <div class="flex flex-col items-center">
-              <div class="bg-indigo-500 p-3 rounded-full">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <!-- Monitoring -->
+        <div class="sdlc-step-item animate-on-scroll slide-in-up" style="transition-delay: 0.5s;" data-step="monitoring">
+            <div class="sdlc-icon-wrapper"> <!-- Removed specific bg-accent-blue -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path d="M3 12h4l2 5 4-10 2 5h6" />
                 </svg>
-              </div>
-              <p class="text-white font-semibold mt-2">Monitoring</p>
-              <p class="text-gray-400 text-sm">Performance tracking</p>
             </div>
-          </div>
-
+            <h3 class="font-semibold">Monitoring</h3>
+            <p>Performance tracking</p>
         </div>
-      </div>
     </div>
-
   </div>
 </section>
-<div class="max-w-4xl mx-auto mt-20">
-                <div class="card p-8 border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
+<div class="max-w-4xl mx-auto mt-20 animate-on-scroll fade-in">
+                <div class="card p-8 border glow-border">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h3 class="font-inter font-bold text-3xl mb-6" style="color: var(--color-text-light);">Why Choose Our AI-Powered SDLC?</h3>
+                            <h3 class="font-inter font-bold text-3xl mb-6 text-section-heading">Why Choose Our <span class="text-gradient">AI-Powered SDLC</span>?</h3>
                             <div class="space-y-4">
                                 <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2 bg-purple-500 rounded-full mt-3 flex-shrink-0"></div>
-                                    <span class="text-lg leading-relaxed" style="color: var(--color-text-muted);">Accelerate development cycles by 50%</span>
+                                    <div class="w-2 h-2 rounded-full mt-3 flex-shrink-0" style="background-color: var(--color-accent-blue);"></div>
+                                    <span class="text-lg leading-relaxed text-section-paragraph">Accelerate development cycles by 50%</span>
                                 </div>
                                 <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2 bg-green-500 rounded-full mt-3 flex-shrink-0"></div>
-                                    <span class="text-lg leading-relaxed" style="color: var(--color-text-muted);">Reduce bugs and security vulnerabilities</span>
+                                    <div class="w-2 h-2 rounded-full mt-3 flex-shrink-0" style="background-color: var(--color-accent-light-blue);"></div>
+                                    <span class="text-lg leading-relaxed text-section-paragraph">Reduce bugs and security vulnerabilities</span>
                                 </div>
                                 <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
-                                    <span class="text-lg leading-relaxed" style="color: var(--color-text-muted);">Improve code quality and maintainability</span>
+                                    <div class="w-2 h-2 rounded-full mt-3 flex-shrink-0" style="background-color: var(--color-accent-dark-blue);"></div>
+                                    <span class="text-lg leading-relaxed text-section-paragraph">Improve code quality and maintainability</span>
                                 </div>
                                 <div class="flex items-start space-x-3">
-                                    <div class="w-2 h-2 bg-red-500 rounded-full mt-3 flex-shrink-0"></div>
-                                    <span class="text-lg leading-relaxed" style="color: var(--color-text-muted);">Enhance team collaboration and productivity</span>
+                                    <div class="w-2 h-2 rounded-full mt-3 flex-shrink-0" style="background-color: var(--color-accent-silver);"></div>
+                                    <span class="text-lg leading-relaxed text-section-paragraph">Enhance team collaboration and productivity</span>
                                 </div>
                             </div>
                         </div>
                         <div class="text-center">
-                            <div class="inline-flex items-center justify-center w-32 h-32 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full mb-8 shadow-lg">
-                                <!-- Lucide Icon: Code (large) -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code w-16 h-16 text-white">
-                                    <polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>
-                                </svg>
+                            <div class="inline-flex items-center justify-center w-32 h-32 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full mb-8 shadow-md">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-code w-16 h-16">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                              </svg>
                             </div>
-                            <div class="relative rounded-lg inline-block primary-button-wrapper">
+                            <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
                                 <a href="contact.html" class="btn-primary-inner">
                                     Get Started with AI SDLC
                                 </a>
@@ -1103,40 +1279,40 @@ body.light-mode .btn-secondary-inner:hover {
 
 
     <!-- New Section: CogniXcellerate Deep Dive -->
-    <section class="py-20" style="background-color: var(--color-section-bg-primary);">
+    <section class="py-20 bg-section-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="lg:order-2">
-                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:1200/https://cdn.gamma.app/npv4hvns4y3k8z7/b303020c1518410c944051a4cbe70dec/original/image.png" alt="CogniXcellerate Platform" class="rounded-xl shadow-lg border transition-transform duration-500 hover:scale-[1.02]" style="border-color: var(--color-border-dark);" loading="lazy" />
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
+                <div class="lg:order-2 animate-on-scroll slide-right">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:1200/https://cdn.gamma.app/npv4hvns4y3k8z7/b303020c1518410c944051a4cbe70dec/original/image.png" alt="CogniXcellerate Platform" class="rounded-xl shadow-lg border transition-transform duration-500 hover:scale-[1.02] glow-border" loading="lazy" />
                 </div>
-                <div class="lg:order-1 space-y-6">
-                    <h2 class="font-inter font-bold text-3xl lg:text-4xl" style="color: var(--color-section-heading);">
+                <div class="lg:order-1 space-y-6 animate-on-scroll slide-left">
+                    <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading">
                         <span class="text-gradient">CogniXcellerate:</span> AI Orchestration Platform
                     </h2>
-                    <p class="text-lg leading-relaxed" style="color: var(--color-section-paragraph);">
+                    <p class="text-lg leading-relaxed text-section-paragraph">
                         CogniXcellerate is our flagship AI orchestration platform, designed to intelligently coordinate complex workflows and automate decision-making across your enterprise. It acts as the central nervous system for your AI initiatives, ensuring seamless integration and optimal performance.
                     </p>
-                    <ul class="space-y-3" style="color: var(--color-text-muted);">
+                    <ul class="space-y-3 text-text-muted">
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 text-purple-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-accent-blue);">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
                             Automated Workflow Management
                         </li>
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 text-purple-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-accent-blue);">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
                             Intelligent Decision Automation
                         </li>
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 text-purple-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-accent-blue);">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
                             Real-time Performance Monitoring
                         </li>
                     </ul>
-                    <div class="relative rounded-lg inline-block primary-button-wrapper">
+                    <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
                         <a href="contact.html" class="btn-primary-inner">
                           Learn More about CogniXcellerate
                         </a>
@@ -1147,40 +1323,40 @@ body.light-mode .btn-secondary-inner:hover {
     </section>
 
     <!-- New Section: CogniLoom Deep Dive -->
-    <section class="py-20" style="background-color: var(--color-section-bg-secondary);">
+    <section class="py-20 bg-section-secondary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="https://go.isostech.com/hubfs/classicdevops.png" alt="CogniLoom Platform" class="rounded-xl shadow-lg border transition-transform duration-500 hover:scale-[1.02]" style="border-color: var(--color-border-dark);" loading="lazy" />
+                <div class="animate-on-scroll slide-left">
+                    <img src="https://go.isostech.com/hubfs/classicdevops.png" alt="CogniLoom Platform" class="rounded-xl shadow-lg border transition-transform duration-500 hover:scale-[1.02] glow-border" loading="lazy" />
                 </div>
-                <div class="space-y-6">
-                    <h2 class="font-inter font-bold text-3xl lg:text-4xl" style="color: var(--color-section-heading);">
+                <div class="space-y-6 animate-on-scroll slide-right">
+                    <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading">
                         <span class="text-gradient">CogniLoom:</span> Intelligent Process Automation
                     </h2>
-                    <p class="text-lg leading-relaxed" style="color: var(--color-section-paragraph);">
+                    <p class="text-lg leading-relaxed text-section-paragraph">
                         CogniLoom revolutionizes your business processes by intelligently automating repetitive tasks and integrating disparate systems. It weaves together complex operational flows, enhancing efficiency and reducing manual effort across your organization.
                     </p>
-                    <ul class="space-y-3" style="color: var(--color-text-muted);">
+                    <ul class="space-y-3 text-text-muted">
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-accent-light-blue);">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
                             Automated Task Execution
                         </li>
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-accent-light-blue);">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
                             Seamless System Integration
                         </li>
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-accent-light-blue);">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
                             Adaptive Process Optimization
                         </li>
                     </ul>
-                    <div class="relative rounded-lg inline-block primary-button-wrapper">
+                    <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
                         <a href="contact.html" class="btn-primary-inner">
                           Learn More about CogniLoom
                         </a>
@@ -1191,40 +1367,40 @@ body.light-mode .btn-secondary-inner:hover {
     </section>
 
     <!-- New Section: CogniAgent Deep Dive -->
-    <section class="py-20" style="background-color: var(--color-section-bg-primary);">
+    <section class="py-20 bg-section-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="lg:order-2">
-                    <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_14fa0f4e9d0153477eed77c2d5a81be6.webp" alt="CogniAgent Platform" class="rounded-xl shadow-lg border transition-transform duration-500 hover:scale-[1.02]" style="border-color: var(--color-border-dark);" loading="lazy" />
+                <div class="lg:order-2 animate-on-scroll slide-right">
+                    <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_14fa0f4e9d0153477eed77c2d5a81be6.webp" alt="CogniAgent Platform" class="rounded-xl shadow-lg border transition-transform duration-500 hover:scale-[1.02] glow-border" loading="lazy" />
                 </div>
-                <div class="lg:order-1 space-y-6">
-                    <h2 class="font-inter font-bold text-3xl lg:text-4xl" style="color: var(--color-section-heading);">
+                <div class="lg:order-1 space-y-6 animate-on-scroll slide-left">
+                    <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading">
                         <span class="text-gradient">CogniAgent:</span> Intelligent Agent Framework
                     </h2>
-                    <p class="text-lg leading-relaxed" style="color: var(--color-section-paragraph);">
+                    <p class="text-lg leading-relaxed text-section-paragraph">
                         CogniAgent provides a robust framework for deploying intelligent, autonomous agents that can execute complex tasks, learn from their environment, and adapt to changing business requirements. Empower your operations with self-sufficient AI entities.
                     </p>
-                    <ul class="space-y-3" style="color: var(--color-text-muted);">
+                    <ul class="space-y-3 text-text-muted">
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 text-red-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-accent-silver);">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
                             Autonomous Task Execution
                         </li>
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 text-red-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-accent-silver);">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
                             Adaptive Learning Capabilities
                         </li>
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 text-red-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-accent-silver);">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
                             Complex Task Orchestration
                         </li>
                     </ul>
-                   <div class="relative rounded-lg inline-block primary-button-wrapper">
+                   <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
                         <a href="contact.html" class="btn-primary-inner">
                           Learn More about CogniAgent
                         </a>
@@ -1234,154 +1410,118 @@ body.light-mode .btn-secondary-inner:hover {
         </div>
     </section>
 
-    <!-- New Section: Solutions Overview -->
-    <section class="py-20" style="background-color: var(--color-section-bg-secondary);">
+    <!-- Integrated AI Solutions Section (Replaced content) -->
+    <section id="solutions" class="py-20 bg-section-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-inter font-bold text-3xl lg:text-4xl mb-4" style="color: var(--color-section-heading);">
-                    Integrated AI <span class="text-gradient">Solutions Overview</span>
+            <div class="text-center mb-16 animate-on-scroll fade-in">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-section-heading">
+                    Enterprise Solutions <span class="text-gradient">Powering Tangible ROI</span>
                 </h2>
-                <p class="text-xl max-w-3xl mx-auto" style="color: var(--color-section-paragraph);">
-                    Our platforms work in harmony to provide comprehensive, end-to-end AI solutions tailored to your enterprise needs.
+                <p class="text-xl text-section-paragraph max-w-4xl mx-auto leading-relaxed">
+                    Real-world AI solutions delivering measurable business impact
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="card p-8 border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
-                    <h3 class="font-inter font-bold text-2xl" style="color: var(--color-text-light);">Seamless Integration</h3>
-                    <p style="color: var(--color-text-muted);">
-                        CogniXcellerate, CogniLoom, and CogniAgent are designed to integrate effortlessly, creating a unified AI ecosystem that drives efficiency and innovation.
-                    </p>
-                    <ul class="space-y-2 text-sm" style="color: var(--color-text-muted);">
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Insurance Underwriting Agent -->
+                <div class="feature-card rounded-3xl p-10 animate-on-scroll slide-in-up">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-lg" style="background: linear-gradient(to bottom right, var(--color-solution-icon-bg-start), var(--color-solution-icon-bg-end));">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text text-white w-8 h-8">
+                            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                            <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                            <path d="M10 9H8"></path>
+                            <path d="M16 13H8"></path>
+                            <path d="M16 17H8"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6" style="color: var(--color-solution-heading);">Insurance Underwriting Agent</h3>
+                    <ul class="space-y-4" style="color: var(--color-solution-text);">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: var(--color-solution-check);">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                <path d="m9 11 3 3L22 4"></path>
                             </svg>
-                            Unified AI Ecosystem
+                            <span class="leading-relaxed text-lg">Reduced risk evaluation from 24 hrs &rarr; minutes</span>
                         </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: var(--color-solution-check);">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                <path d="m9 11 3 3L22 4"></path>
                             </svg>
-                            Cross-Platform Automation
+                            <span class="leading-relaxed text-lg">Integrated claim history, policy rules, external data</span>
                         </li>
                     </ul>
                 </div>
-                <div class="card p-8 border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
-                    <h3 class="font-inter font-bold text-2xl" style="color: var(--color-text-light);">Customizable & Scalable</h3>
-                    <p style="color: var(--color-text-muted);">
-                        Our solutions are built to scale with your business and can be customized to meet specific industry and operational demands.
-                    </p>
-                    <ul class="space-y-2 text-sm" style="color: var(--color-text-muted);">
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                <!-- RFP Response Agent -->
+                <div class="feature-card rounded-3xl p-10 animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-lg" style="background: linear-gradient(to bottom right, var(--color-solution-icon-bg-start), var(--color-solution-icon-bg-end));">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text text-white w-8 h-8">
+                            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                            <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                            <path d="M10 9H8"></path>
+                            <path d="M16 13H8"></path>
+                            <path d="M16 17H8"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6" style="color: var(--color-solution-heading);">RFP Response Agent</h3>
+                    <ul class="space-y-4" style="color: var(--color-solution-text);">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: var(--color-solution-check);">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                <path d="m9 11 3 3L22 4"></path>
                             </svg>
-                            Modular Architecture
+                            <span class="leading-relaxed text-lg">Generated 90% of proposal content automatically</span>
                         </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: var(--color-solution-check);">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                <path d="m9 11 3 3L22 4"></path>
                             </svg>
-                            Industry-Specific Adaptability
+                            <span class="leading-relaxed text-lg">Ensured consistent tone, compliance &amp; rapid turnaround</span>
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div class="text-center mt-12">
-                <div class="relative rounded-lg inline-block primary-button-wrapper">
-                    <a href="solutions_showcase.html" class="btn-primary-inner">
-                      Explore All Solutions
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Customer Success Section -->
-    <section class="py-20" style="background-color: var(--color-section-bg-secondary);">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-inter font-bold text-3xl lg:text-4xl mb-4" style="color: var(--color-section-heading);">
-                    Trusted by Enterprise Leaders
-                </h2>
-                <p class="text-xl" style="color: var(--color-section-paragraph);">
-                    Join thousands of organizations transforming their operations with Cogniwide AI
-                </p>
-            </div>
-
-            <!-- Customer Logos with Hover Metrics -->
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-16">
-                <div class="group relative card p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
-                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Enterprise Client" class="w-full h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300" loading="lazy" onerror="this.src='https://placehold.co/150x50/333/FFF?text=Client+1'; this.onerror=null;" />
-                    <div class="absolute inset-0 bg-purple-500/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <div class="font-inter font-bold text-lg">87%</div>
-                            <div class="text-sm">Efficiency Gain</div>
-                        </div>
+                <!-- Three-Way Invoice Matching Agent -->
+                <div class="feature-card rounded-3xl p-10 animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-lg" style="background: linear-gradient(to bottom right, var(--color-solution-icon-bg-start), var(--color-solution-icon-bg-end));">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-receipt text-white w-8 h-8">
+                            <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"></path>
+                            <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path>
+                            <path d="M12 17.5v-11"></path>
+                        </svg>
                     </div>
-                </div>
-                <div class="group relative card p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Enterprise Client" class="w-full h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300" loading="lazy" onerror="this.src='https://placehold.co/150x50/333/FFF?text=Client+2'; this.onerror=null;" />
-                    <div class="absolute inset-0 bg-green-500/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <div class="font-inter font-bold text-lg">$2.4M</div>
-                            <div class="text-sm">Cost Savings</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="group relative card p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Enterprise Client" class="w-full h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300" loading="lazy" onerror="this.src='https://placehold.co/150x50/333/FFF?text=Client+3'; this.onerror=null;" />
-                    <div class="absolute inset-0 bg-blue-500/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <div class="font-inter font-bold text-lg">45%</div>
-                            <div class="text-sm">Faster Deployment</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="group relative card p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Enterprise Client" class="w-full h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300" loading="lazy" onerror="this.src='https://placehold.co/150x50/333/FFF?text=Client+4'; this.onerror=null;" />
-                    <div class="absolute inset-0 bg-red-500/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <div class="font-inter font-bold text-lg">99.9%</div>
-                            <div class="text-sm">Uptime</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="group relative card p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Enterprise Client" class="w-full h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300" loading="lazy" onerror="this.src='https://placehold.co/150x50/333/FFF?text=Client+5'; this.onerror=null;" />
-                    <div class="absolute inset-0 bg-purple-700/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <div class="font-inter font-bold text-lg">6 Months</div>
-                            <div class="text-sm">ROI Timeline</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="group relative card p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border" style="background-color: var(--color-card-bg); border-color: var(--color-card-border);">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Enterprise Client" class="w-full h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300" loading="lazy" onerror="this.src='https://placehold.co/150x50/333/FFF?text=Client+6'; this.onerror=null;" />
-                    <div class="absolute inset-0 bg-indigo-500/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <div class="font-inter font-bold text-lg">300%</div>
-                            <div class="text-sm">Productivity Boost</div>
-                        </div>
-                    </div>
+                    <h3 class="text-2xl font-bold mb-6" style="color: var(--color-solution-heading);">Three-Way Invoice Matching Agent</h3>
+                    <ul class="space-y-4" style="color: var(--color-solution-text);">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: var(--color-solution-check);">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                <path d="m9 11 3 3L22 4"></path>
+                            </svg>
+                            <span class="leading-relaxed text-lg">98% accuracy in PO-invoice-receipt comparisons</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: var(--color-solution-check);">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                <path d="m9 11 3 3L22 4"></path>
+                            </svg>
+                            <span class="leading-relaxed text-lg">Saved 60% in manual AR/AP review effort</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sticky CTA Section -->
-    <section class="py-20" style="background-color: var(--color-card-bg);">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="font-inter font-bold text-3xl lg:text-4xl mb-4" style="color: var(--color-text-light);">
-                Ready to Transform Your Enterprise?
+    <section class="py-20 bg-card-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll fade-in">
+            <h2 class="font-inter font-bold text-3xl lg:text-4xl mb-4 text-section-heading">
+                Ready to <span class="text-gradient">Transform Your Enterprise</span>?
             </h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto" style="color: var(--color-text-muted);">
+            <p class="text-xl mb-8 max-w-3xl mx-auto text-section-paragraph">
                 Join the AI revolution with Cogniwide's intelligent automation platform. Start your journey today.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <div class="relative rounded-lg inline-block primary-button-wrapper">
+                <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
                     <a href="contact.html" class="btn-primary-inner">
                       Start Free Trial
                     </a>
@@ -1396,82 +1536,121 @@ body.light-mode .btn-secondary-inner:hover {
     </section>
 
     <!-- Footer -->
-    <footer class="border-t" style="background-color: var(--color-footer-bg); border-color: var(--color-footer-border);">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Company Info -->
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center">
-                            <a href="homepage.html" class="text-purple-400 hover:text-purple-500 font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
-                              <img
-                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAgCAMAAADdXFNzAAAAk1BMVEVHcEw8Oy5MUTwtQT4/PjZGPy1FRDRFQjNFQzZNSzdWSjk9PTBTUEotLyhhUDZPQz9NRztFSzlFRjU+QzJGRzpQXDt9TTRIXjZJQTRqXChIdavfLCXiKyRGc6hGTUhLVl93NkdgQkhHdTxHjj6GMEbTjg2FPjq4Nyj/qQA8Y3fVVwnrnAOaNzeMZSy1fR8/bZeORx/Y+bhjAAAAGnRSTlMAD/G4K6tuIH7+/T3+B/e9zNtVjvT89veg9coMtxAAAAGDSURBVCiRdZPZloIwEAVjZEsIm8vgiNlARRTU//+66URE1OGe44tVfWkIINTHWyXBEG+GPuKkhMbxj01McfAh+C5ljN7PNnF3iN8F35XbLeeNvtfn+t6dTpc3wWLgW35rhBAnyIW+hAfeWuUmcIavl3HDgDk0SHcRevNVdxiEJ+bmAsz14a9ZuMx+r48l/c2zHCIshkS+N8eUgJAwmHzMvzDqS7IFIozzfpqNsS1Z+IgSaUb5N36EgsD5sNo3jxmT0xiRK5NS3qYwIoeuaSRJJjDwg2wakTjTnIljcZxPCMCFqHe7dkKA62sNfDfRQLVSqi2KYkKger9XqvhX8EMfJcD3qjb8XYgcL4XzcRIFfG/wWDCnR8gSXgAnAa7tfNHfJhyci9fr/i2HBqXNhkap507kBGleluXwEYSp1tpi+LXJJsvLqipH3wgI8Ij6FQgBWlU4iF67hqlQO9N+FFBsOPZG2Aikrlsq7Gi+Jh/YCCsIxnm+xhhu7AOjKPSGBFk6PKc/6PExEX9mJwAAAAAASUVORK5CYII="
-                                width="40"
-                                height="30"
-                                class="transition-transform duration-300 hover:scale-105"
-                                alt="Home Icon"
-                              />
-                            </a>
-                            <div class="ml-3">
-                                <span class="font-inter font-bold text-xl" style="color: var(--color-logo-text);">Cogniwide</span>
-                            </div>
-                        </div>
-                    <p class="mb-4 max-w-md" style="color: var(--color-footer-text);">
-                        Intelligent automation that amplifies human potential. Transform your enterprise with AI-powered solutions.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="javascript:void(0)" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd"/>
-                            </svg>
-                        </a>
-                        <a href="javascript:void(0)" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0120 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
-                            </svg>
-                        </a>
-                        <a href="javascript:void(0)" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+    <footer class="border-t border-footer-border bg-footer-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
 
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Solutions</h4>
-                    <ul class="space-y-2">
-                        <li><a href="cogni_xcellerate_product_deep_dive.html" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">CogniXcellerate</a></li>
-                        <li><a href="cogni_loom_product_deep_dive.html" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">CogniLoom</a></li>
-                        <li><a href="cogni_chat_product_deep_dive.html" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">CogniChat</a></li>
-                        <li><a href="javascript:void(0)" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">CogniAgent</a></li>
-                    </ul>
-                </div>
-
-                <!-- Resources -->
-                <div>
-                    <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Company</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about_us.html" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">About Us</a></li>
-                        <li><a href="leadership_team.html" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">Leadership Team</a></li>
-                        <li><a href="life_at_cogniwide_careers.html" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">Life at Cogniwide + Careers</a></li>
-                        <li><a href="contact.html" class="transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center" style="border-color: var(--color-border-dark);">
-                <p class="text-sm" style="color: var(--color-footer-text);">
-                    © 2025 Cogniwide AI Platform. All Rights Reserved.
-                </p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="javascript:void(0)" class="text-sm transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">Privacy Policy</a>
-                    <a href="javascript:void(0)" class="text-sm transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">Terms of Service</a>
-                    <a href="javascript:void(0)" class="text-sm transition-colors duration-300" style="color: var(--color-footer-text);" onmouseover="this.style.color='var(--color-footer-link-hover)'" onmouseout="this.style.color='var(--color-footer-text)'">Security</a>
-                </div>
-            </div>
+      <!-- Company Info -->
+      <div class="col-span-1 md:col-span-2">
+        <div class="flex items-center mb-4">
+          <a href="homepage.html" class="font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAgCAMAAADdXFNzAAAAk1BMVEVHcEw8Oy5MUTwtQT4/PjZGPy1FRDRFQjNFQzZNSzdWSjk9PTBTUEotLyhhUDZPQz9NRztFSzlFRjU+QzJGRzpQXDt9TTRIXjZJQTRqXChIdavfLCXiKyRGc6hGTUhLVl93NkdgQkhHdTxHjj6GMEbTjg2FPjq4Nyj/qQA8Y3fVVwnrnAOaNzeMZSy1fR8/bZeORx/Y+bhjAAAAGnRSTlMAD/G4K6tuIH7+/T3+B/e9zNtVjvT89veg9coMtxAAAAGDSURBVCiRdZPZloIwEAVjZEsIm8vgiNlARRTU//+66URE1OGe44tVfWkIINTHWyXBEG+GPuKkhMbxj01McfAh+C5ljN7PNnF3iN8F35XbLeeNvtfn+t6dTpc3wWLgW35rhBAnyIW+hAfeWuUmcIavl3HDgDk0SHcRevNVdxiEJ+bmAsz14a9ZuMx+r48l/c2zHCIshkS+N8eUgJAwmHzMvzDqS7IFIozzfpqNsS1Z+IgSaUb5N36EgsD5sNo3jxmT0xiRK5NS3qYwIoeuaSRJJjDwg2wakTjTnIljcZxPCMCFqHe7dkKA62sNfDfRQLVSqi2KYkKger9XqvhX8EMfJcD3qjb8XYgcL4XzcRIFfG/wWDCnR8gSXgAnAa7tfNHfJhyci9fr/i2HBqXNhkap507kBGleluXwEYSp1tpi+LXJJsvLqipH3wgI8Ij6FQgBWlU4iF67hqlQO9N+FFBsOPZG2Aikrlsq7Gi+Jh/YCCsIxnm+xhhu7AOjKPSGBFk6PKc/6PExEX9mJwAAAAAASUVORK5CYII="
+              width="40"
+              height="30"
+              class="transition-transform duration-300 hover:scale-105"
+              alt="Home Icon"
+            />
+          </a>
+          <div class="ml-3">
+            <span class="font-inter font-bold text-xl" style="color: var(--color-logo-text);">Cogniwide</span>
+          </div>
         </div>
-    </footer>
+        <p class="mb-3 max-w-md text-sm" style="color: var(--color-footer-text);">
+          Cogniwide is an AI-based IT products and services company that provides high-performance product development, solutions, and operations services that focuses on Digital Transformation.
+        </p>
+        <p class="mb-4 max-w-md text-sm" style="color: var(--color-footer-text);">
+          We leverage new generation technologies like AI, RPA, Data Analytics, and Blockchain to build tailor-made digital Web and Mobile solutions and aid in the digital journey of our partners.
+        </p>
+        <div class="flex space-x-4 mb-4">
+          <a href="https://www.linkedin.com/company/cogniwide" target="_blank" rel="noreferrer">
+            <svg class="w-5 h-5 text-white hover:text-blue-400 transition" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.9h.1c.7-1.3 2.5-2.7 5.2-2.7 5.6 0 6.6 3.6 6.6 8.3V24h-5V15c0-2.2 0-5-3-5s-3.5 2.3-3.5 4.8V24h-5V8z"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com/cogniwide" target="_blank" rel="noreferrer">
+            <svg class="w-5 h-5 text-white hover:text-blue-400 transition" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 4.56c-.89.39-1.84.66-2.84.78a4.93 4.93 0 002.16-2.72 9.85 9.85 0 01-3.13 1.2 4.92 4.92 0 00-8.38 4.48A13.96 13.96 0 011.64 3.16 4.92 4.92 0 003.2 9.72a4.9 4.9 0 01-2.23-.62v.06a4.92 4.92 0 003.95 4.83 4.9 4.9 0 01-2.22.08 4.93 4.93 0 004.6 3.41 9.86 9.86 0 01-6.1 2.1c-.4 0-.79-.02-1.18-.07A13.9 13.9 0 007.5 21c9.14 0 14.13-7.57 14.13-14.13 0-.21 0-.42-.01-.63A10.1 10.1 0 0024 4.56z"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/cogniwide" target="_blank" rel="noreferrer">
+            <svg class="w-5 h-5 text-white hover:text-blue-400 transition" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22.68 0H1.32C.59 0 0 .6 0 1.34v21.32C0 23.4.59 24 1.32 24H12v-9.34H9.34v-3.66H12V8.65c0-2.66 1.63-4.11 4-4.11 1.14 0 2.11.08 2.39.12v2.77h-1.64c-1.29 0-1.54.61-1.54 1.5v1.96h3.08l-.4 3.66h-2.68V24h5.27c.73 0 1.32-.6 1.32-1.34V1.34C24 .6 23.41 0 22.68 0z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Solutions Links -->
+      <div>
+        <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Solutions</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="cogni_xcellerate_product_deep_dive.html" class="transition-colors duration-300" style="color: var(--color-footer-text);">CogniXcellerate</a></li>
+          <li><a href="cogni_loom_product_deep_dive.html" class="transition-colors duration-300" style="color: var(--color-footer-text);">CogniLoom</a></li>
+          <li><a href="cogni_chat_product_deep_dive.html" class="transition-colors duration-300" style="color: var(--color-footer-text);">CogniChat</a></li>
+          <li><a href="javascript:void(0)" class="transition-colors duration-300" style="color: var(--color-footer-text);">CogniAgent</a></li>
+        </ul>
+      </div>
+
+      <!-- Company Links -->
+      <div>
+        <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Company</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="about_us.html" class="transition-colors duration-300" style="color: var(--color-footer-text);">About Us</a></li>
+          <li><a href="leadership_team.html" class="transition-colors duration-300" style="color: var(--color-footer-text);">Leadership Team</a></li>
+          <li><a href="life_at_cogniwide_careers.html" class="transition-colors duration-300" style="color: var(--color-footer-text);">Careers</a></li>
+          <li><a href="contact.html" class="transition-colors duration-300" style="color: var(--color-footer-text);">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Address Section -->
+    <div class="mt-10 text-sm" style="color: var(--color-footer-text);">
+      <h4 class="font-inter font-semibold mb-4">Our Branches - India</h4>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+           <div>
+          <h6 class="font-semibold">Headquarters - Chennai</h6>
+          <p>
+            Cogniwide Technologies Private Limited,<br />
+            3rd Floor, Alpha City, SSPDL Building,<br />
+            Rajiv Gandhi Salai, Navalur, Chennai - 603103,<br />
+            Tamilnadu, India.
+          </p>
+        </div>
+        <div>
+          <h6 class="font-semibold">Registered Office - Bengaluru</h6>
+          <p>
+            Cogniwide Technologies Private Limited,<br />
+            1st Floor, SPD Plaza, 52, Jyoti Niwas College Rd,<br />
+            Koramangala Industrial Layout, Koramangala,<br />
+            Bengaluru, Karnataka, India 560034.
+          </p>
+        </div>
+
+        <div>
+          <h6 class="font-semibold">Registered Office - Madurai</h6>
+          <p>
+            Cogniwide Technologies Private Limited,<br />
+            No.15, 4th Floor, Gokale Road, Chinna Chokkikulam,<br />
+            Madurai - 625014, Tamilnadu, India.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center" style="border-color: var(--color-border-subtle);">
+      <p class="text-sm" style="color: var(--color-footer-text);">
+        © 2025 Cogniwide AI Platform. All Rights Reserved.
+      </p>
+      <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-blue-400">Privacy Policy</a>
+        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-blue-400">Terms of Service</a>
+        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-blue-400">Security</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
     <script>
         // Enhanced mobile menu toggle with smooth transitions
@@ -1549,144 +1728,221 @@ body.light-mode .btn-secondary-inner:hover {
         }
 
 
-        // Ring background animation for Hero Section
+        // Hero background animation - Connecting Particles
         const canvas = document.getElementById('hero-canvas');
         const ctx = canvas.getContext('2d');
-        let rings = [];
+        let particles = [];
+        const particleCount = 120; // Increased particle count for more visibility
+        const maxLineDistance = 180; // Increased max distance for longer lines
 
-        // Ring properties
-        const ringCount = 3; // Fewer, larger rings
-        const minRingRadius = 150;
-        const maxRingRadius = 300;
-        const minLineWidth = 2;
-        const maxLineWidth = 5;
-        const ringSpeed = 0.2; // Slower movement
-
-        // Ring constructor
-        class Ring {
-            constructor(x, y, radius, lineWidth, speedX, speedY, colorStops) {
+        class Particle {
+            constructor(x, y, size, speedX, speedY, color) {
                 this.x = x;
                 this.y = y;
-                this.radius = radius;
-                this.lineWidth = lineWidth;
+                this.size = size;
                 this.speedX = speedX;
                 this.speedY = speedY;
-                this.colorStops = colorStops; // Array of {offset, color}
-                this.rotation = Math.random() * Math.PI * 2; // Initial random rotation
-                this.rotationSpeed = (Math.random() - 0.5) * 0.001; // Very slow rotation
+                this.color = color;
+                this.opacity = 0.9; // Higher opacity for more shine
             }
 
-            // Method to draw ring
             draw() {
-                ctx.save(); // Save current canvas state
-                ctx.translate(this.x, this.y); // Move origin to ring center
-                ctx.rotate(this.rotation); // Apply rotation
-
-                // Create a linear gradient for the stroke
-                const gradient = ctx.createLinearGradient(-this.radius, -this.radius, this.radius, this.radius);
-                this.colorStops.forEach(stop => {
-                    gradient.addColorStop(stop.offset, stop.color);
-                });
-
                 ctx.beginPath();
-                // Draw an ellipse to create the ring shape, making it look like an oval
-                ctx.ellipse(0, 0, this.radius, this.radius * 0.6, 0, 0, Math.PI * 2);
-                ctx.strokeStyle = gradient;
-                ctx.lineWidth = this.lineWidth;
-                ctx.stroke();
-
-                ctx.restore(); // Restore canvas state
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.globalAlpha = this.opacity;
+                ctx.fill();
             }
 
-            // Method to update ring position and rotation
             update() {
-                // Move ring
                 this.x += this.speedX;
                 this.y += this.speedY;
-                this.rotation += this.rotationSpeed;
 
-                // Wrap around canvas edges
-                if (this.x - this.radius > canvas.width) this.x = -this.radius;
-                if (this.x + this.radius < 0) this.x = canvas.width + this.radius;
-                if (this.y - this.radius > canvas.height) this.y = -this.radius;
-                if (this.y + this.radius < 0) this.y = canvas.height + this.radius;
+                // Bounce off edges
+                if (this.x + this.size > canvas.width || this.x - this.size < 0) {
+                    this.speedX *= -1;
+                }
+                if (this.y + this.size > canvas.height || this.y - this.size < 0) {
+                    this.speedY *= -1;
+                }
 
-                // Draw ring
                 this.draw();
             }
         }
 
-        // Create ring array
-        function initRings() {
-            rings = [];
+        function initParticles() {
+            particles = [];
             canvas.width = window.innerWidth;
             canvas.height = document.querySelector('.hero-section').offsetHeight;
 
-            // Define a set of color gradients for the rings
-            const ringColorPresets = [
-                [{ offset: 0, color: 'rgba(168, 85, 247, 0.8)' }, { offset: 1, color: 'rgba(59, 130, 246, 0.8)' }], // Purple to Blue
-                [{ offset: 0, color: 'rgba(34, 197, 94, 0.8)' }, { offset: 1, color: 'rgba(168, 85, 247, 0.8)' }], // Green to Purple
-                [{ offset: 0, color: 'rgba(59, 130, 246, 0.8)' }, { offset: 1, color: 'rgba(239, 68, 68, 0.8)' }], // Blue to Red
-                [{ offset: 0, color: 'rgba(239, 68, 68, 0.8)' }, { offset: 1, color: 'rgba(34, 197, 94, 0.8)' }]  // Red to Green
+            const particleColors = [
+                'rgba(0, 207, 255, 1)', /* Bright Cyan - fully opaque */
+                'rgba(77, 255, 255, 1)', /* Lighter Cyan - fully opaque */
+                'rgba(0, 153, 204, 1)', /* Deeper Cyan - fully opaque */
+                'rgba(224, 224, 224, 1)', /* Silver - fully opaque */
+                'rgba(117, 117, 117, 1)'  /* Medium Grey - fully opaque */
             ];
 
-
-            for (let i = 0; i < ringCount; i++) {
-                let radius = Math.random() * (maxRingRadius - minRingRadius) + minRingRadius;
-                let lineWidth = Math.random() * (maxLineWidth - minLineWidth) + minLineWidth;
+            for (let i = 0; i < particleCount; i++) {
+                let size = Math.random() * 3 + 1.5; // Particle size 1.5 to 4.5
                 let x = Math.random() * canvas.width;
                 let y = Math.random() * canvas.height;
-                let speedX = (Math.random() * ringSpeed * 2) - ringSpeed; // -0.2 to 0.2
-                let speedY = (Math.random() * ringSpeed * 2) - ringSpeed; // -0.2 to 0.2
-                let colors = ringColorPresets[Math.floor(Math.random() * ringColorPresets.length)];
-
-                rings.push(new Ring(x, y, radius, lineWidth, speedX, speedY, colors));
+                let speedX = (Math.random() - 0.5) * 0.6; // Slightly faster movement
+                let speedY = (Math.random() - 0.5) * 0.6;
+                let color = particleColors[Math.floor(Math.random() * particleColors.length)];
+                particles.push(new Particle(x, y, size, speedX, speedY, color));
             }
         }
 
-        // Animation loop
-        function animateRings() {
-            requestAnimationFrame(animateRings);
-            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the entire canvas
+        function animateParticles() {
+            requestAnimationFrame(animateParticles);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            rings.forEach(ring => {
-                ring.update();
-            });
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                for (let j = i; j < particles.length; j++) {
+                    const dist = Math.sqrt(
+                        (particles[i].x - particles[j].x)**2 +
+                        (particles[i].y - particles[j].y)**2
+                    );
+
+                    if (dist < maxLineDistance) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(224, 224, 224, ${1 - (dist / maxLineDistance) * 0.7})`; // Brighter lines, less fade
+                        ctx.lineWidth = 0.8; // Thicker lines
+                        ctx.stroke();
+                    }
+                }
+            }
         }
+
+        // SDLC Line Drawing Logic
+        function drawSdlcLines() {
+    const svg = document.getElementById('sdlc-lines');
+    if (!svg) return;
+
+    // Clear existing lines
+    while (svg.firstChild) {
+        svg.removeChild(svg.firstChild);
+    }
+
+    const sdlcLayout = document.getElementById('sdlc-layout');
+    if (!sdlcLayout) return;
+
+    const svgRect = svg.getBoundingClientRect();
+
+    const steps = sdlcLayout.querySelectorAll('.sdlc-step-item');
+    const totalSteps = steps.length;
+    const containerWidth = sdlcLayout.offsetWidth;
+    const containerHeight = sdlcLayout.offsetHeight;
+    const centerX = containerWidth / 2;
+    const centerY = containerHeight / 2;
+
+    const stepItemSize = steps[0] ? Math.max(steps[0].offsetWidth, steps[0].offsetHeight) : 0;
+    const maxPossibleRadius = (Math.min(containerWidth, containerHeight) / 2) - (stepItemSize / 2) - 10;
+    const radius = Math.max(50, maxPossibleRadius);
+
+    const points = {};
+    const stepOrder = ["planning", "development", "feedback", "testing", "deployment", "monitoring"];
+
+    steps.forEach((step, index) => {
+        const angle = (2 * Math.PI / totalSteps) * index - Math.PI / 2; // start at top
+        const x = centerX + radius * Math.cos(angle);
+        const y = centerY + radius * Math.sin(angle);
+
+        // Apply positioning with translate for center alignment
+        step.style.left = `${x}px`;
+        step.style.top = `${y}px`;
+        step.style.transform = 'translate(-50%, -50%)';
+
+        points[step.dataset.step] = { x, y };
+
+        // Optional: Text alignment by quadrant
+        const deltaX = x - centerX;
+        const deltaY = y - centerY;
+
+        if (Math.abs(deltaX) < 10) {
+            step.style.textAlign = 'center';
+            step.style.alignItems = 'center';
+        } else if (deltaX < 0) {
+            step.style.textAlign = 'left';
+            step.style.alignItems = 'flex-start';
+        } else {
+            step.style.textAlign = 'right';
+            step.style.alignItems = 'flex-end';
+        }
+    });
+
+    // Define circular connections
+    const connections = stepOrder.map((step, i) => ({
+        start: points[step],
+        end: points[stepOrder[(i + 1) % totalSteps]]
+    }));
+
+    connections.forEach(conn => {
+        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line.setAttribute('x1', conn.start.x);
+        line.setAttribute('y1', conn.start.y);
+        line.setAttribute('x2', conn.end.x);
+        line.setAttribute('y2', conn.end.y);
+        svg.appendChild(line);
+    });
+}
 
         // Initialize on window load and handle resize
         window.onload = function() {
-            initRings();
-            animateRings();
+            initParticles();
+            animateParticles();
+            // Call drawSdlcLines after a slight delay to ensure elements are rendered and positioned
+            setTimeout(drawSdlcLines, 100);
         };
 
         window.addEventListener('resize', () => {
-            initRings(); // Re-initialize rings on resize
+            initParticles();
+            drawSdlcLines(); // Redraw SDLC lines on resize
         });
 
-        // SDLC Circle Counter-Rotation Logic
-        const sdlcCircleContainer = document.querySelector('.sdlc-circle-container');
 
-function updateSdlcItemRotation() {
-  if (!sdlcCircleContainer) return;
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.1 // 10% of the element must be visible
+        };
 
-  const transform = window.getComputedStyle(sdlcCircleContainer).transform;
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Only unobserve if it's not the SDLC layout, as SDLC needs re-drawing on resize
+                    if (!entry.target.classList.contains('sdlc-layout')) {
+                        observer.unobserve(entry.target);
+                    }
+                }
+            });
+        }, observerOptions);
 
-  let angle = 0;
-  if (transform && transform !== 'none') {
-    const values = transform.split('(')[1].split(')')[0].split(',');
-    const a = parseFloat(values[0]);
-    const b = parseFloat(values[1]);
-    angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
-  }
+        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+            observer.observe(element);
+        });
 
-  document.querySelectorAll('.sdlc-item > div').forEach(el => {
-    el.style.transform = `rotate(${-angle}deg)`;
-  });
-}
+        // Observe SDLC layout for changes (e.g., due to responsive adjustments)
+        const sdlcLayoutObserver = new ResizeObserver(entries => {
+            // Only redraw if the size of the layout actually changed
+            for (let entry of entries) {
+                if (entry.target.id === 'sdlc-layout') {
+                    drawSdlcLines();
+                    break;
+                }
+            }
+        });
 
-setInterval(updateSdlcItemRotation, 50);
-
+        const sdlcLayoutElement = document.getElementById('sdlc-layout');
+        if (sdlcLayoutElement) {
+            sdlcLayoutObserver.observe(sdlcLayoutElement);
+        }
 
     </script>
 </body>
