@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life at Cogniwide + Careers | Cogniwide</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter and IBM Plex Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Explore career opportunities at Cogniwide and learn about our vibrant company culture, values, and benefits." />
+    <style>
+        /* New Silver, Black & Blue Dark Mode Colors (Default) */
+        :root {
+            --color-bg-primary: #0A0A0A; /* Even deeper black */
+            --color-bg-secondary: #181818; /* Slightly lighter black for cards/sections */
+            --color-border-subtle: #383838; /* Darker silver for subtle borders */
+            --color-text-light: #F0F0F0; /* Brighter Silver */
+            --color-text-muted: #C0C0C0; /* Muted Silver */
+
+            /* More vibrant, futuristic blues with a hint of silver */
+            --color-accent-blue: #00CFFF; /* Bright Cyan */
+            --color-accent-light-blue: #4DFFFF; /* Lighter Cyan */
+            --color-accent-silver-gradient: #E0E0E0; /* Silver for gradients */
+            --color-accent-dark-blue: #0099CC; /* Deeper Cyan */
+            --color-accent-silver: #E0E0E0; /* Brighter Silver */
+            --color-accent-grey: #A0A0A0; /* Medium Silver */
+
+            --color-card-bg: var(--color-bg-secondary);
+            --color-card-border: var(--color-border-subtle);
+            --color-input-bg: #222222;
+            --color-input-border: #383838;
+            --color-input-text: var(--color-input-text);
+            --color-input-placeholder: var(--color-input-text);
+
+            --color-button-primary-bg-inner: #222222;
+            --color-button-primary-text: var(--color-text-light);
+            --color-button-secondary-text: var(--color-text-muted);
+            --color-button-hover-bg: #333333;
+
+            --color-header-bg: rgba(24, 24, 24, 0.8); /* Semi-transparent for futuristic feel */
+            --color-header-border: #2C2C2C;
+            --color-nav-link: var(--color-text-muted);
+            --color-nav-link-hover: var(--color-accent-blue);
+            --color-logo-text: var(--color-text-light);
+
+            --color-mobile-menu-bg: var(--color-bg-secondary);
+            --color-mobile-menu-border: var(--color-border-subtle);
+            --color-mobile-link-text: var(--color-text-muted);
+            --color-mobile-link-hover: var(--color-accent-blue);
+            --color-mobile-heading: var(--color-text-light);
+
+            --color-footer-bg: var(--color-bg-secondary);
+            --color-footer-border: var(--color-border-subtle);
+            --color-footer-text: var(--color-text-muted);
+            --color-footer-link-hover: var(--color-accent-blue);
+
+            --color-hero-visual-bg: var(--color-bg-secondary);
+            --color-hero-visual-card-bg: #222222;
+            --color-hero-visual-card-border: #383838;
+            --color-hero-visual-card-text: var(--color-text-light);
+            --color-hero-visual-card-subtext: var(--color-text-muted);
+
+            --color-product-card-bg: var(--color-bg-secondary);
+            --color-product-card-border: var(--color-border-subtle);
+            --color-product-card-text: var(--color-text-light);
+            --color-product-card-subtext: var(--color-text-muted);
+
+            --color-sdlc-bg: var(--color-bg-primary);
+            --color-sdlc-card-bg: var(--color-bg-secondary);
+            --color-sdlc-card-border: var(--color-border-subtle);
+            --color-sdlc-card-text: var(--color-text-light);
+            --color-sdlc-card-subtext: var(--color-text-muted);
+
+            --color-section-heading: var(--color-text-light);
+            --color-section-paragraph: var(--color-section-paragraph);
+
+            /* New colors for the Solutions section */
+            --color-solution-card-bg: var(--color-bg-secondary);
+            --color-solution-card-border: var(--color-border-subtle);
+            --color-solution-heading: var(--color-text-light);
+            --color-solution-text: var(--color-text-muted);
+            --color-solution-icon-bg-start: #00CFFF; /* Bright Cyan */
+            --color-solution-icon-bg-end: #0099CC; /* Deeper Cyan */
+            --color-solution-check: #00CFFF; /* Bright Cyan */
+
+            /* Leadership specific colors */
+            --color-leader-card-bg: var(--color-bg-secondary);
+            --color-leader-card-border: var(--color-border-subtle);
+            --color-leader-heading: var(--color-text-light);
+            --color-leader-role: var(--color-accent-blue); /* Default for roles */
+            --color-leader-subtext: var(--color-text-muted);
+            --color-skill-bar-bg: var(--color-input-bg);
+            --color-skill-bar-fill-start: var(--color-accent-blue);
+            --color-skill-bar-fill-end: var(--color-accent-dark-blue);
+            --color-achievement-dot: var(--color-accent-blue);
+            --color-biography-text: var(--color-biography-text);
+            --color-biography-border: var(--color-biography-border);
+            --color-biography-toggle: var(--color-biography-toggle);
+
+            /* Hero section specific for leadership */
+            --color-hero-leadership-bg-start: var(--color-bg-primary);
+            --color-hero-leadership-bg-end: var(--color-bg-secondary);
+            --color-hero-leadership-accent-bg: rgba(0, 207, 255, 0.05); /* Cyan with opacity */
+            --color-hero-leadership-success-bg: rgba(0, 153, 204, 0.05); /* Deeper Cyan with opacity */
+            --color-hero-leadership-metric-text: var(--color-accent-blue);
+            --color-hero-leadership-metric-subtext: var(--color-text-muted);
+
+            /* CogniXcellerate Specific Colors */
+            --color-cx-hero-bg-start: #0A0A0A; /* Deeper black */
+            --color-cx-hero-bg-end: #181818; /* Slightly lighter black */
+            --color-cx-hero-accent-bg: rgba(0, 207, 255, 0.05); /* Cyan with opacity */
+            --color-cx-hero-success-bg: rgba(0, 153, 204, 0.05); /* Deeper Cyan with opacity */
+            --color-cx-dashboard-bg: var(--color-bg-secondary);
+            --color-cx-dashboard-border: var(--color-border-subtle);
+            --color-cx-dashboard-header: var(--color-text-light);
+            --color-cx-dashboard-live: var(--color-accent-blue);
+            --color-cx-workflow-bg: var(--color-input-bg);
+            --color-cx-workflow-text: var(--color-text-light);
+            --color-cx-workflow-progress-bg: #333333;
+            --color-cx-workflow-progress-fill: var(--color-accent-blue);
+            --color-cx-metric-bg: var(--color-input-bg);
+            --color-cx-metric-value: var(--color-accent-blue);
+            --color-cx-metric-label: var(--color-text-muted);
+            --color-cx-activity-bg: var(--color-input-bg);
+            --color-cx-activity-dot: var(--color-accent-blue);
+            --color-cx-activity-text: var(--color-text-muted);
+
+            --color-cx-api-code-bg: var(--color-input-bg);
+            --color-cx-api-code-comment: #00CFFF; /* Cyan for comments */
+            --color-cx-api-code-text: var(--color-text-light);
+            --color-cx-feature-icon-bg: var(--color-accent-blue);
+            --color-cx-feature-icon-hover: var(--color-accent-dark-blue);
+            --color-cx-feature-text: var(--color-text-light);
+            --color-cx-feature-subtext: var(--color-text-muted);
+            --color-cx-feature-dot: var(--color-accent-blue);
+
+            --color-cx-timeline-line: var(--color-border-subtle);
+            --color-cx-timeline-dot: var(--color-accent-blue);
+            --color-cx-timeline-dot-border: var(--color-bg-primary);
+            --color-cx-timeline-card-bg: var(--color-card-bg);
+            --color-cx-timeline-card-border: var(--color-card-border);
+            --color-cx-timeline-card-header: var(--color-text-light);
+            --color-cx-timeline-card-text: var(--color-text-muted);
+            --color-cx-timeline-card-time: var(--color-accent-blue);
+
+            --color-cx-calculator-bg: var(--color-card-bg);
+            --color-cx-calculator-border: var(--color-card-border);
+            --color-cx-calculator-header: var(--color-text-light);
+            --color-cx-calculator-label: var(--color-text-light);
+            --color-cx-calculator-input-prefix: var(--color-text-muted);
+            --color-cx-calculator-result-bg: var(--color-input-bg);
+            --color-cx-calculator-result-border: var(--color-accent-blue);
+            --color-cx-calculator-result-header: var(--color-text-light);
+            --color-cx-calculator-result-value: var(--color-accent-blue);
+            --color-cx-calculator-result-subtext: var(--color-text-muted);
+            --color-cx-calculator-net-roi: var(--color-accent-blue);
+
+            --color-cx-testimonial-card-bg: var(--color-card-bg);
+            --color-cx-testimonial-card-border: var(--color-card-border);
+            --color-cx-testimonial-company: var(--color-text-light);
+            --color-cx-testimonial-role: var(--color-text-muted);
+            --color-cx-testimonial-challenge-bg: var(--color-input-bg);
+            --color-cx-testimonial-challenge-border: var(--color-accent-blue);
+            --color-cx-testimonial-solution-bg: var(--color-input-bg);
+            --color-cx-testimonial-solution-border: var(--color-accent-blue);
+            --color-cx-testimonial-quote-border: var(--color-accent-blue);
+            --color-cx-testimonial-quote-text: var(--color-text-muted);
+            --color-cx-testimonial-author: var(--color-text-light);
+            --color-cx-testimonial-author-role: var(--color-text-muted);
+
+            --color-cx-table-header: var(--color-text-light);
+            --color-cx-table-border: var(--color-border-subtle);
+            --color-cx-table-text: var(--color-text-light);
+            --color-cx-table-check: var(--color-accent-blue);
+            --color-cx-table-cross: var(--color-text-muted);
+            --color-cx-table-warning: var(--color-text-muted);
+        }
+
+        /* Light Mode Colors - Adjusted for contrast with new accents */
+        body.light-mode {
+            --color-bg-primary: #F8F8F8; /* Very light grey */
+            --color-bg-secondary: #FFFFFF; /* Pure White */
+            --color-border-subtle: #D0D0D0; /* Lighter silver border */
+            --color-text-light: #1A1A1A; /* Dark Black */
+            --color-text-muted: #707070; /* Medium Silver */
+
+            --color-accent-blue: #007ACC; /* Darker Blue for contrast */
+            --color-accent-light-blue: #0099FF; /* Brighter Blue */
+            --color-accent-silver-gradient: #A0A0A0; /* Muted Silver for light mode gradients */
+            --color-accent-dark-blue: #005580; /* Even Darker Blue */
+            --color-accent-silver: #A0A0A0; /* Muted Silver */
+            --color-accent-grey: #606060; /* Darker Silver */
+
+            --color-card-bg: var(--color-bg-secondary);
+            --color-card-border: var(--color-border-subtle);
+            --color-input-bg: #F0F0F0;
+            --color-input-border: #D8D8D8;
+            --color-input-text: var(--color-input-text);
+            --color-input-placeholder: var(--color-input-text);
+
+            --color-button-primary-bg-light: var(--color-accent-blue);
+            --color-button-primary-text-light: #ffffff;
+            --color-button-primary-hover-bg-light: var(--color-accent-dark-blue);
+
+            --color-button-secondary-bg-light: transparent;
+            --color-button-secondary-text-light: var(--color-accent-blue);
+            --color-button-secondary-border-light: var(--color-accent-blue);
+            --color-button-secondary-hover-bg-light: #E0F0FF; /* Light blue hover */
+            --color-button-secondary-hover-text-light: var(--color-accent-blue);
+
+            --color-header-bg: rgba(255, 255, 255, 0.8); /* Semi-transparent for futuristic feel */
+            --color-header-border: #E5E5E5;
+            --color-nav-link: var(--color-text-muted);
+            --color-nav-link-hover: var(--color-accent-blue);
+            --color-logo-text: var(--color-text-light);
+
+            --color-mobile-menu-bg: var(--color-bg-secondary);
+            --color-mobile-menu-border: var(--color-border-subtle);
+            --color-mobile-link-text: var(--color-text-muted);
+            --color-mobile-link-hover: var(--color-accent-blue);
+            --color-mobile-heading: var(--color-text-light);
+
+            --color-footer-bg: var(--color-bg-secondary);
+            --color-footer-border: var(--color-border-subtle);
+            --color-footer-text: var(--color-text-muted);
+            --color-footer-link-hover: var(--color-accent-blue);
+
+            --color-hero-visual-bg: var(--color-bg-secondary);
+            --color-hero-visual-card-bg: #F0F0F0;
+            --color-hero-visual-card-border: #D8D8D8;
+            --color-hero-visual-card-text: var(--color-text-light);
+            --color-hero-visual-card-subtext: var(--color-text-muted);
+
+            --color-product-card-bg: var(--color-bg-secondary);
+            --color-product-card-border: var(--color-border-subtle);
+            --color-product-card-text: var(--color-text-light);
+            --color-product-card-subtext: var(--color-text-muted);
+
+            --color-sdlc-bg: var(--color-bg-primary);
+            --color-sdlc-card-bg: var(--color-bg-secondary);
+            --color-sdlc-card-border: var(--color-border-subtle);
+            --color-sdlc-card-text: var(--color-text-light);
+            --color-sdlc-card-subtext: var(--color-text-muted);
+
+            --color-section-heading: var(--color-text-light);
+            --color-section-paragraph: var(--color-section-paragraph);
+
+            /* New colors for the Solutions section in light mode */
+            --color-solution-card-bg: var(--color-bg-secondary);
+            --color-solution-card-border: var(--color-border-subtle);
+            --color-solution-heading: var(--color-text-light);
+            --color-solution-text: var(--color-text-muted);
+            --color-solution-icon-bg-start: #007ACC; /* Darker Blue */
+            --color-solution-icon-bg-end: #005580; /* Even Darker Blue */
+            --color-solution-check: #007ACC; /* Darker Blue */
+
+            /* Leadership specific colors for light mode */
+            --color-leader-card-bg: var(--color-bg-secondary);
+            --color-leader-card-border: var(--color-border-subtle);
+            --color-leader-heading: var(--color-text-light);
+            --color-leader-role: var(--color-accent-blue); /* Default for roles */
+            --color-leader-subtext: var(--color-text-muted);
+            --color-skill-bar-bg: var(--color-input-bg);
+            --color-skill-bar-fill-start: var(--color-accent-blue);
+            --color-skill-bar-fill-end: var(--color-accent-dark-blue);
+            --color-achievement-dot: var(--color-accent-blue);
+            --color-biography-text: var(--color-biography-text);
+            --color-biography-border: var(--color-biography-border);
+            --color-biography-toggle: var(--color-biography-toggle);
+
+            /* Hero section specific for leadership in light mode */
+            --color-hero-leadership-bg-start: var(--color-bg-primary);
+            --color-hero-leadership-bg-end: var(--color-bg-secondary);
+            --color-hero-leadership-accent-bg: rgba(0, 153, 204, 0.05); /* Darker Blue with opacity */
+            --color-hero-leadership-success-bg: rgba(0, 122, 204, 0.05); /* Even Darker Blue with opacity */
+            --color-hero-leadership-metric-text: var(--color-accent-blue);
+            --color-hero-leadership-metric-subtext: var(--color-text-muted);
+
+            /* CogniXcellerate Specific Colors Light Mode */
+            --color-cx-hero-bg-start: #F8F8F8;
+            --color-cx-hero-bg-end: #FFFFFF;
+            --color-cx-hero-accent-bg: rgba(0, 153, 204, 0.05);
+            --color-cx-hero-success-bg: rgba(0, 122, 204, 0.05);
+            --color-cx-dashboard-bg: var(--color-bg-secondary);
+            --color-cx-dashboard-border: var(--color-border-subtle);
+            --color-cx-dashboard-header: var(--color-text-light);
+            --color-cx-dashboard-live: var(--color-accent-blue);
+            --color-cx-workflow-bg: var(--color-input-bg);
+            --color-cx-workflow-text: var(--color-text-light);
+            --color-cx-workflow-progress-bg: #E0E0E0;
+            --color-cx-workflow-progress-fill: var(--color-accent-blue);
+            --color-cx-metric-bg: var(--color-input-bg);
+            --color-cx-metric-value: var(--color-accent-blue);
+            --color-cx-metric-label: var(--color-text-muted);
+            --color-cx-activity-bg: var(--color-input-bg);
+            --color-cx-activity-dot: var(--color-accent-blue);
+            --color-cx-activity-text: var(--color-text-muted);
+
+            --color-cx-api-code-bg: var(--color-input-bg);
+            --color-cx-api-code-comment: #007ACC; /* Darker blue for comments */
+            --color-cx-api-code-text: var(--color-text-light);
+            --color-cx-feature-icon-bg: var(--color-accent-blue);
+            --color-cx-feature-icon-hover: var(--color-accent-dark-blue);
+            --color-cx-feature-text: var(--color-text-light);
+            --color-cx-feature-subtext: var(--color-text-muted);
+            --color-cx-feature-dot: var(--color-accent-blue);
+
+            --color-cx-timeline-line: var(--color-border-subtle);
+            --color-cx-timeline-dot: var(--color-accent-blue);
+            --color-cx-timeline-dot-border: var(--color-bg-primary);
+            --color-cx-timeline-card-bg: var(--color-card-bg);
+            --color-cx-timeline-card-border: var(--color-card-border);
+            --color-cx-timeline-card-header: var(--color-text-light);
+            --color-cx-timeline-card-text: var(--color-text-muted);
+            --color-cx-timeline-card-time: var(--color-accent-blue);
+
+            --color-cx-calculator-bg: var(--color-card-bg);
+            --color-cx-calculator-border: var(--color-card-border);
+            --color-cx-calculator-header: var(--color-text-light);
+            --color-cx-calculator-label: var(--color-text-light);
+            --color-cx-calculator-input-prefix: var(--color-text-muted);
+            --color-cx-calculator-result-bg: var(--color-input-bg);
+            --color-cx-calculator-result-border: var(--color-accent-blue);
+            --color-cx-calculator-result-header: var(--color-text-light);
+            --color-cx-calculator-result-value: var(--color-accent-blue);
+            --color-cx-calculator-result-subtext: var(--color-text-muted);
+            --color-cx-calculator-net-roi: var(--color-accent-blue);
+
+            --color-cx-testimonial-card-bg: var(--color-card-bg);
+            --color-cx-testimonial-card-border: var(--color-card-border);
+            --color-cx-testimonial-company: var(--color-text-light);
+            --color-cx-testimonial-role: var(--color-text-muted);
+            --color-cx-testimonial-challenge-bg: var(--color-input-bg);
+            --color-cx-testimonial-challenge-border: var(--color-accent-blue);
+            --color-cx-testimonial-solution-bg: var(--color-input-bg);
+            --color-cx-testimonial-solution-border: var(--color-accent-blue);
+            --color-cx-testimonial-quote-border: var(--color-accent-blue);
+            --color-cx-testimonial-quote-text: var(--color-text-muted);
+            --color-cx-testimonial-author: var(--color-text-light);
+            --color-cx-testimonial-author-role: var(--color-text-muted);
+
+            --color-cx-table-header: var(--color-text-light);
+            --color-cx-table-border: var(--color-border-subtle);
+            --color-cx-table-text: var(--color-text-light);
+            --color-cx-table-check: var(--color-accent-blue);
+            --color-cx-table-cross: var(--color-text-muted);
+            --color-cx-table-warning: var(--color-text-muted);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-light);
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .font-ibm-plex {
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+
+        .font-ibm-mono {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        /* Custom gradient for text - now includes silver */
+        .text-gradient {
+            background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-light-blue), var(--color-accent-silver-gradient));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Override text-gradient for light mode to be solid primary accent */
+        body.light-mode .text-gradient {
+            background: none;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+            color: var(--color-accent-blue);
+        }
+
+        /* Button base styles */
+        .btn-primary-inner {
+            @apply inline-flex items-center justify-center px-8 py-3 rounded-lg font-inter font-semibold transition-all duration-300;
+            height: 100%;
+            width: 100%;
+        }
+        .btn-secondary-inner {
+            @apply inline-flex items-center justify-center px-8 py-3 rounded-lg font-inter font-semibold transition-all duration-300;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Dark Mode Button Styles (Default) - updated glow for new blue */
+        .primary-button-wrapper {
+          background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-light-blue));
+          padding: 2px;
+          border-radius: 0.5rem;
+          display: inline-block;
+          box-shadow: 0 0 15px rgba(0, 207, 255, 0.4); /* Cyan glow */
+          transition: all 0.3s ease-in-out;
+        }
+        .primary-button-wrapper:hover {
+            box-shadow: 0 0 25px rgba(0, 207, 255, 0.6), 0 0 40px rgba(77, 255, 255, 0.4); /* Enhanced cyan glow */
+            transform: translateY(-2px);
+        }
+        .primary-button-wrapper.pulse {
+            animation: pulseGlow 2s infinite ease-in-out;
+        }
+        @keyframes pulseGlow {
+          0% { box-shadow: 0 0 10px rgba(0, 207, 255, 0.4); }
+          50% { box-shadow: 0 0 20px rgba(0, 207, 255, 0.8), 0 0 30px rgba(0, 207, 255, 0.6); }
+          100% { box-shadow: 0 0 10px rgba(0, 207, 255, 0.4); }
+        }
+
+
+        .secondary-button-wrapper {
+          background: linear-gradient(90deg, var(--color-text-muted), var(--color-border-subtle));
+          padding: 2px;
+          border-radius: 0.5rem;
+          display: inline-block;
+          box-shadow: 0 0 10px rgba(160, 160, 160, 0.3); /* Subtle silver glow */
+          transition: all 0.3s ease-in-out;
+        }
+        .secondary-button-wrapper:hover {
+            box-shadow: 0 0 15px rgba(160, 160, 160, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Inner Button Styles */
+        .btn-primary-inner,
+        .btn-secondary-inner {
+          display: block;
+          padding: 0.5rem 1.25rem;
+          border-radius: 0.375rem;
+          background-color: var(--color-button-primary-bg-inner);
+          color: var(--color-button-primary-text);
+          text-align: center;
+          text-decoration: none;
+          transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Hover Effects */
+        .btn-primary-inner:hover,
+        .btn-secondary-inner:hover {
+          background-color: var(--color-button-hover-bg);
+        }
+
+        /* Secondary text hover override */
+        .btn-secondary-inner {
+          color: var(--color-button-secondary-text);
+        }
+        .btn-secondary-inner:hover {
+          color: var(--color-button-primary-text); /* Text becomes light on hover */
+        }
+
+        /* Light Mode Overrides — Only Solid Borders */
+        body.light-mode .primary-button-wrapper,
+        body.light-mode .secondary-button-wrapper {
+          background: none;
+          padding: 0;
+          border: 1px solid var(--color-accent-blue);
+          border-radius: 0.5rem;
+          box-shadow: none; /* Remove glow in light mode */
+        }
+
+        /* Primary Button Inner in Light Mode */
+        body.light-mode .btn-primary-inner {
+          background-color: var(--color-button-primary-bg-light);
+          color: var(--color-button-primary-text-light);
+          border: none;
+        }
+
+        /* Hover for Primary */
+        body.light-mode .btn-primary-inner:hover {
+          background-color: var(--color-button-primary-hover-bg-light);
+        }
+
+        /* Secondary Button Inner in Light Mode */
+        body.light-mode .btn-secondary-inner {
+          background-color: var(--color-button-secondary-bg-light);
+          color: var(--color-button-secondary-text-light);
+          border: 1px solid var(--color-button-secondary-border-light);
+        }
+
+        /* Hover for Secondary */
+        body.light-mode .btn-secondary-inner:hover {
+          background-color: var(--color-button-secondary-hover-bg-light);
+          color: var(--color-button-secondary-hover-text-light);
+        }
+
+        /* Custom card styles */
+        .card {
+            background-color: var(--color-card-bg);
+            border-color: var(--color-card-border);
+            @apply rounded-xl shadow-md p-6 border;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card.glow-border {
+            box-shadow: 0 0 15px rgba(0, 207, 255, 0.2), inset 0 0 0 1px rgba(0, 207, 255, 0.1);
+        }
+        body.light-mode .card.glow-border {
+             box-shadow: 0 0 10px rgba(0, 153, 204, 0.1), inset 0 0 0 1px rgba(0, 153, 204, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 207, 255, 0.4); /* Enhanced hover shadow with cyan glow */
+        }
+        body.light-mode .card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 153, 204, 0.2);
+        }
+
+        /* Custom life-card styles */
+        .life-card {
+            background-color: var(--color-card-bg);
+            border-color: var(--color-card-border);
+            border-radius: 1rem; /* equivalent to rounded-xl */
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .life-card.glow-border {
+            box-shadow: 0 0 15px rgba(0, 207, 255, 0.2), inset 0 0 0 1px rgba(0, 207, 255, 0.1);
+        }
+        body.light-mode .life-card.glow-border {
+             box-shadow: 0 0 10px rgba(0, 153, 204, 0.1), inset 0 0 0 1px rgba(0, 153, 204, 0.05);
+        }
+
+        .life-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 207, 255, 0.4); /* Enhanced hover shadow with cyan glow */
+        }
+        body.light-mode .life-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 153, 204, 0.2);
+        }
+
+
+        /* Input field styling */
+        .input-field {
+            background-color: var(--color-input-bg);
+            border-color: var(--color-input-border);
+            color: var(--color-input-text);
+            @apply w-full p-3 rounded-lg border placeholder-gray-500
+            focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors duration-200;
+        }
+        .input-field::placeholder {
+            color: var(--color-input-placeholder);
+        }
+
+        /* Mobile menu transition */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            max-height: 0 !important;
+            opacity: 0 !important;
+        }
+        #mobile-menu:not(.hidden) {
+            max-height: 600px;
+            opacity: 1;
+        }
+
+        /* General section backgrounds and text */
+        .bg-section-primary { background-color: var(--color-bg-primary); }
+        .bg-section-secondary { background-color: var(--color-bg-secondary); }
+        .text-section-heading { color: var(--color-section-heading); }
+        .text-section-paragraph { color: var(--color-section-paragraph); }
+
+        /* Navigation and Footer specific overrides */
+        footer {
+            background-color: var(--color-footer-bg);
+            border-color: var(--color-footer-border);
+        }
+        footer p, footer a {
+            color: var(--color-footer-text);
+        }
+        footer a:hover {
+            color: var(--color-footer-link-hover);
+        }
+        nav a, nav button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a::after, nav button::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-accent-blue);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-out;
+        }
+
+        nav a:hover::after, nav button:hover::after {
+            transform: translateX(0);
+        }
+
+        /* Mobile menu specific colors */
+        #mobile-menu {
+            background-color: var(--color-mobile-menu-bg);
+            border-color: var(--color-mobile-menu-border);
+        }
+        #mobile-menu a {
+            color: var(--color-mobile-link-text);
+        }
+    #mobile-menu a:hover {
+            color: var(--color-mobile-link-hover);
+        }
+        #mobile-menu span {
+            color: var(--color-mobile-heading);
+        }
+
+        /* New Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-on-scroll.slide-left.is-visible {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .animate-on-scroll.slide-right.is-visible { /* Corrected class name */
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        .animate-on-scroll.fade-in.is-visible {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        /* Specific animation delays for staggered effects */
+        .animate-on-scroll:nth-child(1) { transition-delay: 0s; }
+        .animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+        .animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+        .animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+        .animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+        .animate-on-scroll:nth-child(6) { transition-delay: 0.5s; }
+
+        /* Solutions Showcase Specific Styles */
+        .hero-section-solutions {
+            background: linear-gradient(to bottom right, var(--color-bg-primary), var(--color-bg-secondary));
+            position: relative;
+            overflow: hidden;
+            min-height: 50vh;
+        }
+        .hero-section-solutions .absolute.inset-0:nth-child(1) {
+            background: linear-gradient(to right, rgba(0, 207, 255, 0.05), rgba(0, 153, 204, 0.05));
+        }
+        .solution-stat-card {
+            background-color: var(--color-card-bg);
+            border-color: var(--color-card-border);
+            @apply rounded-lg p-6 shadow-md border;
+        }
+        .solution-stat-card .text-3xl {
+            color: var(--color-accent-blue); /* Use accent blue for stats */
+        }
+        .solution-stat-card .text-sm {
+            color: var(--color-text-muted);
+        }
+
+        .case-study-card {
+            background-color: var(--color-card-bg);
+            border-color: var(--color-card-border);
+            @apply rounded-xl shadow-md p-8 border;
+        }
+        .case-study-card .tag {
+            background-color: var(--color-input-bg);
+            color: var(--color-accent-blue);
+        }
+        .case-study-card h3 {
+            color: var(--color-text-light);
+        }
+        .case-study-card p {
+            color: var(--color-text-muted);
+        }
+        .case-study-card .challenge-box {
+            background-color: var(--color-input-bg);
+            border-color: var(--color-accent-blue);
+        }
+        .case-study-card .solution-box {
+            background-color: var(--color-input-bg);
+            border-color: var(--color-accent-blue);
+        }
+        .case-study-card .challenge-box h4, .case-study-card .solution-box h4 {
+            color: var(--color-text-light);
+        }
+        .case-study-card .challenge-box p, .case-study-card .solution-box p {
+            color: var(--color-text-muted);
+        }
+        .case-study-card .result-value {
+            color: var(--color-accent-blue);
+        }
+        .case-study-card .result-label {
+            color: var(--color-text-muted);
+        }
+        .case-study-card .quote-box {
+            background-color: var(--color-input-bg);
+            color: var(--color-text-muted);
+        }
+        .case-study-card .author-name {
+            color: var(--color-text-light);
+        }
+        .case-study-card .author-role {
+            color: var(--color-text-muted);
+        }
+
+        .compliance-badge-card {
+            background-color: var(--color-card-bg);
+            border-color: var(--color-card-border);
+            @apply rounded-lg p-6 text-center border;
+        }
+        .compliance-badge-card .icon-bg {
+            background-color: var(--color-accent-blue);
+        }
+        .compliance-badge-card h3 {
+            color: var(--color-text-light);
+        }
+        .compliance-badge-card p {
+            color: var(--color-text-muted);
+        }
+        .compliance-stats-box {
+            background-color: var(--color-bg-secondary);
+            border-color: var(--color-border-subtle);
+            @apply rounded-lg p-8 border;
+        }
+        .compliance-stats-box .text-3xl {
+            color: var(--color-accent-blue);
+        }
+        .compliance-stats-box .text-text-secondary {
+            color: var(--color-text-muted);
+        }
+
+        .cta-section-solutions {
+            background: linear-gradient(to right, var(--color-accent-blue), var(--color-accent-dark-blue));
+        }
+        .cta-section-solutions h2 {
+            color: white;
+        }
+        .cta-section-solutions p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .cta-section-solutions .btn-primary-inner {
+            background-color: white;
+            color: var(--color-accent-blue);
+        }
+        .cta-section-solutions .btn-secondary-inner {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        /* New styles for the Enterprise Solutions section */
+        .feature-card {
+            background-color: var(--color-card-bg);
+            border: 1px solid var(--color-card-border);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 207, 255, 0.4);
+        }
+        body.light-mode .feature-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 153, 204, 0.2);
+        }
+
+        /* Architecture Diagram Styling */
+        .architecture-diagram-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            justify-content: center;
+            align-items: center;
+            gap: 0.75rem; /* Smaller gap */
+            margin-top: 1.5rem; /* Smaller margin */
+            padding: 1rem; /* Smaller padding */
+            background-color: var(--color-input-bg);
+            border: 1px solid var(--color-border-subtle);
+            border-radius: 0.75rem;
+            overflow-x: auto; /* Allow horizontal scrolling for very small screens if needed, but aim to avoid it */
+        }
+
+        .arch-layer {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping within layers */
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem; /* Even smaller gap within layers */
+            padding: 0.5rem; /* Smaller padding within layers */
+            border: 1px dashed var(--color-border-subtle);
+            border-radius: 0.5rem;
+            width: 100%; /* Ensure layers take full width */
+        }
+
+        .arch-component {
+            background-color: var(--color-bg-secondary);
+            border: 1px solid var(--color-accent-blue);
+            color: var(--color-text-light);
+            padding: 0.5rem 0.75rem; /* Smaller padding */
+            border-radius: 0.375rem; /* Slightly smaller border-radius */
+            text-align: center;
+            font-size: 0.75rem; /* text-xs */
+            flex-shrink: 0; /* Prevent shrinking */
+            white-space: nowrap; /* Keep text on one line */
+        }
+
+        .arch-arrow {
+            font-size: 1rem; /* Smaller arrow */
+            color: var(--color-accent-blue);
+            margin: 0 0.25rem; /* Smaller margin */
+            flex-shrink: 0;
+        }
+
+        .arch-label {
+            font-size: 0.625rem; /* text-xxs */
+            color: var(--color-text-muted);
+            text-align: center;
+            margin-top: 0.125rem; /* Smaller margin */
+        }
+
+        /* Responsive adjustments for architecture diagrams */
+        @media (min-width: 768px) {
+            .arch-layer {
+                flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+            }
+        }
+
+        /* Mobile menu button icon rotation */
+        #mobile-menu-button svg {
+            transition: transform 0.3s ease-in-out;
+        }
+        #mobile-menu-button.menu-open svg {
+            transform: rotate(90deg); /* Rotate to indicate open */
+        }
+
+        /* New styles for Careers page */
+        .job-card {
+          background-color: var(--color-card-bg);
+          border: 1px solid var(--color-card-border);
+          border-radius: 1rem; /* rounded-2xl */
+          padding: 1.5rem; /* p-6 */
+          box-shadow:
+            0 0 0 1px var(--color-border-subtle), /* subtle outline */
+            0 0 15px rgba(0, 207, 255, 0.05); /* soft glow effect */
+          transition: all 0.3s ease;
+        }
+
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 207, 255, 0.4);
+        }
+        body.light-mode .job-card {
+            box-shadow: 0 0 0 1px var(--color-border-subtle), 0 0 10px rgba(0, 153, 204, 0.05);
+        }
+        body.light-mode .job-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 153, 204, 0.2);
+        }
+
+        .job-card h3 {
+            color: var(--color-text-light);
+        }
+
+        .job-card .job-meta {
+            color: var(--color-text-muted);
+        }
+
+        .job-card .job-description {
+            color: var(--color-text-muted);
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+            max-height: 72px; /* Approx 3 lines of text for initial view */
+        }
+
+        .job-card .job-description.expanded {
+            max-height: 1000px; /* Arbitrarily large to show full content */
+        }
+
+        .job-card .read-more-button {
+            color: var(--color-accent-blue);
+            @apply font-semibold mt-3 inline-block;
+        }
+
+        .job-card .read-more-button:hover {
+            color: var(--color-accent-light-blue);
+        }
+
+        .job-detail-list li {
+            position: relative;
+            padding-left: 1.5rem; /* Space for the icon */
+            margin-bottom: 0.5rem;
+            color: var(--color-text-muted);
+        }
+
+        .job-detail-list li strong {
+            color: var(--color-text-light);
+        }
+
+        .job-detail-list li svg {
+            position: absolute;
+            left: 0;
+            top: 0.25rem; /* Adjust alignment */
+            color: var(--color-accent-blue);
+        }
+    </style>
+</head>
+<body class="bg-bg-primary text-text-light font-inter">
+    <!-- Navigation Header -->
+    <header class="bg-header-bg border-b border-header-border sticky top-0 z-50 shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
+                        <img src="assets/logo.png"
+                             class="h-auto w-24 sm:w-28 md:w-32 lg:w-36 transition-transform duration-300 hover:scale-105"
+                             alt="Cogniwide Logo" />
+                      </a>
+                </div>
+
+                <!-- Desktop Navigation - Grouped Layout -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <!-- Primary Navigation Group -->
+                    <div class="flex items-center space-x-1 px-2">
+                        <!-- Products Dropdown -->
+                        <div class="relative group">
+                            <button class="px-3 py-2 rounded-md text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                                Products
+                                <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                            <!-- Mega Menu -->
+                            <div class="absolute left-0 mt-2 w-96 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
+                                <div class="p-6">
+                                    <div class="grid grid-cols-1 gap-4">
+                                        <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-blue);"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniXcellerate</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">AI Orchestration Platform</p>
+                                            </div>
+                                        </a>
+                                        <a href="cogni_loom_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-light-blue);"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniLoom</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">Intelligent Process Automation</p>
+                                            </div>
+                                        </a>
+                                        <a href="cogni_chat_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-dark-blue);"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniChat</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">Conversational AI Platform</p>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-silver);"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniAgent</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">Intelligent Agent Framework</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Solutions & Services Group -->
+                        <div class="flex items-center space-x-1 pl-2 ml-2" style="border-left: 1px solid var(--color-border-subtle);">
+                            <a href="solutions_showcase.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Solutions</a>
+                            <a href="platform_engineering_services.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Services</a>
+                            <a href="industries_hub.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Industries</a>
+                        </div>
+
+                        <!-- Resources & Company Group -->
+                        <div class="flex items-center space-x-1 pl-2 ml-2" style="border-left: 1px solid var(--color-border-subtle);">
+                            <a href="resource_center.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Resources</a>
+
+                            <!-- Company Dropdown -->
+                            <div class="relative group">
+                                <button class="px-3 py-2 rounded-md text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                                    Company
+                                    <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </button>
+                                <!-- Company Dropdown -->
+                                <div class="absolute left-0 mt-2 w-72 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
+                                    <div class="p-4">
+                                        <div class="space-y-2">
+                                            <a href="about_us.html" class="block p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">About Us</a>
+                                            <a href="leadership_team.html" class="block p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">Leadership Team</a>
+                                            <a href="life_at_cogniwide_careers.html" class="block p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">Life at Cogniwide + Careers</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="contact.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tablet Navigation (768px - 1024px) -->
+                <div class="hidden md:flex lg:hidden items-center space-x-6">
+                    <!-- Essential Links -->
+                    <a href="index.html" class="font-ibm-plex font-medium text-sm transition-colors duration-300" style="color: var(--color-accent-blue);" onmouseover="this.style.color='var(--color-accent-light-blue)'" onmouseout="this.style.color='var(--color-accent-blue)'">Home</a>
+
+                    <!-- Products Menu -->
+                    <div class="relative group">
+                        <button class="font-ibm-plex font-medium text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                            Products
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-80 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
+                            <div class="p-4">
+                                <div class="grid grid-cols-1 gap-2">
+                                    <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-blue);"></div>
+                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniXcellerate</span>
+                                    </a>
+                                    <a href="cogni_loom_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-light-blue);"></div>
+                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniLoom</span>
+                                    </a>
+                                    <a href="cogni_chat_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-dark-blue);"></div>
+                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniAgent</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More Menu for remaining items -->
+                    <div class="relative group">
+                        <button class="font-ibm-plex font-medium text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                            More
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-64 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
+                            <div class="p-4">
+                                <div class="space-y-2">
+                                    <a href="solutions_showcase.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Solutions</a>
+                                    <a href="platform_engineering_services.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Services</a>
+                                    <a href="industries_hub.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Industries</a>
+                                    <a href="resource_center.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Resources</a>
+                                    <hr style="border-color: var(--color-border-subtle);" class="my-2" />
+                                    <a href="about_us.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">About Us</a>
+                                    <a href="leadership_team.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Leadership Team</a>
+                                    <a href="life_at_cogniwide_careers.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Life at Cogniwide + Careers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+  <!-- Theme Toggle Button -->
+<!--  <button id="theme-toggle" class="p-2 rounded-full hover:bg-input-bg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue" style="color: var(&#45;&#45;color-nav-link);">-->
+<!--    <svg id="sun-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12h1m15.325-4.275l-.707-.707M4.675 19.325l-.707-.707M19.325 4.675l-.707-.707M4.675 4.675l-.707-.707M12 18a6 6 0 100-12 6 6 0 000 12z" />-->
+<!--    </svg>-->
+<!--    <svg id="moon-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />-->
+<!--    </svg>-->
+<!--  </button>-->
+
+  <!-- Request Demo Button -->
+  <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
+    <a href="contact.html" class="btn-primary-inner">
+      Request Demo
+    </a>
+  </div>
+</div>
+
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- Mobile Theme Toggle -->
+                    <button id="mobile-theme-toggle" class="p-2 rounded-full text-text-muted hover:text-accent-blue hover:bg-input-bg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue">
+                        <svg id="mobile-sun-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12h1m15.325-4.275l-.707-.707M4.675 19.325l-.707-.707M19.325 4.675l-.707-.707M4.675 4.675l-.707-.707M12 18a6 6 0 100-12 6 6 0 000 12z" />
+                        </svg>
+                        <svg id="mobile-moon-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-text-muted hover:text-accent-blue hover:bg-input-bg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden transition-all duration-300 ease-in-out" style="background-color: var(--color-mobile-menu-bg); border-color: var(--color-mobile-menu-border);">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t shadow-lg" style="border-color: var(--color-mobile-menu-border);">
+                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-accent-blue);" onmouseover="this.style.color='var(--color-accent-light-blue)'" onmouseout="this.style.color='var(--color-accent-blue)'">Home</a>
+
+                    <!-- Mobile Products Submenu -->
+                    <div class="block px-3 py-2">
+                        <span class="font-medium text-base" style="color: var(--color-mobile-heading);">Products</span>
+                        <div class="ml-4 mt-2 space-y-1">
+                            <a href="cogni_xcellerate_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniXcellerate</a>
+                            <a href="cogni_loom_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniLoom</a>
+                            <a href="cogni_chat_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniChat</a>
+                            <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAgent</a>
+                        </div>
+                    </div>
+
+                    <a href="solutions_showcase.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Solutions</a>
+                    <a href="platform_engineering_services.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Services</a>
+                    <a href="industries_hub.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Industries</a>
+                    <a href="resource_center.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Resources</a>
+
+                    <!-- Mobile Company Submenu -->
+                    <div class="block px-3 py-2">
+                        <span class="font-medium text-base" style="color: var(--color-mobile-heading);">Company</span>
+                        <div class="ml-4 mt-2 space-y-1">
+                            <a href="about_us.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">About Us</a>
+                            <a href="leadership_team.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">Leadership Team</a>
+                            <a href="life_at_cogniwide_careers.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">Life at Cogniwide + Careers</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Contact</a>
+
+                    <!-- Mobile CTA -->
+                    <div class="pt-4" style="border-color: var(--color-mobile-menu-border);">
+                        <div class="relative rounded-lg inline-block w-full primary-button-wrapper pulse">
+                            <a href="contact.html" class="btn-primary-inner w-full text-center">
+                              Request Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="bg-section-secondary border-b border-border-subtle">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="index.html" class="text-text-muted hover:text-accent-blue transition-colors duration-300">Home</a>
+                <svg class="w-4 h-4 text-text-muted" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-text-light font-inter font-medium">Life at Cogniwide + Careers</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="relative hero-section-solutions overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-accent/5 to-success/5"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
+            <div class="text-center animate-on-scroll fade-in">
+                <h1 class="font-inter font-bold text-4xl lg:text-5xl text-section-heading mb-6">
+                    Join Our Innovative Team
+                </h1>
+                <p class="text-xl text-section-paragraph max-w-3xl mx-auto mb-8">
+                    At Cogniwide, we're building the future of AI. Join a team that values innovation, collaboration, and continuous learning.
+                </p>
+                <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
+                    <a href="#current-openings" class="btn-primary-inner">
+                        Explore Openings
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Life at Cogniwide Section -->
+    <section class="py-20 bg-section-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll fade-in">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-section-heading">
+                    Life at <span class="text-gradient">Cogniwide</span>
+                </h2>
+                <p class="text-xl text-section-paragraph max-w-4xl mx-auto leading-relaxed">
+                    We believe in fostering a dynamic and supportive environment where every team member can thrive.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="life-card animate-on-scroll slide-in-up">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-4" style="background: linear-gradient(to bottom right, var(--color-accent-blue), var(--color-accent-dark-blue));">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb text-white">
+                            <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 6c0 1.3.5 2.6 1.5 3.5.8.7 1.3 1.5 1.5 2.5"></path>
+                            <path d="M9 18h6"></path>
+                            <path d="M10 22h4"></path>
+                            <path d="M11 17v5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" style="color: var(--color-text-light);">Innovation Hub</h3>
+                    <p class="text-base" style="color: var(--color-text-muted);">
+                        Work on cutting-edge AI projects that push the boundaries of technology. We encourage creative problem-solving and bold ideas.
+                    </p>
+                </div>
+
+                <div class="life-card animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-4" style="background: linear-gradient(to bottom right, var(--color-accent-blue), var(--color-accent-dark-blue));">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users text-white">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" style="color: var(--color-text-light);">Collaborative Culture</h3>
+                    <p class="text-base" style="color: var(--color-text-muted);">
+                        Join a diverse team of experts who support each other, share knowledge, and grow together. Your voice matters here.
+                    </p>
+                </div>
+
+                <div class="life-card animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-4" style="background: linear-gradient(to bottom right, var(--color-accent-blue), var(--color-accent-dark-blue));">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap text-white">
+                            <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.007 4.5l-9.395 4.584a1 1 0 0 0-.019 1.838l9.395 4.584a.999.999 0 0 0 .991 0z"></path>
+                            <path d="M12 19.5v-6"></path>
+                            <path d="M22 17.5v-6"></path>
+                            <path d="M2 17.5v-6"></path>
+                            <path d="M12 14.5l8.5-4.5"></path>
+                            <path d="M3.5 10l8.5 4.5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" style="color: var(--color-text-light);">Continuous Learning</h3>
+                    <p class="text-base" style="color: var(--color-text-muted);">
+                        We invest in your growth with access to the latest tools, training programs, and mentorship opportunities.
+                    </p>
+                </div>
+
+                <div class="life-card animate-on-scroll slide-in-up" style="transition-delay: 0.3s;">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-4" style="background: linear-gradient(to bottom right, var(--color-accent-blue), var(--color-accent-dark-blue));">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase text-white">
+                            <rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" style="color: var(--color-text-light);">Impactful Work</h3>
+                    <p class="text-base" style="color: var(--color-text-muted);">
+                        Your contributions will directly impact real-world solutions and help shape industries. Make a difference with us.
+                    </p>
+                </div>
+
+                <div class="life-card animate-on-scroll slide-in-up" style="transition-delay: 0.4s;">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-4" style="background: linear-gradient(to bottom right, var(--color-accent-blue), var(--color-accent-dark-blue));">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart text-white">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.31 1.5 4.06 3 5.5L12 22z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" style="color: var(--color-text-light);">Well-being & Benefits</h3>
+                    <p class="text-base" style="color: var(--color-text-muted);">
+                        We care about our team members. Enjoy comprehensive benefits, flexible work options, and a focus on work-life balance.
+                    </p>
+                </div>
+
+                <div class="life-card animate-on-scroll slide-in-up" style="transition-delay: 0.5s;">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-4" style="background: linear-gradient(to bottom right, var(--color-accent-blue), var(--color-accent-dark-blue));">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket text-white">
+                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.75-.75 1.04-2.02.5-3.25s-1.9-2.25-3.25-1.5c-1.26.75-2 1.04-3.25.5s-2.25-1.9-1.5-3.25c1.26-.75 5-2 5-2s-1.26 3.74-2 5z"></path>
+                            <path d="M10 10l-2 2"></path>
+                            <path d="M19 15l-2 2"></path>
+                            <path d="M15 19l2-2"></path>
+                            <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 12z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2" style="color: var(--color-text-light);">Growth Opportunities</h3>
+                    <p class="text-base" style="color: var(--color-text-muted);">
+                        We offer clear career paths and opportunities for advancement within the company. Your success is our success.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Openings Section -->
+    <section id="current-openings" class="py-20 bg-section-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll fade-in">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-section-heading">
+                    Current <span class="text-gradient">Openings</span>
+                </h2>
+                <p class="text-xl text-section-paragraph max-w-3xl mx-auto leading-relaxed">
+                    Explore our available positions and find your next career challenge at Cogniwide.
+                </p>
+            </div>
+
+            <div id="job-listings-container" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Job listings will be dynamically loaded here by JavaScript -->
+            </div>
+
+            <div class="text-center mt-12 animate-on-scroll fade-in">
+                <p class="text-lg text-section-paragraph mb-6">
+                    Don't see a role that fits? Send us your resume!
+                </p>
+                <div class="relative rounded-lg inline-block secondary-button-wrapper">
+                    <a href="contact.html" class="btn-secondary-inner">
+                        Submit Your Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="border-t border-footer-border bg-footer-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <!-- Company Info -->
+      <div class="col-span-1 md:col-span-2">
+        <div class="flex items-center mb-4">
+          <a href="index.html" class="font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
+            <img src="assets/logo.png"
+                 class="h-auto w-24 sm:w-28 md:w-32 lg:w-36 transition-transform duration-300 hover:scale-105"
+                 alt="Cogniwide Logo" />
+          </a>
+        </div>
+        <p class="mb-3 max-w-md text-sm" style="color: var(--color-footer-text);">
+          Cogniwide is an AI-based IT products and services company that provides high-performance product development, solutions, and operations services that focuses on Digital Transformation.
+        </p>
+        <p class="mb-4 max-w-md text-sm" style="color: var(--color-footer-text);">
+          We leverage new generation technologies like AI, RPA, Data Analytics, and Blockchain to build tailor-made digital Web and Mobile solutions and aid in the digital journey of our partners.
+        </p>
+        <div class="flex space-x-4 mb-4">
+          <a href="https://www.linkedin.com/company/cogniwide" target="_blank" rel="noreferrer">
+            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.9h.1c.7-1.3 2.5-2.7 5.2-2.7 5.6 0 6.6 3.6 6.6 8.3V24h-5V15c0-2.2 0-5-3-5s-3.5 2.3-3.5 4.8V24h-5V8z"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com/cogniwide" target="_blank" rel="noreferrer">
+            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 4.56c-.89.39-1.84.66-2.84.78a4.93 4.93 0 002.16-2.72 9.85 9.85 0 01-3.13 1.2 4.92 4.92 0 00-8.38 4.48A13.96 13.96 0 011.64 3.16 4.92 4.92 0 003.2 9.72a4.9 4.9 0 01-2.23-.62v.06a4.92 4.92 0 003.95 4.83 4.9 4.9 0 01-2.22.08 4.93 4.93 0 004.6 3.41 9.86 9.86 0 01-6.1 2.1c-.4 0-.79-.02-1.18-.07A13.9 13.9 0 007.5 21c9.14 0 14.13-7.57 14.13-14.13 0-.21 0-.42-.01-.63A10.1 10.1 0 0024 4.56z"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/cogniwide" target="_blank" rel="noreferrer">
+            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22.68 0H1.32C.59 0 0 .6 0 1.34v21.32C0 23.4.59 24 1.32 24H12v-9.34H9.34v-3.66H12V8.65c0-2.66 1.63-4.11 4-4.11 1.14 0 2.11.08 2.39.12v2.77h-1.64c-1.29 0-1.54.61-1.54 1.5v1.96h3.08l-.4 3.66h-2.68V24h5.27c.73 0 1.32-.6 1.32-1.34V1.34C24 .6 23.41 0 22.68 0z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Solutions Links -->
+      <div>
+        <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Solutions</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="cogni_xcellerate_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniXcellerate</a></li>
+          <li><a href="cogni_loom_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniLoom</a></li>
+          <li><a href="cogni_chat_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniChat</a></li>
+          <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAgent</a></li>
+        </ul>
+      </div>
+
+      <!-- Company Links -->
+      <div>
+        <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Company</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="about_us.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">About Us</a></li>
+          <li><a href="leadership_team.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Leadership Team</a></li>
+          <li><a href="life_at_cogniwide_careers.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Life at Cogniwide + Careers</a></li>
+          <li><a href="contact.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Address Section -->
+    <div class="mt-10 text-sm" style="color: var(--color-footer-text);">
+      <h4 class="font-inter font-semibold mb-4">Our Branches - India</h4>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+           <div>
+          <h6 class="font-semibold">Headquarters - Chennai</h6>
+          <p>
+            Cogniwide Technologies Private Limited,<br />
+            3rd Floor, Alpha City, SSPDL Building,<br />
+            Rajiv Gandhi Salai, Navalur, Chennai - 603103,<br />
+            Tamilnadu, India.
+          </p>
+        </div>
+        <div>
+          <h6 class="font-semibold">Registered Office - Bengaluru</h6>
+          <p>
+            Cogniwide Technologies Private Limited,<br />
+            1st Floor, SPD Plaza, 52, Jyoti Niwas College Rd,<br />
+            Koramangala Industrial Layout, Koramangala,<br />
+            Bengaluru, Karnataka, India 560034.
+          </p>
+        </div>
+
+        <div>
+          <h6 class="font-semibold">Registered Office - Madurai</h6>
+          <p>
+            Cogniwide Technologies Private Limited,<br />
+            No.15, 4th Floor, Gokale Road, Chinna Chokkikulam,<br />
+            Madurai - 625014, Tamilnadu, India.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center" style="border-color: var(--color-border-subtle);">
+      <p class="text-sm" style="color: var(--color-footer-text);">
+        © 2025 Cogniwide AI Platform. All Rights Reserved.
+      </p>
+      <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Privacy Policy</a>
+        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Terms of Service</a>
+        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Security</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script>
+        // Enhanced mobile menu toggle with smooth transitions
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                // Toggle a class on the button to rotate the icon
+                mobileMenuButton.classList.toggle('menu-open');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.classList.remove('menu-open'); // Ensure icon resets
+                }
+            });
+        }
+
+        // Add responsive behavior for window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.classList.remove('menu-open'); // Ensure icon resets on desktop
+            }
+        });
+
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const mobileSunIcon = document.getElementById('mobile-sun-icon');
+        const mobileMoonIcon = document.getElementById('mobile-moon-icon');
+        const body = document.body;
+
+        // Function to set theme
+        function setTheme(theme) {
+            if (theme === 'light-mode') {
+                body.classList.add('light-mode');
+                if (sunIcon) sunIcon.classList.remove('hidden');
+                if (moonIcon) moonIcon.classList.add('hidden');
+                if (mobileSunIcon) mobileSunIcon.classList.remove('hidden');
+                if (mobileMoonIcon) mobileMoonIcon.classList.add('hidden');
+            } else {
+                body.classList.remove('light-mode');
+                if (sunIcon) sunIcon.classList.add('hidden');
+                if (moonIcon) moonIcon.classList.remove('hidden');
+                if (mobileSunIcon) mobileSunIcon.classList.add('hidden');
+                if (mobileMoonIcon) mobileMoonIcon.classList.remove('hidden');
+            }
+            localStorage.setItem('theme', theme);
+        }
+
+        // Check for saved theme preference on load
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            setTheme(currentTheme);
+        } else {
+            // Default to dark mode if no preference
+            setTheme('dark-mode');
+        }
+
+        // Event listeners for theme toggles
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
+                setTheme(newTheme);
+            });
+        }
+        if (mobileThemeToggleBtn) {
+            mobileThemeToggleBtn.addEventListener('click', () => {
+                const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
+                setTheme(newTheme);
+            });
+        }
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.1 // 10% of the element must be visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Only unobserve if you want the animation to play once
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Dynamic Career Listings Logic
+        const careerOpportunities = [
+            {
+                id: 'software-engineer',
+                title: 'Senior Software Engineer (AI/ML)',
+                location: 'Bengaluru, India',
+                type: 'Full-time',
+                description: 'We are seeking a highly skilled Senior Software Engineer with expertise in Artificial Intelligence and Machine Learning to join our innovative product development team. You will be responsible for designing, developing, and deploying scalable AI/ML solutions that power our core products. This role requires a strong understanding of machine learning algorithms, data pipelines, and cloud platforms.',
+                responsibilities: [
+                    'Design, develop, and deploy robust and scalable AI/ML models and systems.',
+                    'Collaborate with data scientists and product managers to translate business requirements into technical solutions.',
+                    'Build and maintain efficient data pipelines for training and inference.',
+                    'Optimize AI/ML models for performance and scalability.',
+                    'Conduct code reviews and ensure high-quality code standards.',
+                    'Stay up-to-date with the latest advancements in AI/ML technologies.'
+                ],
+                requirements: [
+                    'Bachelor\'s or Master\'s degree in Computer Science, AI, Machine Learning, or a related field.',
+                    '5+ years of experience in software development with a focus on AI/ML.',
+                    'Proficiency in Python and relevant AI/ML frameworks (e.g., TensorFlow, PyTorch, Scikit-learn).',
+                    'Experience with cloud platforms (AWS, Azure, GCP) and MLOps practices.',
+                    'Strong understanding of data structures, algorithms, and software design principles.',
+                    'Excellent problem-solving and communication skills.'
+                ]
+            },
+            {
+                id: 'data-scientist',
+                title: 'Lead Data Scientist',
+                location: 'Chennai, India',
+                type: 'Full-time',
+                description: 'Cogniwide is looking for a Lead Data Scientist to drive our data-driven initiatives. You will lead a team of talented data scientists, develop advanced analytical models, and provide insights that influence strategic business decisions. This role requires a blend of strong technical skills, leadership abilities, and a passion for extracting value from complex datasets.',
+                responsibilities: [
+                    'Lead and mentor a team of data scientists, fostering a culture of innovation and excellence.',
+                    'Design and implement end-to-end data science solutions, from data collection to model deployment.',
+                    'Develop and apply advanced statistical modeling, machine learning, and predictive analytics techniques.',
+                    'Communicate complex analytical findings and recommendations to non-technical stakeholders.',
+                    'Collaborate with engineering teams to integrate models into production systems.',
+                    'Identify new opportunities for leveraging data to solve business problems.'
+                ],
+                requirements: [
+                    'Master\'s or Ph.D. in Data Science, Statistics, Computer Science, or a quantitative field.',
+                    '7+ years of experience in data science, with at least 2 years in a leadership role.',
+                    'Expertise in statistical modeling, machine learning algorithms, and experimental design.',
+                    'Proficiency in Python or R, and SQL.',
+                    'Experience with big data technologies (e.g., Spark, Hadoop) and data visualization tools.',
+                    'Proven track record of delivering impactful data-driven solutions.'
+                ]
+            },
+            {
+                id: 'product-manager',
+                title: 'Product Manager (AI Platform)',
+                location: 'Bengaluru, India',
+                type: 'Full-time',
+                description: 'We are seeking an experienced Product Manager to lead the development and growth of our AI orchestration platform. You will be responsible for defining the product strategy, roadmap, and features, working closely with engineering, design, and sales teams to deliver exceptional value to our enterprise customers.',
+                responsibilities: [
+                    'Define and evangelize the product vision, strategy, and roadmap for the AI platform.',
+                    'Conduct market research, competitive analysis, and gather customer feedback to identify opportunities.',
+                    'Translate user needs and business requirements into detailed product specifications and user stories.',
+                    'Prioritize features and manage the product backlog in an agile development environment.',
+                    'Collaborate with engineering, design, and marketing teams throughout the product lifecycle.',
+                    'Monitor product performance, analyze key metrics, and iterate on product features.'
+                ],
+                requirements: [
+                    'Bachelor\'s degree in Computer Science, Engineering, Business, or a related field.',
+                    '5+ years of product management experience, preferably with AI/ML products or platforms.',
+                    'Strong technical understanding of AI/ML technologies, cloud infrastructure, and software development processes.',
+                    'Proven ability to define and launch successful products.',
+                    'Excellent communication, interpersonal, and presentation skills.',
+                    'Experience with agile methodologies and product management tools.'
+                ]
+            },
+            {
+                id: 'ux-designer',
+                title: 'UX/UI Designer',
+                location: 'Madurai, India',
+                type: 'Full-time',
+                description: 'Cogniwide is looking for a talented UX/UI Designer to create intuitive and engaging user experiences for our AI products. You will be responsible for user research, wireframing, prototyping, and designing high-fidelity interfaces that delight our users.',
+                responsibilities: [
+                    'Conduct user research, usability testing, and gather user requirements.',
+                    'Create wireframes, prototypes, and user flows to effectively communicate design ideas.',
+                    'Design intuitive, user-centered interfaces for web and mobile applications.',
+                    'Collaborate closely with product managers and engineers to ensure design feasibility and implementation.',
+                    'Maintain and evolve design systems and style guides.',
+                    'Advocate for user experience best practices throughout the product development process.'
+                ],
+                requirements: [
+                    'Bachelor\'s degree in Design, Human-Computer Interaction, or a related field.',
+                    '3+ years of experience in UX/UI design for web and mobile applications.',
+                    'Proficiency with design tools such as Figma, Sketch, Adobe XD.',
+                    'Strong portfolio showcasing a range of UX/UI design projects.',
+                    'Understanding of user-centered design principles and methodologies.',
+                    'Excellent communication and collaboration skills.'
+                ]
+            }
+        ];
+
+        function displayCareers(careers) {
+            const container = document.getElementById('job-listings-container');
+            if (!container) {
+                console.error('Job listings container not found!');
+                return;
+            }
+
+            container.innerHTML = ''; // Clear existing content
+
+            careers.forEach(job => {
+                const jobCard = document.createElement('div');
+                // The 'is-visible' class is added here to ensure immediate display, overriding the initial hidden state from animate-on-scroll
+                jobCard.className = 'job-card slide-in-up is-visible';
+                jobCard.style.transitionDelay = `${Math.random() * 0.1}s`; // Slightly reduced delay for faster appearance
+
+                // Truncate description for initial view
+                const shortDescription = job.description.length > 150 ? job.description.substring(0, 150) + '...' : job.description;
+
+                jobCard.innerHTML = `
+                    <h3 class="text-2xl font-bold mb-2">${job.title}</h3>
+                    <p class="job-meta text-sm mb-4">${job.location} &bull; ${job.type}</p>
+                    <p class="job-description mb-4">${shortDescription}</p>
+                    <button class="read-more-button" data-job-id="${job.id}">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </button>
+
+                    <!-- Full Details (Initially hidden) -->
+                    <div id="full-details-${job.id}" class="hidden mt-4">
+                        <h4 class="text-lg font-semibold mb-2" style="color: var(--color-text-light);">Responsibilities:</h4>
+                        <ul class="job-detail-list list-none pl-0 mb-4">
+                            ${job.responsibilities.map(r => `
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                                        <path d="M20 6 9 17l-5-5"/>
+                                    </svg>
+                                    ${r}
+                                </li>
+                            `).join('')}
+                        </ul>
+                        <h4 class="text-lg font-semibold mb-2" style="color: var(--color-text-light);">Requirements:</h4>
+                        <ul class="job-detail-list list-none pl-0">
+                            ${job.requirements.map(req => `
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                                        <path d="M20 6 9 17l-5-5"/>
+                                    </svg>
+                                    ${req}
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `;
+                container.appendChild(jobCard);
+            });
+
+            // Add event listeners for "Read More" buttons
+            document.querySelectorAll('.read-more-button').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    // Find the closest job-card parent to ensure we're targeting the correct elements
+                    const jobCardElement = event.target.closest('.job-card');
+                    if (!jobCardElement) return;
+
+                    const jobId = event.target.dataset.jobId;
+                    const fullDetailsDiv = jobCardElement.querySelector(`#full-details-${jobId}`);
+                    const jobDescriptionP = jobCardElement.querySelector('.job-description');
+
+                    if (fullDetailsDiv && jobDescriptionP) {
+                        const isHidden = fullDetailsDiv.classList.contains('hidden');
+                        if (isHidden) {
+                            fullDetailsDiv.classList.remove('hidden');
+                            jobDescriptionP.classList.add('expanded');
+                            event.target.innerHTML = `
+                                Read Less
+                                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                                </svg>
+                            `;
+                        } else {
+                            fullDetailsDiv.classList.add('hidden');
+                            jobDescriptionP.classList.remove('expanded');
+                            event.target.innerHTML = `
+                                Read More
+                                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            `;
+                        }
+                    }
+                });
+            });
+        }
+
+        // Initialize on window load
+        window.onload = function() {
+            // Any specific initializations for this page can go here
+            displayCareers(careerOpportunities); // Load careers on page load
+        };
+
+    </script>
+</body>
+</html>

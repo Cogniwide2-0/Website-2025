@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Cogniwide AI Platform</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter and IBM Plex Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Get in touch with Cogniwide AI Platform. Contact our team for demos, support, or partnerships. Let's transform your enterprise together." />
+    <style>
+        /* New Silver, Black & Blue Dark Mode Colors (Default) */
+        :root {
+            --color-bg-primary: #0A0A0A; /* Even deeper black */
+            --color-bg-secondary: #181818; /* Slightly lighter black for sections */
+            --color-border-subtle: #383838; /* Darker silver for subtle borders */
+            --color-text-light: #F0F0F0; /* Brighter Silver */
+            --color-text-muted: #C0C0C0; /* Muted Silver */
+
+            /* More vibrant, futuristic blues with a hint of silver */
+            --color-accent-blue: #00CFFF; /* Bright Cyan */
+            --color-accent-light-blue: #4DFFFF; /* Lighter Cyan */
+            --color-accent-silver-gradient: #E0E0E0; /* Silver for gradients */
+            --color-accent-dark-blue: #0099CC; /* Deeper Cyan */
+            --color-accent-silver: #E0E0E0; /* Brighter Silver */
+            --color-accent-grey: #A0A0A0; /* Medium Silver */
+
+            --color-card-bg: var(--color-bg-secondary);
+            --color-card-border: var(--color-border-subtle);
+            --color-input-bg: #222222;
+            --color-input-border: #383838;
+            --color-input-text: var(--color-text-light);
+            --color-input-placeholder: #888888; /* Darker placeholder for contrast */
+            --color-input-focus-ring: rgba(0, 207, 255, 0.6); /* Stronger Cyan glow for focus */
+            --color-input-hover-border: #00CFFF; /* Cyan border on hover */
+            --color-input-shadow: rgba(0, 0, 0, 0.1); /* Subtle initial shadow */
+            --color-input-focus-shadow: rgba(0, 207, 255, 0.4); /* Stronger glow shadow */
+            --color-input-icon: #C0C0C0; /* Input icon color */
+            --color-input-label: #C0C0C0; /* Floating label color */
+            --color-input-label-focus: var(--color-accent-blue); /* Floating label color on focus */
+
+            --color-button-primary-bg-inner: #222222;
+            --color-button-primary-text: var(--color-text-light);
+            --color-button-secondary-text: var(--color-text-muted);
+            --color-button-hover-bg: #333333;
+
+            --color-header-bg: rgba(24, 24, 24, 0.8); /* Semi-transparent for futuristic feel */
+            --color-header-border: #2C2C2C;
+            --color-nav-link: var(--color-text-muted);
+            --color-nav-link-hover: var(--color-accent-blue);
+            --color-logo-text: var(--color-text-light);
+
+            --color-mobile-menu-bg: var(--color-bg-secondary);
+            --color-mobile-menu-border: var(--color-border-subtle);
+            --color-mobile-link-text: var(--color-text-muted);
+            --color-mobile-link-hover: var(--color-accent-blue);
+            --color-mobile-heading: var(--color-text-light);
+
+            --color-footer-bg: var(--color-bg-secondary);
+            --color-footer-border: var(--color-border-subtle);
+            --color-footer-text: var(--color-text-muted);
+            --color-footer-link-hover: var(--color-accent-blue);
+
+            --color-hero-visual-bg: var(--color-bg-secondary);
+            --color-hero-visual-card-bg: #222222;
+            --color-hero-visual-card-border: #383838;
+            --color-hero-visual-card-text: var(--color-text-light);
+            --color-hero-visual-card-subtext: var(--color-text-muted);
+
+            --color-product-card-bg: var(--color-bg-secondary);
+            --color-product-card-border: var(--color-border-subtle);
+            --color-product-card-text: var(--color-text-light);
+            --color-product-card-subtext: var(--color-text-muted);
+
+            --color-sdlc-bg: var(--color-bg-primary);
+            --color-sdlc-card-bg: var(--color-bg-secondary);
+            --color-sdlc-card-border: var(--color-border-subtle);
+            --color-sdlc-card-text: var(--color-text-light);
+            --color-sdlc-card-subtext: var(--color-text-muted);
+
+            --color-section-heading: var(--color-text-light);
+            --color-section-paragraph: var(--color-text-muted);
+
+            /* New colors for the Solutions section */
+            --color-solution-card-bg: var(--color-bg-secondary);
+            --color-solution-card-border: var(--color-border-subtle);
+            --color-solution-heading: var(--color-text-light);
+            --color-solution-text: var(--color-text-muted);
+            --color-solution-icon-bg-start: #00CFFF; /* Bright Cyan */
+            --color-solution-icon-bg-end: #0099CC; /* Deeper Cyan */
+            --color-solution-check: #00CFFF; /* Bright Cyan */
+
+            /* Contact Page specific colors */
+            --color-contact-tab-bg: var(--color-bg-secondary);
+            --color-contact-tab-text: var(--color-text-muted);
+            --color-contact-tab-active-bg: var(--color-accent-blue);
+            --color-contact-tab-active-text: #0A0A0A; /* Dark text for active tab */
+            --color-contact-tab-hover-text: var(--color-accent-blue);
+
+            --color-contact-info-icon-bg-1: linear-gradient(to br, var(--color-accent-blue), var(--color-accent-dark-blue));
+            --color-contact-info-icon-bg-2: linear-gradient(to br, var(--color-accent-dark-blue), #4DFFFF);
+            --color-contact-info-icon-bg-3: linear-gradient(to br, #4DFFFF, #00CFFF);
+        }
+
+        /* Light Mode Colors - Adjusted for contrast with new accents */
+        body.light-mode {
+            --color-bg-primary: #F8F8F8; /* Very light grey */
+            --color-bg-secondary: #FFFFFF; /* Pure White */
+            --color-border-subtle: #D0D0D0; /* Lighter silver border */
+            --color-text-light: #1A1A1A; /* Dark Black */
+            --color-text-muted: #707070; /* Medium Silver */
+
+            --color-accent-blue: #007ACC; /* Darker Blue for contrast */
+            --color-accent-light-blue: #0099FF; /* Brighter Blue */
+            --color-accent-silver-gradient: #A0A0A0; /* Muted Silver for light mode gradients */
+            --color-accent-dark-blue: #005580; /* Even Darker Blue */
+            --color-accent-silver: #A0A0A0; /* Muted Silver */
+            --color-accent-grey: #606060; /* Darker Silver */
+
+            --color-card-bg: var(--color-bg-secondary);
+            --color-card-border: var(--color-border-subtle);
+            --color-input-bg: #F0F0F0;
+            --color-input-border: #D8D8D8;
+            --color-input-text: var(--color-text-light);
+            --color-input-placeholder: #A0A0A0; /* Lighter placeholder for contrast */
+            --color-input-focus-ring: rgba(0, 122, 204, 0.6); /* Stronger Blue glow for focus */
+            --color-input-hover-border: #007ACC; /* Blue border on hover */
+            --color-input-shadow: rgba(0, 0, 0, 0.05); /* Subtle initial shadow */
+            --color-input-focus-shadow: rgba(0, 122, 204, 0.3); /* Stronger glow shadow */
+            --color-input-icon: #707070; /* Input icon color */
+            --color-input-label: #707070; /* Floating label color */
+            --color-input-label-focus: var(--color-accent-blue); /* Floating label color on focus */
+
+            --color-button-primary-bg-light: var(--color-accent-blue);
+            --color-button-primary-text-light: #ffffff;
+            --color-button-primary-hover-bg-light: var(--color-accent-dark-blue);
+
+            --color-button-secondary-bg-light: transparent;
+            --color-button-secondary-text-light: var(--color-accent-blue);
+            --color-button-secondary-border-light: var(--color-accent-blue);
+            --color-button-secondary-hover-bg-light: #E0F0FF; /* Light blue hover */
+            --color-button-secondary-hover-text-light: var(--color-accent-blue);
+
+            --color-header-bg: rgba(255, 255, 255, 0.8); /* Semi-transparent for futuristic feel */
+            --color-header-border: #E5E5E5;
+            --color-nav-link: var(--color-text-muted);
+            --color-nav-link-hover: var(--color-accent-blue);
+            --color-logo-text: var(--color-text-light);
+
+            --color-mobile-menu-bg: var(--color-bg-secondary);
+            --color-mobile-menu-border: var(--color-border-subtle);
+            --color-mobile-link-text: var(--color-text-muted);
+            --color-mobile-link-hover: var(--color-accent-blue);
+            --color-mobile-heading: var(--color-text-light);
+
+            --color-footer-bg: var(--color-bg-secondary);
+            --color-footer-border: var(--color-border-subtle);
+            --color-footer-text: var(--color-text-muted);
+            --color-footer-link-hover: var(--color-accent-blue);
+
+            --color-hero-visual-bg: var(--color-bg-secondary);
+            --color-hero-visual-card-bg: #F0F0F0;
+            --color-hero-visual-card-border: #D8D8D8;
+            --color-hero-visual-card-text: var(--color-text-light);
+            --color-hero-visual-card-subtext: var(--color-text-muted);
+
+            --color-product-card-bg: var(--color-bg-secondary);
+            --color-product-card-border: var(--color-border-subtle);
+            --color-product-card-text: var(--color-text-light);
+            --color-product-card-subtext: var(--color-text-muted);
+
+            --color-sdlc-bg: var(--color-bg-primary);
+            --color-sdlc-card-bg: var(--color-bg-secondary);
+            --color-sdlc-card-border: var(--color-border-subtle);
+            --color-sdlc-card-text: var(--color-text-light);
+            --color-sdlc-card-subtext: var(--color-text-muted);
+
+            --color-section-heading: var(--color-text-light);
+            --color-section-paragraph: var(--color-text-muted);
+
+            /* New colors for the Solutions section */
+            --color-solution-card-bg: var(--color-bg-secondary);
+            --color-solution-card-border: var(--color-border-subtle);
+            --color-solution-heading: var(--color-text-light);
+            --color-solution-text: var(--color-text-muted);
+            --color-solution-icon-bg-start: #00CFFF; /* Bright Cyan */
+            --color-solution-icon-bg-end: #0099CC; /* Deeper Cyan */
+            --color-solution-check: #00CFFF; /* Bright Cyan */
+
+            /* Contact Page specific colors for light mode */
+            --color-contact-tab-bg: #E0E0E0; /* Light grey for tabs */
+            --color-contact-tab-text: var(--color-text-muted);
+            --color-contact-tab-active-bg: var(--color-accent-blue);
+            --color-contact-tab-active-text: #FFFFFF; /* White text for active tab */
+            --color-contact-tab-hover-text: var(--color-accent-blue);
+
+            --color-contact-info-icon-bg-1: linear-gradient(to br, var(--color-accent-blue), var(--color-accent-dark-blue));
+            --color-contact-info-icon-bg-2: linear-gradient(to br, var(--color-accent-dark-blue), #0099FF);
+            --color-contact-info-icon-bg-3: linear-gradient(to br, #0099FF, #007ACC);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-light);
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .font-ibm-plex {
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+
+        .font-ibm-mono {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        /* Custom gradient for text - now includes silver */
+        .text-gradient {
+            background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-light-blue), var(--color-accent-silver-gradient));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Override text-gradient for light mode to be solid primary accent */
+        body.light-mode .text-gradient {
+            background: none;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+            color: var(--color-accent-blue);
+        }
+
+        /* Button base styles - Adjusted to rounded-lg */
+        .btn-primary-inner {
+            @apply inline-flex items-center justify-center px-8 py-3 rounded-lg font-inter font-semibold transition-all duration-300;
+            height: 100%;
+            width: 100%;
+        }
+        .btn-secondary-inner {
+            @apply inline-flex items-center justify-center px-8 py-3 rounded-lg font-inter font-semibold transition-all duration-300;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Dark Mode Button Wrappers - Adjusted to rounded-lg */
+        .primary-button-wrapper {
+          background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-light-blue));
+          padding: 2px;
+          border-radius: 0.5rem; /* Consistent with rounded-lg */
+          display: inline-block;
+          box-shadow: 0 0 15px rgba(0, 207, 255, 0.4); /* Cyan glow */
+          transition: all 0.3s ease-in-out;
+        }
+        .primary-button-wrapper:hover {
+            box-shadow: 0 0 25px rgba(0, 207, 255, 0.6), 0 0 40px rgba(77, 255, 255, 0.4); /* Enhanced cyan glow */
+            transform: translateY(-2px);
+        }
+        .primary-button-wrapper.pulse {
+            animation: pulseGlow 2s infinite ease-in-out;
+        }
+        @keyframes pulseGlow {
+          0% { box-shadow: 0 0 10px rgba(0, 207, 255, 0.4); }
+          50% { box-shadow: 0 0 20px rgba(0, 207, 255, 0.8), 0 0 30px rgba(0, 207, 255, 0.6); }
+          100% { box-shadow: 0 0 10px rgba(0, 207, 255, 0.4); }
+        }
+
+        .secondary-button-wrapper {
+          background: linear-gradient(90deg, var(--color-text-muted), var(--color-border-subtle));
+          padding: 2px;
+          border-radius: 0.5rem; /* Consistent with rounded-lg */
+          display: inline-block;
+          box-shadow: 0 0 10px rgba(160, 160, 160, 0.3); /* Subtle silver glow */
+          transition: all 0.3s ease-in-out;
+        }
+        .secondary-button-wrapper:hover {
+            box-shadow: 0 0 15px rgba(160, 160, 160, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Inner Button Styles - Adjusted to rounded-lg */
+        .btn-primary-inner,
+        .btn-secondary-inner {
+          display: block;
+          padding: 0.5rem 1.25rem;
+          border-radius: 0.5rem; /* Consistent with rounded-lg */
+          background-color: var(--color-button-primary-bg-inner);
+          color: var(--color-button-primary-text);
+          text-align: center;
+          text-decoration: none;
+          transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Hover Effects */
+        .btn-primary-inner:hover,
+        .btn-secondary-inner:hover {
+          background-color: var(--color-button-hover-bg);
+        }
+
+        /* Secondary text hover override */
+        .btn-secondary-inner {
+          color: var(--color-button-secondary-text);
+        }
+        .btn-secondary-inner:hover {
+          color: var(--color-button-primary-text); /* Text becomes light on hover */
+        }
+
+        /* Light Mode Overrides — Only Solid Borders - Adjusted to rounded-lg */
+        body.light-mode .primary-button-wrapper,
+        body.light-mode .secondary-button-wrapper {
+          background: none;
+          padding: 0;
+          border: 1px solid var(--color-accent-blue);
+          border-radius: 0.5rem; /* Consistent with rounded-lg */
+          box-shadow: none; /* Remove glow in light mode */
+        }
+
+        /* Primary Button Inner in Light Mode */
+        body.light-mode .btn-primary-inner {
+          background-color: var(--color-button-primary-bg-light);
+          color: var(--color-button-primary-text-light);
+          border: none;
+        }
+
+        /* Hover for Primary */
+        body.light-mode .btn-primary-inner:hover {
+          background-color: var(--color-button-primary-hover-bg-light);
+        }
+
+        /* Secondary Button Inner in Light Mode */
+        body.light-mode .btn-secondary-inner {
+          background-color: var(--color-button-secondary-bg-light);
+          color: var(--color-button-secondary-text-light);
+          border: 1px solid var(--color-button-secondary-border-light);
+        }
+
+        /* Hover for Secondary */
+        body.light-mode .btn-secondary-inner:hover {
+          background-color: var(--color-button-secondary-hover-bg-light);
+          color: var(--color-button-secondary-hover-text-light);
+        }
+
+        /* Custom card styles - Adjusted to rounded-xl */
+        .card {
+            background-color: var(--color-card-bg);
+            border-color: var(--color-card-border);
+            @apply rounded-xl shadow-md p-6 border;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card.glow-border {
+            box-shadow: 0 0 15px rgba(0, 207, 255, 0.2), inset 0 0 0 1px rgba(0, 207, 255, 0.1);
+        }
+        body.light-mode .card.glow-border {
+             box-shadow: 0 0 10px rgba(0, 153, 204, 0.1), inset 0 0 0 1px rgba(0, 153, 204, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 207, 255, 0.4); /* Enhanced hover shadow with cyan glow */
+        }
+        body.light-mode .card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 153, 204, 0.2);
+        }
+
+        /* Input field styling */
+        .input-field {
+            background-color: var(--color-input-bg);
+            border-color: var(--color-input-border);
+            color: var(--color-input-text);
+            /* Modified: Increased padding to p-4 and changed rounded-lg to rounded-xl */
+            @apply w-full p-4 rounded-xl border placeholder-gray-500
+            focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors duration-200;
+        }
+        .input-field::placeholder {
+            color: var(--color-input-placeholder);
+        }
+
+        /* Custom style for select arrow */
+        select.input-field {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23C0C0C0' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 0.75em 0.75em;
+            padding-right: 2.5rem; /* Make space for the arrow */
+        }
+        body.light-mode select.input-field {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+        }
+
+
+        /* Mobile menu transition */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            max-height: 0 !important;
+            opacity: 0 !important;
+        }
+        #mobile-menu:not(.hidden) {
+            max-height: 600px;
+            opacity: 1;
+        }
+
+        /* General section backgrounds and text */
+        .bg-section-primary { background-color: var(--color-bg-primary); }
+        .bg-section-secondary { background-color: var(--color-bg-secondary); }
+        .text-section-heading { color: var(--color-section-heading); }
+        .text-section-paragraph { color: var(--color-section-paragraph); }
+
+        /* Navigation and Footer specific overrides */
+        footer {
+            background-color: var(--color-footer-bg);
+            border-color: var(--color-footer-border);
+        }
+        footer p, footer a {
+            color: var(--color-footer-text);
+        }
+        footer a:hover {
+            color: var(--color-footer-link-hover);
+        }
+        nav a, nav button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a::after, nav button::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-accent-blue);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-out;
+        }
+
+        nav a:hover::after, nav button:hover::after {
+            transform: translateX(0);
+        }
+
+
+        /* Mobile menu specific colors */
+        #mobile-menu {
+            background-color: var(--color-mobile-menu-bg);
+            border-color: var(--color-mobile-menu-border);
+        }
+        #mobile-menu a {
+            color: var(--color-mobile-link-text);
+        }
+        #mobile-menu a:hover {
+            color: var(--color-mobile-link-hover);
+        }
+        #mobile-menu span {
+            color: var(--color-mobile-heading);
+        }
+
+        /* New Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-on-scroll.slide-left.is-visible {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .animate-on-scroll.slide-right.is-visible {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        .animate-on-scroll.fade-in.is-visible {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        /* Specific animation delays for staggered effects */
+        .animate-on-scroll:nth-child(1) { transition-delay: 0s; }
+        .animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+        .animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+        .animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+        .animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+        .animate-on-scroll:nth-child(6) { transition-delay: 0.5s; }
+
+        /* Solutions Showcase Specific Styles (Reverted to previous state) */
+        .hero-section-solutions {
+            background: linear-gradient(to bottom right, var(--color-bg-primary), var(--color-bg-secondary));
+            position: relative;
+            overflow: hidden;
+            min-height: 50vh;
+        }
+        .hero-section-solutions .absolute.inset-0:nth-child(1) {
+            background: linear-gradient(to right, rgba(0, 207, 255, 0.05), rgba(0, 153, 204, 0.05));
+        }
+
+        /* Contact Options Tabs */
+       .contact-tab-container {
+            background: linear-gradient(to right, rgba(0, 207, 255, 0.08), rgba(0, 153, 204, 0.08));
+            @apply rounded-full p-1 inline-flex space-x-2 shadow-inner ring-1 ring-inset ring-accent/10 backdrop-blur-sm;
+        }
+
+        .contact-tab {
+            @apply px-6 py-2 rounded-full font-inter font-medium text-sm tracking-wide transition-all duration-300;
+            color: var(--color-contact-tab-text);
+            background-color: transparent;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-tab.active {
+            background: linear-gradient(to right, var(--color-accent-blue), var(--color-accent-dark-blue));
+            color: white;
+            @apply shadow-md scale-105;
+        }
+
+        .contact-tab:not(.active):hover {
+            background-color: rgba(0, 207, 255, 0.06);
+            @apply text-white/80;
+        }
+
+        /* Modal backdrop stays same */
+        .modal {
+          @apply fixed inset-0 z-[1000] flex items-center justify-center bg-black/60 backdrop-blur-md;
+        }
+
+        .modal-content {
+          background: linear-gradient(to top right, var(--color-card-bg), rgba(255, 255, 255, 0.02));
+          border: 1px solid var(--color-card-border);
+          @apply text-white p-10 rounded-2xl shadow-2xl max-w-md w-[90%] relative transition-all duration-300;
+        }
+
+        /* Close button */
+        .close-button {
+            @apply absolute top-4 right-4 text-lg text-white/70 hover:text-accent transition;
+        }
+
+        .modal-icon {
+            @apply w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-xl shadow-lg;
+            background: linear-gradient(to bottom right, var(--color-accent-blue), var(--color-accent-dark-blue));
+        }
+    </style>
+</head>
+<body class="bg-bg-primary text-text-light font-inter">
+    <!-- Navigation Header -->
+    <header class="bg-header-bg border-b border-header-border sticky top-0 z-50 shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
+                        <img src="assets/logo.png"
+                             class="h-auto w-24 sm:w-28 md:w-32 lg:w-36 transition-transform duration-300 hover:scale-105"
+                             alt="Cogniwide Logo" />
+                      </a>
+                </div>
+
+                <!-- Desktop Navigation - Grouped Layout -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <!-- Primary Navigation Group -->
+                    <div class="flex items-center space-x-1 px-2">
+                        <!-- Products Dropdown -->
+                        <div class="relative group">
+                            <button class="px-3 py-2 rounded-md text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                                Products
+                                <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                            <!-- Mega Menu -->
+                            <div class="absolute left-0 mt-2 w-96 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
+                                <div class="p-6">
+                                    <div class="grid grid-cols-1 gap-4">
+                                        <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-blue);"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniXcellerate</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">AI Orchestration Platform</p>
+                                            </div>
+                                        </a>
+                                        <a href="cogni_loom_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-light-blue);"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniLoom</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">Intelligent Process Automation</p>
+                                            </div>
+                                        </a>
+                                        <a href="cogni_chat_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-dark-blue);"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniChat</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">Conversational AI Platform</p>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-silver);"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniAgent</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">Intelligent Agent Framework</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Solutions & Services Group -->
+                        <div class="flex items-center space-x-1 pl-2 ml-2" style="border-left: 1px solid var(--color-border-subtle);">
+                            <a href="solutions_showcase.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Solutions</a>
+                            <a href="platform_engineering_services.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Services</a>
+                            <a href="industries_hub.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Industries</a>
+                        </div>
+
+                        <!-- Resources & Company Group -->
+                        <div class="flex items-center space-x-1 pl-2 ml-2" style="border-left: 1px solid var(--color-border-subtle);">
+                            <a href="resource_center.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Resources</a>
+
+                            <!-- Company Dropdown -->
+                            <div class="relative group">
+                                <button class="px-3 py-2 rounded-md text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                                    Company
+                                    <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </button>
+                                <!-- Company Dropdown -->
+                                <div class="absolute left-0 mt-2 w-72 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
+                                    <div class="p-4">
+                                        <div class="space-y-2">
+                                            <a href="about_us.html" class="block p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">About Us</a>
+                                            <a href="leadership_team.html" class="block p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">Leadership Team</a>
+                                            <a href="life_at_cogniwide_careers.html" class="block p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">Careers</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="contact.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tablet Navigation (768px - 1024px) -->
+                <div class="hidden md:flex lg:hidden items-center space-x-6">
+                    <!-- Essential Links -->
+                    <a href="index.html" class="font-ibm-plex font-medium text-sm transition-colors duration-300" style="color: var(--color-accent-blue);" onmouseover="this.style.color='var(--color-accent-light-blue)'" onmouseout="this.style.color='var(--color-accent-blue)'">Home</a>
+
+                    <!-- Products Menu -->
+                    <div class="relative group">
+                        <button class="font-ibm-plex font-medium text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                            Products
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-80 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
+                            <div class="p-4">
+                                <div class="grid grid-cols-1 gap-2">
+                                    <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-blue);"></div>
+                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniXcellerate</span>
+                                    </a>
+                                    <a href="cogni_loom_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-light-blue);"></div>
+                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniLoom</span>
+                                    </a>
+                                    <a href="cogni_chat_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-dark-blue);"></div>
+                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniAgent</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More Menu for remaining items -->
+                    <div class="relative group">
+                        <button class="font-ibm-plex font-medium text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                            More
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-64 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
+                            <div class="p-4">
+                                <div class="space-y-2">
+                                    <a href="solutions_showcase.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Solutions</a>
+                                    <a href="platform_engineering_services.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Services</a>
+                                    <a href="industries_hub.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Industries</a>
+                                    <a href="resource_center.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Resources</a>
+                                    <hr style="border-color: var(--color-border-subtle);" class="my-2" />
+                                    <a href="about_us.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">About Us</a>
+                                    <a href="leadership_team.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Leadership Team</a>
+                                    <a href="life_at_cogniwide_careers.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Careers</a>
+                                    <a href="contact.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+  <!-- Theme Toggle Button -->
+<!--  <button id="theme-toggle" class="p-2 rounded-full hover:bg-input-bg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue" style="color: var(&#45;&#45;color-nav-link);">-->
+<!--    <svg id="sun-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12h1m15.325-4.275l-.707-.707M4.675 19.325l-.707-.707M19.325 4.675l-.707-.707M4.675 4.675l-.707-.707M12 18a6 6 0 100-12 6 6 0 000 12z" />-->
+<!--    </svg>-->
+<!--    <svg id="moon-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />-->
+<!--    </svg>-->
+<!--  </button>-->
+
+  <!-- Request Demo Button -->
+  <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
+    <a href="contact.html" class="btn-primary-inner">
+      Request Demo
+    </a>
+  </div>
+</div>
+
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- Mobile Theme Toggle -->
+                    <button id="mobile-theme-toggle" class="p-2 rounded-full text-text-muted hover:text-accent-blue hover:bg-input-bg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue">
+                        <svg id="mobile-sun-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12h1m15.325-4.275l-.707-.707M4.675 19.325l-.707-.707M19.325 4.675l-.707-.707M4.675 4.675l-.707-.707M12 18a6 6 0 100-12 6 6 0 000 12z" />
+                        </svg>
+                        <svg id="mobile-moon-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-text-muted hover:text-accent-blue hover:bg-input-bg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden transition-all duration-300 ease-in-out" style="background-color: var(--color-mobile-menu-bg); border-color: var(--color-mobile-menu-border);">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t shadow-lg" style="border-color: var(--color-mobile-menu-border);">
+                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-accent-blue);" onmouseover="this.style.color='var(--color-accent-light-blue)'" onmouseout="this.style.color='var(--color-accent-blue)'">Home</a>
+
+                    <!-- Mobile Products Submenu -->
+                    <div class="block px-3 py-2">
+                        <span class="font-medium text-base" style="color: var(--color-mobile-heading);">Products</span>
+                        <div class="ml-4 mt-2 space-y-1">
+                            <a href="cogni_xcellerate_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniXcellerate</a>
+                            <a href="cogni_loom_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniLoom</a>
+                            <a href="cogni_chat_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniChat</a>
+                            <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAgent</a>
+                        </div>
+                    </div>
+
+                    <a href="solutions_showcase.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Solutions</a>
+                    <a href="platform_engineering_services.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Services</a>
+                    <a href="industries_hub.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Industries</a>
+                    <a href="resource_center.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Resources</a>
+
+                    <!-- Mobile Company Submenu -->
+                    <div class="block px-3 py-2">
+                        <span class="font-medium text-base" style="color: var(--color-mobile-heading);">Company</span>
+                        <div class="ml-4 mt-2 space-y-1">
+                            <a href="about_us.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">About Us</a>
+                            <a href="leadership_team.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">Leadership Team</a>
+                            <a href="life_at_cogniwide_careers.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">Careers</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Contact</a>
+
+                    <!-- Mobile CTA -->
+                    <div class="pt-4" style="border-color: var(--color-mobile-menu-border);">
+                        <div class="relative rounded-lg inline-block w-full primary-button-wrapper pulse">
+                            <a href="contact.html" class="btn-primary-inner w-full text-center">
+                              Request Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="bg-section-secondary border-b border-border-subtle">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="index.html" class="text-text-muted hover:text-accent-blue transition-colors duration-300">Home</a>
+                <svg class="w-4 h-4 text-text-muted" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-text-light font-inter font-medium">Contact Us</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="relative hero-section-solutions overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-accent/5 to-success/5"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
+            <div class="text-center animate-on-scroll fade-in">
+                <h1 class="font-inter font-bold text-4xl lg:text-5xl text-section-heading mb-6">
+                    Get in Touch with <span class="text-gradient">Cogniwide</span>
+                </h1>
+                <p class="text-xl text-section-paragraph max-w-3xl mx-auto mb-8">
+                    Whether you have a question, want to schedule a demo, or explore career opportunities, we're here to help.
+                </p>
+                <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
+                    <a href="#contact-form" class="btn-primary-inner">
+                        Send a Message
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Options Tabs -->
+    <section class="py-5 bg-section-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Tab Navigation -->
+            <div class="flex justify-center mb-12">
+              <div class="bg-white/5 backdrop-blur-md rounded-full p-1 inline-flex space-x-2 shadow-inner ring-1 ring-white/10">
+                <button
+                  class="contact-tab px-5 py-2 text-sm font-medium text-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 active"
+                  data-tab="demo"
+                >
+                  Request Demo
+                </button>
+                <button
+                  class="contact-tab px-5 py-2 text-sm font-medium text-white/70 rounded-full hover:bg-white/10 transition-all duration-300"
+                  data-tab="poc"
+                >
+                  Request for a POC
+                </button>
+                <button
+                  class="contact-tab px-5 py-2 text-sm font-medium text-white/70 rounded-full hover:bg-white/10 transition-all duration-300"
+                  data-tab="resume"
+                >
+                  Work with us ❤️
+                </button>
+
+                <button
+                  class="contact-tab px-5 py-2 text-sm font-medium text-white/70 rounded-full hover:bg-white/10 transition-all duration-300"
+                  data-tab="general"
+                >
+                  General Inquiry
+                </button>
+
+              </div>
+            </div>
+
+
+
+            <!-- Tab Content -->
+            <div class="tab-content-container">
+                <!-- Demo Tab -->
+                <div id="demo-tab" class="tab-content active animate-on-scroll fade-in">
+                    <!-- Removed grid-cols-1 lg:grid-cols-2 from here -->
+                    <div class="space-y-6 max-w-3xl mx-auto mb-12 animate-on-scroll slide-left">
+                        <h2 class="font-inter font-bold text-3xl text-section-heading">Schedule a Demo</h2>
+                        <p class="text-xl text-section-paragraph leading-relaxed">
+                            See Cogniwide AI Platform in action. Our experts will show you how to transform your enterprise operations with intelligent automation.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background-color: var(--color-accent-blue);">
+                                    <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-section-paragraph">Live platform walkthrough</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background-color: var(--color-accent-blue);">
+                                    <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-section-paragraph">Custom use case discussion</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background-color: var(--color-accent-blue);">
+                                    <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-section-paragraph">ROI calculation and implementation roadmap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card rounded-xl p-8 bg-gray-900 text-white max-w-4xl mx-auto">
+                      <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <label class="block text-sm font-medium mb-2">First Name</label>
+                            <input
+                              type="text"
+                              placeholder="John"
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            />
+                          </div>
+
+                          <div>
+                            <label class="block text-sm font-medium mb-2">Last Name</label>
+                            <input
+                              type="text"
+                              placeholder="Doe"
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            />
+                          </div>
+
+                          <div class="md:col-span-2">
+                            <label class="block text-sm font-medium mb-2">Email Address</label>
+                            <input
+                              type="email"
+                              placeholder="you@example.com"
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            />
+                          </div>
+
+                           <div class="md:col-span-2">
+                            <label class="block text-sm font-medium mb-2">Company Name</label>
+                            <input
+                              type="text"
+                              placeholder="Your company name"
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            />
+                          </div>
+
+                          <div class="md:col-span-2">
+                            <label class="block text-sm font-medium mb-2">Message</label>
+                            <textarea
+                              rows="4"
+                              placeholder="Write your message..."
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            ></textarea>
+                          </div>
+                        </div>
+
+                        <div class="text-right">
+                          <button
+                            type="submit"
+                            class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg transition-all"
+                          >
+                            Submit
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+
+                <!-- Request for a POC Tab -->
+                <div id="poc-tab" class="tab-content hidden animate-on-scroll fade-in">
+                    <!-- Removed grid-cols-1 lg:grid-cols-2 from here -->
+                    <div class="space-y-6 max-w-3xl mx-auto mb-12 animate-on-scroll slide-left">
+                        <h2 class="font-inter font-bold text-3xl text-section-heading">Request for a Proof of Concept (POC)</h2>
+                        <p class="text-xl text-section-paragraph leading-relaxed">
+                            Ready to see Cogniwide's impact on your specific business challenge? Request a tailored Proof of Concept.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background-color: var(--color-accent-light-blue);">
+                                    <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-section-paragraph">Validate AI capabilities with your data</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background-color: var(--color-accent-light-blue);">
+                                    <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-section-paragraph">Quantify potential ROI for your use case</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background-color: var(--color-accent-light-blue);">
+                                    <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-section-paragraph">Tailored solution design and technical deep dive</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card rounded-xl p-8 bg-gray-900 text-white max-w-4xl mx-auto">
+                      <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                          <div>
+                            <label class="block text-sm font-medium mb-2">Company Name</label>
+                            <input
+                              type="text"
+                              placeholder="Your company name"
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            />
+                          </div>
+
+                          <div>
+                            <label class="block text-sm font-medium mb-2">Contact Person</label>
+                            <input
+                              type="text"
+                              placeholder="Jane Doe"
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            />
+                          </div>
+
+                          <div class="md:col-span-2">
+                            <label class="block text-sm font-medium mb-2">Business Email</label>
+                            <input
+                              type="email"
+                              placeholder="you@company.com"
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            />
+                          </div>
+
+                          <div class="md:col-span-2">
+                            <label class="block text-sm font-medium mb-2">Industry</label>
+                            <input
+                              type="text"
+                              placeholder="e.g. Insurance, Retail, Manufacturing"
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            />
+                          </div>
+
+                          <div class="md:col-span-2">
+                            <label class="block text-sm font-medium mb-2">Business Problem</label>
+                            <textarea
+                              rows="4"
+                              placeholder="Describe the problem you're trying to solve..."
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            ></textarea>
+                          </div>
+
+                          <div class="md:col-span-2">
+                            <label class="block text-sm font-medium mb-2">Expected Results</label>
+                            <textarea
+                              rows="4"
+                              placeholder="What outcome are you expecting?"
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            ></textarea>
+                          </div>
+
+                          <div class="md:col-span-2">
+                            <label class="block text-sm font-medium mb-2">Preferred Timeline for POC</label>
+                            <select
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            >
+                              <option value="" disabled selected>Select Timeline</option>
+                              <option value="1-3-months">1–3 months</option>
+                              <option value="3-6-months">3–6 months</option>
+                              <option value="6-plus-months">6+ months</option>
+                            </select>
+                          </div>
+
+                        </div>
+
+                        <div class="text-right">
+                          <button
+                            type="submit"
+                            class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg transition-all"
+                          >
+                            Submit POC Request
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+
+                </div>
+                <div id="resume-tab" class="tab-content hidden animate-on-scroll fade-in">
+                      <div class="space-y-6 max-w-3xl mx-auto mb-12 animate-on-scroll slide-left">
+                        <h2 class="font-inter font-bold text-3xl text-section-heading">Submit Your Resume</h2>
+                        <p class="text-xl text-section-paragraph leading-relaxed">
+                          Interested in joining the Cogniwide team? Share your details and resume with us.
+                        </p>
+
+                        <div class="space-y-4">
+                          <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background-color: var(--color-accent-light-blue);">
+                              <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                              </svg>
+                            </div>
+                            <span class="text-section-paragraph">Apply for roles that match your passion</span>
+                          </div>
+                          <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background-color: var(--color-accent-light-blue);">
+                              <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                              </svg>
+                            </div>
+                            <span class="text-section-paragraph">Showcase your skills and experience</span>
+                          </div>
+                          <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background-color: var(--color-accent-light-blue);">
+                              <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                              </svg>
+                            </div>
+                            <span class="text-section-paragraph">Join a fast-growing AI company</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card rounded-xl p-8 bg-gray-900 text-white max-w-4xl mx-auto">
+                        <form class="space-y-6" enctype="multipart/form-data">
+                          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                              <label class="block text-sm font-medium mb-2">Full Name</label>
+                              <input
+                                type="text"
+                                placeholder="Jane Doe"
+                                required
+                                class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                              />
+                            </div>
+
+                            <div>
+                              <label class="block text-sm font-medium mb-2">Email</label>
+                              <input
+                                type="email"
+                                placeholder="you@example.com"
+                                required
+                                class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                              />
+                            </div>
+
+                            <div class="md:col-span-2">
+                              <label class="block text-sm font-medium mb-2">Phone Number</label>
+                              <input
+                                type="tel"
+                                placeholder="+91 9876543210"
+                                required
+                                class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                              />
+                            </div>
+
+                            <div class="md:col-span-2">
+                              <label class="block text-sm font-medium mb-2">LinkedIn Profile (Optional)</label>
+                              <input
+                                type="url"
+                                placeholder="https://linkedin.com/in/yourprofile"
+                                class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                              />
+                            </div>
+
+                            <div class="md:col-span-2">
+                              <label class="block text-sm font-medium mb-2">Upload Resume</label>
+                              <input
+                                type="file"
+                                accept=".pdf,.doc,.docx"
+                                required
+                                class="w-full px-4 py-2 text-white bg-gray-800 rounded-xl border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-cyan-500 file:text-white hover:file:bg-cyan-600"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="text-right">
+                            <button
+                              type="submit"
+                              class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg transition-all"
+                            >
+                              Submit Resume
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+
+                <!-- General Tab -->
+                <div id="general-tab" class="tab-content hidden animate-on-scroll fade-in">
+                    <!-- Removed grid-cols-1 lg:grid-cols-2 from here -->
+                    <div class="space-y-6 max-w-3xl mx-auto mb-12 animate-on-scroll slide-left">
+                        <h2 class="font-inter font-bold text-3xl text-section-heading">General Inquiry</h2>
+                        <p class="text-xl text-section-paragraph leading-relaxed">
+                            Have a question about Cogniwide? Whether it's about our products, services, or company, we're here to help.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background-color: var(--color-accent-silver);">
+                                    <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-section-paragraph">Product information</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background-color: var(--color-accent-silver);">
+                                    <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-section-paragraph">Pricing and licensing</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background-color: var(--color-accent-silver);">
+                                    <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-section-paragraph">Media and press inquiries</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card rounded-xl p-8 bg-gray-900 text-white max-w-3xl mx-auto animate-on-scroll slide-right shadow-md">
+                      <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div>
+                            <label class="block text-sm font-medium mb-2">Your Name</label>
+                            <input
+                              type="text"
+                              placeholder="Enter your name"
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            />
+                          </div>
+
+                          <div>
+                            <label class="block text-sm font-medium mb-2">Your Email</label>
+                            <input
+                              type="email"
+                              placeholder="you@example.com"
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            />
+                          </div>
+
+                          <div class="md:col-span-2">
+                            <label class="block text-sm font-medium mb-2">Company (Optional)</label>
+                            <input
+                              type="text"
+                              placeholder="Company name"
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            />
+                          </div>
+
+                          <div class="md:col-span-2">
+                            <label class="block text-sm font-medium mb-2">Subject of Your Inquiry</label>
+                            <input
+                              type="text"
+                              placeholder="Subject"
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            />
+                          </div>
+
+                          <div class="md:col-span-2">
+                            <label class="block text-sm font-medium mb-2">Your Message</label>
+                            <textarea
+                              rows="4"
+                              placeholder="Write your message..."
+                              required
+                              class="w-full px-4 py-2 rounded-xl bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            ></textarea>
+                          </div>
+                        </div>
+
+                        <div class="text-right">
+                          <button
+                            type="submit"
+                            class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg transition-all"
+                          >
+                            Send Message
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-20 bg-section-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">Other Ways to Reach Us</h2>
+                <p class="text-xl text-section-paragraph">Multiple channels to connect with our team</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card p-8 text-center hover:shadow-card-hover transition-all duration-300 animate-on-scroll slide-in-up">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6" style="background: var(--color-contact-info-icon-bg-1);">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl text-section-heading mb-4">Visit Our Office</h3>
+                    <p class="text-section-paragraph mb-4">
+                        123 Innovation Drive<br />
+                        San Francisco, CA 94105<br />
+                        United States
+                    </p>
+                    <p class="text-section-paragraph text-sm">Office Hours: 9 AM - 6 PM PST</p>
+                </div>
+
+                <div class="card p-8 text-center hover:shadow-card-hover transition-all duration-300 animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6" style="background: var(--color-contact-info-icon-bg-2);">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl text-section-heading mb-4">Call Us</h3>
+                    <p class="text-section-paragraph mb-4">
+                        <strong>Sales:</strong> +1 (555) 123-4567<br />
+                        <strong>Support:</strong> +1 (555) 123-4568<br />
+                        <strong>General:</strong> +1 (555) 123-4569
+                    </p>
+                    <p class="text-section-paragraph text-sm">Available 24/7 for support</p>
+                </div>
+
+                <div class="card p-8 text-center hover:shadow-card-hover transition-all duration-300 animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6" style="background: var(--color-contact-info-icon-bg-3);">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl text-section-heading mb-4">Email Us</h3>
+                    <p class="text-section-paragraph mb-4">
+                        <strong>Sales:</strong> sales@cogniwide.com<br />
+                        <strong>Support:</strong> support@cogniwide.com<br />
+                        <strong>General:</strong> info@cogniwide.com
+                    </p>
+                    <p class="text-section-paragraph text-sm">We respond within 24 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-footer-border bg-footer-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <!-- Company Info -->
+      <div class="col-span-1 md:col-span-2">
+        <div class="flex items-center mb-4">
+          <a href="index.html" class="font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
+                        <img src="assets/logo.png"
+                             class="h-auto w-24 sm:w-28 md:w-32 lg:w-36 transition-transform duration-300 hover:scale-105"
+                             alt="Cogniwide Logo" />
+                      </a>
+          <div class="ml-3">
+            <span class="font-inter font-bold text-xl" style="color: var(--color-logo-text);">Cogniwide</span>
+          </div>
+        </div>
+        <p class="mb-3 max-w-md text-sm" style="color: var(--color-footer-text);">
+          Cogniwide is an AI-based IT products and services company that provides high-performance product development, solutions, and operations services that focuses on Digital Transformation.
+        </p>
+        <p class="mb-4 max-w-md text-sm" style="color: var(--color-footer-text);">
+          We leverage new generation technologies like AI, RPA, Data Analytics, and Blockchain to build tailor-made digital Web and Mobile solutions and aid in the digital journey of our partners.
+        </p>
+        <div class="flex space-x-4 mb-4">
+          <a href="https://www.linkedin.com/company/cogniwide" target="_blank" rel="noreferrer">
+            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.9h.1c.7-1.3 2.5-2.7 5.2-2.7 5.6 0 6.6 3.6 6.6 8.3V24h-5V15c0-2.2 0-5-3-5s-3.5 2.3-3.5 4.8V24h-5V8z"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com/cogniwide" target="_blank" rel="noreferrer">
+            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 4.56c-.89.39-1.84.66-2.84.78a4.93 4.93 0 002.16-2.72 9.85 9.85 0 01-3.13 1.2 4.92 4.92 0 00-8.38 4.48A13.96 13.96 0 011.64 3.16 4.92 4.92 0 003.2 9.72a4.9 4.9 0 01-2.23-.62v.06a4.92 4.92 0 003.95 4.83 4.9 4.9 0 01-2.22.08 4.93 4.93 0 004.6 3.41 9.86 9.86 0 01-6.1 2.1c-.4 0-.79-.02-1.18-.07A13.9 13.9 0 007.5 21c9.14 0 14.13-7.57 14.13-14.13 0-.21 0-.42-.01-.63A10.1 10.1 0 0024 4.56z"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/cogniwide" target="_blank" rel="noreferrer">
+            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22.68 0H1.32C.59 0 0 .6 0 1.34v21.32C0 23.4.59 24 1.32 24H12v-9.34H9.34v-3.66H12V8.65c0-2.66 1.63-4.11 4-4.11 1.14 0 2.11.08 2.39.12v2.77h-1.64c-1.29 0-1.54.61-1.54 1.5v1.96h3.08l-.4 3.66h-2.68V24h5.27c.73 0 1.32-.6 1.32-1.34V1.34C24 .6 23.41 0 22.68 0z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Solutions Links -->
+      <div>
+        <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Solutions</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="cogni_xcellerate_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniXcellerate</a></li>
+          <li><a href="cogni_loom_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniLoom</a></li>
+          <li><a href="cogni_chat_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniChat</a></li>
+          <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAgent</a></li>
+        </ul>
+      </div>
+
+      <!-- Company Links -->
+      <div>
+        <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Company</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="about_us.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">About Us</a></li>
+          <li><a href="leadership_team.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Leadership Team</a></li>
+          <li><a href="life_at_cogniwide_careers.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Careers</a></li>
+          <li><a href="contact.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Address Section -->
+    <div class="mt-10 text-sm" style="color: var(--color-footer-text);">
+      <h4 class="font-inter font-semibold mb-4">Our Branches - India</h4>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+           <div>
+          <h6 class="font-semibold">Headquarters - Chennai</h6>
+          <p>
+            Cogniwide Technologies Private Limited,<br />
+            3rd Floor, Alpha City, SSPDL Building,<br />
+            Rajiv Gandhi Salai, Navalur, Chennai - 603103,<br />
+            Tamilnadu, India.
+          </p>
+        </div>
+        <div>
+          <h6 class="font-semibold">Registered Office - Bengaluru</h6>
+          <p>
+            Cogniwide Technologies Private Limited,<br />
+            1st Floor, SPD Plaza, 52, Jyoti Niwas College Rd,<br />
+            Koramangala Industrial Layout, Koramangala,<br />
+            Bengaluru, Karnataka, India 560034.
+          </p>
+        </div>
+
+        <div>
+          <h6 class="font-semibold">Registered Office - Madurai</h6>
+          <p>
+            Cogniwide Technologies Private Limited,<br />
+            No.15, 4th Floor, Gokale Road, Chinna Chokkikulam,<br />
+            Madurai - 625014, Tamilnadu, India.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center" style="border-color: var(--color-border-subtle);">
+      <p class="text-sm" style="color: var(--color-footer-text);">
+        © 2025 Cogniwide AI Platform. All Rights Reserved.
+      </p>
+      <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Privacy Policy</a>
+        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Terms of Service</a>
+        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Security</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Success Modal -->
+    <!-- Hidden by default -->
+    <!-- Put this near the bottom of your body -->
+    <div id="successModal" class="fixed inset-0 z-[1000] flex items-center justify-center bg-black/60 backdrop-blur-md hidden">
+      <div class="bg-gradient-to-tr from-[var(--color-card-bg)] to-white/5 border border-[var(--color-card-border)] text-white p-10 rounded-2xl shadow-2xl max-w-md w-[90%] relative transition-all duration-300">
+        <button onclick="document.getElementById('successModal').classList.add('hidden')" class="close-button absolute top-4 right-4 text-white text-xl font-bold">×</button>
+        <div class="modal-icon mb-4">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16..." clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-2xl mb-2">Thank You!</h3>
+        <p class="text-lg mb-6">Your submission has been received. We will get back to you shortly.</p>
+      </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        }
+
+        // Add responsive behavior for window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const mobileSunIcon = document.getElementById('mobile-sun-icon');
+        const mobileMoonIcon = document.getElementById('mobile-moon-icon');
+        const body = document.body;
+
+        // Function to set theme
+        function setTheme(theme) {
+            if (theme === 'light-mode') {
+                body.classList.add('light-mode');
+                if (sunIcon) sunIcon.classList.remove('hidden');
+                if (moonIcon) moonIcon.classList.add('hidden');
+                if (mobileSunIcon) mobileSunIcon.classList.remove('hidden');
+                if (mobileMoonIcon) mobileMoonIcon.classList.add('hidden');
+            } else {
+                body.classList.remove('light-mode');
+                if (sunIcon) sunIcon.classList.add('hidden');
+                if (moonIcon) moonIcon.classList.remove('hidden');
+                if (mobileSunIcon) mobileSunIcon.classList.add('hidden');
+                if (mobileMoonIcon) mobileMoonIcon.classList.remove('hidden');
+            }
+            localStorage.setItem('theme', theme);
+        }
+
+        // Check for saved theme preference on load
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            setTheme(currentTheme);
+        } else {
+            // Default to dark mode if no preference
+            setTheme('dark-mode');
+        }
+
+        // Event listeners for theme toggles
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
+                setTheme(newTheme);
+            });
+        }
+        if (mobileThemeToggleBtn) {
+            mobileThemeToggleBtn.addEventListener('click', () => {
+                const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
+                setTheme(newTheme);
+            });
+        }
+
+        // Tab functionality
+        const tabs = document.querySelectorAll('.contact-tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                tabs.forEach(t => {
+                    t.classList.remove('active');
+                });
+
+                // Add active class to clicked tab
+                tab.classList.add('active');
+
+                // Hide all tab contents
+                tabContents.forEach(content => {
+                    content.classList.add('hidden'); // Use hidden class for display: none
+                    content.classList.remove('active'); // Remove active for proper re-animation
+                });
+
+                // Show selected tab content
+                const targetTab = document.getElementById(tab.dataset.tab + '-tab');
+                if (targetTab) {
+                    targetTab.classList.remove('hidden'); // Show the tab content
+                    targetTab.classList.add('active'); // Add active for animation
+                }
+            });
+        });
+
+        // Form submissions
+        const successModal = document.getElementById('successModal');
+        const closeButton = document.querySelector('.close-button');
+
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                // Get form data
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData);
+
+                // Here you would typically send the data to your backend
+                console.log('Form submitted:', data);
+
+                // Show success message modal
+                successModal.style.display = 'flex'; // Use flex to center content
+
+                // Reset form
+                form.reset();
+            });
+        });
+
+        // Close modal when clicking on the close button
+        if (closeButton) {
+            closeButton.addEventListener('click', () => {
+                successModal.style.display = 'none';
+            });
+        }
+
+        // Close modal when clicking outside of the modal content
+        if (successModal) {
+            window.addEventListener('click', (event) => {
+                if (event.target == successModal) {
+                    successModal.style.display = 'none';
+                }
+            });
+        }
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.1 // 10% of the element must be visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Floating Label and Input State Management
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputFields = document.querySelectorAll('.input-field');
+
+            inputFields.forEach(input => {
+                // Set initial state for labels based on content
+                if (input.value) {
+                    input.classList.add('not-empty');
+                } else {
+                    input.classList.remove('not-empty');
+                }
+
+                input.addEventListener('input', () => {
+                    if (input.value) {
+                        input.classList.add('not-empty');
+                    } else {
+                        input.classList.remove('not-empty');
+                    }
+                });
+
+                // For select elements, ensure label floats if an option is selected (not disabled)
+                if (input.tagName === 'SELECT') {
+                    input.addEventListener('change', () => {
+                        if (input.value && input.value !== "") {
+                            input.classList.add('not-empty');
+                        } else {
+                            input.classList.remove('not-empty');
+                        }
+                    });
+                     // Initial check for select elements
+                    if (input.value && input.value !== "") {
+                        input.classList.add('not-empty');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

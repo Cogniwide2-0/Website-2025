@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Industries Hub - Cogniwide AI Platform | Vertical-Specific AI Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter and IBM Plex Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Explore real-world Cogniwide AI implementations with detailed case studies, ROI metrics, and success stories across Telecom, BFSI, Insurance, and Workforce Management industries." />
+    <style>
+        /* New Silver, Black & Blue Dark Mode Colors (Default) */
+        :root {
+            --color-bg-primary: #0A0A0A; /* Even deeper black */
+            --color-bg-secondary: #181818; /* Slightly lighter black for cards/sections */
+            --color-border-subtle: #383838; /* Darker silver for subtle borders */
+            --color-text-light: #F0F0F0; /* Brighter Silver */
+            --color-text-muted: #C0C0C0; /* Muted Silver */
+
+            /* More vibrant, futuristic blues with a hint of silver */
+            --color-accent-blue: #00CFFF; /* Bright Cyan */
+            --color-accent-light-blue: #4DFFFF; /* Lighter Cyan */
+            --color-accent-silver-gradient: #E0E0E0; /* Silver for gradients */
+            --color-accent-dark-blue: #0099CC; /* Deeper Cyan */
+            --color-accent-silver: #E0E0E0; /* Brighter Silver */
+            --color-accent-grey: #A0A0A0; /* Medium Silver */
+
+            --color-card-bg: var(--color-bg-secondary);
+            --color-card-border: var(--color-border-subtle);
+            --color-input-bg: #222222;
+            --color-input-border: #383838;
+            --color-input-text: var(--color-text-light);
+            --color-input-placeholder: #888888; /* Darker placeholder for contrast */
+            --color-input-focus-ring: rgba(0, 207, 255, 0.6); /* Stronger Cyan glow for focus */
+            --color-input-hover-border: #00CFFF; /* Cyan border on hover */
+            --color-input-shadow: rgba(0, 0, 0, 0.1); /* Subtle initial shadow */
+            --color-input-focus-shadow: rgba(0, 207, 255, 0.4); /* Stronger glow shadow */
+            --color-input-icon: #C0C0C0; /* Input icon color */
+            --color-input-label: #C0C0C0; /* Floating label color */
+            --color-input-label-focus: var(--color-accent-blue); /* Floating label color on focus */
+
+            --color-button-primary-bg-inner: #222222;
+            --color-button-primary-text: var(--color-text-light);
+            --color-button-secondary-text: var(--color-text-muted);
+            --color-button-hover-bg: #333333;
+
+            --color-header-bg: rgba(24, 24, 24, 0.8); /* Semi-transparent for futuristic feel */
+            --color-header-border: #2C2C2C;
+            --color-nav-link: var(--color-text-muted);
+            --color-nav-link-hover: var(--color-accent-blue);
+            --color-logo-text: var(--color-text-light);
+
+            --color-mobile-menu-bg: var(--color-bg-secondary);
+            --color-mobile-menu-border: var(--color-border-subtle);
+            --color-mobile-link-text: var(--color-text-muted);
+            --color-mobile-link-hover: var(--color-accent-blue);
+            --color-mobile-heading: var(--color-text-light);
+
+            --color-footer-bg: var(--color-bg-secondary);
+            --color-footer-border: var(--color-border-subtle);
+            --color-footer-text: var(--color-text-muted);
+            --color-footer-link-hover: var(--color-accent-blue);
+
+            --color-hero-visual-bg: var(--color-bg-secondary);
+            --color-hero-visual-card-bg: #222222;
+            --color-hero-visual-card-border: #383838;
+            --color-hero-visual-card-text: var(--color-text-light);
+            --color-hero-visual-card-subtext: var(--color-text-muted);
+
+            --color-product-card-bg: var(--color-bg-secondary);
+            --color-product-card-border: var(--color-border-subtle);
+            --color-product-card-text: var(--color-text-light);
+            --color-product-card-subtext: var(--color-text-muted);
+
+            --color-sdlc-bg: var(--color-bg-primary);
+            --color-sdlc-card-bg: var(--color-bg-secondary);
+            --color-sdlc-card-border: var(--color-border-subtle);
+            --color-sdlc-card-text: var(--color-text-light);
+            --color-sdlc-card-subtext: var(--color-text-muted);
+
+            --color-section-heading: var(--color-text-light);
+            --color-section-paragraph: var(--color-text-muted);
+
+            /* New colors for the Solutions section */
+            --color-solution-card-bg: var(--color-bg-secondary);
+            --color-solution-card-border: var(--color-border-subtle);
+            --color-solution-heading: var(--color-text-light);
+            --color-solution-text: var(--color-text-muted);
+            --color-solution-icon-bg-start: #00CFFF; /* Bright Cyan */
+            --color-solution-icon-bg-end: #0099CC; /* Deeper Cyan */
+            --color-solution-check: #00CFFF; /* Bright Cyan */
+
+            /* Industries Hub specific colors */
+            --color-industry-icon-bg-telecom: #3498DB; /* Blue */
+            --color-industry-icon-bg-bfsi: #2ECC71; /* Green */
+            --color-industry-icon-bg-insurance: #00CFFF; /* Accent Cyan */
+            --color-industry-icon-bg-workforce: #E74C3C; /* Red */
+
+            --color-industry-border-telecom: #3498DB;
+            --color-industry-border-bfsi: #2ECC71;
+            --color-industry-border-insurance: #00CFFF;
+            --color-industry-border-workforce: #E74C3C;
+
+            --color-industry-metric-telecom: #3498DB;
+            --color-industry-metric-bfsi: #2ECC71;
+            --color-industry-metric-insurance: #00CFFF;
+            --color-industry-metric-workforce: #E74C3C;
+
+            --color-industry-bg-gradient-telecom-start: rgba(52, 152, 219, 0.05);
+            --color-industry-bg-gradient-telecom-end: rgba(52, 152, 219, 0.1);
+            --color-industry-bg-gradient-bfsi-start: rgba(46, 204, 113, 0.05);
+            --color-industry-bg-gradient-bfsi-end: rgba(46, 204, 113, 0.1);
+            --color-industry-bg-gradient-insurance-start: rgba(0, 207, 255, 0.05);
+            --color-industry-bg-gradient-insurance-end: rgba(0, 153, 204, 0.1);
+            --color-industry-bg-gradient-workforce-start: rgba(231, 76, 60, 0.05);
+            --color-industry-bg-gradient-workforce-end: rgba(231, 76, 60, 0.1);
+
+            --color-hero-bg-start: var(--color-bg-primary);
+            --color-hero-bg-end: var(--color-bg-secondary);
+            --color-hero-accent-bg: rgba(0, 207, 255, 0.05); /* Cyan with opacity */
+            --color-hero-success-bg: rgba(0, 153, 204, 0.05); /* Deeper Cyan with opacity */
+        }
+
+        /* Light Mode Colors - Adjusted for contrast with new accents */
+        body.light-mode {
+            --color-bg-primary: #F8F8F8; /* Very light grey */
+            --color-bg-secondary: #FFFFFF; /* Pure White */
+            --color-border-subtle: #D0D0D0; /* Lighter silver border */
+            --color-text-light: #1A1A1A; /* Dark Black */
+            --color-text-muted: #707070; /* Medium Silver */
+
+            --color-accent-blue: #007ACC; /* Darker Blue for contrast */
+            --color-accent-light-blue: #0099FF; /* Brighter Blue */
+            --color-accent-silver-gradient: #A0A0A0; /* Muted Silver for light mode gradients */
+            --color-accent-dark-blue: #005580; /* Even Darker Blue */
+            --color-accent-silver: #A0A0A0; /* Muted Silver */
+            --color-accent-grey: #606060; /* Darker Silver */
+
+            --color-card-bg: var(--color-bg-secondary);
+            --color-card-border: var(--color-border-subtle);
+            --color-input-bg: #F0F0F0;
+            --color-input-border: #D8D8D8;
+            --color-input-text: var(--color-input-text);
+            --color-input-placeholder: #A0A0A0; /* Lighter placeholder for contrast */
+            --color-input-focus-ring: rgba(0, 122, 204, 0.6); /* Stronger Blue glow for focus */
+            --color-input-hover-border: #007ACC; /* Blue border on hover */
+            --color-input-shadow: rgba(0, 0, 0, 0.05); /* Subtle initial shadow */
+            --color-input-focus-shadow: rgba(0, 122, 204, 0.3); /* Stronger glow shadow */
+            --color-input-icon: #707070; /* Input icon color */
+            --color-input-label: #707070; /* Floating label color */
+            --color-input-label-focus: var(--color-accent-blue); /* Floating label color on focus */
+
+            --color-button-primary-bg-light: var(--color-accent-blue);
+            --color-button-primary-text-light: #ffffff;
+            --color-button-primary-hover-bg-light: var(--color-accent-dark-blue);
+
+            --color-button-secondary-bg-light: transparent;
+            --color-button-secondary-text-light: var(--color-accent-blue);
+            --color-button-secondary-border-light: var(--color-accent-blue);
+            --color-button-secondary-hover-bg-light: #E0F0FF; /* Light blue hover */
+            --color-button-secondary-hover-text-light: var(--color-accent-blue);
+
+            --color-header-bg: rgba(255, 255, 255, 0.8); /* Semi-transparent for futuristic feel */
+            --color-header-border: #E5E5E5;
+            --color-nav-link: var(--color-text-muted);
+            --color-nav-link-hover: var(--color-accent-blue);
+            --color-logo-text: var(--color-text-light);
+
+            --color-mobile-menu-bg: var(--color-bg-secondary);
+            --color-mobile-menu-border: var(--color-border-subtle);
+            --color-mobile-link-text: var(--color-text-muted);
+            --color-mobile-link-hover: var(--color-accent-blue);
+            --color-mobile-heading: var(--color-text-light);
+
+            --color-footer-bg: var(--color-bg-secondary);
+            --color-footer-border: var(--color-border-subtle);
+            --color-footer-text: var(--color-text-muted);
+            --color-footer-link-hover: var(--color-accent-blue);
+
+            --color-hero-visual-bg: var(--color-bg-secondary);
+            --color-hero-visual-card-bg: #F0F0F0;
+            --color-hero-visual-card-border: #D8D8D8;
+            --color-hero-visual-card-text: var(--color-text-light);
+            --color-hero-visual-card-subtext: var(--color-text-muted);
+
+            --color-product-card-bg: var(--color-bg-secondary);
+            --color-product-card-border: var(--color-border-subtle);
+            --color-product-card-text: var(--color-text-light);
+            --color-product-card-subtext: var(--color-text-muted);
+
+            --color-sdlc-bg: var(--color-bg-primary);
+            --color-sdlc-card-bg: var(--color-bg-secondary);
+            --color-sdlc-card-border: var(--color-border-subtle);
+            --color-sdlc-card-text: var(--color-text-light);
+            --color-sdlc-card-subtext: var(--color-text-muted);
+
+            --color-section-heading: var(--color-text-light);
+            --color-section-paragraph: var(--color-text-muted);
+
+            /* New colors for the Solutions section in light mode */
+            --color-solution-card-bg: var(--color-bg-secondary);
+            --color-solution-card-border: var(--color-border-subtle);
+            --color-solution-heading: var(--color-text-light);
+            --color-solution-text: var(--color-text-muted);
+            --color-solution-icon-bg-start: #007ACC; /* Darker Blue */
+            --color-solution-icon-bg-end: #005580; /* Even Darker Blue */
+            --color-solution-check: #007ACC; /* Darker Blue */
+
+            /* Industries Hub specific colors for light mode */
+            --color-industry-icon-bg-telecom: #007ACC; /* Darker Blue */
+            --color-industry-icon-bg-bfsi: #25A25A; /* Darker Green */
+            --color-industry-icon-bg-insurance: #007ACC; /* Darker Accent Cyan */
+            --color-industry-icon-bg-workforce: #C0392B; /* Darker Red */
+
+            --color-industry-border-telecom: #007ACC;
+            --color-industry-border-bfsi: #25A25A;
+            --color-industry-border-insurance: #007ACC;
+            --color-industry-border-workforce: #C0392B;
+
+            --color-industry-metric-telecom: #007ACC;
+            --color-industry-metric-bfsi: #25A25A;
+            --color-industry-metric-insurance: #007ACC;
+            --color-industry-metric-workforce: #C0392B;
+
+            --color-industry-bg-gradient-telecom-start: rgba(0, 122, 204, 0.05);
+            --color-industry-bg-gradient-telecom-end: rgba(0, 122, 204, 0.1);
+            --color-industry-bg-gradient-bfsi-start: rgba(37, 162, 90, 0.05);
+            --color-industry-bg-gradient-bfsi-end: rgba(37, 162, 90, 0.1);
+            --color-industry-bg-gradient-insurance-start: rgba(0, 122, 204, 0.05);
+            --color-industry-bg-gradient-insurance-end: rgba(0, 122, 204, 0.1);
+            --color-industry-bg-gradient-workforce-start: rgba(192, 57, 43, 0.05);
+            --color-industry-bg-gradient-workforce-end: rgba(192, 57, 43, 0.1);
+
+            --color-hero-bg-start: var(--color-bg-primary);
+            --color-hero-bg-end: var(--color-bg-secondary);
+            --color-hero-accent-bg: rgba(0, 122, 204, 0.05);
+            --color-hero-success-bg: rgba(0, 122, 204, 0.05);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-light);
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .font-ibm-plex {
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+
+        .font-ibm-mono {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        /* Custom gradient for text - now includes silver */
+        .text-gradient {
+            background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-light-blue), var(--color-accent-silver-gradient));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Override text-gradient for light mode to be solid primary accent */
+        body.light-mode .text-gradient {
+            background: none;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+            color: var(--color-accent-blue);
+        }
+
+        /* Button base styles */
+        .btn-primary-inner {
+            @apply inline-flex items-center justify-center px-8 py-3 rounded-lg font-inter font-semibold transition-all duration-300;
+            height: 100%;
+            width: 100%;
+        }
+        .btn-secondary-inner {
+            @apply inline-flex items-center justify-center px-8 py-3 rounded-lg font-inter font-semibold transition-all duration-300;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Dark Mode Button Wrappers (Default) */
+        .primary-button-wrapper {
+          background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-light-blue));
+          padding: 2px;
+          border-radius: 0.5rem; /* Consistent with rounded-lg */
+          display: inline-block;
+          box-shadow: 0 0 15px rgba(0, 207, 255, 0.4); /* Cyan glow */
+          transition: all 0.3s ease-in-out;
+        }
+        .primary-button-wrapper:hover {
+            box-shadow: 0 0 25px rgba(0, 207, 255, 0.6), 0 0 40px rgba(77, 255, 255, 0.4); /* Enhanced cyan glow */
+            transform: translateY(-2px);
+        }
+        .primary-button-wrapper.pulse {
+            animation: pulseGlow 2s infinite ease-in-out;
+        }
+        @keyframes pulseGlow {
+          0% { box-shadow: 0 0 10px rgba(0, 207, 255, 0.4); }
+          50% { box-shadow: 0 0 20px rgba(0, 207, 255, 0.8), 0 0 30px rgba(0, 207, 255, 0.6); }
+          100% { box-shadow: 0 0 10px rgba(0, 207, 255, 0.4); }
+        }
+
+        .secondary-button-wrapper {
+          background: linear-gradient(90deg, var(--color-text-muted), var(--color-border-subtle));
+          padding: 2px;
+          border-radius: 0.5rem; /* Consistent with rounded-lg */
+          display: inline-block;
+          box-shadow: 0 0 10px rgba(160, 160, 160, 0.3); /* Subtle silver glow */
+          transition: all 0.3s ease-in-out;
+        }
+        .secondary-button-wrapper:hover {
+            box-shadow: 0 0 15px rgba(160, 160, 160, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Inner Button Styles */
+        .btn-primary-inner,
+        .btn-secondary-inner {
+          display: block;
+          padding: 0.5rem 1.25rem;
+          border-radius: 0.5rem; /* Consistent with rounded-lg */
+          background-color: var(--color-button-primary-bg-inner);
+          color: var(--color-button-primary-text);
+          text-align: center;
+          text-decoration: none;
+          transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Hover Effects */
+        .btn-primary-inner:hover,
+        .btn-secondary-inner:hover {
+          background-color: var(--color-button-hover-bg);
+        }
+
+        /* Secondary text hover override */
+        .btn-secondary-inner {
+          color: var(--color-button-secondary-text);
+        }
+        .btn-secondary-inner:hover {
+          color: var(--color-button-primary-text); /* Text becomes light on hover */
+        }
+
+        /* Light Mode Overrides — Only Solid Borders */
+        body.light-mode .primary-button-wrapper,
+        body.light-mode .secondary-button-wrapper {
+          background: none;
+          padding: 0;
+          border: 1px solid var(--color-accent-blue);
+          border-radius: 0.5rem; /* Consistent with rounded-lg */
+          box-shadow: none; /* Remove glow in light mode */
+        }
+
+        /* Primary Button Inner in Light Mode */
+        body.light-mode .btn-primary-inner {
+          background-color: var(--color-button-primary-bg-light);
+          color: var(--color-button-primary-text-light);
+          border: none;
+        }
+
+        /* Hover for Primary */
+        body.light-mode .btn-primary-inner:hover {
+          background-color: var(--color-button-primary-hover-bg-light);
+        }
+
+        /* Secondary Button Inner in Light Mode */
+        body.light-mode .btn-secondary-inner {
+          background-color: var(--color-button-secondary-bg-light);
+          color: var(--color-button-secondary-text-light);
+          border: 1px solid var(--color-button-secondary-border-light);
+        }
+
+        /* Hover for Secondary */
+        body.light-mode .btn-secondary-inner:hover {
+          background-color: var(--color-button-secondary-hover-bg-light);
+          color: var(--color-button-secondary-hover-text-light);
+        }
+
+        /* Custom card styles */
+        .card {
+            background-color: var(--color-card-bg);
+            border-color: var(--color-card-border);
+            @apply rounded-xl shadow-md p-6 border;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card.glow-border {
+            box-shadow: 0 0 15px rgba(0, 207, 255, 0.2), inset 0 0 0 1px rgba(0, 207, 255, 0.1);
+        }
+        body.light-mode .card.glow-border {
+             box-shadow: 0 0 10px rgba(0, 153, 204, 0.1), inset 0 0 0 1px rgba(0, 153, 204, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 207, 255, 0.4); /* Enhanced hover shadow with cyan glow */
+        }
+        body.light-mode .card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 153, 204, 0.2);
+        }
+
+        /* Input field styling */
+        .input-field {
+            background-color: var(--color-input-bg);
+            border-color: var(--color-input-border);
+            color: var(--color-input-text);
+            @apply w-full p-4 rounded-xl border placeholder-gray-500
+            focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors duration-200;
+        }
+        .input-field::placeholder {
+            color: var(--color-input-placeholder);
+        }
+
+        /* Custom style for select arrow */
+        select.input-field {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23C0C0C0' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 0.75em 0.75em;
+            padding-right: 2.5rem; /* Make space for the arrow */
+        }
+        body.light-mode select.input-field {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+        }
+
+        /* Mobile menu transition */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            max-height: 0 !important;
+            opacity: 0 !important;
+        }
+        #mobile-menu:not(.hidden) {
+            max-height: 600px;
+            opacity: 1;
+        }
+
+        /* General section backgrounds and text */
+        .bg-section-primary { background-color: var(--color-bg-primary); }
+        .bg-section-secondary { background-color: var(--color-bg-secondary); }
+        .text-section-heading { color: var(--color-section-heading); }
+        .text-section-paragraph { color: var(--color-section-paragraph); }
+
+        /* Navigation and Footer specific overrides */
+        footer {
+            background-color: var(--color-footer-bg);
+            border-color: var(--color-footer-border);
+        }
+        footer p, footer a {
+            color: var(--color-footer-text);
+        }
+        footer a:hover {
+            color: var(--color-footer-link-hover);
+        }
+        nav a, nav button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a::after, nav button::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-accent-blue);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-out;
+        }
+
+        nav a:hover::after, nav button:hover::after {
+            transform: translateX(0);
+        }
+
+        /* Mobile menu specific colors */
+        #mobile-menu {
+            background-color: var(--color-mobile-menu-bg);
+            border-color: var(--color-mobile-menu-border);
+        }
+        #mobile-menu a {
+            color: var(--color-mobile-link-text);
+        }
+        #mobile-menu a:hover {
+            color: var(--color-mobile-link-hover);
+        }
+        #mobile-menu span {
+            color: var(--color-mobile-heading);
+        }
+
+        /* New Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-on-scroll.slide-left.is-visible {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .animate-on-scroll.slide-right.is-visible {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        .animate-on-scroll.fade-in.is-visible {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        /* Specific animation delays for staggered effects */
+        .animate-on-scroll:nth-child(1) { transition-delay: 0s; }
+        .animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+        .animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+        .animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+        .animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+        .animate-on-scroll:nth-child(6) { transition-delay: 0.5s; }
+
+        /* Hero Section Styling */
+        .hero-section-industries {
+            background: linear-gradient(to bottom right, var(--color-hero-bg-start), var(--color-hero-bg-end));
+            position: relative;
+            overflow: hidden;
+            min-height: 50vh;
+        }
+        .hero-section-industries .absolute.inset-0:nth-child(1) {
+            background: linear-gradient(to right, var(--color-hero-accent-bg), var(--color-hero-success-bg));
+        }
+
+        /* Industry Quick Navigation Buttons - Corrected for circular shape */
+        .industry-nav-button {
+            @apply flex flex-col items-center justify-center transition-all duration-300;
+            background-color: var(--color-bg-primary);
+            border: 2px solid var(--color-border-subtle);
+            width: 120px; /* Fixed width for circular shape */
+            height: 120px; /* Fixed height for circular shape */
+            border-radius: 50%; /* Make it circular */
+            text-align: center;
+            padding: 0; /* Remove default padding to control inner elements */
+            overflow: hidden; /* Ensure content doesn't spill out */
+            position: relative;
+            box-shadow: 0 0 0 rgba(0,0,0,0); /* Reset box-shadow */
+        }
+        .industry-nav-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 25px var(--color-accent-blue);
+        }
+        body.light-mode .industry-nav-button:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px var(--color-accent-blue);
+        }
+
+        .industry-nav-button .icon-wrapper {
+            @apply w-full h-2/3 flex items-center justify-center; /* Take full width, 2/3 height for icon area */
+            transition: background-color 0.3s ease;
+        }
+
+        .industry-nav-button .text-wrapper {
+            @apply w-full h-1/3 flex items-center justify-center; /* Take full width, 1/3 height for text area */
+            background-color: var(--color-bg-secondary); /* Background for the text part */
+            border-top: 1px solid var(--color-border-subtle); /* Separator line */
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+        .industry-nav-button:hover .text-wrapper {
+            background-color: var(--color-button-hover-bg); /* Darker background on hover */
+        }
+
+
+        .industry-nav-button h3 {
+            color: var(--color-text-light);
+            font-size: 0.875rem; /* Smaller text for circular button */
+            line-height: 1.25rem;
+            margin-top: 0.25rem; /* Adjust spacing */
+        }
+        .industry-nav-button:hover h3 {
+            color: var(--color-accent-blue);
+        }
+
+        /* Specific Industry Sections */
+        .industry-section-visual-card {
+            background: linear-gradient(to bottom right, var(--color-bg-secondary), var(--color-input-bg));
+            @apply rounded-2xl p-8;
+        }
+        .industry-section-visual-card .metric-card {
+            @apply rounded-lg p-4 text-center;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+        }
+        .industry-section-visual-card .metric-value {
+            @apply text-2xl font-inter font-bold mb-1;
+        }
+        .industry-section-visual-card .metric-label {
+            @apply text-sm text-text-muted;
+        }
+
+        /* Solution Cards within Industry Sections */
+        .industry-solution-card {
+            @apply card p-6;
+            border-left-width: 4px;
+            border-right-width: 4px;
+            border-left-style: solid;
+            border-radius: 1rem;
+
+            /* Optional: Add more specific padding if needed */
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        .industry-solution-card h4 {
+            color: var(--color-text-light);
+        }
+        .industry-solution-card p {
+            color: var(--color-text-muted);
+        }
+        .industry-solution-card svg {
+            color: var(--color-accent-blue); /* Default checkmark color */
+        }
+
+        /* ROI Calculator */
+        .roi-calculator-result-box {
+            background-color: var(--color-input-bg);
+            @apply rounded-lg p-6;
+        }
+        .roi-calculator-result-box .result-value {
+            @apply font-inter font-bold text-xl;
+        }
+        .roi-calculator-result-box .result-label {
+            @apply text-text-muted;
+        }
+
+        /* Compliance Certifications */
+        .compliance-cert-card {
+            @apply text-center;
+        }
+        .compliance-cert-card .icon-bg {
+            @apply w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-3;
+        }
+        .compliance-cert-card h4 {
+            @apply font-inter font-semibold mb-2;
+            color: var(--color-text-light);
+        }
+        .compliance-cert-card p {
+            color: var(--color-text-muted);
+        }
+
+        /* Implementation Timeline */
+        .timeline-step-card {
+            @apply text-center;
+            border-radius: 1rem;
+
+        }
+        .timeline-step-card .step-number-bg {
+            @apply w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4;
+            background: linear-gradient(to bottom right, var(--color-accent-blue), var(--color-accent-dark-blue));
+        }
+        .timeline-step-card h4 {
+            @apply font-inter font-semibold mb-2;
+            color: var(--color-text-light);
+            border-radius: 1rem;
+        }
+        .timeline-step-card p {
+            color: var(--color-text-muted);
+
+        }
+
+        /* Peer Success Stories */
+        .success-story-card {
+            background-color: var(--color-input-bg);
+            @apply rounded-lg p-6;
+            border-radius: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        .success-story-card h4 {
+            color: var(--color-text-light);
+        }
+        .success-story-card p {
+            color: var(--color-text-muted);
+        }
+        .success-story-card .metric-value {
+            @apply font-inter font-bold;
+        }
+        .success-story-card .metric-label {
+            @apply text-text-muted;
+        }
+
+        /* Cross-Industry Benefits */
+        .cross-industry-benefit-card {
+            @apply text-center;
+            border-left-width: 4px;
+            border-right-width: 4px;
+            border-left-style: solid;
+            border-radius: 1rem;
+
+            /* Optional: Add more specific padding if needed */
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        .cross-industry-benefit-card .icon-bg {
+            @apply w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4;
+        }
+        .cross-industry-benefit-card h3 {
+            color: var(--color-text-light);
+        }
+        .cross-industry-benefit-card p {
+            color: var(--color-text-muted);
+        }
+
+        /* CTA Section at bottom */
+        .cta-bottom-section {
+            background: linear-gradient(to right, var(--color-accent-blue), var(--color-accent-dark-blue));
+            color: white;
+        }
+        .cta-bottom-section h2 {
+            color: white;
+        }
+        .cta-bottom-section p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .cta-bottom-section .btn-primary {
+            background-color: white;
+            color: var(--color-accent-blue);
+            box-shadow: none;
+        }
+        .cta-bottom-section .btn-primary:hover {
+            background-color: var(--color-text-light);
+            color: var(--color-accent-dark-blue);
+        }
+        .cta-bottom-section .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .cta-bottom-section .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        /* Mobile menu button icon rotation */
+        #mobile-menu-button svg {
+            transition: transform 0.3s ease-in-out;
+        }
+        #mobile-menu-button.menu-open svg {
+            transform: rotate(90deg); /* Rotate to indicate open */
+        }
+
+        /* Logo animation */
+        @keyframes pulseLogo {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .logo-animate:hover {
+            animation: pulseLogo 1s infinite ease-in-out;
+        }
+
+    </style>
+</head>
+<body class="bg-bg-primary text-text-light font-inter">
+    <!-- Navigation Header -->
+    <header class="bg-header-bg border-b border-header-border sticky top-0 z-50 shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                   <a href="index.html" class="font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
+                    <img src="assets/logo.png"
+                         class="h-auto w-24 sm:w-28 md:w-32 lg:w-36 transition-transform duration-300 hover:scale-105"
+                         alt="Cogniwide Logo" />
+                  </a>
+                </div>
+
+                <!-- Desktop Navigation - Grouped Layout -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <!-- Primary Navigation Group -->
+                    <div class="flex items-center space-x-1 px-2">
+                        <!-- Products Dropdown -->
+                        <div class="relative group">
+                            <button class="px-3 py-2 rounded-md text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                                Products
+                                <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                            <!-- Mega Menu -->
+                            <div class="absolute left-0 mt-2 w-96 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
+                                <div class="p-6">
+                                    <div class="grid grid-cols-1 gap-4">
+                                        <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-blue);"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniXcellerate</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">AI Orchestration Platform</p>
+                                            </div>
+                                        </a>
+                                        <a href="cogni_loom_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-light-blue);"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniLoom</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">Intelligent Process Automation</p>
+                                            </div>
+                                        </a>
+                                        <a href="cogni_chat_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-dark-blue);"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniChat</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">Conversational AI Platform</p>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                            <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-silver);"></div>
+                                            <div>
+                                                <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniAgent</h4>
+                                                <p class="text-sm" style="color: var(--color-text-muted);">Intelligent Agent Framework</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Solutions & Services Group -->
+                        <div class="flex items-center space-x-1 pl-2 ml-2" style="border-left: 1px solid var(--color-border-subtle);">
+                            <a href="solutions_showcase.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Solutions</a>
+                            <a href="platform_engineering_services.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Services</a>
+                            <a href="industries_hub.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Industries</a>
+                        </div>
+
+                        <!-- Resources & Company Group -->
+                        <div class="flex items-center space-x-1 pl-2 ml-2" style="border-left: 1px solid var(--color-border-subtle);">
+                            <a href="resource_center.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Resources</a>
+
+                            <!-- Company Dropdown -->
+                            <div class="relative group">
+                                <button class="px-3 py-2 rounded-md text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                                    Company
+                                    <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </button>
+                                <!-- Company Dropdown -->
+                                <div class="absolute left-0 mt-2 w-72 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
+                                    <div class="p-4">
+                                        <div class="space-y-2">
+                                            <a href="about_us.html" class="block p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">About Us</a>
+                                            <a href="leadership_team.html" class="block p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">Leadership Team</a>
+                                            <a href="life_at_cogniwide_careers.html" class="block p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">Life at Cogniwide + Careers</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="contact.html" class="px-3 py-2 rounded-md text-sm transition-colors duration-300" style="color: var(--color-nav-link); font-family: 'IBM Plex Sans', sans-serif;" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tablet Navigation (768px - 1024px) -->
+                <div class="hidden md:flex lg:hidden items-center space-x-6">
+                    <!-- Essential Links -->
+                    <a href="index.html" class="font-ibm-plex font-medium text-sm transition-colors duration-300" style="color: var(--color-accent-blue);" onmouseover="this.style.color='var(--color-accent-light-blue)'" onmouseout="this.style.color='var(--color-accent-blue)'">Home</a>
+
+                    <!-- Products Menu -->
+                    <div class="relative group">
+                        <button class="font-ibm-plex font-medium text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                            Products
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-80 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
+                            <div class="p-4">
+                                <div class="grid grid-cols-1 gap-2">
+                                    <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-blue);"></div>
+                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniXcellerate</span>
+                                    </a>
+                                    <a href="cogni_loom_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-light-blue);"></div>
+                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniLoom</span>
+                                    </a>
+                                    <a href="cogni_chat_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-dark-blue);"></div>
+                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniAgent</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More Menu for remaining items -->
+                    <div class="relative group">
+                        <button class="font-ibm-plex font-medium text-sm transition-colors duration-300 flex items-center" style="color: var(--color-nav-link);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-nav-link)'">
+                            More
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-64 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
+                            <div class="p-4">
+                                <div class="space-y-2">
+                                    <a href="solutions_showcase.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Solutions</a>
+                                    <a href="platform_engineering_services.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Services</a>
+                                    <a href="industries_hub.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Industries</a>
+                                    <a href="resource_center.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Resources</a>
+                                    <hr style="border-color: var(--color-border-subtle);" class="my-2" />
+                                    <a href="about_us.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">About Us</a>
+                                    <a href="leadership_team.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Leadership Team</a>
+                                    <a href="life_at_cogniwide_careers.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Life at Cogniwide + Careers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- Theme Toggle Button -->
+<!--                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-input-bg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue" style="color: var(&#45;&#45;color-nav-link);">-->
+<!--                        <svg id="sun-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12h1m15.325-4.275l-.707-.707M4.675 19.325l-.707-.707M19.325 4.675l-.707-.707M4.675 4.675l-.707-.707M12 18a6 6 0 100-12 6 6 0 000 12z" />-->
+<!--                        </svg>-->
+<!--                        <svg id="moon-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />-->
+<!--                        </svg>-->
+<!--                    </button>-->
+
+                    <!-- Request Demo Button -->
+                    <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
+                        <a href="contact.html" class="btn-primary-inner">
+                            Request Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- Mobile Theme Toggle -->
+                    <button id="mobile-theme-toggle" class="p-2 rounded-full text-text-muted hover:text-accent-blue hover:bg-input-bg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue">
+                        <svg id="mobile-sun-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12h1m15.325-4.275l-.707-.707M4.675 19.325l-.707-.707M19.325 4.675l-.707-.707M4.675 4.675l-.707-.707M12 18a6 6 0 100-12 6 6 0 000 12z" />
+                        </svg>
+                        <svg id="mobile-moon-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-text-muted hover:text-accent-blue hover:bg-input-bg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden transition-all duration-300 ease-in-out" style="background-color: var(--color-mobile-menu-bg); border-color: var(--color-mobile-menu-border);">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t shadow-lg" style="border-color: var(--color-mobile-menu-border);">
+                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-accent-blue);" onmouseover="this.style.color='var(--color-accent-light-blue)'" onmouseout="this.style.color='var(--color-accent-blue)'">Home</a>
+
+                    <!-- Mobile Products Submenu -->
+                    <div class="block px-3 py-2">
+                        <span class="font-medium text-base" style="color: var(--color-mobile-heading);">Products</span>
+                        <div class="ml-4 mt-2 space-y-1">
+                            <a href="cogni_xcellerate_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniXcellerate</a>
+                            <a href="cogni_loom_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniLoom</a>
+                            <a href="cogni_chat_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniChat</a>
+                            <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAgent</a>
+                        </div>
+                    </div>
+
+                    <a href="solutions_showcase.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Solutions</a>
+                    <a href="platform_engineering_services.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Services</a>
+                    <a href="industries_hub.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Industries</a>
+                    <a href="resource_center.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Resources</a>
+
+                    <!-- Mobile Company Submenu -->
+                    <div class="block px-3 py-2">
+                        <span class="font-medium text-base" style="color: var(--color-mobile-heading);">Company</span>
+                        <div class="ml-4 mt-2 space-y-1">
+                            <a href="about_us.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">About Us</a>
+                            <a href="leadership_team.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">Leadership Team</a>
+                            <a href="life_at_cogniwide_careers.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">Life at Cogniwide + Careers</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Contact</a>
+
+                    <!-- Mobile CTA -->
+                    <div class="pt-4" style="border-color: var(--color-mobile-menu-border);">
+                        <div class="relative rounded-lg inline-block w-full primary-button-wrapper pulse">
+                            <a href="contact.html" class="btn-primary-inner w-full text-center">
+                              Request Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="bg-section-secondary border-b border-border-subtle py-3 sm:py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="index.html" class="text-text-muted hover:text-accent-blue transition-colors duration-300">Home</a>
+                <svg class="w-4 h-4 text-text-muted" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-text-light font-inter font-medium">Industries Hub</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="relative hero-section-industries overflow-hidden py-20 lg:py-32">
+        <div class="absolute inset-0 bg-gradient-to-r from-hero-accent-bg to-hero-success-bg"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll fade-in">
+            <h1 class="font-inter font-bold text-4xl lg:text-6xl text-section-heading leading-tight mb-6 sm:mb-8">
+                Industry-Specific
+                <span class="text-gradient">AI Solutions</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-section-paragraph leading-relaxed max-w-4xl mx-auto mb-12 sm:mb-16">
+                Tailored AI automation solutions designed for the unique challenges, regulatory requirements, and operational needs of your industry vertical.
+            </p>
+
+            <!-- Industry Quick Navigation -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto justify-items-center">
+                <button onclick="scrollToSection('telecom')" class="industry-nav-button animate-on-scroll slide-in-up">
+                    <div class="icon-wrapper flex items-center justify-center" style="background-color: var(--color-industry-icon-bg-telecom);">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                    </div>
+                    <div class="text-wrapper">
+                        <h3 class="font-inter font-semibold">Telecom</h3>
+                    </div>
+                </button>
+                <button onclick="scrollToSection('bfsi')" class="industry-nav-button animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <div class="icon-wrapper flex items-center justify-center" style="background-color: var(--color-industry-icon-bg-bfsi);">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"/>
+                        </svg>
+                    </div>
+                    <div class="text-wrapper">
+                        <h3 class="font-inter font-semibold">BFSI</h3>
+                    </div>
+                </button>
+                <button onclick="scrollToSection('insurance')" class="industry-nav-button animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <div class="icon-wrapper  flex items-center justify-center" style="background-color: var(--color-industry-icon-bg-insurance);">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <div class="text-wrapper">
+                        <h3 class="font-inter font-semibold">Insurance</h3>
+                    </div>
+                </button>
+                <button onclick="scrollToSection('workforce')" class="industry-nav-button animate-on-scroll slide-in-up" style="transition-delay: 0.3s;">
+                    <div class="icon-wrapper  flex items-center justify-center" style="background-color: var(--color-industry-icon-bg-workforce);">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                        </svg>
+                    </div>
+                    <div class="text-wrapper">
+                        <h3 class="font-inter font-semibold">Workforce</h3>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero CTAs -->
+    <section class="py-12 sm:py-16 bg-section-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll fade-in">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
+                    <a href="contact.html" class="btn-primary-inner">
+                        Get Started Today
+                    </a>
+                </div>
+                <div class="relative rounded-lg inline-block secondary-button-wrapper">
+                    <a href="solutions_showcase.html" class="btn-secondary-inner">
+                        Explore Solutions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telecom Industry Section -->
+    <section id="telecom" class="py-16 sm:py-20 bg-section-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 sm:mb-16">
+                <div class="animate-on-scroll slide-left">
+                    <div class="flex items-center mb-4 sm:mb-6">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center mr-3 sm:mr-4" style="background-color: var(--color-industry-icon-bg-telecom);">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                        </div>
+                        <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading">Telecom Solutions</h2>
+                    </div>
+                    <p class="text-lg sm:text-xl text-section-paragraph mb-6 sm:mb-8">
+                        Transform network operations and customer experiences with AI-powered automation designed for telecommunications infrastructure and service delivery.
+                    </p>
+
+                    <!-- Key Challenges -->
+                    <div class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                        <h3 class="font-inter font-semibold text-lg text-section-heading">Key Challenges We Address:</h3>
+                        <ul class="space-y-2 sm:space-y-3">
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-telecom);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Network optimization and predictive maintenance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-telecom);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Customer service automation and support</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-telecom);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Fraud detection and security monitoring</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-telecom);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Revenue assurance and billing optimization</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Telecom Visual -->
+                <div class="relative animate-on-scroll slide-right">
+                    <div class="industry-section-visual-card" style="background: linear-gradient(to bottom right, var(--color-industry-bg-gradient-telecom-start), var(--color-industry-bg-gradient-telecom-end));">
+                        <img src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Telecom Network Infrastructure" class="w-full h-48 sm:h-64 object-cover rounded-lg mb-4 sm:mb-6" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+
+                        <!-- Success Metrics -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: var(--color-industry-metric-telecom);">45%</div>
+                                <div class="metric-label">Network Downtime Reduction</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: var(--color-industry-metric-telecom);">78%</div>
+                                <div class="metric-label">Customer Query Resolution</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Telecom Solutions Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
+                <div class="industry-solution-card animate-on-scroll slide-in-up" style="border-left-color: var(--color-industry-border-telecom);">
+                    <h4 class="font-inter font-bold text-lg mb-3">Network Intelligence</h4>
+                    <p class="text-text-muted mb-4">AI-powered network monitoring and predictive maintenance to prevent outages and optimize performance.</p>
+                    <ul class="space-y-2 text-sm text-text-muted">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-telecom);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Predictive Maintenance
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-telecom);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Real-time Monitoring
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-telecom);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Automated Optimization
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="industry-solution-card animate-on-scroll slide-in-up" style="border-left-color: var(--color-industry-border-telecom); transition-delay: 0.1s;">
+                    <h4 class="font-inter font-bold text-lg mb-3">Customer Experience AI</h4>
+                    <p class="text-text-muted mb-4">Intelligent customer service automation with personalized support and proactive issue resolution.</p>
+                    <ul class="space-y-2 text-sm text-text-muted">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-telecom);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Chatbot Integration
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-telecom);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Sentiment Analysis
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-telecom);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Proactive Support
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="industry-solution-card animate-on-scroll slide-in-up" style="border-left-color: var(--color-industry-border-telecom); transition-delay: 0.2s;">
+                    <h4 class="font-inter font-bold text-lg mb-3">Revenue Optimization</h4>
+                    <p class="text-text-muted mb-4">AI-driven billing accuracy, fraud detection, and revenue assurance for maximum profitability.</p>
+                    <ul class="space-y-2 text-sm text-text-muted">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-telecom);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Fraud Detection
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-telecom);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Billing Accuracy
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-telecom);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Revenue Assurance
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BFSI Industry Section -->
+    <section id="bfsi" class="py-16 sm:py-20 bg-section-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 sm:mb-16">
+                <div class="animate-on-scroll slide-left">
+                    <div class="flex items-center mb-4 sm:mb-6">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center mr-3 sm:mr-4" style="background-color: var(--color-industry-icon-bg-bfsi);">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"/>
+                            </svg>
+                        </div>
+                        <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading">BFSI Solutions</h2>
+                    </div>
+                    <p class="text-lg sm:text-xl text-section-paragraph mb-6 sm:mb-8">
+                        Secure, compliant AI solutions for banking, financial services, and insurance that enhance customer experiences while maintaining regulatory compliance.
+                    </p>
+
+                    <!-- Key Challenges -->
+                    <div class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                        <h3 class="font-inter font-semibold text-lg text-section-heading">Key Challenges We Address:</h3>
+                        <ul class="space-y-2 sm:space-y-3">
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-bfsi);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Fraud detection and prevention</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-bfsi);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Regulatory compliance automation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-bfsi);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Customer onboarding and KYC</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-bfsi);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Risk assessment and management</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- BFSI Visual -->
+                <div class="relative animate-on-scroll slide-right">
+                    <div class="industry-section-visual-card" style="background: linear-gradient(to bottom right, var(--color-industry-bg-gradient-bfsi-start), var(--color-industry-bg-gradient-bfsi-end));">
+                        <img src="https://images.pixabay.com/photo/2016/11/27/21/42/stock-1863880_1280.jpg" alt="Financial Services Technology" class="w-full h-48 sm:h-64 object-cover rounded-lg mb-4 sm:mb-6" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+
+                        <!-- Success Metrics -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: var(--color-industry-metric-bfsi);">92%</div>
+                                <div class="metric-label">Fraud Detection Rate</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: var(--color-industry-metric-bfsi);">65%</div>
+                                <div class="metric-label">Faster KYC Processing</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BFSI Solutions Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
+                <div class="industry-solution-card animate-on-scroll slide-in-up" style="border-left-color: var(--color-industry-border-bfsi);">
+                    <h4 class="font-inter font-bold text-lg mb-3">Fraud Prevention AI</h4>
+                    <p class="text-text-muted mb-4">Advanced machine learning algorithms for real-time fraud detection and prevention across all channels.</p>
+                    <ul class="space-y-2 text-sm text-text-muted">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-bfsi);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Real-time Monitoring
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-bfsi);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Behavioral Analysis
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-bfsi);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Risk Scoring
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="industry-solution-card animate-on-scroll slide-in-up" style="border-left-color: var(--color-industry-border-bfsi); transition-delay: 0.1s;">
+                    <h4 class="font-inter font-bold text-lg mb-3">Compliance Automation</h4>
+                    <p class="text-text-muted mb-4">Automated regulatory reporting and compliance monitoring to ensure adherence to financial regulations.</p>
+                    <ul class="space-y-2 text-sm text-text-muted">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-bfsi);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Regulatory Reporting
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-bfsi);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            AML Monitoring
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-bfsi);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Audit Trails
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="industry-solution-card animate-on-scroll slide-in-up" style="border-left-color: var(--color-industry-border-bfsi); transition-delay: 0.2s;">
+                    <h4 class="font-inter font-bold text-lg mb-3">Digital Onboarding</h4>
+                    <p class="text-text-muted mb-4">Streamlined customer onboarding with automated KYC, document verification, and risk assessment.</p>
+                    <ul class="space-y-2 text-sm text-text-muted">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-bfsi);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Document OCR
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-bfsi);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Identity Verification
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-bfsi);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Risk Profiling
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BFSI Compliance Certifications -->
+
+        </div>
+    </section>
+
+    <!-- Insurance Industry Section -->
+    <section id="insurance" class="py-16 sm:py-20 bg-section-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 sm:mb-16">
+                <div class="animate-on-scroll slide-left">
+                    <div class="flex items-center mb-4 sm:mb-6">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center mr-3 sm:mr-4" style="background-color: var(--color-industry-icon-bg-insurance);">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading">Insurance Solutions</h2>
+                    </div>
+                    <p class="text-lg sm:text-xl text-section-paragraph mb-6 sm:mb-8">
+                        Intelligent insurance automation that streamlines claims processing, enhances risk assessment, and improves customer experiences across all insurance verticals.
+                    </p>
+
+                    <!-- Key Challenges -->
+                    <div class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                        <h3 class="font-inter font-semibold text-lg text-section-heading">Key Challenges We Address:</h3>
+                        <ul class="space-y-2 sm:space-y-3">
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-insurance);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Claims processing automation and fraud detection</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-insurance);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Risk assessment and underwriting optimization</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-insurance);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Customer service and policy management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-insurance);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Regulatory compliance and reporting</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Insurance Visual -->
+                <div class="relative animate-on-scroll slide-right">
+                    <div class="industry-section-visual-card" style="background: linear-gradient(to bottom right, var(--color-industry-bg-gradient-insurance-start), var(--color-industry-bg-gradient-insurance-end));">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Insurance Technology Solutions" class="w-full h-48 sm:h-64 object-cover rounded-lg mb-4 sm:mb-6" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+
+                        <!-- Success Metrics -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: var(--color-industry-metric-insurance);">73%</div>
+                                <div class="metric-label">Faster Claims Processing</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: var(--color-industry-metric-insurance);">89%</div>
+                                <div class="metric-label">Fraud Detection Accuracy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insurance Solutions Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
+                <div class="industry-solution-card animate-on-scroll slide-in-up" style="border-left-color: var(--color-industry-border-insurance);">
+                    <h4 class="font-inter font-bold text-lg mb-3">Claims Intelligence</h4>
+                    <p class="text-text-muted mb-4">AI-powered claims processing with automated damage assessment, fraud detection, and settlement optimization.</p>
+                    <ul class="space-y-2 text-sm text-text-muted">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-insurance);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Automated Assessment
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-insurance);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Image Recognition
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-insurance);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Fast Settlement
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="industry-solution-card animate-on-scroll slide-in-up" style="border-left-color: var(--color-industry-border-insurance); transition-delay: 0.1s;">
+                    <h4 class="font-inter font-bold text-lg mb-3">Risk Analytics</h4>
+                    <p class="text-text-muted mb-4">Advanced risk modeling and underwriting automation with predictive analytics for better decision-making.</p>
+                    <ul class="space-y-2 text-sm text-text-muted">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-insurance);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Predictive Modeling
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-insurance);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Automated Underwriting
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-insurance);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Portfolio Optimization
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="industry-solution-card animate-on-scroll slide-in-up" style="border-left-color: var(--color-industry-border-insurance); transition-delay: 0.2s;">
+                    <h4 class="font-inter font-bold text-lg mb-3">Customer Experience</h4>
+                    <p class="text-text-muted mb-4">Personalized insurance experiences with AI-driven recommendations and automated customer service.</p>
+                    <ul class="space-y-2 text-sm text-text-muted">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-insurance);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Personalization
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-insurance);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Chatbot Support
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-insurance);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Policy Management
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Workforce Management Section -->
+    <section id="workforce" class="py-16 sm:py-20 bg-section-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 sm:mb-16">
+                <div class="animate-on-scroll slide-left">
+                    <div class="flex items-center mb-4 sm:mb-6">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center mr-3 sm:mr-4" style="background-color: var(--color-industry-icon-bg-workforce);">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                            </svg>
+                        </div>
+                        <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading">Workforce Management</h2>
+                    </div>
+                    <p class="text-lg sm:text-xl text-section-paragraph mb-6 sm:mb-8">
+                        Intelligent workforce optimization solutions that enhance employee productivity, automate scheduling, and improve operational efficiency across all business functions.
+                    </p>
+
+                    <!-- Key Challenges -->
+                    <div class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                        <h3 class="font-inter font-semibold text-lg text-section-heading">Key Challenges We Address:</h3>
+                        <ul class="space-y-2 sm:space-y-3">
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-workforce);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Employee productivity optimization</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-workforce);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Automated scheduling and resource allocation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-workforce);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Performance monitoring and analytics</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style="background-color: var(--color-industry-border-workforce);"></div>
+                                <span class="text-section-paragraph text-base sm:text-lg">Talent acquisition and retention</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Workforce Visual -->
+                <div class="relative animate-on-scroll slide-right">
+                    <div class="industry-section-visual-card" style="background: linear-gradient(to bottom right, var(--color-industry-bg-gradient-workforce-start), var(--color-industry-bg-gradient-workforce-end));">
+                        <img src="https://images.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg" alt="Workforce Management Technology" class="w-full h-48 sm:h-64 object-cover rounded-lg mb-4 sm:mb-6" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+
+                        <!-- Success Metrics -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: var(--color-industry-metric-workforce);">34%</div>
+                                <div class="metric-label">Productivity Increase</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: var(--color-industry-metric-workforce);">56%</div>
+                                <div class="metric-label">Scheduling Efficiency</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workforce Solutions Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
+                <div class="industry-solution-card animate-on-scroll slide-in-up" style="border-left-color: var(--color-industry-border-workforce);">
+                    <h4 class="font-inter font-bold text-lg mb-3">Smart Scheduling</h4>
+                    <p class="text-text-muted mb-4">AI-powered scheduling optimization that considers employee preferences, skills, and business requirements.</p>
+                    <ul class="space-y-2 text-sm text-text-muted">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-workforce);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Automated Scheduling
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-workforce);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Skill Matching
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-workforce);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Preference Management
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="industry-solution-card animate-on-scroll slide-in-up" style="border-left-color: var(--color-industry-border-workforce); transition-delay: 0.1s;">
+                    <h4 class="font-inter font-bold text-lg mb-3">Performance Analytics</h4>
+                    <p class="text-text-muted mb-4">Real-time performance monitoring with predictive insights for employee development and retention.</p>
+                    <ul class="space-y-2 text-sm text-text-muted">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-workforce);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Real-time Monitoring
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-workforce);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Predictive Insights
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-workforce);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Development Planning
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="industry-solution-card animate-on-scroll slide-in-up" style="border-left-color: var(--color-industry-border-workforce); transition-delay: 0.2s;">
+                    <h4 class="font-inter font-bold text-lg mb-3">Talent Intelligence</h4>
+                    <p class="text-text-muted mb-4">AI-driven talent acquisition and retention strategies with automated candidate screening and matching.</p>
+                    <ul class="space-y-2 text-sm text-text-muted">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-workforce);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Resume Screening
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-workforce);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Candidate Matching
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" style="color: var(--color-industry-metric-workforce);">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Retention Prediction
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Workforce Success Stories -->
+            <div class="card p-6 sm:p-8 animate-on-scroll fade-in">
+                <h3 class="font-inter font-bold text-xl text-section-heading mb-6 text-center">Peer Success Stories</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                    <div class="success-story-card" style="background: linear-gradient(to bottom right, var(--color-industry-bg-gradient-workforce-start), var(--color-industry-bg-gradient-workforce-end));">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Manufacturing Company" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div>
+                                <h4 class="font-inter font-semibold text-section-heading">Global Manufacturing Corp</h4>
+                                <p class="text-sm text-text-muted">15,000+ employees</p>
+                            </div>
+                        </div>
+                        <p class="text-text-muted mb-4">
+                            "Cogniwide's workforce management solution reduced our scheduling conflicts by 78% and improved employee satisfaction scores by 45%."
+                        </p>
+                        <div class="flex space-x-4 text-sm">
+                            <div class="text-center">
+                                <div class="metric-value" style="color: var(--color-industry-metric-workforce);">78%</div>
+                                <div class="metric-label">Conflict Reduction</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="metric-value" style="color: var(--color-industry-metric-workforce);">45%</div>
+                                <div class="metric-label">Satisfaction Increase</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="success-story-card" style="background: linear-gradient(to bottom right, var(--color-industry-bg-gradient-workforce-start), var(--color-industry-bg-gradient-workforce-end));">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Retail Chain" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <div>
+                                <h4 class="font-inter font-semibold text-section-heading">Retail Solutions Inc</h4>
+                                <p class="text-sm text-text-muted">8,500+ employees</p>
+                            </div>
+                        </div>
+                        <p class="text-text-muted mb-4">
+                            "The AI-powered talent acquisition system helped us reduce hiring time by 60% while improving candidate quality by 35%."
+                        </p>
+                        <div class="flex space-x-4 text-sm">
+                            <div class="text-center">
+                                <div class="metric-value" style="color: var(--color-industry-metric-workforce);">60%</div>
+                                <div class="metric-label">Faster Hiring</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="metric-value" style="color: var(--color-industry-metric-workforce);">35%</div>
+                                <div class="metric-label">Better Quality</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cross-Industry Benefits -->
+    <section class="py-16 sm:py-20 bg-section-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    Cross-Industry Benefits
+                </h2>
+                <p class="text-lg sm:text-xl text-section-paragraph max-w-3xl mx-auto">
+                    Common advantages that Cogniwide AI solutions deliver across all industry verticals
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <div class="cross-industry-benefit-card animate-on-scroll slide-in-up" style="border-left-color: var(--color-accent-blue);">
+
+                    <h3 class="font-inter font-bold text-lg mb-2">Operational Efficiency</h3>
+                    <p class="text-text-muted">Average 65% improvement in process efficiency across all implementations</p>
+                </div>
+
+                <div class="cross-industry-benefit-card animate-on-scroll slide-in-up" style="transition-delay: 0.1s; border-left-color: var(--color-accent-blue);">
+
+                    <h3 class="font-inter font-bold text-lg mb-2">Cost Reduction</h3>
+                    <p class="text-text-muted">Typical 40-60% reduction in operational costs within first year</p>
+                </div>
+
+                <div class="cross-industry-benefit-card animate-on-scroll slide-in-up" style="transition-delay: 0.2s; border-left-color: var(--color-accent-blue);">
+
+                    <h3 class="font-inter font-bold text-lg mb-2">Compliance Assurance</h3>
+                    <p class="text-text-muted">Built-in compliance monitoring and automated reporting capabilities</p>
+                </div>
+
+                <div class="cross-industry-benefit-card animate-on-scroll slide-in-up" style="transition-delay: 0.3s; border-left-color: var(--color-accent-blue);">
+
+                    <h3 class="font-inter font-bold text-lg mb-2">Scalable Growth</h3>
+                    <p class="text-text-muted">Solutions that grow with your business and adapt to changing requirements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-card-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll fade-in">
+            <h2 class="font-inter font-bold text-3xl lg:text-4xl mb-4 text-section-heading">
+                Ready to <span class="text-gradient">Transform Your Industry</span>?
+            </h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto text-section-paragraph">
+                Discover how Cogniwide's industry-specific AI solutions can revolutionize your operations and drive measurable results.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
+                    <a href="contact.html" class="btn-primary-inner">
+                      Schedule Industry Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-footer-border bg-footer-bg py-8 sm:py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+          <!-- Company Info -->
+          <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center mb-4">
+              <a href="index.html" class="font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
+                <img src="assets/logo.png"
+                     class="h-auto w-24 sm:w-28 md:w-32 lg:w-36 transition-transform duration-300 hover:scale-105"
+                     alt="Cogniwide Logo" />
+              </a>
+            </div>
+            <p class="mb-3 max-w-md text-sm" style="color: var(--color-footer-text);">
+              Cogniwide is an AI-based IT products and services company that provides high-performance product development, solutions, and operations services that focuses on Digital Transformation.
+            </p>
+            <p class="mb-4 max-w-md text-sm" style="color: var(--color-footer-text);">
+              We leverage new generation technologies like AI, RPA, Data Analytics, and Blockchain to build tailor-made digital Web and Mobile solutions and aid in the digital journey of our partners.
+            </p>
+            <div class="flex space-x-4 mb-4">
+              <a href="https://www.linkedin.com/company/cogniwide" target="_blank" rel="noreferrer" class="text-text-muted hover:text-accent-blue transition-colors duration-300">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.9h.1c.7-1.3 2.5-2.7 5.2-2.7 5.6 0 6.6 3.6 6.6 8.3V24h-5V15c0-2.2 0-5-3-5s-3.5 2.3-3.5 4.8V24h-5V8z"/>
+                </svg>
+              </a>
+              <a href="https://twitter.com/cogniwide" target="_blank" rel="noreferrer" class="text-text-muted hover:text-accent-blue transition-colors duration-300">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 4.56c-.89.39-1.84.66-2.84.78a4.93 4.93 0 002.16-2.72 9.85 9.85 0 01-3.13 1.2 4.92 4.92 0 00-8.38 4.48A13.96 13.96 0 011.64 3.16 4.92 4.92 0 003.2 9.72a4.9 4.9 0 01-2.23-.62v.06a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/cogniwide" target="_blank" rel="noreferrer" class="text-text-muted hover:text-accent-blue transition-colors duration-300">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22.68 0H1.32C.59 0 0 .6 0 1.34v21.32C0 23.4.59 24 1.32 24H12v-9.34H9.34v-3.66H12V8.65c0-2.66 1.63-4.11 4-4.11 1.14 0 2.11.08 2.39.12v2.77h-1.64c-1.29 0-1.54.61-1.54 1.5v1.96h3.08l-.4 3.66h-2.68V24h5.27c.73 0 1.32-.6 1.32-1.34V1.34C24 .6 23.41 0 22.68 0z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Solutions Links -->
+          <div>
+            <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Solutions</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="cogni_xcellerate_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniXcellerate</a></li>
+              <li><a href="cogni_loom_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniLoom</a></li>
+              <li><a href="cogni_chat_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniChat</a></li>
+              <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAgent</a></li>
+            </ul>
+          </div>
+
+          <!-- Company Links -->
+          <div>
+            <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Company</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="about_us.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">About Us</a></li>
+              <li><a href="leadership_team.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Leadership Team</a></li>
+              <li><a href="life_at_cogniwide_careers.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Life at Cogniwide + Careers</a></li>
+              <li><a href="contact.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Address Section -->
+        <div class="mt-8 sm:mt-10 text-sm" style="color: var(--color-footer-text);">
+          <h4 class="font-inter font-semibold mb-4">Our Branches - India</h4>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+               <div>
+              <h6 class="font-semibold">Headquarters - Chennai</h6>
+              <address class="not-italic">
+                Cogniwide Technologies Private Limited,<br />
+                3rd Floor, Alpha City, SSPDL Building,<br />
+                Rajiv Gandhi Salai, Navalur, Chennai - 603103,<br />
+                Tamilnadu, India.
+              </address>
+            </div>
+            <div>
+              <h6 class="font-semibold">Registered Office - Bengaluru</h6>
+              <address class="not-italic">
+                Cogniwide Technologies Private Limited,<br />
+                1st Floor, SPD Plaza, 52, Jyoti Niwas College Rd,<br />
+                Koramangala Industrial Layout, Koramangala,<br />
+                Bengaluru, Karnataka, India 560034.
+              </address>
+            </div>
+
+            <div>
+              <h6 class="font-semibold">Registered Office - Madurai</h6>
+              <address class="not-italic">
+                Cogniwide Technologies Private Limited,<br />
+                No.15, 4th Floor, Gokale Road, Chinna Chokkikulam,<br />
+                Madurai - 625014, Tamilnadu, India.
+              </address>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center" style="border-color: var(--color-border-subtle);">
+          <p class="text-sm" style="color: var(--color-footer-text);">
+            © 2025 Cogniwide AI Platform. All Rights Reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+            <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Privacy Policy</a>
+            <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Terms of Service</a>
+            <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Security</a>
+          </div>
+        </div>
+      </div>
+</footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.classList.toggle('menu-open'); // Toggle class for icon rotation
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.classList.remove('menu-open'); // Ensure icon resets
+                }
+            });
+        }
+
+        // Add responsive behavior for window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.classList.remove('menu-open'); // Ensure icon resets on desktop
+            }
+        });
+
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const mobileSunIcon = document.getElementById('mobile-sun-icon');
+        const mobileMoonIcon = document.getElementById('mobile-moon-icon');
+        const body = document.body;
+
+        // Function to set theme
+        function setTheme(theme) {
+            if (theme === 'light-mode') {
+                body.classList.add('light-mode');
+                if (sunIcon) sunIcon.classList.remove('hidden');
+                if (moonIcon) moonIcon.classList.add('hidden');
+                if (mobileSunIcon) mobileSunIcon.classList.remove('hidden');
+                if (mobileMoonIcon) mobileMoonIcon.classList.add('hidden');
+            } else {
+                body.classList.remove('light-mode');
+                if (sunIcon) sunIcon.classList.add('hidden');
+                if (moonIcon) moonIcon.classList.remove('hidden');
+                if (mobileSunIcon) mobileSunIcon.classList.add('hidden');
+                if (mobileMoonIcon) mobileMoonIcon.classList.remove('hidden');
+            }
+            localStorage.setItem('theme', theme);
+        }
+
+        // Check for saved theme preference on load
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            setTheme(currentTheme);
+        } else {
+            // Default to dark mode if no preference
+            setTheme('dark-mode');
+        }
+
+        // Event listeners for theme toggles
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
+                setTheme(newTheme);
+            });
+        }
+        if (mobileThemeToggleBtn) {
+            mobileThemeToggleBtn.addEventListener('click', () => {
+                const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
+                setTheme(newTheme);
+            });
+        }
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.1 // 10% of the element must be visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+            observer.observe(element);
+        });
+
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
