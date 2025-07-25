@@ -394,18 +394,27 @@
 
         /* Mobile menu transition */
         #mobile-menu {
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            background-color: var(--color-mobile-menu-bg);
+            border-color: var(--color-mobile-menu-border);
+            overflow-y: auto !important;
+            max-height: 100vh;           /* Ensures it doesn't exceed screen height */
+            position: fixed;             /* Makes it stay over the screen */
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;                 /* Keeps it above other content */
         }
-        #mobile-menu.hidden {
-            max-height: 0 !important;
-            opacity: 0 !important;
+
+        #mobile-menu a {
+            color: var(--color-mobile-link-text);
         }
-        #mobile-menu:not(.hidden) {
-            max-height: 600px;
-            opacity: 1;
+
+        #mobile-menu a:hover {
+            color: var(--color-mobile-link-hover);
+        }
+
+        #mobile-menu span {
+            color: var(--color-mobile-heading);
         }
 
         /* General section backgrounds and text */
