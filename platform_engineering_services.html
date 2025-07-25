@@ -582,18 +582,29 @@
 
         /* Mobile menu specific colors */
         #mobile-menu {
-            background-color: var(--color-mobile-menu-bg);
-            border-color: var(--color-mobile-menu-border);
-        }
-        #mobile-menu a {
-            color: var(--color-mobile-link-text);
-        }
-    #mobile-menu a:hover {
-            color: var(--color-mobile-link-hover);
-        }
-        #mobile-menu span {
-            color: var(--color-mobile-heading);
-        }
+    background-color: var(--color-mobile-menu-bg);
+    border-color: var(--color-mobile-menu-border);
+    overflow-y: auto !important;
+    max-height: 100vh;           /* Ensures it doesn't exceed screen height */
+    position: fixed;             /* Makes it stay over the screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;                 /* Keeps it above other content */
+}
+
+#mobile-menu a {
+    color: var(--color-mobile-link-text);
+}
+
+#mobile-menu a:hover {
+    color: var(--color-mobile-link-hover);
+}
+
+#mobile-menu span {
+    color: var(--color-mobile-heading);
+}
+
 
         /* New Animations */
         @keyframes fadeIn {
@@ -966,11 +977,11 @@
                                         <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-light-blue);"></div>
                                         <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniLoom</span>
                                     </a>
-                                    <a href="cogni_chat_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                    <a href="cogniassist.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
                                         <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-dark-blue);"></div>
                                         <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniAssist</span>
                                     </a>
-                                    <a href="javascript:void(0)" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                    <a href="cogniagent.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
                                         <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-silver);"></div>
                                         <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniAgent</span>
                                     </a>
@@ -1080,8 +1091,8 @@
                         <div class="ml-4 mt-2 space-y-1">
                             <a href="cogni_xcellerate_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniXcellerate</a>
                             <a href="cogni_loom_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniLoom</a>
-                            <a href="cogni_chat_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAssist</a>
-
+                            <a href="cogniassist.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAssist</a>
+                            <a href="cogniagent.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAgent</a>
                         </div>
                     </div>
 
@@ -1824,7 +1835,7 @@ spec:
         <ul class="space-y-1.5 text-sm"> <!-- Reduced space-y -->
           <li><a href="cogni_xcellerate_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniXcellerate</a></li>
           <li><a href="cogni_loom_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniLoom</a></li>
-          <li><a href="cogni_chat_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAssist</a></li>
+          <li><a href="cogniassist.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAssist</a></li>
           <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAgent</a></li>
         </ul>
       </div>
