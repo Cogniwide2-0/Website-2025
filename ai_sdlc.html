@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leadership Team - Cogniwide AI Platform</title>
+    <title>AI Powered Software Development - Cogniwide AI Platform</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter and IBM Plex Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Meet the visionary leaders driving Cogniwide's AI innovation and transformation. Expert leadership team with decades of experience in AI, enterprise solutions, and digital transformation." />
+    <meta name="description" content="Accelerate innovation with Cogniwide's AI-powered software development solutions, enhancing every stage of the SDLC from ideation to deployment." />
     <style>
         /* New Silver, Black & Blue Dark Mode Colors (Default) */
         :root {
@@ -31,7 +31,14 @@
             --color-input-bg: #222222;
             --color-input-border: #383838;
             --color-input-text: var(--color-text-light);
-            --color-input-placeholder: var(--color-input-text);
+            --color-input-placeholder: #888888; /* Darker placeholder for contrast */
+            --color-input-focus-ring: rgba(0, 207, 255, 0.6); /* Stronger Cyan glow for focus */
+            --color-input-hover-border: #00CFFF; /* Cyan border on hover */
+            --color-input-shadow: rgba(0, 0, 0, 0.1); /* Subtle initial shadow */
+            --color-input-focus-shadow: rgba(0, 207, 255, 0.4); /* Stronger glow shadow */
+            --color-input-icon: #C0C0C0; /* Input icon color */
+            --color-input-label: #C0C0C0; /* Floating label color */
+            --color-input-label-focus: var(--color-accent-blue); /* Floating label color on focus */
 
             --color-button-primary-bg-inner: #222222;
             --color-button-primary-text: var(--color-text-light);
@@ -52,7 +59,7 @@
 
             --color-footer-bg: var(--color-bg-secondary);
             --color-footer-border: var(--color-border-subtle);
-            --color-footer-text: var(--color-footer-text);
+            --color-footer-text: var(--color-text-muted);
             --color-footer-link-hover: var(--color-accent-blue);
 
             --color-hero-visual-bg: var(--color-bg-secondary);
@@ -84,29 +91,43 @@
             --color-solution-icon-bg-end: #0099CC; /* Deeper Cyan */
             --color-solution-check: #00CFFF; /* Bright Cyan */
 
-            /* Leadership specific colors */
-            --color-leader-card-bg: var(--color-bg-secondary);
-            --color-leader-card-border: var(--color-border-subtle);
-            --color-leader-heading: var(--color-text-light);
-            --color-leader-role: var(--color-accent-blue); /* Default for roles */
-            --color-leader-subtext: var(--color-text-muted);
-            --color-skill-bar-bg: var(--color-input-bg);
-            --color-skill-bar-fill-start: var(--color-accent-blue);
-            --color-skill-bar-fill-end: var(--color-accent-dark-blue);
-            --color-achievement-dot: var(--color-accent-blue);
-            --color-biography-text: var(--color-text-muted);
-            --color-biography-border: var(--color-border-subtle);
-            --color-biography-toggle: var(--color-accent-blue);
-            --color-social-icon: var(--color-text-muted); /* New: Social icon color */
-            --color-social-icon-hover: var(--color-accent-blue); /* New: Social icon hover color */
+            /* Industries Hub specific colors */
+            --color-industry-icon-bg-telecom: #3498DB; /* Blue */
+            --color-industry-icon-bg-bfsi: #2ECC71; /* Green */
+            --color-industry-icon-bg-insurance: #00CFFF; /* Accent Cyan */
+            --color-industry-icon-bg-workforce: #E74C3C; /* Red */
 
-            /* Hero section specific for leadership */
-            --color-hero-leadership-bg-start: var(--color-bg-primary);
-            --color-hero-leadership-bg-end: var(--color-bg-secondary);
-            --color-hero-leadership-accent-bg: rgba(0, 207, 255, 0.05); /* Cyan with opacity */
-            --color-hero-leadership-success-bg: rgba(0, 153, 204, 0.05); /* Deeper Cyan with opacity */
-            --color-hero-leadership-metric-text: var(--color-accent-blue);
-            --color-hero-leadership-metric-subtext: var(--color-text-muted);
+            --color-industry-border-telecom: #3498DB;
+            --color-industry-border-bfsi: #2ECC71;
+            --color-industry-border-insurance: #00CFFF;
+            --color-industry-border-workforce: #E74C3C;
+
+            --color-industry-metric-telecom: #3498DB;
+            --color-industry-metric-bfsi: #2ECC71;
+            --color-industry-metric-insurance: #00CFFF;
+            --color-industry-metric-workforce: #E74C3C;
+
+            --color-industry-bg-gradient-telecom-start: rgba(52, 152, 219, 0.05);
+            --color-industry-bg-gradient-telecom-end: rgba(52, 152, 219, 0.1);
+            --color-industry-bg-gradient-bfsi-start: rgba(46, 204, 113, 0.05);
+            --color-industry-bg-gradient-bfsi-end: rgba(46, 204, 113, 0.1);
+            --color-industry-bg-gradient-insurance-start: rgba(0, 207, 255, 0.05);
+            --color-industry-bg-gradient-insurance-end: rgba(0, 153, 204, 0.1);
+            --color-industry-bg-gradient-workforce-start: rgba(231, 76, 60, 0.05);
+            --color-industry-bg-gradient-workforce-end: rgba(231, 76, 60, 0.1);
+
+            --color-hero-bg-start: var(--color-bg-primary);
+            --color-hero-bg-end: var(--color-bg-secondary);
+            --color-hero-accent-bg: rgba(0, 207, 255, 0.05); /* Cyan with opacity */
+            --color-hero-success-bg: rgba(0, 153, 204, 0.05); /* Deeper Cyan with opacity */
+
+            /* New Pyramid Colors */
+            --color-pyramid-step-1: #00CFFF; /* Bright Cyan */
+            --color-pyramid-step-2: #00B5E0; /* Slightly darker cyan */
+            --color-pyramid-step-3: #0099CC; /* Deeper Cyan */
+            --color-pyramid-step-4: #007AA3; /* Darker Blue-Cyan */
+            --color-pyramid-step-5: #005F7A; /* Even darker Blue-Cyan */
+            --color-pyramid-step-6: #004550; /* Deepest Blue-Cyan */
         }
 
         /* Light Mode Colors - Adjusted for contrast with new accents */
@@ -128,8 +149,15 @@
             --color-card-border: var(--color-border-subtle);
             --color-input-bg: #F0F0F0;
             --color-input-border: #D8D8D8;
-            --color-input-text: var(--color-text-light);
-            --color-input-placeholder: var(--color-input-text);
+            --color-input-text: var(--color-input-text);
+            --color-input-placeholder: #A0A0A0; /* Lighter placeholder for contrast */
+            --color-input-focus-ring: rgba(0, 122, 204, 0.6); /* Stronger Blue glow for focus */
+            --color-input-hover-border: #007ACC; /* Blue border on hover */
+            --color-input-shadow: rgba(0, 0, 0, 0.05); /* Subtle initial shadow */
+            --color-input-focus-shadow: rgba(0, 122, 204, 0.3); /* Stronger glow shadow */
+            --color-input-icon: #707070; /* Input icon color */
+            --color-input-label: #707070; /* Floating label color */
+            --color-input-label-focus: var(--color-accent-blue); /* Floating label color on focus */
 
             --color-button-primary-bg-light: var(--color-accent-blue);
             --color-button-primary-text-light: #ffffff;
@@ -155,7 +183,7 @@
 
             --color-footer-bg: var(--color-bg-secondary);
             --color-footer-border: var(--color-border-subtle);
-            --color-footer-text: var(--color-footer-text);
+            --color-footer-text: var(--color-text-muted);
             --color-footer-link-hover: var(--color-accent-blue);
 
             --color-hero-visual-bg: var(--color-bg-secondary);
@@ -187,28 +215,43 @@
             --color-solution-icon-bg-end: #005580; /* Even Darker Blue */
             --color-solution-check: #007ACC; /* Darker Blue */
 
-            /* Leadership specific colors for light mode */
-            --color-leader-card-bg: var(--color-bg-secondary);
-            --color-leader-card-border: var(--color-border-subtle);
-            --color-leader-heading: var(--color-text-light);
-            --color-leader-role: var(--color-accent-blue); /* Default for roles */
-            --color-leader-subtext: var(--color-text-muted);
-            --color-skill-bar-bg: var(--color-input-bg);
-            --color-skill-bar-fill-start: var(--color-accent-blue);
-            --color-skill-bar-fill-end: var(--color-accent-dark-blue);
-            --color-achievement-dot: var(--color-accent-blue);
-            --color-biography-text: var(--color-text-muted);
-            --color-biography-border: var(--color-border-subtle);
-            --color-biography-toggle: var(--color-accent-blue);
-            --color-social-icon: var(--color-text-muted); /* New: Social icon color */
-            --color-social-icon-hover: var(--color-accent-blue); /* New: Social icon hover color */
-            /* Hero section specific for leadership in light mode */
-            --color-hero-leadership-bg-start: var(--color-bg-primary);
-            --color-hero-leadership-bg-end: var(--color-bg-secondary);
-            --color-hero-leadership-accent-bg: rgba(0, 153, 204, 0.05); /* Darker Blue with opacity */
-            --color-hero-leadership-success-bg: rgba(0, 122, 204, 0.05); /* Even Darker Blue with opacity */
-            --color-hero-leadership-metric-text: var(--color-accent-blue);
-            --color-hero-leadership-metric-subtext: var(--color-text-muted);
+            /* Industries Hub specific colors for light mode */
+            --color-industry-icon-bg-telecom: #007ACC; /* Darker Blue */
+            --color-industry-icon-bg-bfsi: #25A25A; /* Darker Green */
+            --color-industry-icon-bg-insurance: #007ACC; /* Darker Accent Cyan */
+            --color-industry-icon-bg-workforce: #C0392B; /* Darker Red */
+
+            --color-industry-border-telecom: #007ACC;
+            --color-industry-border-bfsi: #25A25A;
+            --color-industry-border-insurance: #007ACC;
+            --color-industry-border-workforce: #C0392B;
+
+            --color-industry-metric-telecom: #007ACC;
+            --color-industry-metric-bfsi: #25A25A;
+            --color-industry-metric-insurance: #007ACC;
+            --color-industry-metric-workforce: #C0392B;
+
+            --color-industry-bg-gradient-telecom-start: rgba(0, 122, 204, 0.05);
+            --color-industry-bg-gradient-telecom-end: rgba(0, 122, 204, 0.1);
+            --color-industry-bg-gradient-bfsi-start: rgba(37, 162, 90, 0.05);
+            --color-industry-bg-gradient-bfsi-end: rgba(37, 162, 90, 0.1);
+            --color-industry-bg-gradient-insurance-start: rgba(0, 122, 204, 0.05);
+            --color-industry-bg-gradient-insurance-end: rgba(0, 122, 204, 0.1);
+            --color-industry-bg-gradient-workforce-start: rgba(192, 57, 43, 0.05);
+            --color-industry-bg-gradient-workforce-end: rgba(192, 57, 43, 0.1);
+
+            --color-hero-bg-start: var(--color-bg-primary);
+            --color-hero-bg-end: var(--color-bg-secondary);
+            --color-hero-accent-bg: rgba(0, 122, 204, 0.05);
+            --color-hero-success-bg: rgba(0, 122, 204, 0.05);
+
+            /* New Pyramid Colors for Light Mode */
+            --color-pyramid-step-1: #007ACC; /* Darker Blue */
+            --color-pyramid-step-2: #0066A3; /* Slightly darker */
+            --color-pyramid-step-3: #00507A; /* Deeper Blue */
+            --color-pyramid-step-4: #003A52; /* Darker Blue */
+            --color-pyramid-step-5: #00242B; /* Even darker */
+            --color-pyramid-step-6: #000E10; /* Deepest */
         }
 
         body {
@@ -255,11 +298,11 @@
             width: 100%;
         }
 
-        /* Dark Mode Button Styles (Default) - updated glow for new blue */
+        /* Dark Mode Button Wrappers (Default) */
         .primary-button-wrapper {
           background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-light-blue));
           padding: 2px;
-          border-radius: 0.5rem;
+          border-radius: 0.5rem; /* Consistent with rounded-lg */
           display: inline-block;
           box-shadow: 0 0 15px rgba(0, 207, 255, 0.4); /* Cyan glow */
           transition: all 0.3s ease-in-out;
@@ -277,11 +320,10 @@
           100% { box-shadow: 0 0 10px rgba(0, 207, 255, 0.4); }
         }
 
-
         .secondary-button-wrapper {
           background: linear-gradient(90deg, var(--color-text-muted), var(--color-border-subtle));
           padding: 2px;
-          border-radius: 0.5rem;
+          border-radius: 0.5rem; /* Consistent with rounded-lg */
           display: inline-block;
           box-shadow: 0 0 10px rgba(160, 160, 160, 0.3); /* Subtle silver glow */
           transition: all 0.3s ease-in-out;
@@ -296,7 +338,7 @@
         .btn-secondary-inner {
           display: block;
           padding: 0.5rem 1.25rem;
-          border-radius: 0.375rem;
+          border-radius: 0.5rem; /* Consistent with rounded-lg */
           background-color: var(--color-button-primary-bg-inner);
           color: var(--color-button-primary-text);
           text-align: center;
@@ -324,7 +366,7 @@
           background: none;
           padding: 0;
           border: 1px solid var(--color-accent-blue);
-          border-radius: 0.5rem;
+          border-radius: 0.5rem; /* Consistent with rounded-lg */
           box-shadow: none; /* Remove glow in light mode */
         }
 
@@ -381,11 +423,23 @@
             background-color: var(--color-input-bg);
             border-color: var(--color-input-border);
             color: var(--color-input-text);
-            @apply w-full p-3 rounded-lg border placeholder-gray-500
+            @apply w-full p-4 rounded-xl border placeholder-gray-500
             focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent transition-colors duration-200;
         }
         .input-field::placeholder {
             color: var(--color-input-placeholder);
+        }
+
+        /* Custom style for select arrow */
+        select.input-field {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23C0C0C0' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 0.75em 0.75em;
+            padding-right: 2.5rem; /* Make space for the arrow */
+        }
+        body.light-mode select.input-field {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
         }
 
         /* Mobile menu transition */
@@ -421,14 +475,6 @@
         footer a:hover {
             color: var(--color-footer-link-hover);
         }
-        header {
-            backdrop-filter: blur(10px); /* Frosted glass effect */
-            -webkit-backdrop-filter: blur(10px); /* For Safari */
-            background-color: var(--color-header-bg);
-            border-color: var(--color-header-border);
-            box-shadow: 0 4px 15px rgba(0, 207, 255, 0.1); /* Subtle cyan glow shadow */
-        }
-
         nav a, nav button {
             position: relative;
             overflow: hidden;
@@ -449,7 +495,6 @@
         nav a:hover::after, nav button:hover::after {
             transform: translateX(0);
         }
-
 
         /* Mobile menu specific colors */
         #mobile-menu {
@@ -518,78 +563,228 @@
         .animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
         .animate-on-scroll:nth-child(6) { transition-delay: 0.5s; }
 
-        /* Leadership Page Specific Styles */
-        .hero-leadership-section {
-            background: linear-gradient(to bottom right, var(--color-hero-leadership-bg-start), var(--color-hero-leadership-bg-end));
+        /* Hero Section Styling */
+        .hero-section-ai-dev {
+            background: linear-gradient(to bottom right, var(--color-hero-bg-start), var(--color-hero-bg-end));
             position: relative;
             overflow: hidden;
+            min-height: 50vh;
         }
-        .hero-leadership-section .absolute.inset-0:nth-child(1) {
-            background: linear-gradient(to right, var(--color-hero-leadership-accent-bg), var(--color-hero-leadership-success-bg));
+        .hero-section-ai-dev .absolute.inset-0:nth-child(1) {
+            background: linear-gradient(to right, var(--color-hero-accent-bg), var(--color-hero-success-bg));
         }
-        .leader-card {
-            background-color: var(--color-leader-card-bg);
-            border-color: var(--color-leader-card-border);
-            @apply rounded-lg p-4 shadow-md border; /* Reduced padding */
+
+        /* SDLC Pyramid Styling */
+        .sdlc-pyramid {
+            display: flex;
+            flex-direction: column; /* Always column for vertical pyramid */
+            align-items: center;
+            position: relative;
+            padding-top: 1rem; /* Reduced space for the top element */
+            padding-bottom: 2rem; /* Ensure space at the bottom */
+            min-height: 60vh; /* Ensure it tries to fit on one screen */
+            justify-content: center; /* Center vertically if space allows */
+        }
+
+        .sdlc-pyramid-step {
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1rem; /* Reduced padding */
+            margin-bottom: -0.5rem; /* Negative margin to make them overlap slightly for pyramid effect */
+            width: 90%; /* Start with a percentage for responsiveness */
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease-in-out;
+            display: flex; /* Use flex for content alignment */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100px; /* Minimum height for each step */
+            border: 1px solid transparent; /* Start with transparent border */
         }
-        .leader-card:hover {
+        body.light-mode .sdlc-pyramid-step {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .sdlc-pyramid-step:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 207, 255, 0.4); /* Enhanced hover shadow with cyan glow */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 207, 255, 0.3);
+            z-index: 15; /* Bring hovered element to front */
         }
-        body.light-mode .leader-card:hover {
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 153, 204, 0.2);
-        }
-
-        .leader-card h3 {
-            color: var(--color-leader-heading);
-        }
-        .leader-card p.role {
-            color: var(--color-leader-role);
-        }
-        .leader-card p.subtext {
-            color: var(--color-leader-subtext);
-            font-size: 0.75rem; /* Smaller font size for subtext */
+        body.light-mode .sdlc-pyramid-step:hover {
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 153, 204, 0.2);
         }
 
-        .skill-bar-bg {
+        .sdlc-pyramid-step .step-number {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 2rem; /* text-3xl */
+            font-weight: 700; /* font-bold */
+            margin-bottom: 0.25rem; /* Reduced margin */
+            line-height: 1;
+            color: white; /* Number color always white for contrast */
+        }
+
+        .sdlc-pyramid-step h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600; /* font-semibold */
+            font-size: 0.8rem; /* Slightly smaller text */
+            color: white; /* Heading color always white for contrast */
+            margin-bottom: 0.25rem;
+        }
+
+        .sdlc-pyramid-step p {
+            font-size: 0.6rem; /* Smaller paragraph text */
+            color: rgba(255, 255, 255, 0.8); /* Lighter white for readability */
+        }
+
+        /* Responsive pyramid widths and specific colors */
+        .sdlc-pyramid-step:nth-child(1) {
+            max-width: 200px;
+            background-color: var(--color-pyramid-step-1);
+            border-color: var(--color-pyramid-step-1);
+            z-index: 16; /* Ensure top is always highest */
+        }
+        .sdlc-pyramid-step:nth-child(2) {
+            max-width: 250px;
+            background-color: var(--color-pyramid-step-2);
+            border-color: var(--color-pyramid-step-2);
+            z-index: 15;
+        }
+        .sdlc-pyramid-step:nth-child(3) {
+            max-width: 300px;
+            background-color: var(--color-pyramid-step-3);
+            border-color: var(--color-pyramid-step-3);
+            z-index: 14;
+        }
+        .sdlc-pyramid-step:nth-child(4) {
+            max-width: 350px;
+            background-color: var(--color-pyramid-step-4);
+            border-color: var(--color-pyramid-step-4);
+            z-index: 13;
+        }
+        .sdlc-pyramid-step:nth-child(5) {
+            max-width: 400px;
+            background-color: var(--color-pyramid-step-5);
+            border-color: var(--color-pyramid-step-5);
+            z-index: 12;
+        }
+        .sdlc-pyramid-step:nth-child(6) {
+            max-width: 450px;
+            background-color: var(--color-pyramid-step-6);
+            border-color: var(--color-pyramid-step-6);
+            z-index: 11;
+        }
+
+        /* No connectors needed with negative margin stacking */
+        .sdlc-pyramid-step::after,
+        .sdlc-pyramid-step::before {
+            display: none;
+        }
+
+        /* What We Do Cards */
+        .what-we-do-card {
+            @apply card p-6;
+            border-left-width: 4px;
+            border-left-style: solid;
+            border-radius: 1rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        .what-we-do-card h3 {
+            color: var(--color-text-light);
+        }
+        .what-we-do-card p {
+            color: var(--color-text-muted);
+        }
+        .what-we-do-card.accent-border {
+            border-left-color: var(--color-accent-blue);
+        }
+
+        /* Key Benefits Cards */
+        .benefit-card {
+            @apply card p-6 text-center;
+            border-radius: 1rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-left-width: 4px;
+            border-left-style: solid;
+        }
+        .benefit-card h3 {
+            color: var(--color-text-light);
+        }
+        .benefit-card p {
+            color: var(--color-text-muted);
+        }
+
+        /* Our Approach Steps */
+        .approach-step {
+            @apply flex items-start space-x-4;
+            border-radius: 1rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-left-width: 4px;
+            border-left-style: solid;
+            border-right-width: 4px;
+            border-right-style: solid;
+            border-left-color: var(--color-accent-blue);
+            border-right-color: var(--color-accent-silver-gradient);
+        }
+        .approach-step .step-number-circle {
+            @apply w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center font-inter font-bold text-lg;
+            background: linear-gradient(to bottom right, var(--color-accent-blue), var(--color-accent-dark-blue));
+            color: white;
+
+        }
+        .approach-step h3 {
+            color: var(--color-text-light);
+        }
+        .approach-step p {
+            color: var(--color-text-muted);
+        }
+
+        /* Technologies We Leverage */
+        .tech-tag {
+            @apply inline-block px-4 py-2 rounded-full text-sm font-semibold;
             background-color: var(--color-input-bg);
+            color: var(--color-text-light);
+            border: 1px solid var(--color-input-border);
+            transition: all 0.2s ease-in-out;
+            border-radius: 1rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+
         }
-        .skill-bar-fill {
-            background: linear-gradient(to right, var(--color-skill-bar-fill-start), var(--color-skill-bar-fill-end));
-        }
-        .achievement-dot {
-            background-color: var(--color-achievement-dot);
+        .tech-tag:hover {
+            background-color: var(--color-button-hover-bg);
+            border-color: var(--color-accent-blue);
+            color: var(--color-accent-blue);
         }
 
-        .biography-section {
-            border-color: var(--color-biography-border);
+        /* Success Story Card */
+        .success-story-section-ai-dev {
+            background: linear-gradient(to bottom right, var(--color-bg-secondary), var(--color-input-bg));
+            @apply rounded-2xl p-8;
         }
-        .biography-text {
-            color: var(--color-biography-text);
-            font-size: 0.875rem; /* Smaller font for biography */
+        .success-story-section-ai-dev .metric-box {
+            @apply rounded-lg p-4 text-center;
+            background-color: var(--color-bg-primary);
+            border: 1px solid var(--color-border-subtle);
         }
-        .biography-toggle-btn {
-            color: var(--color-biography-toggle);
-            font-size: 0.875rem; /* Smaller font for toggle button */
-            margin-top: 0.5rem; /* Reduced margin */
+        .success-story-section-ai-dev .metric-value {
+            @apply text-3xl font-inter font-bold mb-1;
+            color: var(--color-accent-blue);
         }
-        .social-icon {
-            color: var(--color-social-icon);
-            transition: color 0.3s ease;
-            width: 1.25rem; /* Smaller social icons */
-            height: 1.25rem;
-        }
-        .social-icon:hover {
-            color: var(--color-social-icon-hover);
-        }
-        .leader-card .social-links {
-            margin-bottom: 0.5rem; /* Reduced margin below social links */
-        }
-        .leader-card img {
-            width: 100px; /* Slightly smaller profile images */
-            height: 100px;
-            margin-bottom: 1rem; /* Reduced margin */
+        .success-story-section-ai-dev .metric-label {
+            @apply text-sm text-text-muted;
         }
     </style>
 </head>
@@ -746,20 +941,16 @@
                         <div class="absolute left-0 mt-2 w-80 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
                             <div class="p-4">
                                 <div class="grid grid-cols-1 gap-2">
-                                    <a href="cogni_xcellerate_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                    <a href="javascript:void(0)" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
                                         <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-blue);"></div>
                                         <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniXcellerate</span>
                                     </a>
-                                    <a href="cogni_loom_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                    <a href="javascript:void(0)" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
                                         <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-light-blue);"></div>
                                         <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniLoom</span>
                                     </a>
-                                    <a href="cogni_chat_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
-                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-dark-blue);"></div>
-                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniAssist</span>
-                                    </a>
                                     <a href="javascript:void(0)" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
-                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-silver);"></div>
+                                        <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-dark-blue);"></div>
                                         <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniAgent</span>
                                     </a>
                                 </div>
@@ -778,15 +969,14 @@
                         <div class="absolute right-0 mt-2 w-64 rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 card">
                             <div class="p-4">
                                 <div class="space-y-2">
-                                    <a href="solutions_showcase.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Solutions</a>
-                                    <a href="platform_engineering_services.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Services</a>
-                                    <a href="industries_hub.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Industries</a>
+                                    <a href="javascript:void(0)" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Solutions</a>
+                                    <a href="javascript:void(0)" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Services</a>
+                                    <a href="javascript:void(0)" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Industries</a>
                                     <a href="javascript:void(0)" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Resources</a>
                                     <hr style="border-color: var(--color-border-subtle);" class="my-2" />
-                                    <a href="about_us.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">About Us</a>
-                                    <a href="leadership_team.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Leadership Team</a>
-                                    <a href="life_at_cogniwide_careers.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Careers</a>
-                                    <a href="contact.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Contact</a>
+                                    <a href="javascript:void(0)" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">About Us</a>
+                                    <a href="javascript:void(0)" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Leadership Team</a>
+                                    <a href="javascript:void(0)" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Life at Cogniwide + Careers</a>
                                 </div>
                             </div>
                         </div>
@@ -795,24 +985,13 @@
 
                 <!-- CTA Button -->
                 <div class="hidden md:flex items-center space-x-4">
-  <!-- Theme Toggle Button -->
-<!--  <button id="theme-toggle" class="p-2 rounded-full hover:bg-input-bg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue" style="color: var(&#45;&#45;color-nav-link);">-->
-<!--    <svg id="sun-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
-<!--      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12h1m15.325-4.275l-.707-.707M4.675 19.325l-.707-.707M19.325 4.675l-.707-.707M4.675 4.675l-.707-.707M12 18a6 6 0 100-12 6 6 0 000 12z" />-->
-<!--    </svg>-->
-<!--    <svg id="moon-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
-<!--      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />-->
-<!--    </svg>-->
-<!--  </button>-->
-
-  <!-- Request Demo Button -->
-  <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
-    <a href="contact.html" class="btn-primary-inner">
-      Request Demo
-    </a>
-  </div>
-</div>
-
+                    <!-- Request Demo Button -->
+                    <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
+                        <a href="javascript:void(0)" class="btn-primary-inner">
+                            Request Demo
+                        </a>
+                    </div>
+                </div>
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center space-x-4">
@@ -844,34 +1023,34 @@
                     <div class="block px-3 py-2">
                         <span class="font-medium text-base" style="color: var(--color-mobile-heading);">Products</span>
                         <div class="ml-4 mt-2 space-y-1">
-                            <a href="cogni_xcellerate_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniXcellerate</a>
-                            <a href="cogni_loom_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniLoom</a>
-                            <a href="cogni_chat_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAssist</a>
+                            <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniXcellerate</a>
+                            <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniLoom</a>
+                            <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAssist</a>
                             <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAgent</a>
                         </div>
                     </div>
 
-                    <a href="solutions_showcase.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Solutions</a>
-                    <a href="platform_engineering_services.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Services</a>
-                    <a href="industries_hub.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Industries</a>
+                    <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Solutions</a>
+                    <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Services</a>
+                    <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Industries</a>
                     <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Resources</a>
 
                     <!-- Mobile Company Submenu -->
                     <div class="block px-3 py-2">
                         <span class="font-medium text-base" style="color: var(--color-mobile-heading);">Company</span>
                         <div class="ml-4 mt-2 space-y-1">
-                            <a href="about_us.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">About Us</a>
-                            <a href="leadership_team.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">Leadership Team</a>
-                            <a href="life_at_cogniwide_careers.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">Life at Cogniwide + Careers</a>
+                            <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">About Us</a>
+                            <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">Leadership Team</a>
+                            <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">Life at Cogniwide + Careers</a>
                         </div>
                     </div>
 
-                    <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Contact</a>
+                    <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300" style="color: var(--color-mobile-heading);" onmouseover="this.style.color='var(--color-nav-link-hover)'" onmouseout="this.style.color='var(--color-mobile-heading)'">Contact</a>
 
                     <!-- Mobile CTA -->
                     <div class="pt-4" style="border-color: var(--color-mobile-menu-border);">
                         <div class="relative rounded-lg inline-block w-full primary-button-wrapper pulse">
-                            <a href="contact.html" class="btn-primary-inner w-full text-center">
+                            <a href="javascript:void(0)" class="btn-primary-inner w-full text-center">
                               Request Demo
                             </a>
                         </div>
@@ -882,232 +1061,292 @@
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <section class="bg-section-secondary border-b border-border-subtle">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+    <section class="bg-section-secondary border-b border-border-subtle py-3 sm:py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex items-center space-x-2 text-sm">
                 <a href="index.html" class="text-text-muted hover:text-accent-blue transition-colors duration-300">Home</a>
                 <svg class="w-4 h-4 text-text-muted" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
                 </svg>
-                <a href="javascript:void(0)" class="text-text-muted hover:text-accent-blue transition-colors duration-300">Company</a>
-                <svg class="w-4 h-4 text-text-muted" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                </svg>
-                <span class="text-text-light font-inter font-medium">Leadership Team</span>
+                <span class="text-text-light font-inter font-medium">AI Powered Software Development</span>
             </nav>
         </div>
     </section>
 
     <!-- Hero Section -->
-    <section class="relative hero-leadership-section py-20 lg:py-32">
-        <div class="absolute inset-0 bg-gradient-to-r from-hero-leadership-accent-bg to-hero-leadership-success-bg"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="font-inter font-bold text-4xl lg:text-6xl text-section-heading leading-tight animate-on-scroll fade-in">
-                Meet Our Visionary <span class="text-gradient">Leaders</span>
+    <section class="relative hero-section-ai-dev overflow-hidden py-20 lg:py-32">
+        <div class="absolute inset-0 bg-gradient-to-r from-hero-accent-bg to-hero-success-bg"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll fade-in">
+            <h1 class="font-inter font-bold text-4xl lg:text-6xl text-section-heading leading-tight mb-6 sm:mb-8">
+                Accelerate Innovation with
+                <span class="text-gradient">AI Powered Software Development</span>
             </h1>
-            <p class="mt-6 text-xl text-section-paragraph max-w-3xl mx-auto animate-on-scroll fade-in" style="transition-delay: 0.1s;">
-                Driving innovation and transformation with decades of experience in AI, enterprise solutions, and digital strategy.
+            <p class="text-lg sm:text-xl text-section-paragraph leading-relaxed max-w-4xl mx-auto mb-12 sm:mb-16">
+                Leverage the power of Artificial Intelligence to revolutionize your software development lifecycle, from ideation to deployment and maintenance.
             </p>
-            <div class="mt-10 flex justify-center space-x-6 animate-on-scroll fade-in" style="transition-delay: 0.2s;">
-                <div class="text-center">
-                    <div class="text-3xl font-inter font-bold" style="color: var(--color-hero-leadership-metric-text);">15+</div>
-                    <div class="text-sm" style="color: var(--color-hero-leadership-metric-subtext);">Years Average Experience</div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <div class="relative rounded-lg inline-block primary-button-wrapper pulse animate-on-scroll slide-in-up">
+                    <a href="javascript:void(0)" class="btn-primary-inner">
+                        Discuss Your Project
+                    </a>
                 </div>
-                <div class="text-center">
-                    <div class="text-3xl font-inter font-bold" style="color: var(--color-hero-leadership-metric-text);">50+</div>
-                    <div class="text-sm" style="color: var(--color-hero-leadership-metric-subtext);">Successful Projects</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-inter font-bold" style="color: var(--color-hero-leadership-metric-text);">10+</div>
-                    <div class="text-sm" style="color: var(--color-hero-leadership-metric-subtext);">Patents & Publications</div>
+                <div class="relative rounded-lg inline-block secondary-button-wrapper animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <a href="#what-we-do" class="btn-secondary-inner">
+                        What We Do
+                    </a>
                 </div>
             </div>
+            <p class="text-base sm:text-lg text-section-paragraph max-w-3xl mx-auto mt-12 animate-on-scroll fade-in" style="transition-delay: 0.2s;">
+                With AI embedded at every stage of the SDLC, our top 1% engineering talent is equipped to deliver 10X better software development processes and outcomes.
+            </p>
         </div>
     </section>
 
-    <!-- Core Leadership Team Section -->
-    <section class="py-16 bg-section-primary"> <!-- Reduced vertical padding -->
+    <!-- What We Do Section -->
+    <section id="what-we-do" class="py-16 sm:py-20 bg-section-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 animate-on-scroll fade-in"> <!-- Reduced margin-bottom -->
-                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-3"> <!-- Reduced margin-bottom -->
-                    Core Leadership Team
+            <div class="text-center mb-12 sm:mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    What We <span class="text-gradient">Do</span>
                 </h2>
-                <p class="text-lg text-section-paragraph max-w-3xl mx-auto"> <!-- Reduced font size -->
-                    The executive team guiding our vision and strategic direction.
+                <p class="text-lg sm:text-xl text-section-paragraph max-w-3xl mx-auto">
+                    Our comprehensive AI-powered software development services.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> <!-- Reduced gap -->
-                <!-- Leader Card 1 -->
-                <div class="leader-card animate-on-scroll slide-in-up">
-                    <img src="https://images.crunchbase.com/image/upload/c_thumb,h_256,w_256,f_auto,g_face,z_0.7,q_auto:eco,dpr_1/1347352d8c8348aba0cb97622c8d51ad" alt="Kannadasan Kasi" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" onerror="this.src='https://placehold.co/100x100/00CFFF/FFFFFF?text=JD'; this.onerror=null;" /> <!-- Smaller image -->
-                    <h3 class="font-inter font-semibold text-lg text-center mb-1" style="color: var(--color-leader-heading);">Kannadasan Kasi</h3>
-                    <p class="role font-inter text-sm font-medium text-center mb-1" style="color: var(--color-leader-role);">CEO & Founder</p> <!-- Reduced margin -->
-                    <p class="subtext text-xs text-center" style="color: var(--color-leader-subtext);">Visionary leader with 20+ years in AI and enterprise software.</p>
-                    <div class="mt-3 pt-3 border-t border-border-subtle"> <!-- Reduced margin and padding -->
-                        <div class="flex justify-center space-x-3 mb-3 social-links"> <!-- Reduced space and margin -->
-                            <a href="https://www.linkedin.com/in/johndoe" target="_blank" rel="noreferrer">
-                                <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.9h.1c.7-1.3 2.5-2.7 5.2-2.7 5.6 0 6.6 3.6 6.6 8.3V24h-5V15c0-2.2 0-5-3-5s-3.5 2.3-3.5 4.8V24h-5V8z"/>
-                                </svg>
-                            </a>
-                            <a href="https://twitter.com/johndoe" target="_blank" rel="noreferrer">
-                                <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M24 4.56c-.89.39-1.84.66-2.84.78a4.93 4.93 0 002.16-2.72 9.85 9.85 0 01-3.13 1.2 4.92 4.92 0 00-8.38 4.48A13.96 13.96 0 011.64 3.16 4.92 4.92 0 003.2 9.72a4.9 4.9 0 01-2.23-.62v.06a4.92 4.92 0 003.95 4.83 4.9 4.9 0 01-2.22.08 4.93 4.93 0 004.6 3.41 9.86 9.86 0 01-6.1 2.1c-.4 0-.79-.02-1.18-.07A13.9 13.9 0 007.5 21c9.14 0 14.13-7.57 14.13-14.13 0-.21 0-.42-.01-.63A10.1 10.1 0 0024 4.56z"/>
-                                </svg>
-                            </a>
-                            <a href="https://facebook.com/johndoe" target="_blank" rel="noreferrer">
-                                <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M22.68 0H1.32C.59 0 0 .6 0 1.34v21.32C0 23.4.59 24 1.32 24H12v-9.34H9.34v-3.66H12V8.65c0-2.66 1.63-4.11 4-4.11 1.14 0 2.11.08 2.39.12v2.77h-1.64c-1.29 0-1.54.61-1.54 1.5v1.96h3.08l-.4 3.66h-2.68V24h5.27c.73 0 1.32-.6 1.32-1.34V1.34C24 .6 23.41 0 22.68 0z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <button class="biography-toggle-btn text-sm font-semibold" onclick="toggleBiography('bio1')">Read Biography</button>
-                        <div id="bio1" class="biography-text hidden mt-2 p-3 rounded-lg border" style="border-color: var(--color-biography-border); background-color: var(--color-input-bg);"> <!-- Reduced padding and margin -->
-                            Kannadasan Kasi is the driving force behind Cogniwide's vision. With over two decades of experience in the technology sector, John has led numerous successful digital transformations for Fortune 500 companies. His expertise lies in leveraging cutting-edge AI to solve complex business challenges and drive measurable ROI.
-                        </div>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="what-we-do-card accent-border animate-on-scroll slide-in-up">
+                    <h3 class="font-inter font-bold text-lg mb-3">AI-Powered Custom Application Development</h3>
+                    <p class="text-text-muted">AI-assisted coding, debugging, and CI/CD automation accelerate development, detect defects earlier, and ensure seamless, high-performance deployments.</p>
                 </div>
-
-                <!-- Leader Card 2 -->
-                <div class="leader-card animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
-                    <img src="https://images.crunchbase.com/image/upload/c_thumb,h_256,w_256,f_auto,g_face,z_0.7,q_auto:eco,dpr_1/1347352d8c8348aba0cb97622c8d51ad" alt="Jane Appleseed" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" onerror="this.src='https://images.crunchbase.com/image/upload/c_thumb,h_256,w_256,f_auto,g_face,z_0.7,q_auto:eco,dpr_1/1347352d8c8348aba0cb97622c8d51ad'; this.onerror=null;" />
-                    <h3 class="font-inter font-semibold text-lg text-center mb-1" style="color: var(--color-leader-heading);">Jane Appleseed</h3>
-                    <p class="role font-inter text-sm font-medium text-center mb-1" style="color: var(--color-leader-role);">Chief Technology Officer</p>
-                    <p class="subtext text-xs text-center" style="color: var(--color-leader-subtext);">Architecting scalable AI platforms and innovative solutions.</p>
-                    <div class="mt-3 pt-3 border-t border-border-subtle">
-                        <div class="flex justify-center space-x-3 mb-3 social-links">
-                            <a href="https://www.linkedin.com/in/janeappleseed" target="_blank" rel="noreferrer">
-                                <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.9h.1c.7-1.3 2.5-2.7 5.2-2.7 5.6 0 6.6 3.6 6.6 8.3V24h-5V15c0-2.2 0-5-3-5s-3.5 2.3-3.5 4.8V24h-5V8z"/>
-                                </svg>
-                            </a>
-                            <a href="https://twitter.com/janeappleseed" target="_blank" rel="noreferrer">
-                                <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M24 4.56c-.89.39-1.84.66-2.84.78a4.93 4.93 0 002.16-2.72 9.85 9.85 0 01-3.13 1.2 4.92 4.92 0 00-8.38 4.48A13.96 13.96 0 011.64 3.16 4.92 4.92 0 003.2 9.72a4.9 4.9 0 01-2.23-.62v.06a4.92 4.92 0 003.95 4.83 4.9 4.9 0 01-2.22.08 4.93 4.93 0 004.6 3.41 9.86 9.86 0 01-6.1 2.1c-.4 0-.79-.02-1.18-.07A13.9 13.9 0 007.5 21c9.14 0 14.13-7.57 14.13-14.13 0-.21 0-.42-.01-.63A10.1 10.1 0 0024 4.56z"/>
-                                </svg>
-                            </a>
-                            <a href="https://facebook.com/janeappleseed" target="_blank" rel="noreferrer">
-                                <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M22.68 0H1.32C.59 0 0 .6 0 1.34v21.32C0 23.4.59 24 1.32 24H12v-9.34H9.34v-3.66H12V8.65c0-2.66 1.63-4.11 4-4.11 1.14 0 2.11.08 2.39.12v2.77h-1.64c-1.29 0-1.54.61-1.54 1.5v1.96h3.08l-.4 3.66h-2.68V24h5.27c.73 0 1.32-.6 1.32-1.34V1.34C24 .6 23.41 0 22.68 0z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <button class="biography-toggle-btn text-sm font-semibold" onclick="toggleBiography('bio2')">Read Biography</button>
-                        <div id="bio2" class="biography-text hidden mt-2 p-3 rounded-lg border" style="border-color: var(--color-biography-border); background-color: var(--color-input-bg);">
-                            Jane Appleseed leads Cogniwide's technological advancements. With a strong background in distributed systems and machine learning, she is responsible for designing and implementing our robust and scalable AI platforms. Her work ensures our solutions are at the forefront of technological innovation.
-                        </div>
-                    </div>
+                <div class="what-we-do-card accent-border animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <h3 class="font-inter font-bold text-lg mb-3">Architecture, Stack & Infra Overhaul</h3>
+                    <p class="text-text-muted">For CTOs who won’t bolt AI onto broken systems — Cogniwide's Software Consulting rebuilds from first principles: clean architecture, modern stacks, infra built to scale and adapt.</p>
                 </div>
-
-                <!-- Leader Card 3 -->
-                <div class="leader-card animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
-                    <img src="https://images.crunchbase.com/image/upload/c_thumb,h_256,w_256,f_auto,g_face,z_0.7,q_auto:eco,dpr_1/1347352d8c8348aba0cb97622c8d51ad" alt="Lisa Smith" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" onerror="this.src='https://placehold.co/100x100/00CFFF/FFFFFF?text=LS'; this.onerror=null;" />
-                    <h3 class="font-inter font-semibold text-lg text-center mb-1" style="color: var(--color-leader-heading);">Lisa Smith</h3>
-                    <p class="role font-inter text-sm font-medium text-center mb-1" style="color: var(--color-leader-role);">Chief Operating Officer</p>
-                    <p class="subtext text-xs text-center" style="color: var(--color-leader-subtext);">Optimizing operational efficiency and client success.</p>
-                    <div class="mt-3 pt-3 border-t border-border-subtle">
-                        <div class="flex justify-center space-x-3 mb-3 social-links">
-                            <a href="https://www.linkedin.com/in/lisasmith" target="_blank" rel="noreferrer">
-                                <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.9h.1c.7-1.3 2.5-2.7 5.2-2.7 5.6 0 6.6 3.6 6.6 8.3V24h-5V15c0-2.2 0-5-3-5s-3.5 2.3-3.5 4.8V24h-5V8z"/>
-                                </svg>
-                            </a>
-                            <a href="https://twitter.com/lisasmith" target="_blank" rel="noreferrer">
-                                <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M24 4.56c-.89.39-1.84.66-2.84.78a4.93 4.93 0 002.16-2.72 9.85 9.85 0 01-3.13 1.2 4.92 4.92 0 00-8.38 4.48A13.96 13.96 0 011.64 3.16 4.92 4.92 0 003.2 9.72a4.9 4.9 0 01-2.23-.62v.06a4.92 4.92 0 003.95 4.83 4.9 4.9 0 01-2.22.08 4.93 4.93 0 004.6 3.41 9.86 9.86 0 01-6.1 2.1c-.4 0-.79-.02-1.18-.07A13.9 13.9 0 007.5 21c9.14 0 14.13-7.57 14.13-14.13 0-.21 0-.42-.01-.63A10.1 10.1 0 0024 4.56z"/>
-                                </svg>
-                            </a>
-                            <a href="https://facebook.com/lisasmith" target="_blank" rel="noreferrer">
-                                <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M22.68 0H1.32C.59 0 0 .6 0 1.34v21.32C0 23.4.59 24 1.32 24H12v-9.34H9.34v-3.66H12V8.65c0-2.66 1.63-4.11 4-4.11 1.14 0 2.11.08 2.39.12v2.77h-1.64c-1.29 0-1.54.61-1.54 1.5v1.96h3.08l-.4 3.66h-2.68V24h5.27c.73 0 1.32-.6 1.32-1.34V1.34C24 .6 23.41 0 22.68 0z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <button class="biography-toggle-btn text-sm font-semibold" onclick="toggleBiography('bio3')">Read Biography</button>
-                        <div id="bio3" class="biography-text hidden mt-2 p-3 rounded-lg border" style="border-color: var(--color-biography-border); background-color: var(--color-input-bg);">
-                            Lisa Smith is instrumental in ensuring Cogniwide's operational excellence and client satisfaction. Her extensive experience in managing large-scale projects and optimizing workflows ensures that our delivery is seamless and our clients achieve maximum value from our solutions.
-                        </div>
-                    </div>
+                <div class="what-we-do-card accent-border animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <h3 class="font-inter font-bold text-lg mb-3">AI-Assisted Enterprise Software Development</h3>
+                    <p class="text-text-muted">AI-powered automation, predictive performance tuning, and proactive security ensure scalable, high-performance enterprise applications.</p>
+                </div>
+                <div class="what-we-do-card accent-border animate-on-scroll slide-in-up" style="transition-delay: 0.3s;">
+                    <h3 class="font-inter font-bold text-lg mb-3">AI-Powered MVP Development</h3>
+                    <p class="text-text-muted">AI-driven prototyping, automated testing, and continuous analytics accelerate validation, refine product-market fit, and minimize go-to-market risk.</p>
+                </div>
+                <div class="what-we-do-card accent-border animate-on-scroll slide-in-up" style="transition-delay: 0.4s;">
+                    <h3 class="font-inter font-bold text-lg mb-3">AI-Driven UI/UX Design</h3>
+                    <p class="text-text-muted">AI-powered behavioral analytics, automated testing, and predictive insights create intuitive, high-retention user experiences—optimized in real-time.</p>
+                </div>
+                <div class="what-we-do-card accent-border animate-on-scroll slide-in-up" style="transition-delay: 0.5s;">
+                    <h3 class="font-inter font-bold text-lg mb-3">API & Integrations</h3>
+                    <p class="text-text-muted">AI-enhanced API design, automated scaling, and intelligent security fortify seamless integrations and future-proofed ecosystems.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Advisory Board Section -->
-    <section class="py-16 bg-section-secondary"> <!-- Reduced vertical padding -->
+    <!-- The AI SDLC Lifecycle (Pyramid) Section -->
+    <section class="py-16 sm:py-20 bg-section-secondary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 animate-on-scroll fade-in"> <!-- Reduced margin-bottom -->
-                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-3">
-                    Advisory Board
+            <div class="text-center mb-12 sm:mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    The <span class="text-gradient">AI SDLC Lifecycle</span>
                 </h2>
-                <p class="text-lg text-section-paragraph max-w-3xl mx-auto">
-                    Industry veterans providing strategic guidance and insights.
+                <p class="text-lg sm:text-xl text-section-paragraph max-w-3xl mx-auto">
+                    A comprehensive approach to building and deploying intelligent systems.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> <!-- Reduced gap -->
-                <!-- Advisory Member 1 -->
-                <div class="leader-card animate-on-scroll slide-in-up">
-                    <div class="flex justify-center items-center mb-3"> <!-- Reduced margin -->
-                        <img src="https://placehold.co/80x80/00CFFF/FFFFFF?text=MA" alt="Mark Anderson" class="w-16 h-16 rounded-full object-cover" onerror="this.src='https://placehold.co/80x80/00CFFF/FFFFFF?text=MA'; this.onerror=null;" /> <!-- Smaller image -->
-                    </div>
-                    <h3 class="font-inter font-semibold text-lg text-center mb-1" style="color: var(--color-leader-heading);">Mark Anderson</h3>
-                    <p class="role font-inter text-sm font-medium text-center mb-1" style="color: var(--color-leader-role);">AI Ethics & Governance</p>
-                    <p class="subtext text-xs text-center" style="color: var(--color-leader-subtext);">Former Chief AI Ethicist</p>
+            <div class="sdlc-pyramid">
+                <div class="sdlc-pyramid-step animate-on-scroll slide-in-up">
+                    <h3 class="font-inter font-semibold">Planning & Ideation</h3>
+                    <p>AI assists in initial project scoping, resource allocation, and timeline estimation.</p>
                 </div>
-
-                <!-- Advisory Member 2 -->
-                <div class="leader-card animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
-                    <div class="flex justify-center items-center mb-3">
-                        <img src="https://placehold.co/80x80/00CFFF/FFFFFF?text=SC" alt="Sarah Chen" class="w-16 h-16 rounded-full object-cover" onerror="this.src='https://placehold.co/80x80/00CFFF/FFFFFF?text=SC'; this.onerror=null;" />
-                    </div>
-                    <h3 class="font-inter font-semibold text-lg text-center mb-1" style="color: var(--color-leader-heading);">Sarah Chen</h3>
-                    <p class="role font-inter text-sm font-medium text-center mb-1" style="color: var(--color-leader-role);">Enterprise Solutions</p>
-                    <p class="subtext text-xs text-center" style="color: var(--color-leader-subtext);">Former VP, Enterprise Sales</p>
+                <div class="sdlc-pyramid-step animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <h3 class="font-inter font-semibold">Requirements & Analysis</h3>
+                    <p>AI-powered tools gather and analyze requirements, identifying gaps and inconsistencies.</p>
                 </div>
-
-                <!-- Advisory Member 3 -->
-                <div class="leader-card animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
-                    <div class="flex justify-center items-center mb-3">
-                        <img src="https://placehold.co/80x80/00CFFF/FFFFFF?text=LC" alt="Lisa Chang" class="w-16 h-16 rounded-full object-cover" onerror="this.src='https://placehold.co/80x80/00CFFF/FFFFFF?text=LC'; this.onerror=null;" />
-                    </div>
-                    <h3 class="font-inter font-semibold text-lg text-center mb-1" style="color: var(--color-leader-heading);">Lisa Chang</h3>
-                    <p class="role font-inter text-sm font-medium text-center mb-1" style="color: var(--color-leader-role);">Product Innovation</p>
-                    <p class="subtext text-xs text-center" style="color: var(--color-leader-subtext);">Former Chief Product Officer</p>
+                <div class="sdlc-pyramid-step animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <h3 class="font-inter font-semibold">Design & Prototyping</h3>
+                    <p>AI suggests architectural patterns, component designs, and generates interactive prototypes.</p>
                 </div>
-
-                <!-- Advisory Member 4 -->
-                <div class="leader-card animate-on-scroll slide-in-up" style="transition-delay: 0.3s;">
-                    <div class="flex justify-center items-center mb-3">
-                        <img src="https://placehold.co/80x80/00CFFF/FFFFFF?text=DR" alt="David Roberts" class="w-16 h-16 rounded-full object-cover" onerror="this.src='https://placehold.co/80x80/00CFFF/FFFFFF?text=DR'; this.onerror=null;" />
-                    </div>
-                    <h3 class="font-inter font-semibold text-lg text-center mb-1" style="color: var(--color-leader-heading);">David Roberts</h3>
-                    <p class="role font-inter text-sm font-medium text-center mb-1" style="color: var(--color-leader-role);">Digital Transformation</p>
-                    <p class="subtext text-xs text-center" style="color: var(--color-leader-subtext);">Former Head of Digital Strategy</p>
+                <div class="sdlc-pyramid-step animate-on-scroll slide-in-up" style="transition-delay: 0.3s;">
+                    <h3 class="font-inter font-semibold">Development & Coding</h3>
+                    <p>AI-assisted code generation, intelligent refactoring, and real-time debugging for efficiency.</p>
+                </div>
+                <div class="sdlc-pyramid-step animate-on-scroll slide-in-up" style="transition-delay: 0.4s;">
+                    <h3 class="font-inter font-semibold">Testing & Quality Assurance</h3>
+                    <p>AI generates test cases, predicts defects, and automates comprehensive quality assurance.</p>
+                </div>
+                <div class="sdlc-pyramid-step animate-on-scroll slide-in-up" style="transition-delay: 0.5s;">
+                    <h3 class="font-inter font-semibold">Deployment, Ops & Maintenance</h3>
+                    <p>AI optimizes deployment, monitors performance, predicts issues, and automates maintenance tasks.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-16 bg-section-primary"> <!-- Reduced vertical padding -->
+    <!-- Key Benefits of AI-Powered Development Section -->
+    <section class="py-16 sm:py-20 bg-section-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    Key Benefits of <span class="text-gradient">AI-Powered Development</span>
+                </h2>
+                <p class="text-lg sm:text-xl text-section-paragraph max-w-3xl mx-auto">
+                    Transform your development process with measurable improvements in speed, quality, and cost-effectiveness.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <div class="benefit-card animate-on-scroll slide-in-up">
+                    <h3 class="font-inter font-bold text-lg mb-2">Faster Time-to-Market</h3><br>
+                    <p class="text-text-muted">Automate repetitive tasks, accelerate coding, and streamline testing to deliver products faster.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <h3 class="font-inter font-bold text-lg mb-2">Improved Code Quality</h3><br>
+                    <p class="text-text-muted">AI identifies and corrects errors, suggests best practices, and ensures consistent code standards.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <h3 class="font-inter font-bold text-lg mb-2">Reduced Development Costs</h3>
+                    <p class="text-text-muted">Minimize manual effort, reduce rework, and optimize resource allocation for cost savings.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll slide-in-up" style="transition-delay: 0.3s;">
+                    <h3 class="font-inter font-bold text-lg mb-2">Enhanced Developer Productivity</h3>
+                    <p class="text-text-muted">Empower your developers with intelligent tools that automate mundane tasks, allowing them to focus on innovation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our AI-Powered Development Approach Section -->
+    <section class="py-16 sm:py-20 bg-section-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    Our <span class="text-gradient">AI-Powered Development Approach</span>
+                </h2>
+                <p class="text-lg sm:text-xl text-section-paragraph max-w-3xl mx-auto">
+                    We integrate AI at every stage of the software development lifecycle to deliver superior results.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="approach-step animate-on-scroll slide-in-up" style="style=border-left-color: var(--color-accent-blue);">
+                    <div>
+                        <h3 class="font-inter font-semibold text-lg mb-2">Intelligent Planning</h3><br>
+                        <p class="text-text-muted">AI assists in requirements analysis, effort estimation, and project planning, ensuring realistic roadmaps.</p>
+                    </div>
+                </div>
+                <div class="approach-step animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <div>
+                        <h3 class="font-inter font-semibold text-lg mb-2">Automated Design & Code</h3>
+                        <p class="text-text-muted">Leverage AI for architectural design suggestions, code generation, and refactoring, boosting initial development.</p>
+                    </div>
+                </div>
+                <div class="approach-step animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <div>
+                        <h3 class="font-inter font-semibold text-lg mb-2">Smart Testing & QA</h3><br>
+                        <p class="text-text-muted">AI-driven test case generation, defect prediction, and automated testing ensure high-quality software.</p>
+                    </div>
+                </div>
+                <div class="approach-step animate-on-scroll slide-in-up" style="transition-delay: 0.3s;">
+                    <div>
+                        <h3 class="font-inter font-semibold text-lg mb-2">Intelligent Deployment & Ops</h3>
+                        <p class="text-text-muted">AI optimizes deployment pipelines, monitors application performance, and predicts operational issues.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Technologies We Leverage Section -->
+    <section class="py-16 sm:py-20 bg-section-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    Key <span class="text-gradient">Technologies We Leverage</span>
+                </h2>
+                <p class="text-lg sm:text-xl text-section-paragraph max-w-3xl mx-auto">
+                    Our expertise spans a wide range of cutting-edge AI and development technologies.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 animate-on-scroll fade-in">
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Deep Learning</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Computer Vision</span>
+                <span class="tech-tag">Generative AI</span>
+                <span class="tech-tag">DevOps & MLOps</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Story Section -->
+   <section class="py-16 sm:py-20 bg-section-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    Success Story: <span class="text-gradient">AI-Driven Code Optimization</span>
+                </h2>
+                <p class="text-lg sm:text-xl text-section-paragraph max-w-3xl mx-auto">
+                    See how we helped a leading tech company achieve significant improvements.
+                </p>
+            </div>
+
+            <div class="ai-dev-card p-8 animate-on-scroll fade-in">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="font-inter font-bold text-2xl mb-4 text-section-heading">Client: Global Tech Innovators</h3>
+                        <p class="text-text-muted mb-6">
+                            A large enterprise struggling with slow development cycles and increasing technical debt due to complex legacy systems.
+                        </p>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-inter font-semibold text-lg mb-2 text-section-heading">Challenge:</h4>
+                                <p class="text-text-muted">
+                                    Manual code reviews were time-consuming and inconsistent. Debugging complex issues consumed significant developer hours, leading to project delays.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-inter font-semibold text-lg mb-2 text-section-heading">Solution:</h4>
+                                <p class="text-text-muted">
+                                    Implemented Cogniwide's AI-powered code analysis and optimization platform. This solution automated code reviews, identified performance bottlenecks, and suggested refactoring improvements.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Code Optimization" class="w-full h-64 object-cover rounded-lg mb-6" loading="lazy" onerror="this.src='https://placehold.co/600x400/181818/F0F0F0?text=Code+Optimization'; this.onerror=null;" />
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                                <p class="text-accent-blue font-bold text-3xl">30%</p>
+                                <p class="text-text-muted text-sm">Faster Development Cycles</p>
+                            </div>
+                            <div>
+                                <p class="text-accent-blue font-bold text-3xl">45%</p>
+                                <p class="text-text-muted text-sm">Reduction in Critical Bugs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 bg-card-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll fade-in">
-            <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
-                Join Our Growing Team
+            <h2 class="font-inter font-bold text-3xl lg:text-4xl mb-4 text-section-heading">
+                Ready to <span class="text-gradient">Revolutionize Your Development</span>?
             </h2>
-            <p class="text-lg text-section-paragraph mb-6 max-w-3xl mx-auto"> <!-- Reduced font size and margin -->
-                Explore career opportunities and become part of a team that's shaping the future of AI.
+            <p class="text-xl mb-8 max-w-3xl mx-auto text-section-paragraph">
+                Partner with Cogniwide to integrate AI into your software development and achieve unparalleled efficiency and quality.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
-                    <a href="life_at_cogniwide_careers.html" class="btn-primary-inner">
-                        View Open Positions
-                    </a>
-                </div>
-                <div class="relative rounded-lg inline-block secondary-button-wrapper">
-                    <a href="contact.html" class="btn-secondary-inner">
-                        Contact HR
+                    <a href="javascript:void(0)" class="btn-primary-inner">
+                      Start Your AI Transformation
                     </a>
                 </div>
             </div>
@@ -1115,113 +1354,113 @@
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-footer-border bg-footer-bg">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer class="border-t border-footer-border bg-footer-bg py-8 sm:py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
 
-      <!-- Company Info -->
-      <div class="col-span-1 md:col-span-2">
-        <div class="flex items-center mb-4">
-          <a href="index.html" class="font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
-            <img src="assets/logo.png"
-                 class="h-auto w-24 sm:w-28 md:w-32 lg:w-36 transition-transform duration-300 hover:scale-105"
-                 alt="Cogniwide Logo" />
-          </a>
+          <!-- Company Info -->
+          <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center mb-4">
+              <a href="index.html" class="font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
+                    <img src="assets/logo.png"
+                         class="h-auto w-24 sm:w-28 md:w-32 lg:w-36 transition-transform duration-300 hover:scale-105"
+                         alt="Cogniwide Logo" />
+              </a>
+            </div>
+            <p class="mb-3 max-w-md text-sm" style="color: var(--color-footer-text);">
+              Cogniwide is an AI-based IT products and services company that provides high-performance product development, solutions, and operations services that focuses on Digital Transformation.
+            </p>
+            <p class="mb-4 max-w-md text-sm" style="color: var(--color-footer-text);">
+              We leverage new generation technologies like AI, RPA, Data Analytics, and Blockchain to build tailor-made digital Web and Mobile solutions and aid in the digital journey of our partners.
+            </p>
+            <div class="flex space-x-4 mb-4">
+              <a href="https://www.linkedin.com/company/cogniwide" target="_blank" rel="noreferrer" class="text-text-muted hover:text-accent-blue transition-colors duration-300">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.9h.1c.7-1.3 2.5-2.7 5.2-2.7 5.6 0 6.6 3.6 6.6 8.3V24h-5V15c0-2.2 0-5-3-5s-3.5 2.3-3.5 4.8V24h-5V8z"/>
+                </svg>
+              </a>
+              <a href="https://twitter.com/cogniwide" target="_blank" rel="noreferrer" class="text-text-muted hover:text-accent-blue transition-colors duration-300">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 4.56c-.89.39-1.84.66-2.84.78a4.93 4.93 0 002.16-2.72 9.85 9.85 0 01-3.13 1.2 4.92 4.92 0 00-8.38 4.48A13.96 13.96 0 011.64 3.16 4.92 4.92 0 003.2 9.72a4.9 4.9 0 01-2.23-.62v.06a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/cogniwide" target="_blank" rel="noreferrer" class="text-text-muted hover:text-accent-blue transition-colors duration-300">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22.68 0H1.32C.59 0 0 .6 0 1.34v21.32C0 23.4.59 24 1.32 24H12v-9.34H9.34v-3.66H12V8.65c0-2.66 1.63-4.11 4-4.11 1.14 0 2.11.08 2.39.12v2.77h-1.64c-1.29 0-1.54.61-1.54 1.5v1.96h3.08l-.4 3.66h-2.68V24h5.27c.73 0 1.32-.6 1.32-1.34V1.34C24 .6 23.41 0 22.68 0z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Solutions Links -->
+          <div>
+            <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Solutions</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniXcellerate</a></li>
+              <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniLoom</a></li>
+              <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAssist</a></li>
+              <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAgent</a></li>
+            </ul>
+          </div>
+
+          <!-- Company Links -->
+          <div>
+            <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Company</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">About Us</a></li>
+              <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Leadership Team</a></li>
+              <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Life at Cogniwide + Careers</a></li>
+              <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Contact</a></li>
+            </ul>
+          </div>
         </div>
-        <p class="mb-3 max-w-md text-sm" style="color: var(--color-footer-text);">
-          Cogniwide is an AI-based IT products and services company that provides high-performance product development, solutions, and operations services that focuses on Digital Transformation.
-        </p>
-        <p class="mb-4 max-w-md text-sm" style="color: var(--color-footer-text);">
-          We leverage new generation technologies like AI, RPA, Data Analytics, and Blockchain to build tailor-made digital Web and Mobile solutions and aid in the digital journey of our partners.
-        </p>
-        <div class="flex space-x-4 mb-4">
-          <a href="https://www.linkedin.com/company/cogniwide" target="_blank" rel="noreferrer">
-            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.9h.1c.7-1.3 2.5-2.7 5.2-2.7 5.6 0 6.6 3.6 6.6 8.3V24h-5V15c0-2.2 0-5-3-5s-3.5 2.3-3.5 4.8V24h-5V8z"/>
-            </svg>
-          </a>
-          <a href="https://twitter.com/cogniwide" target="_blank" rel="noreferrer">
-            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M24 4.56c-.89.39-1.84.66-2.84.78a4.93 4.93 0 002.16-2.72 9.85 9.85 0 01-3.13 1.2 4.92 4.92 0 00-8.38 4.48A13.96 13.96 0 011.64 3.16 4.92 4.92 0 003.2 9.72a4.9 4.9 0 01-2.23-.62v.06a4.92 4.92 0 003.95 4.83 4.9 4.9 0 01-2.22.08 4.93 4.93 0 004.6 3.41 9.86 9.86 0 01-6.1 2.1c-.4 0-.79-.02-1.18-.07A13.9 13.9 0 007.5 21c9.14 0 14.13-7.57 14.13-14.13 0-.21 0-.42-.01-.63A10.1 10.1 0 0024 4.56z"/>
-            </svg>
-          </a>
-          <a href="https://www.facebook.com/cogniwide" target="_blank" rel="noreferrer">
-            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M22.68 0H1.32C.59 0 0 .6 0 1.34v21.32C0 23.4.59 24 1.32 24H12v-9.34H9.34v-3.66H12V8.65c0-2.66 1.63-4.11 4-4.11 1.14 0 2.11.08 2.39.12v2.77h-1.64c-1.29 0-1.54.61-1.54 1.5v1.96h3.08l-.4 3.66h-2.68V24h5.27c.73 0 1.32-.6 1.32-1.34V1.34C24 .6 23.41 0 22.68 0z"/>
-            </svg>
-          </a>
+
+        <!-- Address Section -->
+        <div class="mt-8 sm:mt-10 text-sm" style="color: var(--color-footer-text);">
+          <h4 class="font-inter font-semibold mb-4">Our Branches - India</h4>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+               <div>
+              <h6 class="font-semibold">Headquarters - Chennai</h6>
+              <address class="not-italic">
+                Cogniwide Technologies Private Limited,<br />
+                3rd Floor, Alpha City, SSPDL Building,<br />
+                Rajiv Gandhi Salai, Navalur, Chennai - 603103,<br />
+                Tamilnadu, India.
+              </address>
+            </div>
+            <div>
+              <h6 class="font-semibold">Registered Office - Bengaluru</h6>
+              <address class="not-italic">
+                Cogniwide Technologies Private Limited,<br />
+                1st Floor, SPD Plaza, 52, Jyoti Niwas College Rd,<br />
+                Koramangala Industrial Layout, Koramangala,<br />
+                Bengaluru, Karnataka, India 560034.
+              </address>
+            </div>
+
+            <div>
+              <h6 class="font-semibold">Registered Office - Madurai</h6>
+              <address class="not-italic">
+                Cogniwide Technologies Private Limited,<br />
+                No.15, 4th Floor, Gokale Road, Chinna Chokkikulam,<br />
+                Madurai - 625014, Tamilnadu, India.
+              </address>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <!-- Solutions Links -->
-      <div>
-        <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Solutions</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="cogni_xcellerate_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniXcellerate</a></li>
-          <li><a href="cogni_loom_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniLoom</a></li>
-          <li><a href="cogni_chat_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAssist</a></li>
-          <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAgent</a></li>
-        </ul>
-      </div>
-
-      <!-- Company Links -->
-      <div>
-        <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Company</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="about_us.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">About Us</a></li>
-          <li><a href="leadership_team.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Leadership Team</a></li>
-          <li><a href="life_at_cogniwide_careers.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Careers</a></li>
-          <li><a href="contact.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Address Section -->
-    <div class="mt-10 text-sm" style="color: var(--color-footer-text);">
-      <h4 class="font-inter font-semibold mb-4">Our Branches - India</h4>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-           <div>
-          <h6 class="font-semibold">Headquarters - Chennai</h6>
-          <p>
-            Cogniwide Technologies Private Limited,<br />
-            3rd Floor, Alpha City, SSPDL Building,<br />
-            Rajiv Gandhi Salai, Navalur, Chennai - 603103,<br />
-            Tamilnadu, India.
+        <!-- Footer Bottom -->
+        <div class="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center" style="border-color: var(--color-border-subtle);">
+          <p class="text-sm" style="color: var(--color-footer-text);">
+            © 2025 Cogniwide AI Platform. All Rights Reserved.
           </p>
-        </div>
-        <div>
-          <h6 class="font-semibold">Registered Office - Bengaluru</h6>
-          <p>
-            Cogniwide Technologies Private Limited,<br />
-            1st Floor, SPD Plaza, 52, Jyoti Niwas College Rd,<br />
-            Koramangala Industrial Layout, Koramangala,<br />
-            Bengaluru, Karnataka, India 560034.
-          </p>
-        </div>
-
-        <div>
-          <h6 class="font-semibold">Registered Office - Madurai</h6>
-          <p>
-            Cogniwide Technologies Private Limited,<br />
-            No.15, 4th Floor, Gokale Road, Chinna Chokkikulam,<br />
-            Madurai - 625014, Tamilnadu, India.
-          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+            <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Privacy Policy</a>
+            <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Terms of Service</a>
+            <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Security</a>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Footer Bottom -->
-    <div class="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center" style="border-color: var(--color-border-subtle);">
-      <p class="text-sm" style="color: var(--color-footer-text);">
-        © 2025 Cogniwide AI Platform. All Rights Reserved.
-      </p>
-      <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
-        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Privacy Policy</a>
-        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Terms of Service</a>
-        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Security</a>
-      </div>
-    </div>
-  </div>
 </footer>
 
     <script>
@@ -1232,12 +1471,14 @@
         if (mobileMenuButton && mobileMenu) {
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.classList.toggle('menu-open'); // Toggle class for icon rotation
             });
 
             // Close mobile menu when clicking outside
             document.addEventListener('click', (e) => {
                 if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
                     mobileMenu.classList.add('hidden');
+                    mobileMenuButton.classList.remove('menu-open'); // Ensure icon resets
                 }
             });
         }
@@ -1246,6 +1487,7 @@
         window.addEventListener('resize', () => {
             if (window.innerWidth >= 768) {
                 mobileMenu.classList.add('hidden');
+                mobileMenuButton.classList.remove('menu-open'); // Ensure icon resets on desktop
             }
         });
 
@@ -1310,7 +1552,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // Only animate once
+                    // observer.unobserve(entry.target); // Only animate once if desired
                 }
             });
         }, observerOptions);
@@ -1319,12 +1561,11 @@
             observer.observe(element);
         });
 
-        // Biography Toggle
-        function toggleBiography(id) {
-            const bioElement = document.getElementById(id);
-            if (bioElement) {
-                bioElement.classList.toggle('hidden');
-            }
+        // Function to scroll to section (used for "What We Do" button)
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
         }
     </script>
 </body>

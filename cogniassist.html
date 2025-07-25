@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CogniXcellerate - AI Orchestration Platform | Cogniwide</title>
+    <title>CogniAssist: Low-Code Conversational AI Platform | Cogniwide</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter and IBM Plex Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="CogniXcellerate is the premier AI orchestration platform that intelligently coordinates complex workflows and automates decision-making processes with measurable ROI." />
+    <meta name="description" content="CogniAssist is a low-code Conversational AI Platform powered by Generative AI, designed for rapid deployment and secure on-premise integration." />
     <style>
-        /* New Silver, Black & Blue Dark Mode Colors (Default) */
+        /* New Silver, Black & Blue Dark Mode Colors (Default) - Copied from cogni_xcellerate_product_deep_dive.html */
         :root {
             --color-bg-primary: #0A0A0A; /* Even deeper black */
             --color-bg-secondary: #181818; /* Slightly lighter black for cards/sections */
@@ -126,10 +126,12 @@
             --color-cx-activity-dot: var(--color-accent-blue);
             --color-cx-activity-text: var(--color-text-muted);
 
+
+
             --color-cx-api-code-bg: var(--color-input-bg);
             --color-cx-api-code-comment: #00CFFF; /* Cyan for comments */
             --color-cx-api-code-text: var(--color-text-light);
-            --color-cx-feature-icon-bg: var(--color-accent-blue);
+            --color-cx-feature-icon-bg: var(--color-accent-blue); /* Changed to use accent-blue directly */
             --color-cx-feature-icon-hover: var(--color-accent-dark-blue);
             --color-cx-feature-text: var(--color-text-light);
             --color-cx-feature-subtext: var(--color-text-muted);
@@ -177,9 +179,48 @@
             --color-cx-table-check: var(--color-accent-blue);
             --color-cx-table-cross: var(--color-text-muted);
             --color-cx-table-warning: var(--color-text-muted);
+
+            /* CogniAssist Specific Colors - Adjusted to align with CX pattern */
+            --color-ca-hero-bg-start: #0A0A0A;
+            --color-ca-hero-bg-end: #181818;
+            --color-ca-hero-accent-bg: rgba(0, 207, 255, 0.05);
+            --color-ca-hero-success-bg: rgba(0, 153, 204, 0.05);
+
+            --color-ca-feature-icon-bg: var(--color-accent-blue); /* Changed to use accent-blue directly */
+            --color-ca-feature-icon-hover: var(--color-accent-dark-blue);
+            --color-ca-feature-text: var(--color-text-light);
+            --color-ca-feature-subtext: var(--color-text-muted);
+            --color-ca-feature-dot: var(--color-accent-blue);
+
+            --color-ca-onprem-card-bg: var(--color-card-bg);
+            --color-ca-onprem-card-border: var(--color-card-border);
+            --color-ca-onprem-heading: var(--color-text-light);
+            --color-ca-onprem-text: var(--color-text-muted);
+            --color-ca-onprem-icon-bg: var(--color-accent-blue);
+            --color-ca-onprem-icon-hover: var(--color-accent-dark-blue);
+
+            --color-cc-feature-card-border: var(--color-border-subtle);
+            --color-cc-feature-icon-bg: var(--color-accent-blue);
+            --color-cc-feature-icon-hover: var(--color-accent-dark-blue);
+            --color-cc-feature-heading: var(--color-text-light);
+            --color-cc-feature-text: var(--color-text-muted);
+            --color-cc-feature-metric-bg: var(--color-input-bg);
+            --color-cc-feature-metric-value: var(--color-accent-blue);
+            --color-cc-feature-metric-label: var(--color-text-muted);
+
+            --color-cc-integration-icon-bg: var(--color-accent-blue);
+            --color-cc-integration-heading: var(--color-text-light);
+            --color-cc-integration-text: var(--color-text-muted);
+            --color-cc-integration-dot: var(--color-accent-blue);
+            --color-cc-api-code-bg: var(--color-input-bg);
+            --color-cc-api-code-comment: #00CFFF;
+            --color-cc-api-code-text: var(--color-text-light);
+            --color-cc-api-code-keyword: #4DFFFF;
+            --color-cc-api-code-string: #E0E0E0;
+            --color-cc-api-code-number: #00CFFF;
         }
 
-        /* Light Mode Colors - Adjusted for contrast with new accents */
+        /* Light Mode Colors - Adjusted for contrast with new accents - Copied from cogni_xcellerate_product_deep_dive.html */
         body.light-mode {
             --color-bg-primary: #F8F8F8; /* Very light grey */
             --color-bg-secondary: #FFFFFF; /* Pure White */
@@ -302,7 +343,7 @@
             --color-cx-api-code-bg: var(--color-input-bg);
             --color-cx-api-code-comment: #007ACC; /* Darker blue for comments */
             --color-cx-api-code-text: var(--color-text-light);
-            --color-cx-feature-icon-bg: var(--color-accent-blue);
+            --color-cx-feature-icon-bg: var(--color-accent-blue); /* Changed to use accent-blue directly */
             --color-cx-feature-icon-hover: var(--color-accent-dark-blue);
             --color-cx-feature-text: var(--color-text-light);
             --color-cx-feature-subtext: var(--color-text-muted);
@@ -350,6 +391,25 @@
             --color-cx-table-check: var(--color-accent-blue);
             --color-cx-table-cross: var(--color-text-muted);
             --color-cx-table-warning: var(--color-text-muted);
+
+            /* CogniAssist Specific Colors Light Mode - Adjusted to align with CX pattern */
+            --color-ca-hero-bg-start: #F8F8F8;
+            --color-ca-hero-bg-end: #FFFFFF;
+            --color-ca-hero-accent-bg: rgba(0, 153, 204, 0.05);
+            --color-ca-hero-success-bg: rgba(0, 122, 204, 0.05);
+
+            --color-ca-feature-icon-bg: var(--color-accent-blue); /* Changed to use accent-blue directly */
+            --color-ca-feature-icon-hover: var(--color-accent-blue); /* Changed to use accent-blue directly */
+            --color-ca-feature-text: var(--color-text-light);
+            --color-ca-feature-subtext: var(--color-text-muted);
+            --color-ca-feature-dot: var(--color-accent-blue);
+
+            --color-ca-onprem-card-bg: var(--color-card-bg);
+            --color-ca-onprem-card-border: var(--color-card-border);
+            --color-ca-onprem-heading: var(--color-text-light);
+            --color-ca-onprem-text: var(--color-text-muted);
+            --color-ca-onprem-icon-bg: var(--color-accent-blue);
+            --color-ca-onprem-icon-hover: var(--color-accent-dark-blue);
         }
 
         body {
@@ -517,7 +577,6 @@
         body.light-mode .card:hover {
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 153, 204, 0.2);
         }
-
         /* Input field styling */
         .input-field {
             background-color: var(--color-input-bg);
@@ -660,334 +719,132 @@
         .animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
         .animate-on-scroll:nth-child(6) { transition-delay: 0.5s; }
 
-        /* CogniXcellerate Page Specific Styles */
-        .hero-section-cx {
+        /* CogniAssist Page Specific Styles - Aligned with CX */
+        .hero-section-ca {
             background: linear-gradient(to bottom right, var(--color-cx-hero-bg-start), var(--color-cx-hero-bg-end));
             position: relative;
             overflow: hidden;
-            min-height: 50vh; /* Adjusted height */
+            min-height: 60vh; /* Adjusted height for more impact */
         }
-        .hero-section-cx .absolute.inset-0:nth-child(1) {
+        .hero-section-ca .absolute.inset-0:nth-child(1) {
             background: linear-gradient(to right, var(--color-cx-hero-accent-bg), var(--color-cx-hero-success-bg));
         }
 
-        .cx-dashboard-card {
-            background-color: var(--color-cx-dashboard-bg);
-            border-color: var(--color-cx-dashboard-border);
-            @apply rounded-2xl shadow-md p-6 border;
-        }
-        .cx-dashboard-card h3 {
-            color: var(--color-cx-dashboard-header);
-        }
-        .cx-dashboard-card .text-success {
-            color: var(--color-cx-dashboard-live);
-        }
-        .cx-workflow-status {
-            background-color: var(--color-cx-workflow-bg);
-            @apply rounded-lg p-4;
-        }
-        .cx-workflow-status span:first-child {
-            color: var(--color-cx-workflow-text);
-        }
-        .cx-workflow-status span:last-child {
-            color: var(--color-cx-workflow-progress-fill);
-        }
-        .cx-workflow-status div:nth-child(2) { /* progress bar background */
-            background-color: var(--color-cx-workflow-progress-bg);
-        }
-        .cx-workflow-status div:nth-child(2) div { /* progress bar fill */
-            background-color: var(--color-cx-workflow-progress-fill);
-        }
-        .cx-metric-card {
-            background-color: var(--color-cx-metric-bg);
-            @apply rounded-lg p-4 text-center;
-        }
-        .cx-metric-card div:first-child {
-            color: var(--color-cx-metric-value);
-        }
-        .cx-metric-card div:last-child {
-            color: var(--color-cx-metric-label);
-        }
-        .cx-activity-item {
-            background-color: var(--color-cx-activity-bg);
-            @apply rounded-lg p-2;
-        }
-        .cx-activity-item div {
-            background-color: var(--color-cx-activity-dot);
-        }
-        .cx-activity-item span {
-            color: var(--color-cx-activity-text);
-        }
-
-        /* Technical Specs */
-        .cx-api-code-block {
-            background-color: var(--color-cx-api-code-bg);
-            @apply rounded-lg p-4 font-ibm-mono text-sm;
-        }
-        .cx-api-code-block .text-success { /* comments */
-            color: var(--color-cx-api-code-comment);
-        }
-        .cx-api-code-block .text-text-primary { /* code text */
-            color: var(--color-cx-api-code-text);
-        }
-        .cx-tech-feature-item div:first-child { /* dot */
-            background-color: var(--color-cx-feature-dot);
-        }
-        .cx-tech-feature-item span {
-            color: var(--color-cx-feature-subtext);
-        }
-
-        /* Architecture Diagram */
-        .cx-architecture-layer {
-            @apply rounded-lg p-4 border-l-4;
-        }
-        .cx-architecture-layer.accent-border { border-color: var(--color-accent-blue); background-color: var(--color-input-bg); }
-        .cx-architecture-layer.success-border { border-color: var(--color-accent-blue); background-color: var(--color-input-bg); }
-        .cx-architecture-layer.blue-border { border-color: var(--color-accent-blue); background-color: var(--color-input-bg); }
-        .cx-architecture-layer h4 { color: var(--color-cx-timeline-card-header); }
-        .cx-architecture-layer div div { background-color: var(--color-bg-primary); color: var(--color-text-muted); }
-
-        /* Core Capabilities */
-        .cx-capability-card .w-16.h-16 {
-            background-color: var(--color-cx-feature-icon-bg);
+        .ca-feature-card .w-16.h-16 {
+            background-color: var(--color-accent-blue); /* Using CX feature icon background */
             transition: background-color 0.3s ease;
         }
-        .cx-capability-card:hover .w-16.h-16 {
-            background-color: var(--color-cx-feature-icon-hover);
+        .ca-feature-card:hover .w-16.h-16 {
+            background-color: var(--color-cx-feature-icon-hover); /* Using CX feature icon hover */
         }
-        .cx-capability-card h3 {
+        .ca-feature-card h3 {
             color: var(--color-cx-feature-text);
         }
-        .cx-capability-card p {
+        .ca-feature-card p {
             color: var(--color-cx-feature-subtext);
         }
-        .cx-capability-card .space-y-2 div div {
+        .ca-feature-card .space-y-2 div div {
             background-color: var(--color-cx-feature-dot);
         }
-        .cx-capability-card .space-y-2 div span {
+        .ca-feature-card .space-y-2 div span {
             color: var(--color-cx-feature-subtext);
         }
 
-        /* Implementation Timeline */
-        .cx-timeline-line {
-            background-color: var(--color-cx-timeline-line);
+        .ca-onprem-card {
+            background-color: var(--color-card-bg); /* Using general card background */
+            border-color: var(--color-card-border); /* Using general card border */
+            @apply rounded-xl shadow-md p-6 border;
+            transition: all 0.3s ease-in-out;
+            border-radius: 0.5rem;
         }
-        .cx-timeline-dot {
-            background-color: var(--color-cx-timeline-dot);
-            border-color: var(--color-cx-timeline-dot-border);
+        .ca-onprem-card h3 {
+            color: var(--color-text-light); /* Using general text light */
         }
-        .cx-timeline-card {
-            background-color: var(--color-cx-timeline-card-bg);
-            border-color: var(--color-cx-timeline-card-border);
+        .ca-onprem-card p {
+            color: var(--color-text-muted); /* Using general text muted */
         }
-        .cx-timeline-card h3 {
-            color: var(--color-cx-timeline-card-header);
+        .ca-onprem-card .w-12.h-12 {
+            background-color: var(--color-accent-blue); /* Consistent accent blue for icons */
+            transition: background-color 0.3s ease;
         }
-        .cx-timeline-card p {
-            color: var(--color-cx-timeline-card-text);
-        }
-        .cx-timeline-card div:last-child {
-            color: var(--color-cx-timeline-card-time);
-        }
-
-        /* ROI Calculator */
-        .cx-calculator-card {
-            background-color: var(--color-cx-calculator-bg);
-            border-color: var(--color-cx-calculator-border);
-        }
-        .cx-calculator-card h3 {
-            color: var(--color-cx-calculator-header);
-        }
-        .cx-calculator-card label {
-            color: var(--color-cx-calculator-label);
-        }
-        .cx-calculator-card .input-field.pl-8 + span { /* prefix for input */
-            color: var(--color-cx-calculator-input-prefix);
-        }
-        .cx-calculator-result-box {
-            background-color: var(--color-cx-calculator-result-bg);
-            border-color: var(--color-cx-calculator-result-border);
-        }
-        .cx-calculator-result-box h4 {
-            color: var(--color-cx-calculator-result-header);
-        }
-        .cx-calculator-result-box div:nth-child(2) {
-            color: var(--color-cx-calculator-result-value);
-        }
-        .cx-calculator-result-box p {
-            color: var(--color-cx-calculator-result-subtext);
-        }
-        .cx-calculator-grid-metric div:first-child {
-            color: var(--color-cx-calculator-result-value);
-        }
-        .cx-calculator-grid-metric div:last-child {
-            color: var(--color-cx-calculator-result-subtext);
-        }
-        .cx-calculator-summary-box {
-            background-color: var(--color-bg-primary);
-            border-color: var(--color-border-subtle);
-        }
-        .cx-calculator-summary-box h4 {
-            color: var(--color-cx-calculator-header);
-        }
-        .cx-calculator-summary-box span:first-child {
-            color: var(--color-cx-calculator-summary-text);
-        }
-        .cx-calculator-summary-box span:last-child {
-            color: var(--color-cx-calculator-summary-value);
-        }
-        .cx-calculator-summary-box .border-t {
-            border-color: var(--color-border-subtle);
-        }
-        .cx-calculator-summary-box .text-2xl {
-            color: var(--color-cx-calculator-net-roi);
+        .ca-onprem-card:hover .w-12.h-12 {
+            background-color: var(--color-accent-dark-blue); /* Consistent dark blue on hover */
         }
 
-        /* Customer Success Stories */
-        .cx-testimonial-card {
-            background-color: var(--color-cx-testimonial-card-bg);
-            border-color: var(--color-cx-testimonial-card-border);
-        }
-        .cx-testimonial-card h3 {
-            color: var(--color-cx-testimonial-company);
-        }
-        .cx-testimonial-card p {
-            color: var(--color-cx-testimonial-role);
-        }
-        .cx-testimonial-challenge-box {
-            background-color: var(--color-cx-testimonial-challenge-bg);
-            border-color: var(--color-cx-testimonial-challenge-border);
-        }
-        .cx-testimonial-solution-box {
-            background-color: var(--color-cx-testimonial-solution-bg);
-            border-color: var(--color-cx-testimonial-solution-border);
-        }
-        .cx-testimonial-challenge-box h4, .cx-testimonial-solution-box h4 {
-            color: var(--color-text-light);
-        }
-        .cx-testimonial-challenge-box p, .cx-testimonial-solution-box p {
-            color: var(--color-text-muted);
-        }
-        .cx-testimonial-metric div:first-child {
-            color: var(--color-accent-blue);
-        }
-        .cx-testimonial-metric div:last-child {
-            color: var(--color-text-muted);
-        }
-        .cx-testimonial-quote {
-            border-color: var(--color-cx-testimonial-quote-border);
-            color: var(--color-cx-testimonial-quote-text);
-        }
-        .cx-testimonial-author {
-            color: var(--color-cx-testimonial-author);
-        }
-        .cx-testimonial-author-role {
-            color: var(--color-cx-testimonial-author-role);
-        }
-
-        /* Loom Portal Integration */
-        .cx-loom-portal-card {
-            background-color: var(--color-cx-dashboard-bg);
-            border-color: var(--color-cx-dashboard-border);
-        }
-        .cx-loom-portal-card h3 {
-            color: var(--color-cx-dashboard-header);
-        }
-        .cx-loom-portal-card .animate-pulse {
-            background-color: var(--color-accent-blue);
-        }
-        .cx-loom-portal-card .text-sm.text-text-secondary {
-            color: var(--color-text-muted);
-        }
-        .cx-loom-workflow-designer {
-            background-color: var(--color-cx-workflow-bg);
-        }
-        .cx-loom-workflow-designer span:first-child {
-            color: var(--color-text-light);
-        }
-        .cx-loom-workflow-designer button {
-            color: var(--color-accent-blue);
-        }
-        .cx-loom-workflow-designer div div {
-            background-color: var(--color-accent-blue); /* Unified button colors */
-            color: white;
-        }
-        .cx-loom-analytics {
-            background-color: var(--color-cx-workflow-bg);
-        }
-        .cx-loom-analytics span:first-child {
-            color: var(--color-text-light);
-        }
-        .cx-loom-analytics span:last-child {
-            color: var(--color-accent-blue);
-        }
-        .cx-loom-analytics div:nth-child(2) {
-            background-color: var(--color-cx-workflow-progress-bg);
-        }
-        .cx-loom-analytics div:nth-child(2) div {
-            background-color: var(--color-accent-blue);
-        }
-        .cx-loom-api-integrations {
-            background-color: var(--color-cx-workflow-bg);
-        }
-        .cx-loom-api-integrations span:first-child {
-            color: var(--color-text-light);
-        }
-        .cx-loom-api-integrations span:last-child {
-            color: var(--color-accent-blue);
-        }
-        .cx-loom-feature-icon {
-            background-color: var(--color-accent-blue);
-        }
-        .cx-loom-feature-text {
-            color: var(--color-text-light);
-        }
-        .cx-loom-feature-subtext {
-            color: var(--color-text-muted);
-        }
-
-        /* Competitive Comparison Table */
-        .cx-comparison-table th {
+        .ca-comparison-table th {
             color: var(--color-cx-table-header);
         }
-        .cx-comparison-table tr.border-b {
+        .ca-comparison-table tr.border-b {
             border-color: var(--color-cx-table-border);
         }
-        .cx-comparison-table td {
+        .ca-comparison-table td {
             color: var(--color-cx-table-text);
         }
-        .cx-comparison-table .text-success {
+        .ca-comparison-table .text-success {
             color: var(--color-cx-table-check);
         }
-        .cx-comparison-table .text-error {
+        .ca-comparison-table .text-error {
             color: var(--color-cx-table-cross);
         }
-        .cx-comparison-table .text-warning {
+        .ca-comparison-table .text-warning {
             color: var(--color-cx-table-warning);
         }
-        .cx-comparison-table .font-semibold.text-success {
+        .ca-comparison-table .font-semibold.text-success {
             color: var(--color-accent-blue); /* Consistent success color */
         }
 
-        /* Final CTA */
-<!--        .cx-final-cta-section {-->
-<!--            background: linear-gradient(to right, var(&#45;&#45;color-accent-blue), var(&#45;&#45;color-accent-dark-blue));-->
-<!--        }-->
-        .cx-final-cta-section h2 {
+        /* Specific styling for the chat preview to ensure theme consistency */
+        .chat-preview-ai-bubble {
+            background-color: var(--color-accent-dark-blue); /* Using input background for consistency */
+            color: var(--color-text-light);
+        }
+        .chat-preview-user-bubble {
+            background-color: var(--color-accent-blue); /* Using accent blue for user messages */
+            color: white; /* White text on accent blue */
+        }
+        body.light-mode .chat-preview-user-bubble {
+            background-color: var(--color-accent-blue); /* Ensure it stays blue in light mode */
             color: white;
         }
-        .cx-final-cta-section p {
-            color: rgba(255, 255, 255, 0.9);
+        .chat-preview-avatar-ai {
+            background-color: var(--color-accent-blue); /* AI avatar matches accent */
         }
-        .cx-final-cta-section .bg-white {
-            color: var(--color-accent-blue);
+        .chat-preview-avatar-user {
+            background-color: var(--color-accent-dark-blue); /* User avatar matches silver accent */
         }
-        .cx-final-cta-section .border-white {
-            color: white;
+         /* Integration Showcase */
+        .cc-integration-icon {
+            background-color: var(--color-accent-blue);
         }
-        .cx-final-cta-section .hover\:bg-white:hover {
-            color: var(--color-accent-blue);
+        .cc-integration-heading {
+            color: var(--color-cc-integration-heading);
         }
+        .cc-integration-text {
+            color: var(--color-cc-integration-text);
+        }
+        .cc-integration-dot {
+            background-color: var(--color-accent-blue);
+        }
+        .cc-api-code-block {
+            background-color: var(--color-cc-api-code-bg);
+            @apply rounded-lg p-6 font-ibm-mono text-sm;
+        }
+        .cc-api-code-comment {
+            color: var(--color-cc-api-code-comment);
+        }
+        .cc-api-code-keyword {
+            color: var(--color-cc-api-code-keyword);
+        }
+        .cc-api-code-string {
+            color: var(--color-cc-api-code-string);
+        }
+        .cc-api-code-number {
+            color: var(--color-cc-api-code-number);
+        }
+        .cc-api-code-text {
+            color: var(--color-cc-api-code-text);
+        }
+
     </style>
 </head>
 <body class="bg-bg-primary text-text-light font-inter">
@@ -1003,7 +860,6 @@
                          alt="Cogniwide Logo" />
                   </a>
                 </div>
-
 
                 <!-- Desktop Navigation - Grouped Layout -->
                 <div class="hidden lg:flex items-center space-x-4">
@@ -1155,9 +1011,9 @@
                                         <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-dark-blue);"></div>
                                         <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniAssist</span>
                                     </a>
-                                    <a href="javascript:void(0)" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                    <a href="cogni_assist_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
                                         <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-silver);"></div>
-                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniAgent</span>
+                                        <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniAssist</span>
                                     </a>
                                 </div>
                             </div>
@@ -1192,23 +1048,13 @@
 
                 <!-- CTA Button -->
                 <div class="hidden md:flex items-center space-x-4">
-  <!-- Theme Toggle Button -->
-<!--  <button id="theme-toggle" class="p-2 rounded-full hover:bg-input-bg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-blue" style="color: var(&#45;&#45;color-nav-link);">-->
-<!--    <svg id="sun-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
-<!--      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12h1m15.325-4.275l-.707-.707M4.675 19.325l-.707-.707M19.325 4.675l-.707-.707M4.675 4.675l-.707-.707M12 18a6 6 0 100-12 6 6 0 000 12z" />-->
-<!--    </svg>-->
-<!--    <svg id="moon-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
-<!--      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />-->
-<!--    </svg>-->
-<!--  </button>-->
-
-  <!-- Request Demo Button -->
-  <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
-    <a href="contact.html" class="btn-primary-inner">
-      Request Demo
-    </a>
-  </div>
-</div>
+                    <!-- Request Demo Button -->
+                    <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
+                        <a href="contact.html" class="btn-primary-inner">
+                            Request Demo
+                        </a>
+                    </div>
+                </div>
 
 
                 <!-- Mobile menu button -->
@@ -1244,7 +1090,7 @@
                             <a href="cogni_xcellerate_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniXcellerate</a>
                             <a href="cogni_loom_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniLoom</a>
                             <a href="cogni_chat_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAssist</a>
-                            <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAgent</a>
+                            <a href="cogni_assist_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAssist</a>
                         </div>
                     </div>
 
@@ -1290,14 +1136,14 @@
                 <svg class="w-4 h-4 text-text-muted" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-text-light font-inter font-medium">CogniXcellerate</span>
+                <span class="text-text-light font-inter font-medium">CogniAssist</span>
             </nav>
         </div>
     </section>
 
-    <!-- Hero Section with Interactive Dashboard -->
-    <section class="relative hero-section-cx overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-cx-hero-accent-bg to-cx-hero-success-bg"></div>
+    <!-- Hero Section -->
+    <section class="relative hero-section-ca overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-ca-hero-accent-bg to-ca-hero-success-bg"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Hero Content -->
@@ -1305,14 +1151,14 @@
                     <div class="space-y-6">
                         <div class="inline-flex items-center px-4 py-2 rounded-full" style="background-color: var(--color-input-bg);">
                             <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-blue);"></div>
-                            <span class="text-sm font-inter font-medium" style="color: var(--color-accent-blue);">Flagship AI Orchestration Platform</span>
+                            <span class="text-sm font-inter font-medium" style="color: var(--color-accent-blue);">Low-Code Conversational AI Powered by Gen AI</span>
                         </div>
                         <h1 class="font-inter font-bold text-4xl lg:text-6xl text-section-heading leading-tight">
-                            <span class="text-gradient">CogniXcellerate</span><br />
-                            Intelligent Workflow Orchestration
+                            <span class="text-gradient">CogniAssist:</span><br />
+                            Intelligent Conversations, Simplified.
                         </h1>
                         <p class="text-xl text-section-paragraph leading-relaxed">
-                            The premier AI orchestration platform that intelligently coordinates complex workflows, automates decision-making processes, and delivers measurable ROI through adaptive learning algorithms.
+                            Empower your business with enterprise-grade conversational AI, built with low-code simplicity and the power of Generative AI, deployable securely on-premise.
                         </p>
                     </div>
 
@@ -1320,695 +1166,328 @@
                     <div class="flex flex-col sm:flex-row gap-4">
                         <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
                             <a href="contact.html" class="btn-primary-inner text-center">
-                                Initiate Innovation → Start POC
+                                Request On-Prem Demo
                             </a>
                         </div>
                         <div class="relative rounded-lg inline-block secondary-button-wrapper">
-                            <a href="contact.html" class="btn-secondary-inner text-center">
-                                Schedule Demo
+                            <a href="javascript:void(0)" class="btn-secondary-inner text-center">
+                                Explore Use Cases
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Interactive Dashboard Preview -->
+                <!-- Placeholder for a visual element or interactive demo -->
                 <div class="relative animate-on-scroll fade-in" style="transition-delay: 0.2s;">
-                    <div class="cx-dashboard-card">
-                        <div class="flex items-center justify-between mb-6">
-                            <h3 class="font-inter font-semibold text-lg" style="color: var(--color-cx-dashboard-header);">CogniXcellerate Dashboard</h3>
-                            <div class="flex items-center space-x-2">
-                                <div class="w-3 h-3 rounded-full" style="background-color: var(--color-cx-dashboard-live);"></div>
-                                <span class="text-sm" style="color: var(--color-text-muted);">Live</span>
+                    <div class="card p-8 glow-border">
+                        <h3 class="font-inter font-semibold text-lg text-section-heading mb-4">Conversational Flow Preview</h3>
+                        <div class="flex flex-col items-center justify-center h-64 bg-input-bg rounded-lg p-4">
+                            <div class="w-full max-w-sm bg-bg-secondary rounded-lg p-4 shadow-lg space-y-4">
+
+                            <!-- AI Message -->
+                            <div class="flex items-start ">
+                              <div class="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm mr-2 chat-preview-avatar-ai">AI</div>
+                              <div class="text-sm px-4 py-2 rounded-2xl rounded-tl-none max-w-[80%] chat-preview-ai-bubble">
+                                Hello! How can I assist you today?
+                              </div>
                             </div>
+
+                            <!-- User Message -->
+                            <div class="flex items-end justify-end">
+                              <div class="text-sm px-4 py-2 rounded-2xl rounded-tr-none max-w-[80%] chat-preview-user-bubble">
+                                I need help with my account.
+                              </div>
+                              <div class="w-8 h-8 rounded-full flex items-center justify-center text-text-light font-bold text-sm ml-2 chat-preview-avatar-user">You</div>
+                            </div>
+
+                            <!-- AI Message -->
+                            <div class="flex items-start">
+                              <div class="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm mr-2 chat-preview-avatar-ai">AI</div>
+                              <div class="text-sm px-4 py-2 rounded-2xl rounded-tl-none max-w-[80%] chat-preview-ai-bubble">
+                                Certainly. Are you looking to update your details, check your balance, or something else?
+                              </div>
+                            </div>
+
+                            <!-- Footer -->
+                            <div class="text-center pt-2">
+                              <span class="text-xs text-text-muted">Powered by Generative AI</span>
+                            </div>
+
+                          </div>
                         </div>
-
-                        <!-- Dashboard Content -->
-                        <div class="space-y-4">
-                            <!-- Workflow Status -->
-                            <div class="cx-workflow-status">
-                                <div class="flex items-center justify-between mb-3">
-                                    <span class="font-inter font-medium" style="color: var(--color-cx-workflow-text);">Active Workflows</span>
-                                    <span class="font-inter font-bold" style="color: var(--color-cx-workflow-progress-fill);">247</span>
-                                </div>
-                                <div class="w-full rounded-full h-2" style="background-color: var(--color-cx-workflow-progress-bg);">
-                                    <div class="h-2 rounded-full" style="width: 87%; background-color: var(--color-cx-workflow-progress-fill);"></div>
-                                </div>
-                            </div>
-
-                            <!-- Performance Metrics -->
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="cx-metric-card">
-                                    <div class="font-inter font-bold text-lg" style="color: var(--color-cx-metric-value);">99.9%</div>
-                                    <div class="text-sm" style="color: var(--color-cx-metric-label);">Uptime</div>
-                                </div>
-                                <div class="cx-metric-card">
-                                    <div class="font-inter font-bold text-lg" style="color: var(--color-cx-metric-value);">2.3s</div>
-                                    <div class="text-sm" style="color: var(--color-cx-metric-label);">Avg Response</div>
-                                </div>
-                            </div>
-
-                            <!-- Recent Activities -->
-                            <div class="space-y-2">
-                                <div class="flex items-center space-x-3 p-2 cx-activity-item">
-                                    <div class="w-2 h-2 rounded-full" style="background-color: var(--color-cx-activity-dot);"></div>
-                                    <span class="text-sm" style="color: var(--color-cx-activity-text);">Customer onboarding completed</span>
-                                </div>
-                                <div class="flex items-center space-x-3 p-2 cx-activity-item">
-                                    <div class="w-2 h-2 rounded-full" style="background-color: var(--color-cx-activity-dot);"></div>
-                                    <span class="text-sm" style="color: var(--color-cx-activity-text);">Invoice processing automated</span>
-                                </div>
-                                <div class="flex items-center space-x-3 p-2 cx-activity-item">
-                                    <div class="w-2 h-2 rounded-full" style="background-color: var(--color-cx-activity-dot);"></div>
-                                    <span class="text-sm" style="color: var(--color-cx-activity-text);">Compliance check initiated</span>
-                                </div>
-                            </div>
-                        </div>
+                        <p class="text-center text-sm text-text-muted mt-4">Visualize and build complex conversational flows with ease.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technical Specifications -->
+    <!-- Key Features Section -->
     <section class="py-20 bg-section-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-on-scroll fade-in">
                 <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
-                    Technical Architecture
+                    Unleash the Power of Conversational AI
                 </h2>
                 <p class="text-xl text-section-paragraph max-w-3xl mx-auto">
-                    Built on enterprise-grade infrastructure with cloud-native architecture and comprehensive API ecosystem
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- API Integration Example -->
-                <div class="space-y-6 animate-on-scroll slide-in-left">
-                    <h3 class="font-inter font-bold text-2xl text-section-heading">API Integration</h3>
-                    <div class="card p-6">
-                        <div class="cx-api-code-block">
-                            <div class="text-success mb-2">// Initialize CogniXcellerate SDK</div>
-                            <div class="text-text-primary mb-1">const cogni = new CogniXcellerate({</div>
-                            <div class="text-text-primary ml-4 mb-1">apiKey: 'your-api-key',</div>
-                            <div class="text-text-primary ml-4 mb-1">environment: 'production'</div>
-                            <div class="text-text-primary mb-2">});</div>
-                            <div class="text-success mb-2">// Create workflow</div>
-                            <div class="text-text-primary mb-1">const workflow = await cogni.workflows.create({</div>
-                            <div class="text-text-primary ml-4 mb-1">name: 'Customer Onboarding',</div>
-                            <div class="text-text-primary ml-4 mb-1">triggers: ['form_submission'],</div>
-                            <div class="text-text-primary ml-4 mb-1">actions: ['validate', 'process', 'notify']</div>
-                            <div class="text-text-primary">});</div>
-                        </div>
-                    </div>
-
-                    <!-- Technical Features -->
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3 cx-tech-feature-item">
-                            <div class="w-2 h-2 rounded-full" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">RESTful API with GraphQL support</span>
-                        </div>
-                        <div class="flex items-center space-x-3 cx-tech-feature-item">
-                            <div class="w-2 h-2 rounded-full" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Real-time WebSocket connections</span>
-                        </div>
-                        <div class="flex items-center space-x-3 cx-tech-feature-item">
-                            <div class="w-2 h-2 rounded-full" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">OAuth 2.0 and SAML authentication</span>
-                        </div>
-                        <div class="flex items-center space-x-3 cx-tech-feature-item">
-                            <div class="w-2 h-2 rounded-full" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Enterprise-grade security</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Architecture Diagram -->
-                <div class="space-y-6 animate-on-scroll slide-in-right">
-                    <h3 class="font-inter font-bold text-2xl text-section-heading">System Architecture</h3>
-                    <div class="card p-6">
-                        <div class="space-y-4">
-                            <!-- Layer 1: Presentation -->
-                            <div class="cx-architecture-layer accent-border">
-                                <h4 class="font-inter font-semibold mb-2" style="color: var(--color-cx-architecture-layer-header);">Presentation Layer</h4>
-                                <div class="grid grid-cols-3 gap-2">
-                                    <div class="rounded p-2 text-center text-sm" style="background-color: var(--color-bg-primary); color: var(--color-text-muted);">Web UI</div>
-                                    <div class="rounded p-2 text-center text-sm" style="background-color: var(--color-bg-primary); color: var(--color-text-muted);">Mobile</div>
-                                    <div class="rounded p-2 text-center text-sm" style="background-color: var(--color-bg-primary); color: var(--color-text-muted);">API</div>
-                                </div>
-                            </div>
-
-                            <!-- Layer 2: Business Logic -->
-                            <div class="cx-architecture-layer success-border">
-                                <h4 class="font-inter font-semibold mb-2" style="color: var(--color-cx-architecture-layer-header);">Business Logic</h4>
-                                <div class="grid grid-cols-2 gap-2">
-                                    <div class="rounded p-2 text-center text-sm" style="background-color: var(--color-bg-primary); color: var(--color-text-muted);">Workflow Engine</div>
-                                    <div class="rounded p-2 text-center text-sm" style="background-color: var(--color-bg-primary); color: var(--color-text-muted);">AI Orchestrator</div>
-                                </div>
-                            </div>
-
-                            <!-- Layer 3: Data -->
-                            <div class="cx-architecture-layer blue-border">
-                                <h4 class="font-inter font-semibold mb-2" style="color: var(--color-cx-architecture-layer-header);">Data Layer</h4>
-                                <div class="grid grid-cols-3 gap-2">
-                                    <div class="rounded p-2 text-center text-sm" style="background-color: var(--color-bg-primary); color: var(--color-text-muted);">PostgreSQL</div>
-                                    <div class="rounded p-2 text-center text-sm" style="background-color: var(--color-bg-primary); color: var(--color-text-muted);">Redis</div>
-                                    <div class="rounded p-2 text-center text-sm" style="background-color: var(--color-bg-primary); color: var(--color-text-muted);">MongoDB</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Features Showcase -->
-    <section class="py-20 bg-section-secondary">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 animate-on-scroll fade-in">
-                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
-                    Core Capabilities
-                </h2>
-                <p class="text-xl text-section-paragraph">
-                    Discover the powerful features that make CogniXcellerate the leading AI orchestration platform
+                    CogniAssist combines cutting-edge AI with an intuitive low-code platform for unparalleled flexibility and performance.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Intelligent Workflow Orchestration -->
-                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer cx-capability-card animate-on-scroll slide-in-up">
-                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-cx-feature-icon-bg);">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                <!-- Low-Code Development -->
+                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-feature-card animate-on-scroll slide-in-up">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 bg-accent-blue">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 6.75L19.5 9.75M19.5 6.75L16.5 9.75M4.5 6.75H12M4.5 12H9M4.5 17.25H14.25M18.75 15.75A2.25 2.25 0 0116.5 18a2.25 2.25 0 01-2.25-2.25 2.25 2.25 0 012.25-2.25 2.25 2.25 0 012.25 2.25z"/>
                         </svg>
                     </div>
-                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-cx-feature-text);">Intelligent Orchestration</h3>
-                    <p style="color: var(--color-cx-feature-subtext);" class="mb-6">
-                        Automatically coordinate complex workflows across multiple systems with AI-driven decision making and adaptive routing.
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">Low-Code Development</h3>
+                    <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                        Rapidly build, deploy, and manage conversational AI agents with minimal coding, empowering business users and developers alike.
                     </p>
                     <div class="space-y-2 text-sm">
                         <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Dynamic workflow adaptation</span>
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Intuitive drag-and-drop interface</span>
                         </div>
                         <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Multi-system integration</span>
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Pre-built templates & components</span>
                         </div>
                         <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Real-time monitoring</span>
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Seamless integration with existing systems</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Predictive Analytics -->
-                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer cx-capability-card animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
-                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-cx-feature-icon-bg);">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+
+                <!-- Generative AI Capabilities -->
+                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-feature-card animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M12 3v1m6.364 2.636l-.707.707M21 12h-1m-2.636 6.364l-.707-.707M12 21v-1m-6.364-2.636l.707-.707M3 12h1m2.636-6.364l.707.707M9 9h.01M15 15h.01M9 15h.01M15 9h.01M12 12h.01" />
                         </svg>
                     </div>
-                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-cx-feature-text);">Predictive Analytics</h3>
-                    <p style="color: var(--color-cx-feature-subtext);" class="mb-6">
-                        Leverage machine learning algorithms to predict workflow bottlenecks and optimize resource allocation proactively.
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">Generative AI Power</h3>
+                    <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                        Leverage the latest Generative AI models for more natural, human-like conversations, dynamic content generation, and intelligent responses.
                     </p>
                     <div class="space-y-2 text-sm">
                         <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Bottleneck prediction</span>
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Context-aware responses</span>
                         </div>
                         <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Resource optimization</span>
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Dynamic content generation</span>
                         </div>
                         <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Performance forecasting</span>
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Automated intent recognition</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Adaptive Learning -->
-                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer cx-capability-card animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
-                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-cx-feature-icon-bg);">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-cx-feature-text);">Adaptive Learning</h3>
-                    <p style="color: var(--color-cx-feature-subtext);" class="mb-6">
-                        Continuously improve workflow efficiency through machine learning that adapts to changing business patterns and requirements.
-                    </p>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Pattern recognition</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Continuous optimization</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Self-improving algorithms</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- Multi-Channel Deployment -->
+                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-feature-card animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
 
-                <!-- Enterprise Security -->
-                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer cx-capability-card animate-on-scroll slide-in-up" style="transition-delay: 0.3s;">
-                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-cx-feature-icon-bg);">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M2.166 4.999A1 1 0 011.732 10.001c0 1.266 1.014 2.291 2.291 2.291a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L13.586 5H12zm-9 7a1 1 0 012 0v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1 1v-4zm13-1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L15 13.586v-1.586a1 1 0 011-1h2.291a1 1 0 011 1v1.586l-2.293 2.293a1 1 0 01-1.414 1.414L10 11.414l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                        </svg>
                     </div>
-                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-cx-feature-text);">Enterprise Security</h3>
-                    <p style="color: var(--color-cx-feature-subtext);" class="mb-6">
-                        Built-in security framework with end-to-end encryption, audit trails, and compliance management for enterprise requirements.
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">Multi-Channel Deployment</h3>
+                    <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                        Deploy your conversational AI across various channels including web, mobile, messaging apps, and voice assistants.
                     </p>
                     <div class="space-y-2 text-sm">
                         <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">End-to-end encryption</span>
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Web, mobile, & in-app support</span>
                         </div>
                         <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Comprehensive audit trails</span>
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Social media & messaging platforms</span>
                         </div>
                         <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Compliance automation</span>
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Voice assistant integration</span>
                         </div>
                     </div>
                 </div>
+                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-feature-card animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                        <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 bg-accent-blue">
+                            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.105A9.002 9.002 0 0112 3c4.97 0 9 3.582 9 8z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">Natural Language Processing</h3>
+                        <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                            Advanced NLP understands context, sentiment, and intent across 45+ languages with industry-leading accuracy.
+                        </p>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center"><div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div><span style="color: var(--color-ca-feature-subtext);">Context-aware understanding</span></div>
+                            <div class="flex items-center"><div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div><span style="color: var(--color-ca-feature-subtext);">Multilingual support (45+ languages)</span></div>
+                            <div class="flex items-center"><div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div><span style="color: var(--color-ca-feature-subtext);">Intent recognition accuracy: 97.3%</span></div>
+                        </div>
+                    </div>
+                    <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-feature-card animate-on-scroll slide-in-up" style="transition-delay: 0.5s;">
+                        <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 bg-accent-grey">
+                            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10a2 2 0 01-2 2h-2a2 2 0 01-2-2zm9 0V5a2 2 0 00-2-2h-2a2 2 0 00-2 2v14a2 2 0 002 2h2a2 2 0 002-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">Analytics & Insights</h3>
+                        <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                            Comprehensive conversation analytics with sentiment analysis, topic clustering, and performance metrics.
+                        </p>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center"><div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div><span style="color: var(--color-ca-feature-subtext);">Sentiment & intent breakdown</span></div>
+                            <div class="flex items-center"><div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div><span style="color: var(--color-ca-feature-subtext);">Topic clustering by volume</span></div>
+                            <div class="flex items-center"><div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div><span style="color: var(--color-ca-feature-subtext);">Real-time dashboard metrics</span></div>
+                        </div>
+                    </div>
 
-                <!-- Real-time Monitoring -->
-                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer cx-capability-card animate-on-scroll slide-in-up" style="transition-delay: 0.4s;">
-                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-cx-feature-icon-bg);">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-cx-feature-text);">Real-time Monitoring</h3>
-                    <p style="color: var(--color-cx-feature-subtext);" class="mb-6">
-                        Comprehensive monitoring dashboard with real-time alerts, performance metrics, and detailed analytics for complete visibility.
-                    </p>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Live performance metrics</span>
+                    <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-feature-card animate-on-scroll slide-in-up" style="transition-delay: 0.6s;">
+                        <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 bg-accent-blue">
+                            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c.867 0 1.625-.373 2.125-.969A3.012 3.012 0 0015 8a3 3 0 00-6 0c0 .795.312 1.517.875 2.031A2.992 2.992 0 0012 11zm6 0v6a6 6 0 01-12 0v-6h12z" />
+                            </svg>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Intelligent alerting</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Custom dashboards</span>
+                        <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">Enterprise Security</h3>
+                        <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                            Ensure data privacy, role-based access, and compliance with enterprise-grade security controls.
+                        </p>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center"><div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div><span style="color: var(--color-ca-feature-subtext);">Role-based access control (RBAC)</span></div>
+                            <div class="flex items-center"><div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div><span style="color: var(--color-ca-feature-subtext);">Data encryption at rest & in transit</span></div>
+                            <div class="flex items-center"><div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div><span style="color: var(--color-ca-feature-subtext);">Compliance with GDPR & ISO standards</span></div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Scalable Infrastructure -->
-                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer cx-capability-card animate-on-scroll slide-in-up" style="transition-delay: 0.5s;">
-                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-cx-feature-icon-bg);">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-cx-feature-text);">Scalable Infrastructure</h3>
-                    <p style="color: var(--color-cx-feature-subtext);" class="mb-6">
-                        Cloud-native architecture that automatically scales to handle increasing workloads while maintaining optimal performance.
-                    </p>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Auto-scaling capabilities</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">Load balancing</span>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-cx-feature-dot);"></div>
-                            <span style="color: var(--color-cx-feature-subtext);">High availability</span>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Implementation Timeline -->
-    <section class="py-20 bg-section-primary">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 animate-on-scroll fade-in">
-                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
-                    Implementation Roadmap
-                </h2>
-                <p class="text-xl text-section-paragraph max-w-3xl mx-auto">
-                    Structured deployment process ensuring smooth integration with your existing systems
-                </p>
-            </div>
-
-            <div class="relative">
-                <!-- Timeline Line -->
-                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full cx-timeline-line"></div>
-
-                <div class="space-y-12">
-                    <!-- Phase 1 -->
-                    <div class="relative flex items-center animate-on-scroll slide-in-up">
-                        <div class="flex-1 pr-8 text-right">
-                            <div class="card p-6 cx-timeline-card">
-                                <h3 class="font-inter font-bold text-xl" style="color: var(--color-cx-timeline-card-header);">Discovery & Planning</h3>
-                                <p class="mb-4" style="color: var(--color-cx-timeline-card-text);">
-                                    Comprehensive assessment of current workflows and system architecture to design optimal integration strategy.
-                                </p>
-                                <div class="text-sm font-inter font-medium" style="color: var(--color-cx-timeline-card-time);">Week 1-2</div>
-                            </div>
-                        </div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full border-4 flex items-center justify-center cx-timeline-dot">
-                            <span class="text-white font-inter font-bold text-sm">1</span>
-                        </div>
-                        <div class="flex-1 pl-8"></div>
-                    </div>
-
-                    <!-- Phase 2 -->
-                    <div class="relative flex items-center animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
-                        <div class="flex-1 pr-8"></div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full border-4 flex items-center justify-center cx-timeline-dot">
-                            <span class="text-white font-inter font-bold text-sm">2</span>
-                        </div>
-                        <div class="flex-1 pl-8">
-                            <div class="card p-6 cx-timeline-card">
-                                <h3 class="font-inter font-bold text-xl" style="color: var(--color-cx-timeline-card-header);">Environment Setup</h3>
-                                <p class="mb-4" style="color: var(--color-cx-timeline-card-text);">
-                                    Configure development and staging environments with security protocols and integration endpoints.
-                                </p>
-                                <div class="text-sm font-inter font-medium" style="color: var(--color-cx-timeline-card-time);">Week 3-4</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Phase 3 -->
-                    <div class="relative flex items-center animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
-                        <div class="flex-1 pr-8 text-right">
-                            <div class="card p-6 cx-timeline-card">
-                                <h3 class="font-inter font-bold text-xl" style="color: var(--color-cx-timeline-card-header);">Core Integration</h3>
-                                <p class="mb-4" style="color: var(--color-cx-timeline-card-text);">
-                                    Implement core workflow orchestration features and establish connections with existing systems.
-                                </p>
-                                <div class="text-sm font-inter font-medium" style="color: var(--color-cx-timeline-card-time);">Week 5-8</div>
-                            </div>
-                        </div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full border-4 flex items-center justify-center cx-timeline-dot">
-                            <span class="text-white font-inter font-bold text-sm">3</span>
-                        </div>
-                        <div class="flex-1 pl-8"></div>
-                    </div>
-
-                    <!-- Phase 4 -->
-                    <div class="relative flex items-center animate-on-scroll slide-in-up" style="transition-delay: 0.3s;">
-                        <div class="flex-1 pr-8"></div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full border-4 flex items-center justify-center cx-timeline-dot">
-                            <span class="text-white font-inter font-bold text-sm">4</span>
-                        </div>
-                        <div class="flex-1 pl-8">
-                            <div class="card p-6 cx-timeline-card">
-                                <h3 class="font-inter font-bold text-xl" style="color: var(--color-cx-timeline-card-header);">Testing & Optimization</h3>
-                                <p class="mb-4" style="color: var(--color-cx-timeline-card-text);">
-                                    Comprehensive testing of all workflows with performance optimization and user acceptance testing.
-                                </p>
-                                <div class="text-sm font-inter font-medium" style="color: var(--color-cx-timeline-card-time);">Week 9-10</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Phase 5 -->
-                    <div class="relative flex items-center animate-on-scroll slide-in-up" style="transition-delay: 0.4s;">
-                        <div class="flex-1 pr-8 text-right">
-                            <div class="card p-6 cx-timeline-card">
-                                <h3 class="font-inter font-bold text-xl" style="color: var(--color-cx-timeline-card-header);">Production Deployment</h3>
-                                <p class="mb-4" style="color: var(--color-cx-timeline-card-text);">
-                                    Phased rollout to production environment with monitoring, training, and ongoing support.
-                                </p>
-                                <div class="text-sm font-inter font-medium" style="color: var(--color-cx-timeline-card-time);">Week 11-12</div>
-                            </div>
-                        </div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full border-4 flex items-center justify-center cx-timeline-dot">
-                            <span class="text-white font-inter font-bold text-sm">5</span>
-                        </div>
-                        <div class="flex-1 pl-8"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Customer Success Stories -->
-    <section class="py-20 bg-section-primary">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 animate-on-scroll fade-in">
-                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
-                    Customer Success Stories
-                </h2>
-                <p class="text-xl text-section-paragraph">
-                    Real implementations, measurable results, and transformative outcomes
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Case Study 1: Telecom -->
-                <div class="card p-8 cx-testimonial-card animate-on-scroll slide-in-left">
-                    <div class="flex items-center mb-6">
-                        <img src="https://placehold.co/64x64/00CFFF/FFFFFF?text=TC" alt="Global Telecom Corp" class="w-16 h-16 rounded-lg object-cover mr-4" loading="lazy" onerror="this.src='https://placehold.co/64x64/00CFFF/FFFFFF?text=TC'; this.onerror=null;" />
-                        <div>
-                            <h3 class="font-inter font-bold text-xl" style="color: var(--color-cx-testimonial-company);">Global Telecom Corp</h3>
-                            <p style="color: var(--color-cx-testimonial-role);">Fortune 500 Telecommunications</p>
-                        </div>
-                    </div>
-
-                    <div class="space-y-4 mb-6">
-                        <div class="rounded-lg p-4 border-l-4 cx-testimonial-challenge-box" style="border-color: var(--color-cx-testimonial-challenge-border);">
-                            <h4 class="font-inter font-semibold mb-2" style="color: var(--color-text-light);">Challenge</h4>
-                            <p class="text-sm" style="color: var(--color-text-muted);">
-                                Manual customer onboarding process taking 14 days with 23% error rate across multiple legacy systems.
-                            </p>
-                        </div>
-
-                        <div class="rounded-lg p-4 border-l-4 cx-testimonial-solution-box" style="border-color: var(--color-cx-testimonial-solution-border);">
-                            <h4 class="font-inter font-semibold mb-2" style="color: var(--color-text-light);">Solution</h4>
-                            <p class="text-sm" style="color: var(--color-text-muted);">
-                                Implemented CogniXcellerate to orchestrate end-to-end customer onboarding with intelligent validation and routing.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Results Metrics -->
-                    <div class="grid grid-cols-3 gap-4 mb-6">
-                        <div class="text-center cx-testimonial-metric">
-                            <div class="text-2xl font-inter font-bold" style="color: var(--color-accent-blue);">2 Days</div>
-                            <div class="text-xs" style="color: var(--color-text-muted);">Onboarding Time</div>
-                        </div>
-                        <div class="text-center cx-testimonial-metric">
-                            <div class="text-2xl font-inter font-bold" style="color: var(--color-accent-blue);">1.2%</div>
-                            <div class="text-xs" style="color: var(--color-text-muted);">Error Rate</div>
-                        </div>
-                        <div class="text-center cx-testimonial-metric">
-                            <div class="text-2xl font-inter font-bold" style="color: var(--color-accent-blue);">$3.2M</div>
-                            <div class="text-xs" style="color: var(--color-text-muted);">Annual Savings</div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial -->
-                    <blockquote class="border-l-4 pl-4 italic cx-testimonial-quote">
-                        "CogniXcellerate transformed our customer onboarding from a 14-day manual nightmare to a 2-day automated experience. The ROI was evident within the first quarter."
-                    </blockquote>
-                    <div class="mt-3 text-sm">
-                        <span class="font-inter font-semibold cx-testimonial-author">Sarah Chen</span>
-                        <span class="cx-testimonial-author-role"> - CTO, Global Telecom Corp</span>
-                    </div>
-                </div>
-
-                <!-- Case Study 2: BFSI -->
-                <div class="card p-8 cx-testimonial-card animate-on-scroll slide-in-right">
-                    <div class="flex items-center mb-6">
-                        <img src="https://placehold.co/64x64/00CFFF/FFFFFF?text=PF" alt="Premier Financial Services" class="w-16 h-16 rounded-lg object-cover mr-4" loading="lazy" onerror="this.src='https://placehold.co/64x64/00CFFF/FFFFFF?text=PF'; this.onerror=null;" />
-                        <div>
-                            <h3 class="font-inter font-bold text-xl" style="color: var(--color-cx-testimonial-company);">Premier Financial Services</h3>
-                            <p style="color: var(--color-cx-testimonial-role);">Regional Banking Institution</p>
-                        </div>
-                    </div>
-
-                    <div class="space-y-4 mb-6">
-                        <div class="rounded-lg p-4 border-l-4 cx-testimonial-challenge-box" style="border-color: var(--color-cx-testimonial-challenge-border);">
-                            <h4 class="font-inter font-semibold mb-2" style="color: var(--color-text-light);">Challenge</h4>
-                            <p class="text-sm" style="color: var(--color-text-muted);">
-                                Loan approval process involving 8 departments with average 21-day processing time and compliance bottlenecks.
-                            </p>
-                        </div>
-
-                        <div class="rounded-lg p-4 border-l-4 cx-testimonial-solution-box" style="border-color: var(--color-cx-testimonial-solution-border);">
-                            <h4 class="font-inter font-semibold mb-2" style="color: var(--color-text-light);">Solution</h4>
-                            <p class="text-sm" style="color: var(--color-text-muted);">
-                                Deployed CogniXcellerate for intelligent loan processing with automated compliance checks and risk assessment.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Results Metrics -->
-                    <div class="grid grid-cols-3 gap-4 mb-6">
-                        <div class="text-center cx-testimonial-metric">
-                            <div class="text-2xl font-inter font-bold" style="color: var(--color-accent-blue);">5 Days</div>
-                            <div class="text-xs" style="color: var(--color-text-muted);">Processing Time</div>
-                        </div>
-                        <div class="text-center cx-testimonial-metric">
-                            <div class="text-2xl font-inter font-bold" style="color: var(--color-accent-blue);">94%</div>
-                            <div class="text-xs" style="color: var(--color-text-muted);">Compliance Rate</div>
-                        </div>
-                        <div class="text-center cx-testimonial-metric">
-                            <div class="text-2xl font-inter font-bold" style="color: var(--color-accent-blue);">$1.8M</div>
-                            <div class="text-xs" style="color: var(--color-text-muted);">Annual Savings</div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial -->
-                    <blockquote class="border-l-4 pl-4 italic cx-testimonial-quote">
-                        "The intelligent orchestration capabilities reduced our loan processing time by 76% while improving compliance accuracy. Our customers are delighted with the faster service."
-                    </blockquote>
-                    <div class="mt-3 text-sm">
-                        <span class="font-inter font-semibold cx-testimonial-author">Michael Rodriguez</span>
-                        <span class="cx-testimonial-author-role"> - VP Operations, Premier Financial</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--  Portal Integration -->
     <section class="py-20 bg-section-secondary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-on-scroll fade-in">
                 <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
-                     Portal Integration
+                    Seamless CRM & Platform Integration
                 </h2>
-                <p class="text-xl text-section-paragraph">
-                    Experience CogniXcellerate through our interactive demonstration portal
+                <p class="text-xl text-section-paragraph max-w-3xl mx-auto">
+                    Connect CogniAssist with your existing technology stack for unified customer communication experiences.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Portal Preview -->
-                <div class="relative animate-on-scroll slide-in-left">
-                    <div class="cx-loom-portal-card">
-                        <div class="flex items-center justify-between mb-6">
-                            <h3 class="font-inter font-semibold text-lg" style="color: var(--color-cx-loom-portal-card-header);">Portal - Live Demo</h3>
-                            <div class="flex items-center space-x-2">
-                                <div class="w-3 h-3 rounded-full animate-pulse" style="background-color: var(--color-accent-blue);"></div>
-                                <span class="text-sm" style="color: var(--color-text-muted);">Interactive</span>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Integration Examples -->
+                <div class="space-y-8">
+                    <div class="card p-6 border-l-4" style="border-color: var(--color-accent-blue);">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4 cc-integration-icon">
+                                <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" /></svg>
                             </div>
+                            <h3 class="font-inter font-bold text-xl cc-integration-heading">CRM Integration</h3>
                         </div>
+                        <ul class="space-y-2 text-sm cc-integration-text">
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 rounded-full mr-3 cc-integration-dot"></div>
+                                Salesforce, HubSpot, Microsoft Dynamics
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 rounded-full mr-3 cc-integration-dot"></div>
+                                Automatic contact & lead creation
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 rounded-full mr-3 cc-integration-dot"></div>
+                                Conversation history sync
+                            </li>
+                        </ul>
+                    </div>
 
-                        <!-- Demo Interface -->
-                        <div class="space-y-4">
-                            <div class="rounded-lg p-4 cx-loom-workflow-designer">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="font-inter font-medium" style="color: var(--color-text-light);">Workflow Designer</span>
-                                    <button class="transition-colors duration-300" style="color: var(--color-accent-blue);">
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="grid grid-cols-4 gap-2">
-                                    <div class="rounded p-2 text-center text-xs text-white" style="background-color: var(--color-accent-blue);">Start</div>
-                                    <div class="rounded p-2 text-center text-xs text-white" style="background-color: var(--color-accent-blue);">Process</div>
-                                    <div class="rounded p-2 text-center text-xs text-white" style="background-color: var(--color-accent-blue);">Validate</div>
-                                    <div class="rounded p-2 text-center text-xs text-white" style="background-color: var(--color-accent-blue);">End</div>
-                                </div>
+                    <div class="card p-6 border-l-4" style="border-color: var(--color-accent-light-blue);">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4 cc-integration-icon" style="background-color: var(--color-accent-light-blue);">
+                                <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
                             </div>
-
-                            <div class="rounded-lg p-4 cx-loom-analytics">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="font-inter font-medium" style="color: var(--color-text-light);">Performance Analytics</span>
-                                    <span class="text-sm" style="color: var(--color-accent-blue);">+23% this month</span>
-                                </div>
-                                <div class="w-full rounded-full h-2" style="background-color: var(--color-cx-workflow-progress-bg);">
-                                    <div class="h-2 rounded-full" style="width: 78%; background-color: var(--color-accent-blue);"></div>
-                                </div>
-                            </div>
-
-                            <div class="rounded-lg p-4 cx-loom-api-integrations">
-                                <div class="flex items-center justify-between">
-                                    <span class="font-inter font-medium" style="color: var(--color-text-light);">API Integrations</span>
-                                    <span class="text-sm" style="color: var(--color-accent-blue);">12 Active</span>
-                                </div>
-                            </div>
+                            <h3 class="font-inter font-bold text-xl cc-integration-heading">Communication Platforms</h3>
                         </div>
+                        <ul class="space-y-2 text-sm cc-integration-text">
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 rounded-full mr-3 cc-integration-dot"></div>
+                                WhatsApp, Telegram, Facebook Messenger
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 rounded-full mr-3 cc-integration-dot"></div>
+                                Slack, Microsoft Teams integration
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 rounded-full mr-3 cc-integration-dot"></div>
+                                Unified conversation management
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card p-6 border-l-4" style="border-color: var(--color-accent-dark-blue);">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4 cc-integration-icon" style="background-color: var(--color-accent-dark-blue);">
+                                <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+                            </div>
+                            <h3 class="font-inter font-bold text-xl cc-integration-heading">Helpdesk Systems</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm cc-integration-text">
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 rounded-full mr-3 cc-integration-dot"></div>
+                                Zendesk, Freshdesk, ServiceNow
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 rounded-full mr-3 cc-integration-dot"></div>
+                                Automatic ticket creation
+                            </li>
+                            <li class="flex items-center">
+                                <div class="w-2 h-2 rounded-full mr-3 cc-integration-dot"></div>
+                                Agent handoff with context
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Portal Features -->
-                <div class="space-y-8 animate-on-scroll slide-in-right">
-                    <div>
-                        <h3 class="font-inter font-bold text-2xl text-section-heading mb-4">Interactive Experience</h3>
-                        <p class="text-section-paragraph mb-6">
-                            Explore CogniXcellerate's capabilities through our comprehensive demonstration portal with real-time simulations and guided tutorials.
-                        </p>
-                    </div>
-
-                    <!-- Feature List -->
-                    <div class="space-y-4">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 cx-loom-feature-icon">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-inter font-semibold cx-loom-feature-text">Workflow Designer</h4>
-                                <p class="text-sm cx-loom-feature-subtext">Drag-and-drop interface for creating complex workflows</p>
-                            </div>
+                <!-- API Code Example -->
+                <div class="card p-8">
+                    <h3 class="font-inter font-bold text-xl cc-integration-heading mb-6">API Integration Example</h3>
+                    <div class="cc-api-code-block">
+                        <div class="cc-api-code-comment mb-4">
+                            // CogniAssist API Integration
                         </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 cx-loom-feature-icon">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-inter font-semibold cx-loom-feature-text">Real-time Analytics</h4>
-                                <p class="text-sm cx-loom-feature-subtext">Live performance metrics and optimization insights</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 cx-loom-feature-icon">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-inter font-semibold cx-loom-feature-text">API Playground</h4>
-                                <p class="text-sm cx-loom-feature-subtext">Test integrations with interactive API documentation</p>
-                            </div>
+                        <div class="cc-api-code-text space-y-2">
+                            <div><span class="cc-api-code-keyword">POST</span> /api/v1/conversations</div>
+                            <div class="cc-api-code-keyword">Content-Type: application/json</div>
+                            <div class="cc-api-code-text">&#123;</div>
+                            <div class="pl-4"><span class="cc-api-code-string">"user_id"</span>: <span class="cc-api-code-string">"user123"</span>,</div>
+                            <div class="pl-4"><span class="cc-api-code-string">"message"</span>: <span class="cc-api-code-string">"Hello, I need help"</span>,</div>
+                            <div class="pl-4"><span class="cc-api-code-string">"channel"</span>: <span class="cc-api-code-string">"web"</span>,</div>
+                            <div class="pl-4"><span class="cc-api-code-string">"context"</span>: &#123;</div>
+                            <div class="pl-8"><span class="cc-api-code-string">"page"</span>: <span class="cc-api-code-string">"/products"</span>,</div>
+                            <div class="pl-8"><span class="cc-api-code-string">"user_tier"</span>: <span class="cc-api-code-string">"premium"</span></div>
+                            <div class="pl-4 cc-api-code-text">&#125;</div>
+                            <div class="cc-api-code-text">&#125;</div>
                         </div>
                     </div>
-
-                    <!-- Portal CTA -->
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
-                            <a href="javascript:void(0)" class="btn-primary-inner">
-                                Access Xcellerate Portal
-                            </a>
+                    <div class="space-y-4 mt-6">
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 rounded-full mr-3 cc-integration-dot"></div>
+                            <span class="text-sm cc-integration-text">RESTful API with comprehensive documentation</span>
                         </div>
-                        <div class="relative rounded-lg inline-block secondary-button-wrapper">
-                            <a href="javascript:void(0)" class="btn-secondary-inner">
-                                Schedule Guided Demo
-                            </a>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 rounded-full mr-3 cc-integration-dot"></div>
+                            <span class="text-sm cc-integration-text">WebSocket support for real-time communication</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 rounded-full mr-3 cc-integration-dot"></div>
+                            <span class="text-sm cc-integration-text">SDKs available for popular languages</span>
                         </div>
                     </div>
                 </div>
@@ -2016,32 +1495,276 @@
         </div>
     </section>
 
-    <!-- Competitive Comparison -->
+    <!-- On-Premise Advantage Section -->
+    <section class="py-20 bg-section-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    The On-Premise Advantage
+                </h2>
+                <p class="text-xl text-section-paragraph max-w-3xl mx-auto">
+                    Maintain complete control, security, and compliance with CogniAssist's flexible on-premise deployment options.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Data Sovereignty -->
+                <div class="group ca-onprem-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up">
+                    <div class="w-12 h-12 bg-accent-blue rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <!-- Lock Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 17a1 1 0 001-1v-3a1 1 0 10-2 0v3a1 1 0 001 1zm6-6V9a6 6 0 00-12 0v2m12 0H6a2 2 0 00-2 2v5a2 2 0 002 2h12a2 2 0 002-2v-5a2 2 0 00-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl mb-2">Data Sovereignty</h3>
+                    <p class="text-sm">
+                        Keep all your sensitive data within your own infrastructure, meeting strict regulatory and compliance requirements.
+                    </p>
+                </div>
+
+                <!-- Enhanced Security -->
+                <div class="group ca-onprem-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <div class="w-12 h-12 bg-accent-blue rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <!-- Shield Alert Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zm0-6v.01M12 9v4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl mb-2">Enhanced Security</h3>
+                    <p class="text-sm">
+                        Leverage your existing security protocols and infrastructure to protect your conversational AI deployments.
+                    </p>
+                </div>
+
+                <!-- Customization & Control -->
+                <div class="group ca-onprem-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <div class="w-12 h-12 bg-accent-blue rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <!-- Sliders Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 21v-4M4 10v-4M4 3v1m16 0v1M8 8h8M8 12h8M8 16h8M20 16v1M20 8v1"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl mb-2">Customization & Control</h3>
+                    <p class="text-sm">
+                        Tailor the platform to your exact specifications, integrate deeply with internal systems, and manage resources directly.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Business Benefits Section -->
     <section class="py-20 bg-section-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-on-scroll fade-in">
                 <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
-                    Why Choose CogniXcellerate
+                    Tangible Business Outcomes
                 </h2>
-                <p class="text-xl text-section-paragraph">
-                    See how we compare against traditional automation platforms
+                <p class="text-xl text-section-paragraph max-w-3xl mx-auto">
+                    CogniAssist delivers measurable ROI by transforming customer interactions and internal processes.
                 </p>
             </div>
 
-            <div class="card p-8 cx-comparison-table animate-on-scroll fade-in">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benefit 1: Reduced Operational Costs -->
+                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-feature-card animate-on-scroll slide-in-up">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 bg-accent-blue">
+                        <!-- Piggy Bank Icon -->
+                       <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M12 8c-1.5 0-2.7.8-3 2h6c-.3-1.2-1.5-2-3-2z"></path>
+                            <path d="M12 16c1.5 0 2.7-.8 3-2H9c.3 1.2 1.5 2 3 2z"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                          </svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">Reduced Operational Costs</h3>
+                    <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                        Automate repetitive tasks and reduce reliance on human agents for routine queries, significantly cutting operational expenses.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Up to 60% reduction in support costs</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Improved agent efficiency</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 2: Enhanced Customer Experience -->
+                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-feature-card animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 bg-accent-blue">
+                        <!-- Smile Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">Enhanced Customer Experience</h3>
+                    <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                        Provide instant, 24/7 support and personalized interactions, leading to higher customer satisfaction and loyalty.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">24/7 instant support</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Personalized interactions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 3: Accelerated Time-to-Value -->
+                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-feature-card animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 bg-accent-blue">
+                        <!-- Zap Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 2L3 14h7v8l10-12h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">Accelerated Time-to-Value</h3>
+                    <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                        The low-code approach and pre-built components ensure rapid deployment and faster realization of business value.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Weeks, not months, to deploy</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Quick iterations and improvements</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Use Cases / Industry Solutions -->
+    <section class="py-20 bg-section-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    Transformative Use Cases
+                </h2>
+                <p class="text-xl text-section-paragraph max-w-3xl mx-auto">
+                    CogniAssist empowers diverse industries to automate interactions and streamline operations.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Use Case 1: Customer Service -->
+                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-feature-card animate-on-scroll slide-in-up">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <!-- Sparkles Icon -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path>
+                      </svg>
+
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">Customer Service Automation</h3>
+                    <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                        Handle routine inquiries, provide instant answers, and escalate complex issues seamlessly to human agents.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">24/7 support availability</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Reduced call center volume</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Use Case 2: HR & Employee Support -->
+                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-feature-card animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <!-- Bolt Icon -->
+                        <!-- Clipboard Document Icon -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path>
+                          </svg>
+
+
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">HR & Employee Support</h3>
+                    <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                        Automate HR FAQs, benefits inquiries, and internal support requests, freeing up HR teams.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Instant answers to HR queries</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Streamlined internal processes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Use Case 3: Sales & Marketing Engagement -->
+                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-feature-card animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="1.5"
+                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 17l6-6 4 4 8-8" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5h7v7" />
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">Sales & Marketing Engagement</h3>
+                    <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                        Qualify leads, provide product information, and guide prospects through the sales funnel 24/7.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Automated lead qualification</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Enhanced customer journey</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why CogniAssist / Comparison -->
+    <section class="py-20 bg-section-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    Why CogniAssist Stands Out
+                </h2>
+                <p class="text-xl text-section-paragraph">
+                    A true enterprise-grade solution for modern conversational AI needs.
+                </p>
+            </div>
+
+            <div class="card p-8 ca-comparison-table animate-on-scroll fade-in">
                 <div class="overflow-x-auto">
                     <table class="w-full">
                         <thead>
                             <tr class="border-b" style="border-color: var(--color-cx-table-border);">
                                 <th class="text-left py-4 px-6 font-inter font-semibold" style="color: var(--color-cx-table-header);">Feature</th>
-                                <th class="text-center py-4 px-6 font-inter font-semibold" style="color: var(--color-accent-blue);">CogniXcellerate</th>
-                                <th class="text-center py-4 px-6 font-inter font-semibold" style="color: var(--color-text-muted);">Traditional RPA</th>
-                                <th class="text-center py-4 px-6 font-inter font-semibold" style="color: var(--color-text-muted);">Legacy BPM</th>
+                                <th class="text-center py-4 px-6 font-inter font-semibold" style="color: var(--color-accent-blue);">CogniAssist</th>
+                                <th class="text-center py-4 px-6 font-inter font-semibold" style="color: var(--color-text-muted);">Traditional Chatbots</th>
+                                <th class="text-center py-4 px-6 font-inter font-semibold" style="color: var(--color-text-muted);">High-Code Platforms</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="border-b" style="border-color: var(--color-cx-table-border);">
-                                <td class="py-4 px-6" style="color: var(--color-cx-table-text);">AI-Powered Decision Making</td>
+                                <td class="py-4 px-6" style="color: var(--color-cx-table-text);">Generative AI Capabilities</td>
                                 <td class="py-4 px-6 text-center">
                                     <svg class="w-6 h-6 mx-auto" style="color: var(--color-cx-table-check);" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
@@ -2050,24 +1773,24 @@
                                 <td class="py-4 px-6 text-center">
                                     <svg class="w-6 h-6 mx-auto" style="color: var(--color-cx-table-cross);" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                                    </svg>
-                                </td>
-                                <td class="py-4 px-6 text-center">
-                                    <svg class="w-6 h-6 mx-auto" style="color: var(--color-cx-table-cross);" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr class="border-b" style="border-color: var(--color-cx-table-border);">
-                                <td class="py-4 px-6" style="color: var(--color-cx-table-text);">Adaptive Learning</td>
-                                <td class="py-4 px-6 text-center">
-                                    <svg class="w-6 h-6 mx-auto" style="color: var(--color-cx-table-check);" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                     </svg>
                                 </td>
                                 <td class="py-4 px-6 text-center">
                                     <span style="color: var(--color-cx-table-warning);">Limited</span>
                                 </td>
+                            </tr>
+                            <tr class="border-b" style="border-color: var(--color-cx-table-border);">
+                                <td class="py-4 px-6" style="color: var(--color-cx-table-text);">Low-Code Development</td>
+                                <td class="py-4 px-6 text-center">
+                                    <svg class="w-6 h-6 mx-auto" style="color: var(--color-cx-table-check);" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </td>
+                                <td class="py-4 px-6 text-center">
+                                    <svg class="w-6 h-6 mx-auto" style="color: var(--color-cx-table-check);" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </td>
                                 <td class="py-4 px-6 text-center">
                                     <svg class="w-6 h-6 mx-auto" style="color: var(--color-cx-table-cross);" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -2075,30 +1798,30 @@
                                 </td>
                             </tr>
                             <tr class="border-b" style="border-color: var(--color-cx-table-border);">
-                                <td class="py-4 px-6" style="color: var(--color-cx-table-text);">Real-time Orchestration</td>
+                                <td class="py-4 px-6" style="color: var(--color-cx-table-text);">On-Premise Deployment</td>
                                 <td class="py-4 px-6 text-center">
                                     <svg class="w-6 h-6 mx-auto" style="color: var(--color-cx-table-check);" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                     </svg>
                                 </td>
                                 <td class="py-4 px-6 text-center">
-                                    <span style="color: var(--color-cx-table-warning);">Partial</span>
+                                    <span style="color: var(--color-cx-table-warning);">No / Limited</span>
                                 </td>
                                 <td class="py-4 px-6 text-center">
-                                    <span style="color: var(--color-cx-table-warning);">Basic</span>
+                                    <span style="color: var(--color-cx-table-warning);">Complex</span>
                                 </td>
                             </tr>
                             <tr class="border-b" style="border-color: var(--color-cx-table-border);">
-                                <td class="py-4 px-6" style="color: var(--color-cx-table-text);">Implementation Time</td>
-                                <td class="py-4 px-6 text-center font-inter font-semibold" style="color: var(--color-accent-blue);">6-12 weeks</td>
-                                <td class="py-4 px-6 text-center" style="color: var(--color-text-muted);">3-6 months</td>
-                                <td class="py-4 px-6 text-center" style="color: var(--color-text-muted);">6-18 months</td>
+                                <td class="py-4 px-6" style="color: var(--color-cx-table-text);">Scalability & Performance</td>
+                                <td class="py-4 px-6 text-center font-inter font-semibold" style="color: var(--color-accent-blue);">Enterprise-Grade</td>
+                                <td class="py-4 px-6 text-center" style="color: var(--color-text-muted);">Basic</td>
+                                <td class="py-4 px-6 text-center" style="color: var(--color-text-muted);">High (Requires Expertise)</td>
                             </tr>
                             <tr>
-                                <td class="py-4 px-6" style="color: var(--color-cx-table-text);">Total Cost of Ownership</td>
-                                <td class="py-4 px-6 text-center font-inter font-semibold" style="color: var(--color-accent-blue);">Low</td>
-                                <td class="py-4 px-6 text-center" style="color: var(--color-text-muted);">Medium</td>
-                                <td class="py-4 px-6 text-center" style="color: var(--color-text-muted);">High</td>
+                                <td class="py-4 px-6" style="color: var(--color-cx-table-text);">Time-to-Value</td>
+                                <td class="py-4 px-6 text-center font-inter font-semibold" style="color: var(--color-accent-blue);">Rapid</td>
+                                <td class="py-4 px-6 text-center" style="color: var(--color-text-muted);">Moderate</td>
+                                <td class="py-4 px-6 text-center" style="color: var(--color-text-muted);">Slow</td>
                             </tr>
                         </tbody>
                     </table>
@@ -2111,20 +1834,20 @@
     <section class="py-20 bg-card-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll fade-in">
             <h2 class="font-inter font-bold text-3xl lg:text-4xl mb-4 text-section-heading">
-                Ready to <span class="text-gradient">Transform Your Workflows?</span>?
+                Ready to <span class="text-gradient">Revolutionize Your Conversations?</span>
             </h2>
             <p class="text-xl mb-8 max-w-3xl mx-auto text-section-paragraph">
-                Join hundreds of enterprises already benefiting from CogniXcellerate's intelligent orchestration platform. Start your transformation today.
+                Experience the future of conversational AI with CogniAssist. Secure, scalable, and simple.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
                     <a href="contact.html" class="btn-primary-inner">
-                      Initiate Innovation → Start POC
+                      Get Started with On-Prem Demo
                     </a>
                 </div>
                 <div class="relative rounded-lg inline-block secondary-button-wrapper">
-                    <a href="contact.html" class="btn-secondary-inner">
-                      Schedule Demo
+                    <a href="javascript:void(0)" class="btn-secondary-inner">
+                      Download Brochure
                     </a>
                 </div>
             </div>
@@ -2133,113 +1856,114 @@
 
     <!-- Footer -->
     <footer class="border-t border-footer-border bg-footer-bg">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
 
-      <!-- Company Info -->
-      <div class="col-span-1 md:col-span-2">
-        <div class="flex items-center mb-4">
-          <a href="index.html" class="font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
-            <img src="assets/logo.png"
-                 class="h-auto w-24 sm:w-28 md:w-32 lg:w-36 transition-transform duration-300 hover:scale-105"
-                 alt="Cogniwide Logo" />
-          </a>
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <a href="index.html" class="font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
+                            <img src="assets/logo.png"
+                                 class="h-auto w-24 sm:w-28 md:w-32 lg:w-36 transition-transform duration-300 hover:scale-105"
+                                 alt="Cogniwide Logo"
+                                 onerror="this.onerror=null;this.src='https://placehold.co/96x32/181818/F0F0F0?text=Cogniwide';" />
+                        </a>
+                    </div>
+                    <p class="mb-3 max-w-md text-sm" style="color: var(--color-footer-text);">
+                        Cogniwide is an AI-based IT products and services company that provides high-performance product development, solutions, and operations services that focuses on Digital Transformation.
+                    </p>
+                    <p class="mb-4 max-w-md text-sm" style="color: var(--color-footer-text);">
+                        We leverage new generation technologies like AI, RPA, Data Analytics, and Blockchain to build tailor-made digital Web and Mobile solutions and aid in the digital journey of our partners.
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://www.linkedin.com/company/cogniwide" target="_blank" rel="noreferrer">
+                            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.9h.1c.7-1.3 2.5-2.7 5.2-2.7 5.6 0 6.6 3.6 6.6 8.3V24h-5V15c0-2.2 0-5-3-5s-3.5 2.3-3.5 4.8V24h-5V8z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/cogniwide" target="_blank" rel="noreferrer">
+                            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.56c-.89.39-1.84.66-2.84.78a4.93 4.93 0 002.16-2.72 9.85 9.85 0 01-3.13 1.2 4.92 4.92 0 00-8.38 4.48A13.96 13.96 0 011.64 3.16 4.92 4.92 0 003.2 9.72a4.9 4.9 0 01-2.23-.62v.06a4.92 4.92 0 003.95 4.83 4.9 4.9 0 01-2.22.08 4.93 4.93 0 004.6 3.41 9.86 9.86 0 01-6.1 2.1c-.4 0-.79-.02-1.18-.07A13.9 13.9 0 007.5 21c9.14 0 14.13-7.57 14.13-14.13 0-.21 0-.42-.01-.63A10.1 10.1 0 0024 4.56z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/cogniwide" target="_blank" rel="noreferrer">
+                            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.68 0H1.32C.59 0 0 .6 0 1.34v21.32C0 23.4.59 24 1.32 24H12v-9.34H9.34v-3.66H12V8.65c0-2.66 1.63-4.11 4-4.11 1.14 0 2.11.08 2.39.12v2.77h-1.64c-1.29 0-1.54.61-1.54 1.5v1.96h3.08l-.4 3.66h-2.68V24h5.27c.73 0 1.32-.6 1.32-1.34V1.34C24 .6 23.41 0 22.68 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Solutions Links -->
+                <div>
+                    <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Solutions</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="cogni_xcellerate_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniXcellerate</a></li>
+                        <li><a href="cogni_loom_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniLoom</a></li>
+                        <li><a href="cogni_chat_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAssist</a></li>
+                        <li><a href="cogni_assist_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAssist</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Links -->
+                <div>
+                    <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about_us.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">About Us</a></li>
+                        <li><a href="leadership_team.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Leadership Team</a></li>
+                        <li><a href="life_at_cogniwide_careers.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Careers</a></li>
+                        <li><a href="contact.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Address Section -->
+            <div class="mt-10 text-sm" style="color: var(--color-footer-text);">
+                <h4 class="font-inter font-semibold mb-4">Our Branches - India</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <h6 class="font-semibold">Headquarters - Chennai</h6>
+                        <address class="not-italic">
+                            Cogniwide Technologies Private Limited,<br />
+                            3rd Floor, Alpha City, SSPDL Building,<br />
+                            Rajiv Gandhi Salai, Navalur, Chennai - 603103,<br />
+                            Tamilnadu, India.
+                        </address>
+                    </div>
+                    <div>
+                        <h6 class="font-semibold">Registered Office - Bengaluru</h6>
+                        <address class="not-italic">
+                            Cogniwide Technologies Private Limited,<br />
+                            1st Floor, SPD Plaza, 52, Jyoti Niwas College Rd,<br />
+                            Koramangala Industrial Layout, Koramangala,<br />
+                            Bengaluru, Karnataka, India 560034.
+                        </address>
+                    </div>
+
+                    <div>
+                        <h6 class="font-semibold">Registered Office - Madurai</h6>
+                        <address class="not-italic">
+                            Cogniwide Technologies Private Limited,<br />
+                            No.15, 4th Floor, Gokale Road, Chinna Chokkikulam,<br />
+                            Madurai - 625014, Tamilnadu, India.
+                        </address>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center" style="border-color: var(--color-border-subtle);">
+                <p class="text-sm" style="color: var(--color-footer-text);">
+                    © 2025 Cogniwide AI Platform. All Rights Reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+                    <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Privacy Policy</a>
+                    <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Terms of Service</a>
+                    <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Security</a>
+                </div>
+            </div>
         </div>
-        <p class="mb-3 max-w-md text-sm" style="color: var(--color-footer-text);">
-          Cogniwide is an AI-based IT products and services company that provides high-performance product development, solutions, and operations services that focuses on Digital Transformation.
-        </p>
-        <p class="mb-4 max-w-md text-sm" style="color: var(--color-footer-text);">
-          We leverage new generation technologies like AI, RPA, Data Analytics, and Blockchain to build tailor-made digital Web and Mobile solutions and aid in the digital journey of our partners.
-        </p>
-        <div class="flex space-x-4 mb-4">
-          <a href="https://www.linkedin.com/company/cogniwide" target="_blank" rel="noreferrer">
-            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.9h.1c.7-1.3 2.5-2.7 5.2-2.7 5.6 0 6.6 3.6 6.6 8.3V24h-5V15c0-2.2 0-5-3-5s-3.5 2.3-3.5 4.8V24h-5V8z"/>
-            </svg>
-          </a>
-          <a href="https://twitter.com/cogniwide" target="_blank" rel="noreferrer">
-            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M24 4.56c-.89.39-1.84.66-2.84.78a4.93 4.93 0 002.16-2.72 9.85 9.85 0 01-3.13 1.2 4.92 4.92 0 00-8.38 4.48A13.96 13.96 0 011.64 3.16 4.92 4.92 0 003.2 9.72a4.9 4.9 0 01-2.23-.62v.06a4.92 4.92 0 003.95 4.83 4.9 4.9 0 01-2.22.08 4.93 4.93 0 004.6 3.41 9.86 9.86 0 01-6.1 2.1c-.4 0-.79-.02-1.18-.07A13.9 13.9 0 007.5 21c9.14 0 14.13-7.57 14.13-14.13 0-.21 0-.42-.01-.63A10.1 10.1 0 0024 4.56z"/>
-            </svg>
-          </a>
-          <a href="https://www.facebook.com/cogniwide" target="_blank" rel="noreferrer">
-            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M22.68 0H1.32C.59 0 0 .6 0 1.34v21.32C0 23.4.59 24 1.32 24H12v-9.34H9.34v-3.66H12V8.65c0-2.66 1.63-4.11 4-4.11 1.14 0 2.11.08 2.39.12v2.77h-1.64c-1.29 0-1.54.61-1.54 1.5v1.96h3.08l-.4 3.66h-2.68V24h5.27c.73 0 1.32-.6 1.32-1.34V1.34C24 .6 23.41 0 22.68 0z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Solutions Links -->
-      <div>
-        <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Solutions</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="cogni_xcellerate_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniXcellerate</a></li>
-          <li><a href="cogni_loom_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniLoom</a></li>
-          <li><a href="cogni_chat_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAssist</a></li>
-          <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAgent</a></li>
-        </ul>
-      </div>
-
-      <!-- Company Links -->
-      <div>
-        <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Company</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="about_us.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">About Us</a></li>
-          <li><a href="leadership_team.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Leadership Team</a></li>
-          <li><a href="life_at_cogniwide_careers.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Careers</a></li>
-          <li><a href="contact.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Address Section -->
-    <div class="mt-10 text-sm" style="color: var(--color-footer-text);">
-      <h4 class="font-inter font-semibold mb-4">Our Branches - India</h4>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-           <div>
-          <h6 class="font-semibold">Headquarters - Chennai</h6>
-          <p>
-            Cogniwide Technologies Private Limited,<br />
-            3rd Floor, Alpha City, SSPDL Building,<br />
-            Rajiv Gandhi Salai, Navalur, Chennai - 603103,<br />
-            Tamilnadu, India.
-          </p>
-        </div>
-        <div>
-          <h6 class="font-semibold">Registered Office - Bengaluru</h6>
-          <p>
-            Cogniwide Technologies Private Limited,<br />
-            1st Floor, SPD Plaza, 52, Jyoti Niwas College Rd,<br />
-            Koramangala Industrial Layout, Koramangala,<br />
-            Bengaluru, Karnataka, India 560034.
-          </p>
-        </div>
-
-        <div>
-          <h6 class="font-semibold">Registered Office - Madurai</h6>
-          <p>
-            Cogniwide Technologies Private Limited,<br />
-            No.15, 4th Floor, Gokale Road, Chinna Chokkikulam,<br />
-            Madurai - 625014, Tamilnadu, India.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Bottom -->
-    <div class="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center" style="border-color: var(--color-border-subtle);">
-      <p class="text-sm" style="color: var(--color-footer-text);">
-        © 2025 Cogniwide AI Platform. All Rights Reserved.
-      </p>
-      <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
-        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Privacy Policy</a>
-        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Terms of Service</a>
-        <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Security</a>
-      </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
     <script>
         // Enhanced mobile menu toggle with smooth transitions

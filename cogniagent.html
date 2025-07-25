@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Platform Engineering Services - Cogniwide AI Platform</title>
+    <title>CogniAgent - Plug-and-Play AI Agents | Cogniwide</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter and IBM Plex Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@4400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Comprehensive platform engineering services with Loom portal integration. Infrastructure orchestration, DevOps automation, and CI/CD solutions for enterprise AI deployment." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="CogniAgent is a plug-and-play library of pre-built AI agents for invoice processing, policy reviews, report generation, and more, offering seamless integration, enterprise-grade security, and flexible deployment options." />
     <style>
         /* New Silver, Black & Blue Dark Mode Colors (Default) */
         :root {
@@ -26,7 +26,7 @@
             --color-accent-silver: #E0E0E0; /* Brighter Silver */
             --color-accent-grey: #A0A0A0; /* Medium Silver */
 
-            --color-card-bg: var(--color-bg-secondary);
+            --color-card-bg: #222222;
             --color-card-border: var(--color-border-subtle);
             --color-input-bg: #222222;
             --color-input-border: #383838;
@@ -154,6 +154,8 @@
             --color-cx-calculator-result-header: var(--color-text-light);
             --color-cx-calculator-result-value: var(--color-accent-blue);
             --color-cx-calculator-result-subtext: var(--color-text-muted);
+            --color-cx-calculator-summary-text: var(--color-text-muted);
+            --color-cx-calculator-summary-value: var(--color-text-light);
             --color-cx-calculator-net-roi: var(--color-accent-blue);
 
             --color-cx-testimonial-card-bg: var(--color-card-bg);
@@ -175,6 +177,73 @@
             --color-cx-table-check: var(--color-accent-blue);
             --color-cx-table-cross: var(--color-text-muted);
             --color-cx-table-warning: var(--color-text-muted);
+
+            /* CogniAgent Specific Colors */
+            --color-ca-hero-bg-start: #0A0A0A;
+            --color-ca-hero-bg-end: #181818;
+            --color-ca-hero-accent-bg: rgba(0, 207, 255, 0.05);
+            --color-ca-hero-success-bg: rgba(0, 153, 204, 0.05);
+            --color-ca-dashboard-bg: var(--color-bg-secondary);
+            --color-ca-dashboard-border: var(--color-border-subtle);
+            --color-ca-dashboard-header: var(--color-text-light);
+            --color-ca-dashboard-live: var(--color-accent-blue);
+            --color-ca-agent-card-bg: var(--color-input-bg);
+            --color-ca-agent-card-border: var(--color-border-subtle);
+            --color-ca-agent-card-text: var(--color-text-light);
+            --color-ca-agent-card-subtext: var(--color-text-muted);
+            --color-ca-agent-metric-value: var(--color-accent-blue);
+            --color-ca-agent-metric-label: var(--color-text-muted);
+            --color-ca-task-item-bg: var(--color-input-bg);
+            --color-ca-task-item-dot: var(--color-accent-blue);
+            --color-ca-task-item-text: var(--color-text-muted);
+
+            --color-ca-feature-icon-bg: var(--color-accent-blue);
+            --color-ca-feature-icon-hover: var(--color-accent-dark-blue);
+            --color-ca-feature-text: var(--color-text-light);
+            --color-ca-feature-subtext: var(--color-text-muted);
+            --color-ca-feature-dot: var(--color-accent-blue);
+
+            /* New Deployment Mode Colors */
+            --color-deployment-card-bg: var(--color-bg-secondary);
+            --color-deployment-card-border: var(--color-border-subtle);
+            --color-deployment-icon-bg: var(--color-accent-blue);
+            --color-deployment-heading: var(--color-text-light);
+            --color-deployment-text: var(--color-text-muted);
+            --color-deployment-dot: var(--color-accent-blue);
+
+            /* New Key Benefits Colors */
+            --color-benefit-card-bg: var(--color-bg-secondary);
+            --color-benefit-card-border: var(--color-border-subtle);
+            --color-benefit-icon-bg: var(--color-accent-blue);
+            --color-benefit-heading: var(--color-text-light);
+            --color-benefit-text: var(--color-text-muted);
+
+            /* New How It Works Colors */
+            --color-how-it-works-card-bg: var(--color-bg-secondary);
+            --color-how-it-works-card-border: var(--color-border-subtle);
+            --color-how-it-works-icon-bg: var(--color-accent-blue);
+            --color-how-it-works-heading: var(--color-text-light);
+            --color-how-it-works-text: var(--color-text-muted);
+            --color-how-it-works-arrow: var(--color-border-subtle);
+
+            /* New Use Cases Colors */
+            --color-use-case-card-bg: var(--color-border-subtle);
+            --color-use-case-card-border: var(--color-border-subtle);
+            --color-use-case-icon-bg: var(--color-accent-blue);
+            --color-use-case-heading: var(--color-text-light);
+            --color-use-case-text: var(--color-text-muted);
+            --color-use-case-problem: #FF6B6B; /* Reddish for problem */
+            --color-use-case-solution: #6BFF6B; /* Greenish for solution */
+
+            /* New Custom Agent Development Colors */
+            --color-custom-agent-card-bg: var(--color-bg-secondary);
+            --color-custom-agent-card-border: var(--color-border-subtle);
+            --color-custom-agent-icon-bg: var(--color-accent-blue);
+            --color-custom-agent-heading: var(--color-text-light);
+            --color-custom-agent-text: var(--color-text-muted);
+            --color-custom-agent-code-bg: var(--color-input-bg);
+            --color-custom-agent-code-comment: #00CFFF;
+            --color-custom-agent-code-text: var(--color-text-light);
         }
 
         /* Light Mode Colors - Adjusted for contrast with new accents */
@@ -197,7 +266,7 @@
             --color-input-bg: #F0F0F0;
             --color-input-border: #D8D8D8;
             --color-input-text: var(--color-input-text);
-            --color-input-placeholder: var(--color-input-text);
+            --color-input-placeholder: var(--color-input-placeholder);
 
             --color-button-primary-bg-light: var(--color-accent-blue);
             --color-button-primary-text-light: #ffffff;
@@ -325,6 +394,8 @@
             --color-cx-calculator-result-header: var(--color-text-light);
             --color-cx-calculator-result-value: var(--color-accent-blue);
             --color-cx-calculator-result-subtext: var(--color-text-muted);
+            --color-cx-calculator-summary-text: var(--color-text-muted);
+            --color-cx-calculator-summary-value: var(--color-text-light);
             --color-cx-calculator-net-roi: var(--color-accent-blue);
 
             --color-cx-testimonial-card-bg: var(--color-card-bg);
@@ -346,6 +417,73 @@
             --color-cx-table-check: var(--color-accent-blue);
             --color-cx-table-cross: var(--color-text-muted);
             --color-cx-table-warning: var(--color-text-muted);
+
+            /* CogniAgent Specific Colors Light Mode */
+            --color-ca-hero-bg-start: #F8F8F8;
+            --color-ca-hero-bg-end: #FFFFFF;
+            --color-ca-hero-accent-bg: rgba(0, 153, 204, 0.05);
+            --color-ca-hero-success-bg: rgba(0, 122, 204, 0.05);
+            --color-ca-dashboard-bg: var(--color-bg-secondary);
+            --color-ca-dashboard-border: var(--color-border-subtle);
+            --color-ca-dashboard-header: var(--color-text-light);
+            --color-ca-dashboard-live: var(--color-accent-blue);
+            --color-ca-agent-card-bg: var(--color-input-bg);
+            --color-ca-agent-card-border: var(--color-border-subtle);
+            --color-ca-agent-card-text: var(--color-text-light);
+            --color-ca-agent-card-subtext: var(--color-text-muted);
+            --color-ca-agent-metric-value: var(--color-accent-blue);
+            --color-ca-agent-metric-label: var(--color-text-muted);
+            --color-ca-task-item-bg: var(--color-input-bg);
+            --color-ca-task-item-dot: var(--color-accent-blue);
+            --color-ca-task-item-text: var(--color-text-muted);
+
+            --color-ca-feature-icon-bg: var(--color-accent-blue);
+            --color-ca-feature-icon-hover: var(--color-accent-dark-blue);
+            --color-ca-feature-text: var(--color-text-light);
+            --color-ca-feature-subtext: var(--color-text-muted);
+            --color-ca-feature-dot: var(--color-accent-blue);
+
+            /* New Deployment Mode Colors Light Mode */
+            --color-deployment-card-bg: var(--color-bg-secondary);
+            --color-deployment-card-border: var(--color-border-subtle);
+            --color-deployment-icon-bg: var(--color-accent-blue);
+            --color-deployment-heading: var(--color-text-light);
+            --color-deployment-text: var(--color-text-muted);
+            --color-deployment-dot: var(--color-accent-blue);
+
+            /* New Key Benefits Colors Light Mode */
+            --color-benefit-card-bg: var(--color-bg-secondary);
+            --color-benefit-card-border: var(--color-border-subtle);
+            --color-benefit-icon-bg: var(--color-accent-blue);
+            --color-benefit-heading: var(--color-text-light);
+            --color-benefit-text: var(--color-benefit-text);
+
+            /* New How It Works Colors Light Mode */
+            --color-how-it-works-card-bg: var(--color-bg-secondary);
+            --color-how-it-works-card-border: var(--color-border-subtle);
+            --color-how-it-works-icon-bg: var(--color-accent-blue);
+            --color-how-it-works-heading: var(--color-text-light);
+            --color-how-it-works-text: var(--color-text-muted);
+            --color-how-it-works-arrow: var(--color-border-subtle);
+
+            /* New Use Cases Colors Light Mode */
+            --color-use-case-card-bg: var(--color-bg-secondary);
+            --color-use-case-card-border: var(--color-border-subtle);
+            --color-use-case-icon-bg: var(--color-accent-blue);
+            --color-use-case-heading: var(--color-text-light);
+            --color-use-case-text: var(--color-text-muted);
+            --color-use-case-problem: #FF6B6B; /* Reddish for problem */
+            --color-use-case-solution: #6BFF6B; /* Greenish for solution */
+
+            /* New Custom Agent Development Colors Light Mode */
+            --color-custom-agent-card-bg: var(--color-bg-secondary);
+            --color-custom-agent-card-border: var(--color-border-subtle);
+            --color-custom-agent-icon-bg: var(--color-accent-blue);
+            --color-custom-agent-heading: var(--color-text-light);
+            --color-custom-agent-text: var(--color-text-muted);
+            --color-custom-agent-code-bg: var(--color-input-bg);
+            --color-custom-agent-code-comment: #007ACC;
+            --color-custom-agent-code-text: var(--color-text-light);
         }
 
         body {
@@ -494,9 +632,9 @@
         .card {
             background-color: var(--color-card-bg);
             border-color: var(--color-card-border);
-            border-radius: 1rem;
-            @apply rounded-xl shadow-md p-4 border; /* Reduced padding */
+            @apply rounded-xl shadow-md p-6 border;
             transition: all 0.3s ease-in-out;
+            border-radius: 1rem;
         }
 
         .card.glow-border {
@@ -559,6 +697,14 @@
         footer a:hover {
             color: var(--color-footer-link-hover);
         }
+        header {
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            background-color: var(--color-header-bg);
+            border-color: var(--color-header-border);
+            box-shadow: 0 4px 15px rgba(0, 207, 255, 0.1); /* Subtle cyan glow shadow */
+        }
+
         nav a, nav button {
             position: relative;
             overflow: hidden;
@@ -580,6 +726,7 @@
             transform: translateX(0);
         }
 
+
         /* Mobile menu specific colors */
         #mobile-menu {
             background-color: var(--color-mobile-menu-bg);
@@ -588,7 +735,7 @@
         #mobile-menu a {
             color: var(--color-mobile-link-text);
         }
-    #mobile-menu a:hover {
+        #mobile-menu a:hover {
             color: var(--color-mobile-link-hover);
         }
         #mobile-menu span {
@@ -647,163 +794,213 @@
         .animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
         .animate-on-scroll:nth-child(6) { transition-delay: 0.5s; }
 
-        /* Platform Engineering Specific Styles */
-        .hero-section-platform {
-            background: linear-gradient(to bottom right, var(--color-bg-primary), var(--color-bg-secondary));
+        /* CogniAgent Page Specific Styles */
+        .hero-section-ca {
+            background: linear-gradient(to bottom right, var(--color-ca-hero-bg-start), var(--color-ca-hero-bg-end));
             position: relative;
             overflow: hidden;
-            min-height: 50vh; /* Reduced height */
+            min-height: 50vh;
         }
-        .hero-section-platform .absolute.inset-0:nth-child(1) {
-            background: linear-gradient(to right, rgba(0, 207, 255, 0.05), rgba(0, 153, 204, 0.05));
-        }
-        .hero-highlight-badge {
-            background-color: var(--color-input-bg);
-            color: var(--color-accent-blue);
-        }
-        .loom-portal-card {
-            background-color: var(--color-text-light); /* Changed to text-light for contrast */
-            border-color: var(--color-border-subtle);
-            @apply rounded-xl p-4 shadow-lg border; /* Reduced padding */
-        }
-        .loom-portal-header-icon {
-            background-color: var(--color-accent-blue);
-        }
-        .loom-portal-header-text {
-            color: var(--color-bg-primary); /* Changed to bg-primary for contrast */
-        }
-        .loom-portal-header-subtext {
-            color: var(--color-text-muted); /* Changed to text-muted for contrast */
-        }
-        .loom-portal-live-indicator {
-            color: var(--color-accent-blue);
-        }
-        .loom-portal-metric-card {
-            background-color: var(--color-input-bg);
-            @apply rounded-md p-2; /* Reduced padding */
-        }
-        .loom-portal-metric-label {
-            color: var(--color-text-muted);
-        }
-        .loom-portal-metric-value {
-            color: var(--color-accent-blue);
-        }
-        .loom-portal-progress-bar {
-            background-color: var(--color-border-subtle);
-        }
-        .loom-portal-progress-fill {
-            background-color: var(--color-accent-blue);
-        }
-        .loom-portal-activity-feed {
-            background-color: var(--color-input-bg);
-            @apply rounded-md p-2; /* Reduced padding */
-        }
-        .loom-portal-activity-dot {
-            background-color: var(--color-accent-blue);
-        }
-        .loom-portal-activity-timestamp {
-            color: var(--color-text-muted);
-        }
-        .loom-portal-activity-text {
-            color: var(--color-text-muted);
+        .hero-section-ca .absolute.inset-0:nth-child(1) {
+            background: linear-gradient(to right, var(--color-ca-hero-accent-bg), var(--color-ca-hero-success-bg));
         }
 
-        /* Core Service Cards */
-        .service-card {
-            border-left-width: 4px; /* Tailwind's border-l-4 */
-            display: flex; /* Added for flexbox alignment */
-            flex-direction: column; /* Added for flexbox alignment */
-            justify-content: space-between; /* Added for flexbox alignment */
+        .ca-dashboard-card {
+            background-color: var(--color-ca-dashboard-bg);
+            border-color: var(--color-ca-dashboard-border);
+            @apply rounded-2xl shadow-md p-6 border;
         }
-        .service-card-accent {
-            border-color: var(--color-accent-blue);
+        .ca-dashboard-card h3 {
+            color: var(--color-ca-dashboard-header);
         }
-        .service-card-success {
-            border-color: var(--color-accent-dark-blue); /* Using a darker accent blue for success-like color */
+        .ca-dashboard-card .text-success {
+            color: var(--color-ca-dashboard-live);
         }
-        .service-card-info {
-            border-color: var(--color-accent-light-blue); /* Using a lighter accent blue for info-like color */
+        .ca-agent-status {
+            background-color: var(--color-ca-agent-card-bg);
+            @apply rounded-lg p-4;
         }
-        .service-card-icon-bg-accent {
-            background: linear-gradient(to bottom right, var(--color-accent-blue), var(--color-accent-dark-blue));
+        .ca-agent-status span:first-child {
+            color: var(--color-ca-agent-card-text);
         }
-        .service-card-icon-bg-success {
-            background: linear-gradient(to bottom right, var(--color-accent-dark-blue), var(--color-accent-blue));
+        .ca-agent-status span:last-child {
+            color: var(--color-ca-agent-metric-value);
         }
-        .service-card-icon-bg-info {
-            background: linear-gradient(to bottom right, var(--color-accent-light-blue), var(--color-accent-blue));
+        .ca-agent-metric-card {
+            background-color: var(--color-ca-agent-card-bg);
+            @apply rounded-lg p-4 text-center;
         }
-        .service-card h3, .service-card h4 {
-            color: var(--color-text-light);
+        .ca-agent-metric-card div:first-child {
+            color: var(--color-ca-agent-metric-value);
         }
-        .service-card p, .service-card li {
-            color: var(--color-text-muted);
+        .ca-agent-metric-card div:last-child {
+            color: var(--color-ca-agent-metric-label);
         }
-        .service-card .code-block {
-            background-color: var(--color-input-bg);
-            color: var(--color-text-light);
+        .ca-task-item {
+            background-color: var(--color-ca-task-item-bg);
+            @apply rounded-lg p-2;
         }
-        .service-card .code-lang {
-            color: var(--color-accent-blue);
+        .ca-task-item div {
+            background-color: var(--color-ca-task-item-dot);
         }
-        .service-card .metric-value {
-            color: var(--color-accent-blue);
+        .ca-task-item span {
+            color: var(--color-ca-task-item-text);
         }
 
-        /* Technical Architecture Section */
-        .arch-diagram-node {
-            background-color: var(--color-accent-blue);
+        /* Core Capabilities (Pre-built Agents) */
+        .ca-capability-card .w-16.h-16 {
+            background-color: var(--color-ca-feature-icon-bg);
+            transition: background-color 0.3s ease;
+        }
+        .ca-capability-card:hover .w-16.h-16 {
+            background-color: var(--color-ca-feature-icon-hover);
+        }
+        .ca-capability-card h3 {
+            color: var(--color-ca-feature-text);
+        }
+        .ca-capability-card p {
+            color: var(--color-ca-feature-subtext);
+        }
+        .ca-capability-card .space-y-2 div div {
+            background-color: var(--color-ca-feature-dot);
+        }
+        .ca-capability-card .space-y-2 div span {
+            color: var(--color-ca-feature-subtext);
+        }
+
+        /* New Deployment Modes Section */
+        .deployment-card {
+            background-color: var(--color-deployment-card-bg);
+            border-color: var(--color-deployment-card-border);
+            @apply rounded-xl shadow-md p-6 border;
+            transition: all 0.3s ease-in-out;
+            border-radius: 0.5rem;
+        }
+        .deployment-card .w-16.h-16 {
+            background-color: var(--color-deployment-icon-bg);
+        }
+        .deployment-card h3 {
+            color: var(--color-deployment-heading);
+        }
+        .deployment-card p {
+            color: var(--color-deployment-text);
+        }
+        .deployment-card .space-y-2 div div {
+            background-color: var(--color-deployment-dot);
+        }
+        .deployment-card .space-y-2 div span {
+            color: var(--color-deployment-text);
+        }
+
+        /* New Key Benefits Section */
+        .benefit-card {
+            background-color: var(--color-benefit-card-bg);
+            border-color: var(--color-benefit-card-border);
+            @apply rounded-xl shadow-md p-6 border;
+            transition: all 0.3s ease-in-out;
+            border-radius: 0.5rem;
+        }
+        .benefit-card .w-16.h-16 {
+            background-color: var(--color-benefit-icon-bg);
+        }
+        .benefit-card h3 {
+            color: var(--color-benefit-heading);
+        }
+        .benefit-card p {
+            color: var(--color-benefit-text);
+        }
+
+        /* How It Works Section */
+        .how-it-works-card {
+            background-color: var(--color-how-it-works-card-bg);
+            border-color: var(--color-how-it-works-card-border);
+            @apply rounded-xl shadow-md p-6 border;
+        }
+        .how-it-works-card .w-16.h-16 {
+            background-color: var(--color-how-it-works-icon-bg);
+        }
+        .how-it-works-card h3 {
+            color: var(--color-how-it-works-heading);
+        }
+        .how-it-works-card p {
+            color: var(--color-how-it-works-text);
+        }
+        .how-it-works-arrow {
+            color: var(--color-how-it-works-arrow);
+        }
+
+        /* Use Cases Section */
+        .use-case-card {
+            background-color: var(--color-use-case-card-bg);
+            border-left-width: 4px;
+            border-left-style: solid;
+            border-radius: 1rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        .use-case-card .w-16.h-16 {
+            background-color: var(--color-use-case-icon-bg);
+        }
+        .use-case-card h3 {
+            color: var(--color-use-case-heading);
+        }
+        .use-case-card p {
+            color: var(--color-use-case-text);
+        }
+        .use-case-card .problem-tag {
+            background-color: var(--color-use-case-problem);
+        }
+        .use-case-card .solution-tag {
+            background-color: var(--color-use-case-solution);
+        }
+
+        /* Custom Agent Development Section */
+        .custom-agent-card {
+            background-color: var(--color-custom-agent-card-bg);
+            border-color: var(--color-custom-agent-card-border);
+            @apply rounded-xl shadow-md p-6 border;
+        }
+        .custom-agent-card .w-16.h-16 {
+            background-color: var(--color-custom-agent-icon-bg);
+        }
+        .custom-agent-card h3 {
+            color: var(--color-custom-agent-heading);
+        }
+        .custom-agent-card p {
+            color: var(--color-custom-agent-text);
+        }
+        .custom-agent-code-block {
+            background-color: var(--color-custom-agent-code-bg);
+            @apply rounded-lg p-4 font-ibm-mono text-sm;
+        }
+        .custom-agent-code-block .text-comment {
+            color: var(--color-custom-agent-code-comment);
+        }
+        .custom-agent-code-block .text-code {
+            color: var(--color-custom-agent-code-text);
+        }
+
+
+        /* Final CTA */
+        .ca-final-cta-section {
+            background: linear-gradient(to right, var(--color-accent-blue), var(--color-accent-dark-blue));
+        }
+        .ca-final-cta-section h2 {
             color: white;
-            padding: 0.75rem 1.5rem; /* Increased padding */
-            font-size: 1rem; /* Increased font size */
         }
-        .arch-diagram-node.secondary {
-            background-color: var(--color-accent-dark-blue);
+        .ca-final-cta-section p {
+            color: rgba(255, 255, 255, 0.9);
         }
-        .arch-diagram-node.tertiary {
-            background-color: var(--color-accent-light-blue);
-        }
-        .arch-diagram-node.data {
-            background-color: var(--color-accent-grey);
-        }
-        .arch-feature-dot {
-            background-color: var(--color-accent-blue);
-        }
-
-        /* Consultation CTA Section */
-        .cta-consultation-section {
-            background-color: var(--color-bg-primary); /* Darker background for CTA */
-        }
-        .cta-consultation-section h2 {
-            color: var(--color-text-light);
-        }
-        .cta-consultation-section p {
-            color: var(--color-text-muted);
-        }
-        .cta-consultation-input {
-            background-color: var(--color-input-bg);
-            border-color: var(--color-input-border);
-            color: var(--color-input-text);
-        }
-        .cta-consultation-input::placeholder {
-            color: var(--color-input-placeholder);
-        }
-        .cta-consultation-btn-secondary {
-            background-color: transparent;
-            border: 2px solid var(--color-accent-blue);
+        .ca-final-cta-section .bg-white {
             color: var(--color-accent-blue);
         }
-        .cta-consultation-btn-secondary:hover {
-            background-color: var(--color-accent-blue);
+        .ca-final-cta-section .border-white {
             color: white;
         }
-
-        /* Mobile menu button icon rotation */
-        #mobile-menu-button svg {
-            transition: transform 0.3s ease-in-out;
-        }
-        #mobile-menu-button.menu-open svg {
-            transform: rotate(90deg); /* Rotate to indicate open */
+        .ca-final-cta-section .hover\:bg-white:hover {
+            color: var(--color-accent-blue);
         }
     </style>
 </head>
@@ -815,10 +1012,11 @@
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="index.html" class="font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
-                        <img src="assets/logo.png"
+                        <img src="https://placehold.co/120x40/0A0A0A/F0F0F0?text=Cogniwide"
+                             onerror="this.onerror=null;this.src='https://placehold.co/120x40/0A0A0A/F0F0F0?text=Cogniwide';"
                              class="h-auto w-24 sm:w-28 md:w-32 lg:w-36 transition-transform duration-300 hover:scale-105"
                              alt="Cogniwide Logo" />
-                      </a>
+                    </a>
                 </div>
 
                 <!-- Desktop Navigation - Grouped Layout -->
@@ -858,7 +1056,7 @@
                                                 <p class="text-sm" style="color: var(--color-text-muted);">Conversational AI Platform</p>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                        <a href="cogni_agent_product_deep_dive.html" class="flex items-center p-3 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
                                             <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--color-accent-silver);"></div>
                                             <div>
                                                 <h4 class="font-inter font-semibold" style="color: var(--color-text-light);">CogniAgent</h4>
@@ -934,7 +1132,7 @@
                                         <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-dark-blue);"></div>
                                         <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniAssist</span>
                                     </a>
-                                    <a href="javascript:void(0)" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
+                                    <a href="cogni_agent_product_deep_dive.html" class="flex items-center p-2 rounded-lg hover:bg-input-bg transition-colors duration-300" style="color: var(--color-text-light);">
                                         <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-silver);"></div>
                                         <span class="font-inter font-medium text-sm" style="color: var(--color-text-light);">CogniAgent</span>
                                     </a>
@@ -962,7 +1160,6 @@
                                     <a href="about_us.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">About Us</a>
                                     <a href="leadership_team.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Leadership Team</a>
                                     <a href="life_at_cogniwide_careers.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Life at Cogniwide + Careers</a>
-                                    <a href="contact.html" class="block p-2 rounded-lg hover:bg-input-bg transition-colors duration-300 text-sm" style="color: var(--color-text-light);">Contact</a>
                                 </div>
                             </div>
                         </div>
@@ -1023,7 +1220,7 @@
                             <a href="cogni_xcellerate_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniXcellerate</a>
                             <a href="cogni_loom_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniLoom</a>
                             <a href="cogni_chat_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAssist</a>
-                            <a href="javascript:void(0)" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAgent</a>
+                            <a href="cogni_agent_product_deep_dive.html" class="block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300" style="color: var(--color-mobile-link-text);" onmouseover="this.style.color='var(--color-mobile-link-hover)'" onmouseout="this.style.color='var(--color-mobile-link-text)'">CogniAgent</a>
                         </div>
                     </div>
 
@@ -1065,528 +1262,497 @@
                 <svg class="w-4 h-4 text-text-muted" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-text-light font-inter font-medium">Services</span>
+                <a href="javascript:void(0)" class="text-text-muted hover:text-accent-blue transition-colors duration-300">Products</a>
+                <svg class="w-4 h-4 text-text-muted" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-text-light font-inter font-medium">CogniAgent</span>
             </nav>
         </div>
     </section>
 
-    <!-- Hero Section with Loom Portal Demo -->
-    <section class="relative hero-section-platform overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-accent/5 to-success/5"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16"> <!-- Reduced py -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center"> <!-- Reduced gap -->
+    <!-- Hero Section with Interactive Dashboard -->
+    <section class="relative hero-section-ca overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-ca-hero-accent-bg to-ca-hero-success-bg"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Hero Content -->
-                <div class="space-y-4 animate-on-scroll slide-in-left"> <!-- Reduced space-y -->
-                    <div class="space-y-2"> <!-- Reduced space-y -->
-                        <div class="inline-flex items-center px-2.5 py-1 hero-highlight-badge rounded-full"> <!-- Reduced padding -->
-                            <div class="w-1.5 h-1.5 bg-accent-blue rounded-full mr-1.5"></div> <!-- Reduced size and margin -->
-                            <span class="text-sm font-inter font-medium" style="color: var(--color-accent-blue);">Platform Engineering Excellence</span>
+                <div class="space-y-8 animate-on-scroll fade-in">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center px-4 py-2 rounded-full" style="background-color: var(--color-input-bg);">
+                            <div class="w-2 h-2 rounded-full mr-2" style="background-color: var(--color-accent-blue);"></div>
+                            <span class="text-sm font-inter font-medium" style="color: var(--color-accent-blue);">Plug-and-Play AI Agent Library</span>
                         </div>
-                        <h1 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading leading-tight"> <!-- Reduced text size for lg -->
-                            Enterprise-Grade
-                            <span class="text-gradient">Platform Engineering</span>
+                        <h1 class="font-inter font-bold text-4xl lg:text-6xl text-section-heading leading-tight">
+                            <span class="text-gradient">CogniAgent</span><br />
+                            Intelligent Automation, Simplified
                         </h1>
-                        <p class="text-base text-section-paragraph leading-relaxed"> <!-- Reduced text size -->
-                            Build scalable, secure AI infrastructure with our comprehensive platform engineering services and integrated Loom portal for real-time monitoring and orchestration.
+                        <p class="text-xl text-section-paragraph leading-relaxed">
+                            A comprehensive library of pre-built AI agents for invoice processing, policy reviews, report generation & more. Deploy powerful automation in minutes.
                         </p>
                     </div>
 
-                    <!-- Service Highlights -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2"> <!-- Reduced gap -->
-                        <div class="flex items-center space-x-1.5 p-2 card"> <!-- Reduced padding and space-x -->
-                            <div class="w-6 h-6 service-card-icon-bg-accent rounded-md flex items-center justify-center"> <!-- Reduced size -->
-                                <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12zm-9 7a1 1 0 012 0v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1-1v-4zm13-1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L15 13.586V12a1 1 0 011-1z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-inter font-semibold text-sm text-text-light">Auto-Scaling</h4>
-                                <p class="text-xs text-text-muted">99.9% uptime</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-1.5 p-2 card">
-                            <div class="w-6 h-6 service-card-icon-bg-success rounded-md flex items-center justify-center">
-                                <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-inter font-semibold text-sm text-text-light">CI/CD Pipeline</h4>
-                                <p class="text-xs text-text-muted">Automated deployment</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-1.5 p-2 card">
-                            <div class="w-6 h-6 service-card-icon-bg-info rounded-md flex items-center justify-center">
-                                <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-inter font-semibold text-sm text-text-light">Security First</h4>
-                                <p class="text-xs text-text-muted">Zero-trust architecture</p>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Hero CTAs -->
-                    <div class="flex flex-col sm:flex-row gap-2"> <!-- Reduced gap -->
+                    <div class="flex flex-col sm:flex-row gap-4">
                         <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
                             <a href="contact.html" class="btn-primary-inner text-center">
-                                Get Started
+                                Explore Agents →
                             </a>
                         </div>
                         <div class="relative rounded-lg inline-block secondary-button-wrapper">
                             <a href="contact.html" class="btn-secondary-inner text-center">
-                                Schedule Consultation
+                                Request Custom Agent
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Live Loom Portal Demo -->
+                <!-- Interactive Dashboard Preview (Agent specific) -->
+                <div class="relative animate-on-scroll fade-in" style="transition-delay: 0.2s;">
+                    <div class="ca-dashboard-card">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="font-inter font-semibold text-lg" style="color: var(--color-ca-dashboard-header);">Agent Performance Overview</h3>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-3 h-3 rounded-full" style="background-color: var(--color-ca-dashboard-live);"></div>
+                                <span class="text-sm" style="color: var(--color-text-muted);">Live Data</span>
+                            </div>
+                        </div>
+
+                        <!-- Dashboard Content -->
+                        <div class="space-y-4">
+                            <!-- Agent Status -->
+                            <div class="ca-agent-status">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="font-inter font-medium" style="color: var(--color-ca-agent-card-text);">Agents Deployed</span>
+                                    <span class="font-inter font-bold" style="color: var(--color-ca-agent-metric-value);">12</span>
+                                </div>
+                                <div class="w-full rounded-full h-2 bg-gray-700">
+                                    <div class="h-2 rounded-full" style="width: 80%; background-color: var(--color-ca-agent-metric-value);"></div>
+                                </div>
+                            </div>
+
+                            <!-- Performance Metrics -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="ca-agent-metric-card">
+                                    <div class="font-inter font-bold text-lg" style="color: var(--color-ca-agent-metric-value);">98%</div>
+                                    <div class="text-sm" style="color: var(--color-ca-agent-metric-label);">Task Completion</div>
+                                </div>
+                                <div class="ca-agent-metric-card">
+                                    <div class="font-inter font-bold text-lg" style="color: var(--color-ca-agent-metric-value);">0.5s</div>
+                                    <div class="text-sm" style="color: var(--color-ca-agent-metric-label);">Avg Agent Response</div>
+                                </div>
+                            </div>
+
+                            <!-- Recent Agent Activities -->
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-3 p-2 ca-task-item">
+                                    <div class="w-2 h-2 rounded-full" style="background-color: var(--color-ca-task-item-dot);"></div>
+                                    <span class="text-sm" style="color: var(--color-ca-task-item-text);">Invoice Agent processed 50 docs</span>
+                                </div>
+                                <div class="flex items-center space-x-3 p-2 ca-task-item">
+                                    <div class="w-2 h-2 rounded-full" style="background-color: var(--color-ca-task-item-dot);"></div>
+                                    <span class="text-sm" style="color: var(--color-ca-task-item-text);">Policy Review Agent flagged 3 issues</span>
+                                </div>
+                                <div class="flex items-center space-x-3 p-2 ca-task-item">
+                                    <div class="w-2 h-2 rounded-full" style="background-color: var(--color-ca-task-item-dot);"></div>
+                                    <span class="text-sm" style="color: var(--color-ca-task-item-text);">Report Gen. Agent created 1 daily report</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits Section -->
+    <section class="py-20 bg-section-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    Key Benefits of CogniAgent
+                </h2>
+                <p class="text-xl text-section-paragraph">
+                    Unlock new levels of efficiency, accuracy, and scalability for your business operations.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benefit 1: Rapid Deployment -->
+                <div class="group benefit-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-benefit-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-benefit-heading);">Rapid Deployment</h3>
+                    <p style="color: var(--color-benefit-text);">
+                        Deploy intelligent automation rapidly with our pre-built agents and intuitive configuration, significantly reducing time-to-value.
+                    </p>
+                </div>
+
+                <!-- Benefit 2: Enhanced Accuracy -->
+                <div class="group benefit-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-benefit-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-benefit-heading);">Enhanced Accuracy</h3>
+                    <p style="color: var(--color-benefit-text);">
+                        Leverage advanced AI and machine learning to minimize human error, ensuring higher data quality and process precision.
+                    </p>
+                </div>
+
+                <!-- Benefit 3: Cost Reduction -->
+                <div class="group benefit-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-benefit-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-benefit-heading);">Significant Cost Reduction</h3>
+                    <p style="color: var(--color-benefit-text);">
+                        Automate repetitive tasks, reduce operational overhead, and reallocate human resources to more strategic initiatives.
+                    </p>
+                </div>
+
+                <!-- Benefit 4: Scalability & Flexibility -->
+                <div class="group benefit-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up" style="transition-delay: 0.3s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-benefit-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8L11 17m-5 2a2 2 0 11-4 0 2 2 0 014 0zM17 19a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-benefit-heading);">Scalability & Flexibility</h3>
+                    <p style="color: var(--color-benefit-text);">
+                        Scale your automation efforts seamlessly to meet growing demands and adapt to evolving business requirements.
+                    </p>
+                </div>
+
+                <div class="group benefit-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up" style="transition-delay: 0.3s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-benefit-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h10a2 2 0 002-2V8M5 6h14a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2zm0 0V4a2 2 0 012-2h4a2 2 0 012 2v2M7 12h4m-4 4h4m-4-8h4m-4 8h4" /></svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-benefit-heading);">Seamless Integration</h3>
+                    <p style="color: var(--color-benefit-text);">
+                        Integrate CogniAgent effortlessly with your existing enterprise systems and data sources.
+                    </p>
+                </div>
+
+                <div class="group benefit-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up" style="transition-delay: 0.3s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-benefit-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-benefit-heading);">Enterprise-grade Security</h3>
+                    <p style="color: var(--color-benefit-text);">
+                        Ensure data privacy and compliance with robust security features and audit capabilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-built AI Agents for Every Business Need -->
+    <section class="py-20 bg-section-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    Pre-built AI Agents for Every Business Need
+                </h2>
+                <p class="text-xl text-section-paragraph">
+                    CogniAgent provides a comprehensive library of pre-built AI agents designed for common business processes. From invoice processing to report generation, deploy powerful automation in minutes.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Invoice Processing Agent -->
+                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-capability-card animate-on-scroll slide-in-up">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-ca-feature-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">Invoice Processing Agent</h3>
+                    <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                        Automated invoice extraction, validation, and approval workflows, reducing manual effort and errors.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Automated data extraction</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Intelligent validation rules</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Seamless ERP integration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Policy Review Agent -->
+                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-capability-card animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-ca-feature-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">Policy Review Agent</h3>
+                    <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                        Intelligent policy analysis and compliance checking, ensuring adherence to regulatory standards.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Automated compliance checks</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Risk identification</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Version control & audit trails</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Report Generation Agent -->
+                <div class="group card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer ca-capability-card animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-ca-feature-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-5m3 5v-5m3 5v-5M9 21h6a2 2 0 002-2V7a2 2 0 00-2-2H9a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-ca-feature-text);">Report Generation Agent</h3>
+                    <p style="color: var(--color-ca-feature-subtext);" class="mb-6">
+                        Automated report creation with data visualization, ensuring timely and accurate insights.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Customizable report templates</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Automated data aggregation</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-ca-feature-dot);"></div>
+                            <span style="color: var(--color-ca-feature-subtext);">Scheduled report delivery</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases by Industry Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    Transformative Use Cases Across Industries
+                </h2>
+                <p class="text-xl text-section-paragraph">
+                    See how CogniAgent delivers measurable impact in various sectors.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Financial Services Use Case -->
+                <div class="group use-case-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-use-case-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-use-case-heading);">Financial Services</h3>
+                    <p style="color: var(--color-use-case-text);" class="mb-4">
+                        Automate loan application processing, fraud detection, and compliance checks.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-sm font-medium">
+                        <span class="px-3 py-1 rounded-full text-white problem-tag">Loan Processing</span>
+                        <span class="px-3 py-1 rounded-full text-white solution-tag">Automated Fraud Detection</span>
+                    </div>
+                </div>
+
+                <!-- Healthcare Use Case -->
+                <div class="group use-case-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-use-case-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-use-case-heading);">Healthcare</h3>
+                    <p style="color: var(--color-use-case-text);" class="mb-4">
+                        Streamline patient record analysis, claims processing, and medical coding.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-sm font-medium">
+                        <span class="px-3 py-1 rounded-full text-white problem-tag">Claims Processing</span>
+                        <span class="px-3 py-1 rounded-full text-white solution-tag">Patient Data Extraction</span>
+                    </div>
+                </div>
+
+                <!-- Manufacturing Use Case -->
+                <div class="group use-case-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-use-case-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37a1.724 1.724 0 002.572-1.065z" /></svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-use-case-heading);">Manufacturing</h3>
+                    <p style="color: var(--color-use-case-text);" class="mb-4">
+                        Optimize supply chain logistics, quality control, and predictive maintenance.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-sm font-medium">
+                        <span class="px-3 py-1 rounded-full text-white problem-tag">Supply Chain Bottlenecks</span>
+                        <span class="px-3 py-1 rounded-full text-white solution-tag">Automated Quality Checks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Agent Development Section -->
+    <section class="py-20 bg-section-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    Build Your Own: Custom Agent Development
+                </h2>
+                <p class="text-xl text-section-paragraph">
+                    Leverage CogniAgent's flexible framework to create bespoke AI agents tailored to your unique needs.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="space-y-6 animate-on-scroll slide-in-left">
+                    <div class="group custom-agent-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer">
+                        <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-custom-agent-icon-bg);">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="font-inter font-bold text-xl" style="color: var(--color-custom-agent-heading);">Flexible Framework</h3>
+                        <p style="color: var(--color-custom-agent-text);">
+                            Our robust and extensible framework provides the foundation for building highly specialized AI agents.
+                        </p>
+                    </div>
+
+                    <div class="group custom-agent-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer" style="transition-delay: 0.1s;">
+                        <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-custom-agent-icon-bg);">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                        </div>
+                        <h3 class="font-inter font-bold text-xl" style="color: var(--color-custom-agent-heading);">Developer-Friendly Tools</h3>
+                        <p style="color: var(--color-custom-agent-text);">
+                            Access comprehensive SDKs, APIs, and documentation to accelerate your custom agent development.
+                        </p>
+                    </div>
+
+                    <div class="group custom-agent-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer" style="transition-delay: 0.2s;">
+                        <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-custom-agent-icon-bg);">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 0A9.001 9.001 0 0012 21a9.001 9.001 0 00-5.636-15.636m0 0L5.636 18.364m12.728-12.728A9.001 9.001 0 0021 12a9.001 9.001 0 00-15.636 5.636m0 0L5.636 18.364" /></svg>
+                        </div>
+                        <h3 class="font-inter font-bold text-xl" style="color: var(--color-custom-agent-heading);">Expert Support</h3>
+                        <p style="color: var(--color-custom-agent-text);">
+                            Our team of AI specialists is available to provide guidance and support throughout your development journey.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Code Snippet Example -->
                 <div class="relative animate-on-scroll slide-in-right">
-                    <div class="loom-portal-card">
-                        <!-- Portal Header -->
-                        <div class="flex items-center justify-between mb-3"> <!-- Reduced mb -->
-                            <div class="flex items-center space-x-1.5"> <!-- Reduced space-x -->
-                                <div class="w-6 h-6 loom-portal-header-icon rounded-md flex items-center justify-center"> <!-- Reduced size -->
-                                    <svg class="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm2 2a1 1 0 000 2h.01a1 1 0 100-2H5zm3 0a1 1 0 000 2h3a1 1 0 100-2H8z" clip-rule="evenodd"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="font-inter font-semibold loom-portal-header-text text-sm">Loom Portal</h3> <!-- Reduced text size -->
-                                    <p class="loom-portal-header-subtext text-xs">Live Platform Monitoring</p> <!-- Reduced text size -->
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-1"> <!-- Reduced space-x -->
-                                <div class="w-1.5 h-1.5 bg-accent-blue rounded-full"></div> <!-- Reduced size -->
-                                <span class="loom-portal-live-indicator text-xs font-ibm-mono">LIVE</span> <!-- Reduced text size -->
-                            </div>
-                        </div>
-
-                        <!-- Dashboard Grid -->
-                        <div class="grid grid-cols-2 gap-2 mb-3"> <!-- Reduced gap and mb -->
-                            <div class="loom-portal-metric-card">
-                                <div class="flex items-center justify-between mb-0.5"> <!-- Reduced mb -->
-                                    <span class="loom-portal-metric-label text-xs">CPU Usage</span> <!-- Reduced text size -->
-                                    <span class="loom-portal-metric-value font-ibm-mono text-xs">67%</span> <!-- Reduced text size -->
-                                </div>
-                                <div class="w-full loom-portal-progress-bar rounded-full h-1"> <!-- Reduced height -->
-                                    <div class="loom-portal-progress-fill h-1 rounded-full" style="width: 67%"></div>
-                                </div>
-                            </div>
-                            <div class="loom-portal-metric-card">
-                                <div class="flex items-center justify-between mb-0.5">
-                                    <span class="loom-portal-metric-label text-xs">Memory</span>
-                                    <span class="loom-portal-metric-value font-ibm-mono text-xs">4.2GB</span>
-                                </div>
-                                <div class="w-full loom-portal-progress-bar rounded-full h-1">
-                                    <div class="loom-portal-progress-fill h-1 rounded-full" style="width: 52%"></div>
-                                </div>
-                            </div>
-                            <div class="loom-portal-metric-card">
-                                <div class="flex items-center justify-between mb-0.5">
-                                    <span class="loom-portal-metric-label text-xs">Active Pods</span>
-                                    <span class="loom-portal-metric-value font-ibm-mono text-xs">24</span>
-                                </div>
-                                <div class="flex space-x-0.5"> <!-- Reduced space-x -->
-                                    <div class="w-1 h-1 loom-portal-activity-dot rounded-full"></div> <!-- Reduced size -->
-                                    <div class="w-1 h-1 loom-portal-activity-dot rounded-full"></div>
-                                    <div class="w-1 h-1 loom-portal-activity-dot rounded-full"></div>
-                                    <div class="w-1 h-1 loom-portal-activity-dot rounded-full"></div>
-                                </div>
-                            </div>
-                            <div class="loom-portal-metric-card">
-                                <div class="flex items-center justify-between mb-0.5">
-                                    <span class="loom-portal-metric-label text-xs">Deployments</span>
-                                    <span class="loom-portal-metric-value font-ibm-mono text-xs">12/h</span>
-                                </div>
-                                <div class="text-xs loom-portal-activity-text">Last: 2 min ago</div>
-                            </div>
-                        </div>
-
-                        <!-- Live Activity Feed -->
-                        <div class="loom-portal-activity-feed">
-                            <h4 class="loom-portal-header-text font-inter font-semibold mb-1.5 text-sm">Recent Activity</h4> <!-- Reduced mb and text size -->
-                            <div class="space-y-1"> <!-- Reduced space-y -->
-                                <div class="flex items-center space-x-1.5 text-xs"> <!-- Reduced space-x and text size -->
-                                    <div class="w-1 h-1 loom-portal-activity-dot rounded-full"></div>
-                                    <span class="loom-portal-activity-timestamp font-ibm-mono">14:31:15</span>
-                                    <span class="loom-portal-activity-text">Deployment completed: api-service-v2.1.3</span>
-                                </div>
-                                <div class="flex items-center space-x-1.5 text-xs">
-                                    <div class="w-1 h-1 loom-portal-activity-dot rounded-full"></div>
-                                    <span class="loom-portal-activity-timestamp font-ibm-mono">14:29:42</span>
-                                    <span class="loom-portal-activity-text">Auto-scaling triggered: web-tier +2 instances</span>
-                                </div>
-                                <div class="flex items-center space-x-1.5 text-xs">
-                                    <div class="w-1 h-1 loom-portal-activity-dot rounded-full"></div>
-                                    <span class="loom-portal-activity-timestamp font-ibm-mono">14:28:01</span>
-                                    <span class="loom-portal-activity-text">Health check passed: database cluster</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="custom-agent-code-block">
+                        <div class="text-comment mb-2">// Example: Define a custom invoice validation agent</div>
+                        <div class="text-code mb-1">class CustomInvoiceAgent(CogniAgent):</div>
+                        <div class="text-code ml-4 mb-1">def __init__(self):</div>
+                        <div class="text-code ml-8 mb-1">super().__init__("invoice_validator")</div>
+                        <div class="text-code ml-4 mb-2"></div>
+                        <div class="text-code ml-4 mb-1">def process(self, invoice_data):</div>
+                        <div class="text-code ml-8 mb-1"># Implement custom validation logic here</div>
+                        <div class="text-code ml-8 mb-1">if invoice_data.total &gt; 10000:</div>
+                        <div class="text-code ml-12 mb-1">return {"status": "flagged", "reason": "High value invoice"}</div>
+                        <div class="text-code ml-8 mb-1">return {"status": "approved", "reason": "Validation successful"}</div>
+                        <div class="text-code mb-2"></div>
+                        <div class="text-comment mb-2">// Instantiate and use the agent</div>
+                        <div class="text-code mb-1">agent = CustomInvoiceAgent()</div>
+                        <div class="text-code mb-1">result = agent.process({"total": 12000, "items": [...]})</div>
+                        <div class="text-code mb-1">print(result)</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Core Service Areas -->
-    <section class="py-12 bg-section-secondary"> <!-- Reduced py -->
+    <!-- Deployment Modes Section -->
+    <section class="py-20 bg-section-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10 animate-on-scroll fade-in"> <!-- Reduced mb -->
-                <h2 class="font-inter font-bold text-3xl lg:text-3xl text-section-heading mb-2.5"> <!-- Reduced mb -->
-                    Comprehensive Platform Engineering Services
+            <div class="text-center mb-16 animate-on-scroll fade-in">
+                <h2 class="font-inter font-bold text-3xl lg:text-4xl text-section-heading mb-4">
+                    Flexible Deployment Modes
                 </h2>
-                <p class="text-base text-section-paragraph max-w-3xl mx-auto"> <!-- Reduced text size -->
-                    Three core service areas designed to accelerate your AI platform deployment and ensure long-term success
+                <p class="text-xl text-section-paragraph">
+                    Choose the deployment option that best fits your infrastructure and security requirements.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4"> <!-- Reduced gap -->
-                <!-- Infrastructure Orchestration -->
-                <div class="card p-4 service-card service-card-accent animate-on-scroll slide-in-up"> <!-- Reduced padding -->
-                    <div> <!-- Content wrapper for flexbox -->
-                        <div class="mb-3"> <!-- Reduced mb -->
-                            <div class="w-10 h-10 service-card-icon-bg-accent rounded-lg flex items-center justify-center mb-1.5"> <!-- Reduced size and mb -->
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"> <!-- Reduced size -->
-                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12zm-9 7a1 1 0 012 0v1.586l2.293-2.293a1 1 0 111.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1-1v-4zm13-1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-2.293-2.293a1 1 0 111.414-1.414L15 13.586V12a1 1 0 011-1z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <h3 class="font-inter font-bold text-base text-text-light mb-1">Infrastructure Orchestration</h3> <!-- Reduced text size and mb -->
-                            <p class="text-sm text-text-muted mb-3"> <!-- Reduced text size and mb -->
-                                Cloud-native infrastructure design and orchestration with intelligent resource optimization and automated scaling capabilities.
-                            </p>
-                        </div>
-
-                        <!-- Technical Specifications -->
-                        <div class="space-y-2 mb-3"> <!-- Reduced space-y and mb -->
-                            <div class="card p-2.5"> <!-- Reduced padding -->
-                                <h4 class="font-inter font-semibold text-text-light mb-1 text-sm">Key Capabilities</h4> <!-- Reduced text size and mb -->
-                                <ul class="space-y-0.5 text-xs text-text-muted"> <!-- Reduced space-y and text size -->
-                                    <li class="flex items-center">
-                                        <div class="w-1 h-1 bg-accent-blue rounded-full mr-1.5"></div>
-                                        Kubernetes orchestration with custom operators
-                                    </li>
-                                    <li class="flex items-center">
-                                        <div class="w-1 h-1 bg-accent-blue rounded-full mr-1.5"></div>
-                                        Multi-cloud deployment strategies
-                                    </li>
-                                    <li class="flex items-center">
-                                        <div class="w-1 h-1 bg-accent-blue rounded-full mr-1.5"></div>
-                                        Infrastructure as Code (Terraform/Pulumi)
-                                    </li>
-                                    <li class="flex items-center">
-                                        <div class="w-1 h-1 bg-accent-blue rounded-full mr-1.5"></div>
-                                        Automated disaster recovery
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <!-- Code Example -->
-                            <div class="code-block rounded-lg p-2.5"> <!-- Reduced padding -->
-                                <div class="flex items-center justify-between mb-1"> <!-- Reduced mb -->
-                                    <span class="text-text-muted text-sm font-inter font-semibold">Kubernetes Deployment</span>
-                                    <button class="text-accent-blue text-xs font-ibm-mono focus:outline-none" onclick="toggleCode('kubernetes-code')">
-                                        <span id="kubernetes-toggle-text">Show Code</span>
-                                        <svg id="kubernetes-toggle-icon" class="w-4 h-4 inline-block ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                    </button>
-                                </div>
-                                <div id="kubernetes-code" class="hidden">
-                                    <pre class="text-text-light text-xs font-ibm-mono overflow-x-auto">
-<code>apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: cogni-api
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: cogni-api
-  template:
-    metadata:
-      labels:
-        app: cogni-api
-    spec:
-      containers:
-      - name: api
-        image: cogniwide/api:v2.1.3
-        resources:
-          requests:
-            memory: "256Mi"
-            cpu: "250m"
-          limits:
-            memory: "512Mi"
-            cpu: "500m"</code>
-                                    </pre>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Success Metrics -->
-                        <div class="grid grid-cols-2 gap-1.5 mb-3"> <!-- Reduced gap and mb -->
-                            <div class="text-center">
-                                <div class="text-base font-inter font-bold metric-value">99.9%</div> <!-- Reduced text size -->
-                                <div class="text-xs text-text-muted">Uptime SLA</div> <!-- Reduced text size -->
-                            </div>
-                            <div class="text-center">
-                                <div class="text-base font-inter font-bold metric-value">40%</div> <!-- Reduced text size -->
-                                <div class="text-xs text-text-muted">Cost Reduction</div> <!-- Reduced text size -->
-                            </div>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cloud Deployment -->
+                <div class="group deployment-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-deployment-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 005-5c0-1.49-.6-2.84-1.55-3.82A7.002 7.002 0 0012 2a7.002 7.002 0 00-6.45 4.18A4 4 0 003 15z" /></svg>
                     </div>
-
-                    <div class="relative rounded-lg inline-block primary-button-wrapper w-full mt-auto"> <!-- Added mt-auto -->
-                        <a href="javascript:void(0)" class="btn-primary-inner w-full">
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- DevOps Automation -->
-                <div class="card p-4 service-card service-card-success animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
-                    <div> <!-- Content wrapper for flexbox -->
-                        <div class="mb-3">
-                            <div class="w-10 h-10 service-card-icon-bg-success rounded-lg flex items-center justify-center mb-1.5">
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <h3 class="font-inter font-bold text-base text-text-light mb-1">DevOps Automation</h3>
-                            <p class="text-sm text-text-muted mb-3">
-                                End-to-end automation of development workflows with intelligent monitoring, testing, and deployment pipelines.
-                            </p>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-deployment-heading);">Cloud Deployment</h3>
+                    <p style="color: var(--color-deployment-text);" class="mb-6">
+                        Leverage the scalability and flexibility of cloud infrastructure for rapid setup and global access.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-deployment-dot);"></div>
+                            <span style="color: var(--color-deployment-text);">Managed service</span>
                         </div>
-
-                        <!-- Pipeline Visualization -->
-                        <div class="space-y-2 mb-3">
-                            <div class="card p-2.5">
-                                <h4 class="font-inter font-semibold text-text-light mb-1 text-sm">Automated Pipeline Stages</h4>
-                                <div class="space-y-0.5">
-                                    <div class="flex items-center space-x-1.5">
-                                        <div class="w-5 h-5 bg-accent-blue rounded-full flex items-center justify-center">
-                                            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                            </svg>
-                                        </div>
-                                        <div class="flex-1">
-                                            <div class="flex items-center justify-between">
-                                                <span class="font-inter font-medium text-text-light text-sm">Code Commit</span>
-                                                <span class="text-xs text-accent-blue font-ibm-mono">PASSED</span>
-                                            </div>
-                                            <div class="text-xs text-text-muted">Automated testing & validation</div>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center space-x-1.5">
-                                        <div class="w-5 h-5 bg-accent-blue rounded-full flex items-center justify-center">
-                                            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                            </svg>
-                                        </div>
-                                        <div class="flex-1">
-                                            <div class="flex items-center justify-between">
-                                                <span class="font-inter font-medium text-text-light text-sm">Build & Package</span>
-                                                <span class="text-xs text-accent-blue font-ibm-mono">PASSED</span>
-                                            </div>
-                                            <div class="text-xs text-text-muted">Container image creation</div>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center space-x-1.5">
-                                        <div class="w-5 h-5 bg-accent-blue rounded-full flex items-center justify-center">
-                                            <div class="w-2.5 h-2.5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                        </div>
-                                        <div class="flex-1">
-                                            <div class="flex items-center justify-between">
-                                                <span class="font-inter font-medium text-text-light text-sm">Deploy to Staging</span>
-                                                <span class="text-xs text-accent-blue font-ibm-mono">RUNNING</span>
-                                            </div>
-                                            <div class="text-xs text-text-muted">Automated deployment in progress</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-deployment-dot);"></div>
+                            <span style="color: var(--color-deployment-text);">Elastic scalability</span>
                         </div>
-
-                        <!-- Success Metrics -->
-                        <div class="grid grid-cols-2 gap-1.5 mb-3">
-                            <div class="text-center">
-                                <div class="text-base font-inter font-bold metric-value">85%</div>
-                                <div class="text-xs text-text-muted">Faster Deployments</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-base font-inter font-bold metric-value">12x</div>
-                                <div class="text-xs text-text-muted">Daily Releases</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="relative rounded-lg inline-block primary-button-wrapper w-full mt-auto"> <!-- Added mt-auto -->
-                        <a href="javascript:void(0)" class="btn-primary-inner w-full">
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- CI/CD Pipeline -->
-                <div class="card p-4 service-card service-card-info animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
-                    <div> <!-- Content wrapper for flexbox -->
-                        <div class="mb-3">
-                            <div class="w-10 h-10 service-card-icon-bg-info rounded-lg flex items-center justify-center mb-1.5">
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <h3 class="font-inter font-bold text-base text-text-light mb-1">Continuous Integration/Deployment</h3>
-                            <p class="text-sm text-text-muted mb-3">
-                                Robust CI/CD pipelines with automated testing, security scanning, and intelligent deployment strategies.
-                            </p>
-                        </div>
-
-                        <!-- Pipeline Health Dashboard -->
-                        <div class="space-y-2 mb-3">
-                            <div class="card p-2.5">
-                                <h4 class="font-inter font-semibold text-text-light mb-1 text-sm">Pipeline Health</h4>
-                                <div class="space-y-0.5">
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-xs text-text-muted">Success Rate</span>
-                                        <div class="flex items-center space-x-1.5">
-                                            <div class="w-16 bg-border-subtle rounded-full h-1">
-                                                <div class="bg-accent-blue h-1 rounded-full transition-all duration-300" style="width: 94%"></div>
-                                            </div>
-                                            <span class="text-xs font-ibm-mono text-accent-blue">94%</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-xs text-text-muted">Avg. Build Time</span>
-                                        <span class="text-xs font-ibm-mono text-accent-blue">3m 42s</span>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-xs text-text-muted">Tests Passed</span>
-                                        <span class="text-xs font-ibm-mono text-accent-blue">2,847/2,891</span>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-xs text-text-muted">Security Scans</span>
-                                        <span class="text-xs font-ibm-mono text-accent-blue">0 Critical Issues</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Success Metrics -->
-                        <div class="grid grid-cols-2 gap-1.5 mb-3">
-                            <div class="text-center">
-                                <div class="text-base font-inter font-bold metric-value">2.5min</div>
-                                <div class="text-xs text-text-muted">Avg Build Time</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-base font-inter font-bold metric-value">99.2%</div>
-                                <div class="text-xs text-text-muted">Pipeline Reliability</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="relative rounded-lg inline-block primary-button-wrapper w-full mt-auto"> <!-- Added mt-auto -->
-                        <a href="javascript:void(0)" class="btn-primary-inner w-full">
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Architecture Deep Dive -->
-    <section class="py-12 bg-section-primary"> <!-- Reduced py -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10 animate-on-scroll fade-in"> <!-- Reduced mb -->
-                <h2 class="font-inter font-bold text-3xl lg:text-3xl text-section-heading mb-2.5">
-                    Technical Architecture & Implementation
-                </h2>
-                <p class="text-base text-section-paragraph max-w-3xl mx-auto">
-                    Comprehensive technical documentation and architecture diagrams for solution architects and DevOps engineers
-                </p>
-            </div>
-
-            <div class="space-y-5"> <!-- Changed from grid to space-y, reduced space-y -->
-                <!-- Architecture Diagram -->
-                <div class="card p-4 animate-on-scroll slide-in-left w-full"> <!-- Added w-full, reduced padding -->
-                    <h3 class="font-inter font-bold text-base text-text-light mb-3">Platform Architecture</h3> <!-- Reduced mb and text size -->
-                    <div class="bg-input-bg rounded-lg p-3 mb-3"> <!-- Reduced padding and mb -->
-                        <!-- Simplified Architecture Diagram -->
-                        <div class="space-y-3"> <!-- Increased space-y -->
-                            <!-- Load Balancer Layer -->
-                            <div class="flex justify-center">
-                                <div class="arch-diagram-node rounded-md"> <!-- Increased padding and font size via CSS -->
-                                    Load Balancer
-                                </div>
-                            </div>
-
-                            <!-- API Gateway Layer -->
-                            <div class="flex justify-center">
-                                <div class="arch-diagram-node secondary rounded-md">
-                                    API Gateway
-                                </div>
-                            </div>
-
-                            <!-- Microservices Layer -->
-                            <div class="grid grid-cols-3 gap-2"> <!-- Increased gap -->
-                                <div class="arch-diagram-node tertiary rounded-md text-center">
-                                    Auth Service
-                                </div>
-                                <div class="arch-diagram-node tertiary rounded-md text-center">
-                                    AI Engine
-                                </div>
-                                <div class="arch-diagram-node tertiary rounded-md text-center">
-                                    Data Service
-                                </div>
-                            </div>
-
-                            <!-- Data Layer -->
-                            <div class="grid grid-cols-2 gap-2"> <!-- Increased gap -->
-                                <div class="arch-diagram-node data rounded-md text-center">
-                                    PostgreSQL
-                                </div>
-                                <div class="arch-diagram-node data rounded-md text-center">
-                                    Redis Cache
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Architecture Features -->
-                    <div class="space-y-1"> <!-- Reduced space-y -->
-                        <div class="flex items-center space-x-1"> <!-- Reduced space-x -->
-                            <div class="w-1.5 h-1.5 arch-feature-dot rounded-full"></div>
-                            <span class="text-sm text-text-muted">Kubernetes-native deployment</span>
-                        </div>
-                        <div class="flex items-center space-x-1">
-                            <div class="w-1.5 h-1.5 arch-feature-dot rounded-full"></div>
-                            <span class="text-sm text-text-muted">Microservices architecture</span>
-                        </div>
-                        <div class="flex items-center space-x-1">
-                            <div class="w-1.5 h-1.5 arch-feature-dot rounded-full"></div>
-                            <span class="text-sm text-text-muted">Event-driven communication</span>
-                        </div>
-                        <div class="flex items-center space-x-1">
-                            <div class="w-1.5 h-1.5 arch-feature-dot rounded-full"></div>
-                            <span class="text-sm text-text-muted">Distributed data management</span>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-deployment-dot);"></div>
+                            <span style="color: var(--color-deployment-text);">Reduced operational overhead</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Performance Metrics -->
-                <div class="card p-3 animate-on-scroll slide-in-right w-full"> <!-- Reduced padding -->
-                    <h4 class="font-inter font-semibold text-base text-text-light mb-1.5">Performance Benchmarks</h4> <!-- Reduced mb and text size -->
-                    <div class="grid grid-cols-2 gap-1.5"> <!-- Reduced gap -->
-                        <div class="text-center">
-                            <div class="text-base font-inter font-bold metric-value">< 100ms</div> <!-- Reduced text size -->
-                            <div class="text-xs text-text-muted">API Response Time</div> <!-- Reduced text size -->
+                <!-- On-Premise Deployment -->
+                <div class="group deployment-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-deployment-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h10m0 4h-4m-4 4h4m-6 2h10m0-10H9" /></svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-deployment-heading);">On-Premise Deployment</h3>
+                    <p style="color: var(--color-deployment-text);" class="mb-6">
+                        Maintain full control over your data and infrastructure, meeting strict regulatory and security requirements.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-deployment-dot);"></div>
+                            <span style="color: var(--color-deployment-text);">Complete data sovereignty</span>
                         </div>
-                        <div class="text-center">
-                            <div class="text-base font-inter font-bold metric-value">10,000+</div> <!-- Reduced text size -->
-                            <div class="text-xs text-text-muted">Requests/Second</div> <!-- Reduced text size -->
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-deployment-dot);"></div>
+                            <span style="color: var(--color-deployment-text);">Custom security policies</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-deployment-dot);"></div>
+                            <span style="color: var(--color-deployment-text);">Integration with existing IT stack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hybrid Deployment -->
+                <div class="group deployment-card p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer animate-on-scroll slide-in-up" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style="background-color: var(--color-deployment-icon-bg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+                    </div>
+                    <h3 class="font-inter font-bold text-xl" style="color: var(--color-deployment-heading);">Hybrid Deployment</h3>
+                    <p style="color: var(--color-deployment-text);" class="mb-6">
+                        Combine the best of both worlds, optimizing for performance, cost, and data residency needs.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-deployment-dot);"></div>
+                            <span style="color: var(--color-deployment-text);">Flexible data placement</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-deployment-dot);"></div>
+                            <span style="color: var(--color-deployment-text);">Optimized resource utilization</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-1.5 h-1.5 rounded-full mr-2" style="background-color: var(--color-deployment-dot);"></div>
+                            <span style="color: var(--color-deployment-text);">Seamless workload migration</span>
                         </div>
                     </div>
                 </div>
@@ -1594,159 +1760,64 @@ spec:
         </div>
     </section>
 
-    <!-- Client Success Stories -->
-    <section class="py-12 bg-section-secondary"> <!-- Reduced py -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10 animate-on-scroll fade-in"> <!-- Reduced mb -->
-                <h2 class="font-inter font-bold text-3xl lg:text-3xl text-section-heading mb-2.5">
-                    Technical Success Stories
-                </h2>
-                <p class="text-base text-section-paragraph max-w-3xl mx-auto">
-                    Real-world implementations showcasing technical achievements and measurable improvements
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4"> <!-- Reduced gap -->
-                <!-- Case Study 1 -->
-                <div class="card p-4 animate-on-scroll slide-in-up"> <!-- Reduced padding -->
-                    <div class="flex items-center space-x-2.5 mb-3"> <!-- Reduced space-x and mb -->
-                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Enterprise Client" class="w-12 h-12 rounded-md object-cover" loading="lazy" onerror="this.src='https://placehold.co/64x64/181818/F0F0F0?text=Client';" /> <!-- Reduced size -->
-                        <div>
-                            <h3 class="font-inter font-bold text-base text-text-light">Global Telecom Provider</h3> <!-- Reduced text size -->
-                            <p class="text-sm text-text-muted">Infrastructure Modernization</p> <!-- Reduced text size -->
-                        </div>
-                    </div>
-
-                    <blockquote class="text-sm text-text-muted italic mb-3"> <!-- Reduced text size and mb -->
-                        "Cogniwide's platform engineering team reduced our deployment time from 6 hours to 15 minutes while improving system reliability by 300%. The Loom portal gives us unprecedented visibility into our infrastructure."
-                    </blockquote>
-
-                    <div class="space-y-2 mb-4">
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-text-muted">Deployment Speed</span>
-                            <span class="font-inter font-bold text-accent-blue text-sm">24x Faster</span> <!-- Reduced text size -->
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-text-muted">System Uptime</span>
-                            <span class="font-inter font-bold text-accent-blue text-sm">99.97%</span>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-text-muted">Cost Reduction</span>
-                            <span class="font-inter font-bold text-accent-blue text-sm">45%</span>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center space-x-2.5"> <!-- Reduced space-x -->
-                        <div class="flex-1">
-                            <div class="text-sm font-inter font-semibold text-text-light">Sarah Chen</div>
-                            <div class="text-xs text-text-muted">CTO, TelecomGlobal</div> <!-- Reduced text size -->
-                        </div>
-                        <div class="flex space-x-0.5">
-                            <div class="w-1 h-1 bg-accent-blue rounded-full"></div>
-                            <div class="w-1 h-1 bg-accent-blue rounded-full"></div>
-                            <div class="w-1 h-1 bg-accent-blue rounded-full"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Case Study 2 -->
-                <div class="card p-4 animate-on-scroll slide-in-up" style="transition-delay: 0.1s;">
-                    <div class="flex items-center space-x-2.5 mb-3">
-                        <img src="https://images.pixabay.com/photo/2016/11/27/21/42/stock-1863880_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Financial Services Client" class="w-12 h-12 rounded-md object-cover" loading="lazy" onerror="this.src='https://placehold.co/64x64/181818/F0F0F0?text=Client';" />
-                        <div>
-                            <h3 class="font-inter font-bold text-base text-text-light">Leading Financial Institution</h3>
-                            <p class="text-sm text-text-muted">DevOps Transformation</p>
-                        </div>
-                    </div>
-
-                    <blockquote class="text-sm text-text-muted italic mb-3">
-                        "The automated CI/CD pipeline implementation exceeded our expectations. We now deploy 50+ times per day with zero downtime, and the security scanning integration gives us complete confidence in our releases."
-                    </blockquote>
-
-                    <div class="space-y-2 mb-4">
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-text-muted">Daily Deployments</span>
-                            <span class="font-inter font-bold text-accent-blue text-sm">50+</span>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-text-muted">Zero Downtime</span>
-                            <span class="font-inter font-bold text-accent-blue text-sm">100%</span>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-text-muted">Security Compliance</span>
-                            <span class="font-inter font-bold text-accent-blue text-sm">SOC 2 Type II</span>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center space-x-2.5">
-                        <div class="flex-1">
-                            <div class="text-sm font-inter font-semibold text-text-light">Michael Rodriguez</div>
-                            <div class="text-xs text-text-muted">VP Engineering, FinanceFirst</div>
-                        </div>
-                        <div class="flex space-x-0.5">
-                            <div class="w-1 h-1 bg-accent-blue rounded-full"></div>
-                            <div class="w-1 h-1 bg-accent-blue rounded-full"></div>
-                            <div class="w-1 h-1 bg-accent-blue rounded-full"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Consultation CTA -->
-    <!-- Sticky CTA Section -->
+    <!-- Final CTA Section -->
     <section class="py-20 bg-card-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll fade-in">
             <h2 class="font-inter font-bold text-3xl lg:text-4xl mb-4 text-section-heading">
-                Ready to <span class="text-gradient">Transform Your Platform Engineering?</span>?
+                Ready to <span class="text-gradient">Automate with AI Agents?</span>?
             </h2>
             <p class="text-xl mb-8 max-w-3xl mx-auto text-section-paragraph">
-                Schedule a technical consultation with our platform engineering experts and discover how Cogniwide can accelerate your infrastructure deployment.            </p>
+                Discover how CogniAgent can streamline your business processes and drive efficiency.
+            </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <div class="relative rounded-lg inline-block primary-button-wrapper pulse">
                     <a href="contact.html" class="btn-primary-inner">
-                      Schedule Technical Consultation
+                      Get Started with CogniAgent →
                     </a>
                 </div>
-
+                <div class="relative rounded-lg inline-block secondary-button-wrapper">
+                    <a href="contact.html" class="btn-secondary-inner">
+                      Request a Demo
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="border-t border-footer-border bg-footer-bg">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10"> <!-- Reduced py -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6"> <!-- Reduced gap -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
 
       <!-- Company Info -->
       <div class="col-span-1 md:col-span-2">
-        <div class="flex items-center mb-3"> <!-- Reduced mb -->
+        <div class="flex items-center mb-4">
           <a href="index.html" class="font-ibm-plex font-medium px-3 py-2 rounded-md text-sm transition-colors duration-300">
-            <img src="assets/logo.png"
+            <img src="https://placehold.co/120x40/0A0A0A/F0F0F0?text=Cogniwide"
+                 onerror="this.onerror=null;this.src='https://placehold.co/120x40/0A0A0A/F0F0F0?text=Cogniwide';"
                  class="h-auto w-24 sm:w-28 md:w-32 lg:w-36 transition-transform duration-300 hover:scale-105"
                  alt="Cogniwide Logo" />
           </a>
         </div>
-        <p class="mb-2.5 max-w-md text-sm" style="color: var(--color-footer-text);"> <!-- Reduced mb -->
+        <p class="mb-3 max-w-md text-sm" style="color: var(--color-footer-text);">
           Cogniwide is an AI-based IT products and services company that provides high-performance product development, solutions, and operations services that focuses on Digital Transformation.
         </p>
-        <p class="mb-3 max-w-md text-sm" style="color: var(--color-footer-text);"> <!-- Reduced mb -->
+        <p class="mb-4 max-w-md text-sm" style="color: var(--color-footer-text);">
           We leverage new generation technologies like AI, RPA, Data Analytics, and Blockchain to build tailor-made digital Web and Mobile solutions and aid in the digital journey of our partners.
         </p>
-        <div class="flex space-x-3 mb-3"> <!-- Reduced space-x and mb -->
+        <div class="flex space-x-4 mb-4">
           <a href="https://www.linkedin.com/company/cogniwide" target="_blank" rel="noreferrer">
-            <svg class="w-4.5 h-4.5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24"> <!-- Reduced size -->
+            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
               <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.7v2.9h.1c.7-1.3 2.5-2.7 5.2-2.7 5.6 0 6.6 3.6 6.6 8.3V24h-5V15c0-2.2 0-5-3-5s-3.5 2.3-3.5 4.8V24h-5V8z"/>
             </svg>
           </a>
           <a href="https://twitter.com/cogniwide" target="_blank" rel="noreferrer">
-            <svg class="w-4.5 h-4.5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
               <path d="M24 4.56c-.89.39-1.84.66-2.84.78a4.93 4.93 0 002.16-2.72 9.85 9.85 0 01-3.13 1.2 4.92 4.92 0 00-8.38 4.48A13.96 13.96 0 011.64 3.16 4.92 4.92 0 003.2 9.72a4.9 4.9 0 01-2.23-.62v.06a4.92 4.92 0 003.95 4.83 4.9 4.9 0 01-2.22.08 4.93 4.93 0 004.6 3.41 9.86 9.86 0 01-6.1 2.1c-.4 0-.79-.02-1.18-.07A13.9 13.9 0 007.5 21c9.14 0 14.13-7.57 14.13-14.13 0-.21 0-.42-.01-.63A10.1 10.1 0 0024 4.56z"/>
             </svg>
           </a>
           <a href="https://www.facebook.com/cogniwide" target="_blank" rel="noreferrer">
-            <svg class="w-4.5 h-4.5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5" style="color: var(--color-footer-text);" fill="currentColor" viewBox="0 0 24 24">
               <path d="M22.68 0H1.32C.59 0 0 .6 0 1.34v21.32C0 23.4.59 24 1.32 24H12v-9.34H9.34v-3.66H12V8.65c0-2.66 1.63-4.11 4-4.11 1.14 0 2.11.08 2.39.12v2.77h-1.64c-1.29 0-1.54.61-1.54 1.5v1.96h3.08l-.4 3.66h-2.68V24h5.27c.73 0 1.32-.6 1.32-1.34V1.34C24 .6 23.41 0 22.68 0z"/>
             </svg>
           </a>
@@ -1755,19 +1826,19 @@ spec:
 
       <!-- Solutions Links -->
       <div>
-        <h4 class="font-inter font-semibold mb-3" style="color: var(--color-text-light);">Solutions</h4> <!-- Reduced mb -->
-        <ul class="space-y-1.5 text-sm"> <!-- Reduced space-y -->
+        <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Solutions</h4>
+        <ul class="space-y-2 text-sm">
           <li><a href="cogni_xcellerate_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniXcellerate</a></li>
           <li><a href="cogni_loom_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniLoom</a></li>
           <li><a href="cogni_chat_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAssist</a></li>
-          <li><a href="javascript:void(0)" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAgent</a></li>
+          <li><a href="cogni_agent_product_deep_dive.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">CogniAgent</a></li>
         </ul>
       </div>
 
       <!-- Company Links -->
       <div>
-        <h4 class="font-inter font-semibold mb-3" style="color: var(--color-text-light);">Company</h4> <!-- Reduced mb -->
-        <ul class="space-y-1.5 text-sm"> <!-- Reduced space-y -->
+        <h4 class="font-inter font-semibold mb-4" style="color: var(--color-text-light);">Company</h4>
+        <ul class="space-y-2 text-sm">
           <li><a href="about_us.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">About Us</a></li>
           <li><a href="leadership_team.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Leadership Team</a></li>
           <li><a href="life_at_cogniwide_careers.html" class="transition-colors duration-300 hover:text-accent-blue" style="color: var(--color-footer-text);">Life at Cogniwide + Careers</a></li>
@@ -1777,9 +1848,9 @@ spec:
     </div>
 
     <!-- Address Section -->
-    <div class="mt-8 text-sm"> <!-- Reduced mt -->
-      <h4 class="font-inter font-semibold mb-3">Our Branches - India</h4> <!-- Reduced mb -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4"> <!-- Reduced gap -->
+    <div class="mt-10 text-sm" style="color: var(--color-footer-text);">
+      <h4 class="font-inter font-semibold mb-4">Our Branches - India</h4>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
            <div>
           <h6 class="font-semibold">Headquarters - Chennai</h6>
           <p>
@@ -1811,11 +1882,11 @@ spec:
     </div>
 
     <!-- Footer Bottom -->
-    <div class="border-t mt-6 pt-6 flex flex-col md:flex-row justify-between items-center" style="border-color: var(--color-border-subtle);"> <!-- Reduced mt and pt -->
+    <div class="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center" style="border-color: var(--color-border-subtle);">
       <p class="text-sm" style="color: var(--color-footer-text);">
         © 2025 Cogniwide AI Platform. All Rights Reserved.
       </p>
-      <div class="flex space-x-4 mt-3 md:mt-0 text-sm"> <!-- Reduced space-x and mt -->
+      <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
         <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Privacy Policy</a>
         <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Terms of Service</a>
         <a href="javascript:void(0)" style="color: var(--color-footer-text);" class="hover:text-accent-blue">Security</a>
@@ -1832,15 +1903,12 @@ spec:
         if (mobileMenuButton && mobileMenu) {
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
-                // Toggle a class on the button to rotate the icon
-                mobileMenuButton.classList.toggle('menu-open');
             });
 
             // Close mobile menu when clicking outside
             document.addEventListener('click', (e) => {
                 if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
                     mobileMenu.classList.add('hidden');
-                    mobileMenuButton.classList.remove('menu-open'); // Ensure icon resets
                 }
             });
         }
@@ -1849,7 +1917,6 @@ spec:
         window.addEventListener('resize', () => {
             if (window.innerWidth >= 768) {
                 mobileMenu.classList.add('hidden');
-                mobileMenuButton.classList.remove('menu-open'); // Ensure icon resets on desktop
             }
         });
 
@@ -1922,24 +1989,6 @@ spec:
         document.querySelectorAll('.animate-on-scroll').forEach(element => {
             observer.observe(element);
         });
-
-        // Function to toggle code blocks
-        function toggleCode(id) {
-            const element = document.getElementById(id);
-            const toggleText = document.getElementById(id + '-toggle-text');
-            const toggleIcon = document.getElementById(id + '-toggle-icon');
-
-            if (element) {
-                element.classList.toggle('hidden');
-                if (element.classList.contains('hidden')) {
-                    toggleText.textContent = 'Show Code';
-                    toggleIcon.classList.remove('rotate-180');
-                } else {
-                    toggleText.textContent = 'Hide Code';
-                    toggleIcon.classList.add('rotate-180');
-                }
-            }
-        }
 
         // Initialize on window load
         window.onload = function() {
